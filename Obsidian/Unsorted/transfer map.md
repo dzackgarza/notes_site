@@ -1,3 +1,18 @@
 ---
-aliases: ["transfer", "transfers"]
+aliases:
+- transfer
+- transfers
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+

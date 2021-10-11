@@ -1,5 +1,19 @@
 ---
-aliases: ["framed cobordism"]
+aliases:
+- framed cobordism
 ---
 
-References: [stable%20framing.md](stable%20framing.md) | [frame](frame)
+
+
+
+
+
+
+
+
+
+
+
+
+
+References: [[stable%20framing.md | stable%20framing.html]] \| [frame](frame)

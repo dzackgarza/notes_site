@@ -1,5 +1,17 @@
-Topics: #algebraicgeometry #numbertheory #representationtheory
 
 
-- ![](_attachments/alggroups.pdf)
-- [reductive](reductive)
+
+
+
+
+
+
+
+
+
+
+
+Topics: \#algebraicgeometry \#numbertheory \#representationtheory
+
+-   ![[_attachments/alggroups.pdf]]
+-   [reductive](reductive)

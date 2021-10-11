@@ -1,2 +1,14 @@
-Rank of [Jacobian.md](Jacobian.md)?
 
+
+
+
+
+
+
+
+
+
+
+
+
+Rank of [[Jacobian.md | Jacobian.html]]?
