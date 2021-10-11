@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -rf /tmp/output/*;
+rm -rf ./site/*;
 rm -rf ./Obsidian/*;
 cp -r ~/Notes/Obsidian/* ./Obsidian;
 #mkdir figures;
@@ -19,4 +19,4 @@ rm tikz.*;
 find ./Obsidian -type f -iname '*.yaml' -exec rm {} \;
 sed -i '/file:\/\//d' ./Unsorted/**/*.md;
 
-emanote -L /home/zack/projects/chenghaomou.github.io/Obsidian gen /tmp/output;
+emanote -L ./Obsidian gen ./site;
