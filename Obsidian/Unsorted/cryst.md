@@ -1,14 +1,1 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-http://www-personal.umich.edu/\~malloryd/haoyang.pdf
+http://www-personal.umich.edu/~malloryd/haoyang.pdf

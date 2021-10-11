@@ -1,118 +1,89 @@
--   [Part 2: Surface bundles, mapping class groups, moduli spaces, and cohomology](#part-2-surface-bundles-mapping-class-groups-moduli-spaces-and-cohomology)
-    -   [Why study $\Sigma_g$ bundles?](#why-study-sigma_g-bundles)
-    -   [Monodromy as a Complete Invariant](#monodromy-as-a-complete-invariant)
-    -   [Characteristic Classes](#characteristic-classes)
-    -   [The "Signature Cocycle"](#the-signature-cocycle)
-    -   [Another Cocycle](#another-cocycle)
+[Subjects/mapping class group](Subjects/mapping%20class%20group.md)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-[[Subjects/mapping class group | Subjects/mapping%20class%20group.html]]
-
-Tags: \#notes \#nograph \#topology
+Tags: #notes #nograph  #topology 
 
 # Part 2: Surface bundles, mapping class groups, moduli spaces, and cohomology
 
 > Reference: 29th Workshop in Geometric Topology, Oregon State University, June 29, 2012
 
--   Talk about the theory [[../Unsorted/surface bundle | ../Unsorted/surface%20bundle.html]].
-    -   This talk: not so much related to his personal work!
-    -   Will revisit
+- Talk about the theory [../Unsorted/surface bundle](../Unsorted/surface%20bundle.md).
+  - This talk: not so much related to his personal work!
+  - Will revisit
 
-Throughout: $\Sigma_g$ will be a connected oriented $g\geq 2$ surface, will look at $\Sigma_g{\hbox{-}}$ bundles given by `
-<span class="math display">
-\begin{align*}
-\Sigma_g \to E \xrightarrow{\pi} B
-\end{align*}
-<span>`{=html}
+Throughout: $\Sigma_g$ will be a connected oriented $g\geq 2$ surface, will look at $\Sigma_g\dash$ bundles given by
+$$
+\Sigma_g \to E \mapsvia{\pi} B
+$$
 
 (Fiber bundle where the base and total space will usually be compact manifolds, fiber is a surface)
 
-For any $f\in \operatorname{Diff}(\Sigma_g)$, take cylinder on $\Sigma_g$ and glue ends via $f$ to obtain a 3-manifold and the surface bundle `
-<span class="math display">
-\begin{align*}
-\Sigma_g \to M_f^3 \xrightarrow{\pi} S^1
-\end{align*}
-<span>`{=html}
+For any $f\in \operatorname{Diff}(\Sigma_g)$, take cylinder on $\Sigma_g$ and glue ends via $f$ to obtain a 3-manifold and the surface bundle
+$$
+\Sigma_g \to M_f^3 \mapsvia{\pi} S^1
+$$
 
 Every 3-manifold that fibers over the circle is of this form! Why? Can remove a point from $S^1$ to get a trivial bundle.
 
-Another way to build bundles: take a representation $\rho: \pi_1 B \to \operatorname{Diff}(\Sigma_g)$, let `
-<span class="math display">
-\begin{align*}E = \tilde B \times\Sigma_g / (x,y) \sim (g.x, \rho(g)(y))\end{align*}
-<span>`{=html} (standard construction) where $\tilde B$ is the universal cover of $B$.
+Another way to build bundles: take a representation $\rho: \pi_1 B \to \operatorname{Diff}(\Sigma_g)$, let $$E = \tilde B \cross \Sigma_g / (x,y) \sim (g.x, \rho(g)(y))$$ (standard construction) where $\tilde B$ is the universal cover of $B$.
 
 Generalizes previous example: take real line cross surface and mod out by [deck transformations](deck%20transformations).
 
-Such bundles are called [[../Unsorted/flat morphism | ../Unsorted/flat%20morphism.html]] $\Sigma_g$ bundles, exactly those which admit a [flat connection](flat%20connection).
+Such bundles are called [../Unsorted/flat morphism](../Unsorted/flat%20morphism.md) $\Sigma_g$ bundles, exactly those which admit a [flat connection](flat%20connection).
 
-> Note on connections: there's a map $TE \xrightarrow{\pi} TB$, can look at $\ker \pi$ which is a 2-plane bundle over $E$. Take the kernel of $E \xrightarrow{f} B$ is obtain a "vertical" 2-plane bundle, horizontal is not well-defined and so is a choice of a 2-plane field. Flat means curvature vanishes is equivalent to [[Frobenius integrability theorem](Frobenius%20integrability%20theorem) -- the 2-plane is integrable. So [curvature](../Unsorted/curvature.md) measures how integrable the 2-plane field is, rephrases "when is a 2-plane tangent to a [../Unsorted/foliate | ../Unsorted/foliate.html]]".
+> Note on connections: there's a map $TE \mapsvia{\pi} TB$, can look at $\ker \pi$ which is a 2-plane bundle over $E$. 
+> Take the kernel of $E \mapsvia{f} B$ is obtain a "vertical" 2-plane bundle, horizontal is not well-defined and so is a choice of a 2-plane field. 
+> Flat means curvature vanishes is equivalent to [Frobenius integrability theorem](Frobenius%20integrability%20theorem) -- the 2-plane is integrable. 
+> So [curvature](../Unsorted/curvature.md) measures how integrable the 2-plane field is, rephrases "when is a 2-plane tangent to a [../Unsorted/foliate](../Unsorted/foliate.md)".
 
 One organizing problem: classify surface bundles over a fixed closed base manifold up to
 
--   Bundle isomorphism
-    -   Fiber-wise homeomorphism, but doesn't actually permute any fibers
-    -   Covering the identity map
--   Homeomorphism
--   Diffeomorphism
--   Homotopy-equivalence
--   Fiber-wise Homeomorphism
-    -   Homeomorphism that takes fiber to fiber
--   Symplectomorphism
--   Biholomorphism
-    -   Total spaces are complex manifolds
+- Bundle isomorphism
+  - Fiber-wise homeomorphism, but doesn't actually permute any fibers
+  - Covering the identity map
+- Homeomorphism
+- Diffeomorphism
+- Homotopy-equivalence
+- Fiber-wise Homeomorphism
+  - Homeomorphism that takes fiber to fiber
+- Symplectomorphism
+- Biholomorphism
+  - Total spaces are complex manifolds
 
 B.F. proved algorithmic computability for bundle isomorphisms, but homeomorphisms and even fiberwise homeomorphisms are generally unsolvable.
 
-## Why study $\Sigma_g$ bundles? {#why-study-sigma_g-bundles}
+## Why study $\Sigma_g$ bundles?
 
-\^1f6c50
+^1f6c50
 
-1.  The simplest nonlinear bundle theory (i.e. structure group is not just $\operatorname{GL}(n)$, it is $S^1$)
+1. The simplest nonlinear bundle theory (i.e. structure group is not just $\GL(n)$, it is $S^1$)
 
-2.  For 3-manifolds: almost all (e.g. all hyperbolic) closed 3-manifolds are finitely covered by some $M_f^3$ surface bundle
+2. For 3-manifolds: almost all (e.g. all hyperbolic) closed 3-manifolds are finitely covered by some $M_f^3$ surface bundle
+  1. Famous conjecture of Thurston! Very recent.
+    His fields medal was finding a single [hyperbolic structure](hyperbolic%20structure) on a closed 3-manifold [fibering](fibering) over the circle.
 
-3.  Famous conjecture of Thurston! Very recent. His fields medal was finding a single [hyperbolic structure](hyperbolic%20structure) on a closed 3-manifold [fibering](fibering) over the circle.
+3. For 4-manifolds: huge class of [symplectic manifolds](symplectic%20manifolds).
+   1. Perpendicular to work of Mike Friedman, these fundamental groups all contain free groups.
+   2. Donaldson: All closed symplectic 4-manifolds are Lefschetz fibrations (!!)
 
-4.  For 4-manifolds: huge class of [symplectic manifolds](symplectic%20manifolds).
-
-    1.  Perpendicular to work of Mike Friedman, these fundamental groups all contain free groups.
-    2.  Donaldson: All closed symplectic 4-manifolds are Lefschetz fibrations (!!)
-
-5.  AG: $\mathcal M$ moduli spaces of Riemann surfaces (see [[moduli stack of elliptic curves | ../Unsorted/moduli%20stack%20of%20elliptic%20curves.html]] ), decompose problems about [varieties](varieties) to problems about families of [algebraic curves](algebraic%20curves) (i.e. what we call surface bundles)
+4. AG: $\mathcal M$ moduli spaces of Riemann surfaces (see [moduli stack of elliptic curves](../Unsorted/moduli%20stack%20of%20elliptic%20curves.md) ), decompose problems about [varieties](varieties) to problems about families of [algebraic curves](algebraic%20curves)  (i.e. what we call surface bundles)
 
 The main invariant for these bundles: **The Monodromy Representation**
 
-Let $\operatorname{Mod}(\Sigma_g)$ be the mapping class group of the surface, i.e. $\pi_0(\operatorname{Diff}^+ \Sigma_g)$) (group of homotopy/isotopy classes of diffeos on the surface).
+Let $\operatorname{Mod}(\Sigma_g)$ be the mapping class group of the surface, i.e. $\pi_0(\operatorname{Diff}^+ \Sigma_g)$) (group of homotopy/isotopy classes of diffeos on the surface).
 
-Representation from earlier can be projected: `
-<span class="math display">
-\begin{align*}
-\pi_1 B \to \operatorname{Diff}^+ \Sigma_g \xrightarrow{\pi} \operatorname{Mod}(\Sigma_g)
-\end{align*}
-<span>`{=html}
+Representation from earlier can be projected:
+$$
+\pi_1 B \to \operatorname{Diff}^+ \Sigma_g \mapsvia{\pi} \operatorname{Mod}(\Sigma_g)
+$$
 
 Take a homeomorphism to its homotopy class, Mod is finitely generated.
 
-> In AG, the [[mapping class group](Subjects/mapping%20class%20group.md) is the [orbifold | ../Unsorted/orbifold.html]] [fundamental group](fundamental%20group)\] of $\mathcal{M}$, and this is a $K(\pi_1)$ space in the appropriate category.
+> In AG, the [mapping class group](Subjects/mapping%20class%20group.md) is the [orbifold](../Unsorted/orbifold.md) [fundamental group](fundamental%20group)] of $\mathcal{M}$, and this is a $K(\pi_1)$ space in the appropriate category.
 
-So any bundle $\Sigma_g \to E \to B$ yields a corresponding [[../Unsorted/monodromy representation | ../Unsorted/monodromy%20representation.html]] `
-<span class="math display">
-\begin{align*}
+So any bundle $\Sigma_g \to E \to B$ yields a corresponding [../Unsorted/monodromy representation](../Unsorted/monodromy%20representation.md)
+$$
 \rho: \pi_1 B \to \operatorname{Mod} \Sigma_g
-\end{align*}
-<span>`{=html}
+$$
 
 Look at LES in homotopy, the map $\pi_2 B \to \pi_1 F$ has image in the center, but $\pi_a \Sigma_g$ is centerless, yielding a SES.
 
@@ -122,52 +93,52 @@ Can produce a map $\operatorname{Mod} \Sigma_g \to \operatorname{Out}\pi_1 \Sigm
 
 **Question**: when does the representation lift?
 
-`<p style="text-align:center;"> <img class="tikzcd" src="figures/a0e81a479791cb88a740b8637709a8a0246880c1.svg"></p>`{=html}
+\begin{tikzcd}
+ &  & \operatorname{Diff}^+ \Sigma_g \arrow[dd] \\
+ &  &  \\
+\pi_1 B \arrow[rr] \arrow[rruu, "?" description, dotted] &  & \operatorname{Mod} \Sigma_g
+\end{tikzcd}
 
-Equivalently,\*\* is every bundle flat? \*\* No, but this is an open question when the base is a surface (i.e. for all we know, every representation could lift). Conjectured that for the [Kodaira manifold](Kodaira%20manifold), it is not flat. Big problem, because this is perhaps the simplest nonlinear connection.
+Equivalently,** is every bundle flat? **
+No, but this is an open question when the base is a surface (i.e. for all we know, every representation could lift). 
+Conjectured that for the [Kodaira manifold](Kodaira%20manifold), it is not flat. 
+Big problem, because this is perhaps the simplest nonlinear connection.
 
 ## Monodromy as a Complete Invariant
 
-[[classifying space | ../Unsorted/classifying%20space.html]] theory: there exists a (crazy) space $\operatorname{BDiff}^+\Sigma_g$ such that `
-<span class="math display">
-\begin{align*}
-\left\{{\text{iso classes } \Sigma_g \to E \to B}\right\} \iff [B, \operatorname{BDiff}^+ \Sigma_g]
-\end{align*}
-<span>`{=html}
+[classifying space](../Unsorted/classifying%20space.md) theory: there exists a (crazy) space $\operatorname{BDiff}^+\Sigma_g$ such that
+$$
+\theset{\text{iso classes } \Sigma_g \to E \to B} \iff [B, \operatorname{BDiff}^+ \Sigma_g]
+$$
 
-Model: general construction, just find any contractible space on which $\operatorname{Diff}$ acts freely and take the quotient. One that works: $\operatorname{Emb}(\Sigma_g, {\mathbb{R}}^\infty)$.
+Model: general construction, just find any contractible space on which $\operatorname{Diff}$ acts freely and take the quotient. One that works: $\operatorname{Emb}(\Sigma_g, \RR^\infty)$.
 
 Not useful yet, because we don't know what $\operatorname{BDiff}$ is.
 
 Some serious math, theorem of Eels-Earle 1969:
 
--   For surfaces $g\geq 2$, $\operatorname{Diff}_0(\Sigma_g)$ (the diffeos isotopic to the identity) is homotopy-equivalent to a point!
-    -   Note: can write mapping class group as Diff mod the path-component of the identity (i.e. it's the group of path components)
-    -   Uses [Beltrami equatiobn](Beltrami%20equatiobn), measurable [Riemann mapping theorem](Riemann%20mapping%20theorem), solving PDEs, some serious Math!
-    -   $\operatorname{Diff}_0$ acts on the space of complex structures on the surface, and the quotient is [Teichmüller space](Teichmüller%20space), which is contractible, which makes the space of complex structures contractible (from the LES in homotopy). This is some solution space of some PDE.
+- For surfaces $g\geq 2$, $\operatorname{Diff}_0(\Sigma_g)$ (the diffeos isotopic to the identity) is homotopy-equivalent to a point!
+    - Note: can write mapping class group as Diff mod the path-component of the identity (i.e. it's the group of path components)
+    - Uses [Beltrami equatiobn](Beltrami%20equatiobn), measurable [Riemann mapping theorem](Riemann%20mapping%20theorem), solving PDEs, some serious Math!
+    - $\operatorname{Diff}_0$ acts on the space of complex structures on the surface, and the quotient is [Teichmüller space](Teichmüller%20space), which is contractible, which makes the space of complex structures contractible (from the LES in homotopy). This is some solution space of some PDE.
 
-**Corollary**: we care about $\operatorname{Bdiff}$, [[classifying space | ../Unsorted/classifying%20space.html]] theory doesn't really see contractible stuff. So: `
-<span class="math display">
-\begin{align*}
+**Corollary**: we care about $\operatorname{Bdiff}$, [classifying space](../Unsorted/classifying%20space.md) theory doesn't really see contractible stuff. So:
+$$
 \operatorname{Bdiff}^+ \Sigma_g \simeq \operatorname{BMod}\Sigma_g = K(\operatorname{Mod}\Sigma_g, 1)
-\end{align*}
-<span>`{=html}
+$$
 
 Note that the last equality follows because there's no topology on the mapping class group of a discrete group.
 
 **Huge conclusion**:
 
-`
-<span class="math display">
-\begin{align*}
-\left\{{\text{iso classes of } \Sigma_g{\hbox{-}}\text{bundles over } B}\right\} \iff
-\left\{{\text{conjugacy classes of representations } \rho: \pi_b \to \operatorname{Mod}\Sigma_g}\right\}
-\end{align*}
-<span>`{=html}
+$$
+\theset{\text{iso classes of } \Sigma_g\dash\text{bundles over } B} \iff
+\theset{\text{conjugacy classes of representations } \rho: \pi_b \to \operatorname{Mod}\Sigma_g}
+$$
 
-Why? For any $X = K(\pi, 1)$ space, $[{-}, X] \cong$ the conjugacy classes of $[\pi_1 {-}, \pi_1 X]$(?)
+Why? For any $X = K(\pi, 1)$ space, $[\wait, X] \cong$ the conjugacy classes of $[\pi_1 \wait, \pi_1 X]$(?)
 
-Somehow, this all comes down to [[uniformization | ../Unsorted/uniformization.html]].
+Somehow, this all comes down to [uniformization](../Unsorted/uniformization.md).
 
 > Note: Reduces problem of classification up to bundle isomorphism (solved in general by B.F.) to a group theory problem immediately.
 
@@ -179,64 +150,78 @@ But this does not solve the problem for homeo $\Sigma_g \to M^3 \to S_1$.
 
 Why? Relates back to a paper of Thurston's, theory of the Thurston Norm, from paper "A norm on the Homology of 3-manifolds": there exist many 3-manifolds fibering over the circle (as long as $\beta_1(M^3) > 2)$ such that $M^3$ fibers $\Sigma_h \to M^3 \to S^1$ for infinitely many $h$, but finitely many for any fixed $h$.
 
-How do you get an invariant out of this? Given two 3-manifolds that fiber over the circle, each with a monodromy in the mapping class group. Are they conjugate in the mapping class group? If so, then the manifolds are the same. If not, the bundles are not isomorphic, *but* they could be homeomorphic in some accidental different way.
+How do you get an invariant out of this? 
+Given two 3-manifolds that fiber over the circle, each with a monodromy in the mapping class group.
+Are they conjugate in the mapping class group? 
+If so, then the manifolds are the same. 
+If not, the bundles are not isomorphic, *but* they could be homeomorphic in some accidental different way.
 
-How to solve: the [Thurston norm](Thurston%20norm) is computable. Need to enumerate all the ways of [fibering](fibering), and find the minimal genus fibering. (Should be the same!)
+How to solve: the [Thurston norm](Thurston%20norm) is computable. Need to enumerate all the ways of [fibering](fibering), and find the minimal genus fibering. 
+(Should be the same!) 
 
-Check how many ways there are of fibering. Then check, for each fibering, are the monodromies the same? At least one needs to be the same to be homeomorphic.
+Check how many ways there are of fibering. 
+Then check, for each fibering, are the monodromies the same? 
+At least one needs to be the same to be homeomorphic.
 
 ## Characteristic Classes
 
-For suitably nice spaces, given by a mapping `
-<span class="math display">
-\begin{align*}
-\Sigma_g \to E \xrightarrow{\pi} B \iff c(E \xrightarrow{\pi} B) \in H^i(B)
-\end{align*}
-<span>`{=html}
+For suitably nice spaces, given by a mapping
+$$
+\Sigma_g \to E \mapsvia{\pi} B \iff c(E \mapsvia{\pi} B) \in H^i(B)
+$$
 
-that is natural with respect to pullbacks; i.e. take
+that is natural with respect to pullbacks; i.e. take
 
-`<p style="text-align:center;"> <img class="tikzcd" src="figures/a412dd75675345122cc835af370ed0356c1625db.svg"></p>`{=html}
+\begin{tikzcd}
+E' \arrow[rr, "\tilde f"] \arrow[dd, "\pi'"] &  & E \arrow[dd, "\pi"] \\
+ &  &  \\
+B' \arrow[rr, "f" description] &  & B
+\end{tikzcd}
 
-and require that `
-<span class="math display">
-\begin{align*}
-\tilde {f^*}(c(E \xrightarrow{\pi} B) = c(\tilde {f^*}(E \xrightarrow{\pi} B)).
-\end{align*}
-<span>`{=html}
+and require that
+$$
+\tilde {f^*}(c(E \mapsvia{\pi} B) = c(\tilde {f^*}(E \mapsvia{\pi} B)).
+$$
 
-Any [[characteristic class | ../Unsorted/characteristic%20class.html]] is just an element of $H^*(\operatorname{BDiff}^+ \Sigma_g) = H^*(\operatorname{Mod} \Sigma_g)$, since every bundle will be a pullback of the [universal bundle](universal%20bundle).
+Any [characteristic class](../Unsorted/characteristic%20class.md) is just an element of $H^*(\operatorname{BDiff}^+ \Sigma_g) = H^*(\operatorname{Mod} \Sigma_g)$, since every bundle will be a pullback of the [universal bundle](universal%20bundle).
 
 Lots of papers about the [stable cohomology](stable%20cohomology) of the mapping class group, given by taking $g$ big enough. We know $\chi$ of the mapping class group, it grows superexponentially and we know polynomially-many. No known unstable classes in genus 5 or higher!!
 
 What do we know?
 
--   $H^1(\operatorname{Mod} \Sigma_g; {\mathbb{Q}}) = 0$
--   Elements of $H^2(\operatorname{Mod} \Sigma_g; {\mathbb{Q}})$: some known cocycles.
+- $H^1(\operatorname{Mod} \Sigma_g; \QQ) = 0$
+- Elements of $H^2(\operatorname{Mod} \Sigma_g; \QQ)$: some known cocycles.
 
 ## The "Signature Cocycle"
 
 Any 2-cycle (for any space) will be homologous to the image of a map $f$ of a surface into that space. Given blah, pullback the bundle over $\operatorname{BDiff}$:
 
-`<p style="text-align:center;"> <img class="tikzcd" src="figures/d3d5fca033cd4f394dd275c6a57f3b43f8a96d3e.svg"></p>`{=html}
+\begin{tikzcd}
+ &  & \Sigma_g \arrow[rr] &  & T \arrow[dd] \\
+ &  &  &  &  \\
+\Sigma_g \arrow[rr] \arrow[rruu, dotted] &  & M^4 \arrow[dd] \arrow[rruu, dotted] &  & \operatorname{BDiff}^+ \Sigma_g \\
+ &  &  &  &  \\
+ &  & \Sigma_h \arrow[rruu, "f" description] &  &
+\end{tikzcd}
 
-Take the signature of $M_4$ (where you use the [[intersection pairing](intersection%20pairing) on $H_2$, take the [signature](../Unsorted/signature.md) of that [quadratic form | ../Unsorted/quadratic%20form.html]]). Using Novikov additivity for signature, this satisfies the cocycle condition and finally yields a number!
+Take the signature of $M_4$ (where you use the [intersection pairing](intersection%20pairing) on $H_2$, take the [signature](../Unsorted/signature.md) of that [quadratic form](../Unsorted/quadratic%20form.md)). Using Novikov additivity for signature, this satisfies the cocycle condition and finally yields a number!
 
 ## Another Cocycle
 
-Look at the vertical bundle over $T$, you get ${\mathbb{R}}^2 \to E \to T$.
+Look at the vertical bundle over $T$, you get $\RR^2 \to E \to T$.
 
 > Note: can see this bundle by looking at moduli space of Riemann surfaces $\mathcal{M}_g$, covered by $\mathcal{M}_g^*$ with fiber $\Sigma_g$. There is a vertical bundle over this, everything that is tangent to the fiber, which is a 2-plane bundle over the covering space.
 
-So look at the [[Euler class | ../Unsorted/Euler%20class.html]] $e\in H^2(T)$, take so-called "MMM class". How to get a cocycle? Can try integrating over fiber, so `
-<span class="math display">
-\begin{align*}
-e_i = \int_{\Sigma_g} e^{i+1} \in H^{2i}(\operatorname{Mod} \Sigma_g; {\mathbb{Q}}).
-\end{align*}
-<span>`{=html}
+So look at the [Euler class](../Unsorted/Euler%20class.md) $e\in H^2(T)$, take so-called "MMM class". How to get a cocycle? Can try integrating over fiber, so
+$$
+e_i = \int_{\Sigma_g} e^{i+1} \in H^{2i}(\operatorname{Mod} \Sigma_g; \QQ).
+$$
 
-> Note: the [[moduli space | ../Unsorted/moduli%20space.html]] is a [Kähler Manifold](Kähler%20Manifold), so you get the Weil-Peterson 2-form which is the [Kähler class](Kähler%20class) in $H^2$.
+> Note: the [moduli space](../Unsorted/moduli%20space.md) is a [Kähler Manifold](Kähler%20Manifold), so you get the Weil-Peterson 2-form which is the [Kähler class](Kähler%20class) in $H^2$.
 
-**Theorem (Harrer, 1980s):** $H^2(\operatorname{Mod}(\Sigma)g; {\mathbb{R}}) = {\mathbb{R}}$, which is one-dimensional! So all of these classes are scalar multiples of each other - and in fact, sometimes not rational multiples, so sometimes you get interesting number-theoretic quantities like $\frac {\pi^2} 6$.
+**Theorem (Harrer, 1980s):**
+$H^2(\operatorname{Mod}(\Sigma)g; \RR) = \RR$, which is one-dimensional! 
+So all of these classes are scalar multiples of each other - and in fact, sometimes not rational multiples, so sometimes you get interesting number-theoretic quantities like $\frac {\pi^2} 6$.
 
-See book with Dan Margalit: all of this lives in the group $\operatorname{Mod} \Sigma_g \hookrightarrow\operatorname{Homeo}^+(S^1)$
+See book with Dan Margalit: all of this lives in the group $\operatorname{Mod} \Sigma_g \injects \operatorname{Homeo}^+(S^1)$
+

@@ -1,23 +1,8 @@
 ---
 date: 2021-04-26
-tags:
-- Unfiled
+tags: 
+  - Unfiled
 ---
-
--   [What is the difference between low and high dimensional topology?](#what-is-the-difference-between-low-and-high-dimensional-topology)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # What is the difference between low and high dimensional topology?
 
@@ -27,4 +12,4 @@ The distinction is because surgery theory works in dimension 5 and above (in fac
 
 The precise reason for the difference at dimension 5 is because the Whitney embedding theorem, the key technical trick which underlies surgery theory, requires 2+1 dimensions.
 
-Low-dimensional topology is strongly geometric, as reflected in the uniformization theorem in 2 dimensions -- every surface admits a constant curvature metric; geometrically, it has one of 3 possible geometries: positive curvature/spherical, zero curvature/flat, negative curvature/hyperbolic -- and the geometrization theorem in 3 dimensions -- every 3-manifold can be cut into pieces, each of which has one of 8 possible geometries.
+Low-dimensional topology is strongly geometric, as reflected in the uniformization theorem in 2 dimensions – every surface admits a constant curvature metric; geometrically, it has one of 3 possible geometries: positive curvature/spherical, zero curvature/flat, negative curvature/hyperbolic – and the geometrization theorem in 3 dimensions – every 3-manifold can be cut into pieces, each of which has one of 8 possible geometries.

@@ -1,14 +1,1 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-An **affine scheme** $X\in {\mathsf{Sch}}({\mathsf{Aff}})$ is a locally ringed space $X\underset{\mathsf{RingSp}}{\cong}\operatorname{Spec}R$ for some $R\in \mathsf{CRing}$.
+An **affine scheme**  $X\in \Sch(\Aff)$ is a locally ringed space $X\congas{\Ringedspace}\spec R$ for some $R\in \CRing$. 
