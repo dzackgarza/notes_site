@@ -1,3 +1,17 @@
 ---
-aliases: ["contractible"]
+aliases:
+- contractible
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+

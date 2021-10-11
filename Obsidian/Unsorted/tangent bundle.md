@@ -1,8 +1,23 @@
 ---
-aliases: ["tangent space", "cotangent space", "cotangent bundle"]
+aliases:
+- tangent space
+- cotangent space
+- cotangent bundle
 ---
 
 
-:::{.remark}
+
+
+
+
+
+
+
+
+
+
+
+
+::: {.remark .proofenv}
 A [vector%20field](vector%20field) on $M$.
 :::

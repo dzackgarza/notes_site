@@ -1,3 +1,18 @@
 ---
-aliases: ["Seiberg-Witten theory", "Seiberg-Witten invariants"]
+aliases:
+- Seiberg-Witten theory
+- Seiberg-Witten invariants
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+

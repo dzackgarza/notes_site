@@ -1,1 +1,14 @@
-- $n$ ODE IVPs for $M^n$, luckily has existence/uniquness
+
+
+
+
+
+
+
+
+
+
+
+
+
+-   $n$ ODE IVPs for $M^n$, luckily has existence/uniquness

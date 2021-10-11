@@ -1,5 +1,20 @@
 ---
-aliases: ["local field", "local fields"]
+aliases:
+- local field
+- local fields
 ---
 
-Completion of $K\in \Field$ with respect to a valuation?
+
+
+
+
+
+
+
+
+
+
+
+
+
+Completion of $K\in \mathsf{Field}$ with respect to a valuation?
