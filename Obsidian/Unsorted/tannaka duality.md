@@ -1,1 +1,14 @@
-Tannaka duality for classifying [Representation%20theory.md](Representation%20theory.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tannaka duality for classifying [[Representation%20theory.md | Representation%20theory.html]]

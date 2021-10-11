@@ -1,3 +1,19 @@
 ---
-aliases: ["section", "global section", "local section"]
+aliases:
+- section
+- global section
+- local section
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+

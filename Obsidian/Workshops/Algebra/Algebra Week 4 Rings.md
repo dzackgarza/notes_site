@@ -2,14 +2,29 @@
 title: Algebra Qual Prep Week 4
 ---
 
+-   [Week 4: Rings](#week-4-rings)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Week 4: Rings
 
-- Morphisms, Ideals, quotients, zero divisors, isomorphism theorems, CRT
-- Irreducible and prime elements, nilpotent, units
-- Radical, nilradical, spec and maxspec
-- Special types: domains, integral domains, Euclidean ⇒ PID ⇒ UFD ⇒?, Dedekind domains, Noetherian, Artinian
-- Zorn's lemma arguments
-- Bonus optional stuff: localization
+-   Morphisms, Ideals, quotients, zero divisors, isomorphism theorems, CRT
+-   Irreducible and prime elements, nilpotent, units
+-   Radical, nilradical, spec and maxspec
+-   Special types: domains, integral domains, Euclidean ⇒ PID ⇒ UFD ⇒?, Dedekind domains, Noetherian, Artinian
+-   Zorn's lemma arguments
+-   Bonus optional stuff: localization
 
 ![Workshop%20Materials%2022af9a14367c44e585cb4aefe9e11862/Untitled%2015.png](_attachments/Untitled%2015.png)
 
@@ -23,9 +38,8 @@ Prove that a commutive ring with unit is a field if and only if its only ideals 
 
 ![Workshop%20Materials%2022af9a14367c44e585cb4aefe9e11862/Untitled%2019.png](_attachments/Untitled%2019.png)
 
-Show the irreducibility criterion for polynomials f ∈ k[x] of degree 2 or 3: such a polynomial is irreducible iff it has no roots in the field k
+Show the irreducibility criterion for polynomials f ∈ k\[x\] of degree 2 or 3: such a polynomial is irreducible iff it has no roots in the field k
 
 ![Workshop%20Materials%2022af9a14367c44e585cb4aefe9e11862/Untitled%2020.png](_attachments/Untitled%2020.png)
 
 ![Workshop%20Materials%2022af9a14367c44e585cb4aefe9e11862/Untitled%2021.png](_attachments/Untitled%2021.png)
-

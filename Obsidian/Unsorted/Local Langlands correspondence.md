@@ -1,3 +1,17 @@
 ---
-aliases: ["local Langlands"]
+aliases:
+- local Langlands
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+

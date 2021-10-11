@@ -1,86 +1,110 @@
 ---
 date: 2021-04-26
-tags: 
-  - Unfiled
+tags:
+- Unfiled
 ---
 
-Tags: #papers #reading
+-   [Algebraic Topology](#algebraic-topology)
+-   [Algebraic Geometry](#algebraic-geometry)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tags: \#papers \#reading
 
 > And overall, read classical papers by Adams, Pontryagin, Quillen, Serre, Sullivan, Thom...John Francis has a list of classical papers for the Kan seminar on his homepage.
 
 # Algebraic Topology
 
-- Algebraic Topology, The Kan Seminar
-  <https://ocw.mit.edu/courses/mathematics/18-915-graduate-topology-seminar-kan-seminar-fall-2014/reading-list/list-of-possible-papers/>
-  
-  [https://math.vanderbilt.edu/bohmanar/literature.pdf](https://math.vanderbilt.edu/bohmanar/literature.pdf)
+-   Algebraic Topology, The Kan Seminar <https://ocw.mit.edu/courses/mathematics/18-915-graduate-topology-seminar-kan-seminar-fall-2014/reading-list/list-of-possible-papers/>
 
-Serre, J. -P. "[http://dx.doi.org/10.1007/BF02564562)." _Commentarii Mathematici Helvetici_ 27, no. 1 (1953](http://dx.doi.org/10.1007/BF02564562)."%20_Commentarii%20Mathematici%20Helvetici_%2027,%20no.%201%20(1953): 198–232.
+    <https://math.vanderbilt.edu/bohmanar/literature.pdf>
 
-Thom, R. "[http://dx.doi.org/10.1007/BF02566923)." _Commentarii Mathematici Helvetici_ 28 (1954](http://dx.doi.org/10.1007/BF02566923)."%20_Commentarii%20Mathematici%20Helvetici_%2028%20(1954): 17–86.
+Serre, J. -P. "[http://dx.doi.org/10.1007/BF02564562).\" *Commentarii Mathematici Helvetici* 27, no. 1 (1953](http://dx.doi.org/10.1007/BF02564562)."%20_Commentarii%20Mathematici%20Helvetici\_%2027,%20no.%201%20(1953): 198--232.
 
-Milnor, J. W. "On the Construction FK." In _Algebraic Topology: A Student's Guide (London Mathematical Society Lecture Note)_. Vol. 4. Cambridge University Press, 1972, pp. 119–36. ISBN: 9780521080767.
+Thom, R. "[http://dx.doi.org/10.1007/BF02566923).\" *Commentarii Mathematici Helvetici* 28 (1954](http://dx.doi.org/10.1007/BF02566923)."%20_Commentarii%20Mathematici%20Helvetici\_%2028%20(1954): 17--86.
 
-———. "[http://www.jstor.org/stable/1969983)." _Annals of Mathematics_ 64, no. 2 (1956](http://www.jstor.org/stable/1969983)."%20_Annals%20of%20Mathematics_%2064,%20no.%202%20(1956): 399–405.
+Milnor, J. W. "On the Construction FK." In *Algebraic Topology: A Student's Guide (London Mathematical Society Lecture Note)*. Vol. 4. Cambridge University Press, 1972, pp. 119--36. ISBN: 9780521080767.
 
-Milnor, J. W., and J. D. Stasheff. _Characteristic Classes_ _(Annals of Mathematics Studies)._ Vol. 76_._ Princeton University Press, 1974. ISBN: 9780691081229. \[[http://books.google.com/books?id=5zQ9AFk1i4EC&pg=PAfrontcover]]\]
+---------. "[http://www.jstor.org/stable/1969983).\" *Annals of Mathematics* 64, no. 2 (1956](http://www.jstor.org/stable/1969983)."%20_Annals%20of%20Mathematics\_%2064,%20no.%202%20(1956): 399--405.
 
-Milnor, J. W. "[http://www.jstor.org/stable/1969967)." _Annals of Mathematics_ 65, no. 2 (1957](http://www.jstor.org/stable/1969967)."%20_Annals%20of%20Mathematics_%2065,%20no.%202%20(1957): 357–62.
+Milnor, J. W., and J. D. Stasheff. *Characteristic Classes* *(Annals of Mathematics Studies).* Vol. 76\_.\_ Princeton University Press, 1974. ISBN: 9780691081229. `
+<span class="math display">
+\begin{align*}[http://books.google.com/books?id=5zQ9AFk1i4EC&pg=PAfrontcover]]\end{align*}
+<span>`{=html}
 
-Moore, J. C. "Semi-simplicial complexes and Postnikov systems." In _Symposium Internacional de Topologia Algebraica_. La Universidad Nacional Autonoma de Mexico y la UNESCO, 1958, pp. 232–47.
+Milnor, J. W. "[http://www.jstor.org/stable/1969967).\" *Annals of Mathematics* 65, no. 2 (1957](http://www.jstor.org/stable/1969967)."%20_Annals%20of%20Mathematics\_%2065,%20no.%202%20(1957): 357--62.
 
-Bott, R. "[http://www.jstor.org/stable/1970106)." _Annals of Mathematics_ 70, no. 2 (1959](http://www.jstor.org/stable/1970106)."%20_Annals%20of%20Mathematics_%2070,%20no.%202%20(1959): 313–37.
+Moore, J. C. "Semi-simplicial complexes and Postnikov systems." In *Symposium Internacional de Topologia Algebraica*. La Universidad Nacional Autonoma de Mexico y la UNESCO, 1958, pp. 232--47.
 
-Adams, J. F. "[http://www.jstor.org/stable/1970147)." _Annals of Mathematics_ 72, no. 1 (1960](http://www.jstor.org/stable/1970147)."%20_Annals%20of%20Mathematics_%2072,%20no.%201%20(1960): 20–104.
+Bott, R. "[http://www.jstor.org/stable/1970106).\" *Annals of Mathematics* 70, no. 2 (1959](http://www.jstor.org/stable/1970106)."%20_Annals%20of%20Mathematics\_%2070,%20no.%202%20(1959): 313--37.
 
-———. "[http://www.jstor.org/stable/1970213)." _Annals of Mathematics_ 75, no. 3 (1962](http://www.jstor.org/stable/1970213)."%20_Annals%20of%20Mathematics_%2075,%20no.%203%20(1962): 603–32.
+Adams, J. F. "[http://www.jstor.org/stable/1970147).\" *Annals of Mathematics* 72, no. 1 (1960](http://www.jstor.org/stable/1970147)."%20_Annals%20of%20Mathematics\_%2072,%20no.%201%20(1960): 20--104.
 
-Brown, E. H., Jr.  "[http://www.jstor.org/stable/1970209)." _Annals of Mathematics_ 75, no. 3 (1962](http://www.jstor.org/stable/1970209)."%20_Annals%20of%20Mathematics_%2075,%20no.%203%20(1962): 467–84.
+---------. "[http://www.jstor.org/stable/1970213).\" *Annals of Mathematics* 75, no. 3 (1962](http://www.jstor.org/stable/1970213)."%20_Annals%20of%20Mathematics\_%2075,%20no.%203%20(1962): 603--32.
 
-Kervaire, M. A., and J. W. Milnor. "[http://www.jstor.org/stable/1970128)." _Annals of Mathematics_ 77, no. 3 (1963](http://www.jstor.org/stable/1970128)."%20_Annals%20of%20Mathematics_%2077,%20no.%203%20(1963): 504–37.
+Brown, E. H., Jr.  "[http://www.jstor.org/stable/1970209).\" *Annals of Mathematics* 75, no. 3 (1962](http://www.jstor.org/stable/1970209)."%20_Annals%20of%20Mathematics\_%2075,%20no.%203%20(1962): 467--84.
 
-Atiyah, M. F. _K–theory_ _(Advanced Book Classics)_. 2nd ed. Notes by D. W. Anderson. Addison Wesley Longman Publishing Company, 1989. ISBN: 9780201093940.
+Kervaire, M. A., and J. W. Milnor. "[http://www.jstor.org/stable/1970128).\" *Annals of Mathematics* 77, no. 3 (1963](http://www.jstor.org/stable/1970128)."%20_Annals%20of%20Mathematics\_%2077,%20no.%203%20(1963): 504--37.
 
-Wall, C. T. C. "[http://www.jstor.org/stable/1970382)." _Annals of Mathematics_ 81, no. 1 (1965](http://www.jstor.org/stable/1970382)."%20_Annals%20of%20Mathematics_%2081,%20no.%201%20(1965): 56–69.
+Atiyah, M. F. *K--theory* *(Advanced Book Classics)*. 2nd ed. Notes by D. W. Anderson. Addison Wesley Longman Publishing Company, 1989. ISBN: 9780201093940.
 
-Adams, J. F. "[http://dx.doi.org/10.1016/0040-9383(66)90004-8)." _Topology_ 5, no. 1 (1966](http://dx.doi.org/10.1016/0040-9383(66)90004-8)."%20_Topology_%205,%20no.%201%20(1966): 21–71.
+Wall, C. T. C. "[http://www.jstor.org/stable/1970382).\" *Annals of Mathematics* 81, no. 1 (1965](http://www.jstor.org/stable/1970382)."%20_Annals%20of%20Mathematics\_%2081,%20no.%201%20(1965): 56--69.
 
-Adams, J. F., and M. F. Atiyah. [http://dx.doi.org/10.1093/qmath/17.1.31)." _The Quarterly Journal of Mathematics_ 17, no. 1 (1966](http://dx.doi.org/10.1093/qmath/17.1.31)."%20_The%20Quarterly%20Journal%20of%20Mathematics_%2017,%20no.%201%20(1966): 31–38.
+Adams, J. F. "[http://dx.doi.org/10.1016/0040-9383(66)90004-8).\" *Topology* 5, no. 1 (1966](http://dx.doi.org/10.1016/0040-9383(66)90004-8)."%20_Topology\_%205,%20no.%201%20(1966): 21--71.
 
-Quillen, D. G. _Homotopical Algebra (Lecture Notes in Mathematics)_. Vol. 43. Springer, 1967. ISBN: 9783540039143.
+Adams, J. F., and M. F. Atiyah. [http://dx.doi.org/10.1093/qmath/17.1.31).\" *The Quarterly Journal of Mathematics* 17, no. 1 (1966](http://dx.doi.org/10.1093/qmath/17.1.31).\"%20_The%20Quarterly%20Journal%20of%20Mathematics\_%2017,%20no.%201%20(1966): 31--38.
 
-Segal, G. "[http://dx.doi.org/10.1007/BF02684591)." __Publications Math´ematiques__ ___de__ I'lnstitut Hautes des E'tudes Scientifique_ 34, no. 1 (1968](http://dx.doi.org/10.1007/BF02684591)."%20__Publications%20Math´ematiques__%20___de__%20I'lnstitut%20Hautes%20des%20E'tudes%20Scientifique_%2034,%20no.%201%20(1968): 105–12.
+Quillen, D. G. *Homotopical Algebra (Lecture Notes in Mathematics)*. Vol. 43. Springer, 1967. ISBN: 9783540039143.
 
-Atiyah, M. F., and G. Segal. "Equivariant K-theory and Completion." _Journal of Differential Geometry_ 3, no. 1–2 (1969): 1–18.
+Segal, G. "[http://dx.doi.org/10.1007/BF02684591).\" **Publications Math´ematiques** ***de** I'lnstitut Hautes des E'tudes Scientifique* 34, no. 1 (1968](http://dx.doi.org/10.1007/BF02684591)."%20\_\_Publications%20Math´ematiques**%20**\_de\_\_%20I'lnstitut%20Hautes%20des%20E'tudes%20Scientifique\_%2034,%20no.%201%20(1968): 105--12.
 
-Adams, J. F. "Quillen's Work on Formal Groups and Complex Cobordism." In _Stable Homotopy and Generalised Homology_ _(Chicago Lectures in Mathematics)_. University of Chicago Press, 1995. ISBN: 9780226005249. \[reprint of the 1974 original\]
+Atiyah, M. F., and G. Segal. "Equivariant K-theory and Completion." *Journal of Differential Geometry* 3, no. 1--2 (1969): 1--18.
 
-Quillen, D. G. "[http://www.jstor.org/stable/1970770)." _Annals of Mathematics_ 94, no. 3 (1971](http://www.jstor.org/stable/1970770)."%20_Annals%20of%20Mathematics_%2094,%20no.%203%20(1971): 549–72.
+Adams, J. F. "Quillen's Work on Formal Groups and Complex Cobordism." In *Stable Homotopy and Generalised Homology* *(Chicago Lectures in Mathematics)*. University of Chicago Press, 1995. ISBN: 9780226005249. `
+<span class="math display">
+\begin{align*}reprint of the 1974 original\end{align*}
+<span>`{=html}
 
-May, J. P. _The Geometry of Iterated Loop Spaces_ _(Lectures Notes in Mathematics)._ Vol. 271. Springer-Verlag, 1972.
+Quillen, D. G. "[http://www.jstor.org/stable/1970770).\" *Annals of Mathematics* 94, no. 3 (1971](http://www.jstor.org/stable/1970770)."%20_Annals%20of%20Mathematics\_%2094,%20no.%203%20(1971): 549--72.
 
-Quillen, D. G. "[http://www.jstor.org/stable/1970825)." _Annals of Mathematics_ 96, no. 3 (1972](http://www.jstor.org/stable/1970825)."%20_Annals%20of%20Mathematics_%2096,%20no.%203%20(1972): 552–86.
+May, J. P. *The Geometry of Iterated Loop Spaces* *(Lectures Notes in Mathematics).* Vol. 271. Springer-Verlag, 1972.
 
-———. "Algebraic K–theory I." In __Higher K-Theories (_Lecture Notes in Mathematics)_.__ Vol. 341. Springer, 1973, pp. 85–147. ISBN: 9783540064343.
+Quillen, D. G. "[http://www.jstor.org/stable/1970825).\" *Annals of Mathematics* 96, no. 3 (1972](http://www.jstor.org/stable/1970825)."%20_Annals%20of%20Mathematics\_%2096,%20no.%203%20(1972): 552--86.
 
-Nishida, G. "[http://dx.doi.org/10.2969/jmsj/02540707)." _Journal of the Mathematical Society of Japan_ 25, no. 4 (1973](http://dx.doi.org/10.2969/jmsj/02540707)."%20_Journal%20of%20the%20Mathematical%20Society%20of%20Japan_%2025,%20no.%204%20(1973): 707–32.
+---------. "Algebraic K--theory I." In **Higher K-Theories (*Lecture Notes in Mathematics)*.** Vol. 341. Springer, 1973, pp. 85--147. ISBN: 9783540064343.
 
-Adams, J. F. _Stable Homotopy and Generalised Homology_ _(Chicago Lectures in Mathematics)_. University of Chicago Press, 1995. ISBN: 9780226005249. \[reprint of the 1974 original\]
+Nishida, G. "[http://dx.doi.org/10.2969/jmsj/02540707).\" *Journal of the Mathematical Society of Japan* 25, no. 4 (1973](http://dx.doi.org/10.2969/jmsj/02540707)."%20_Journal%20of%20the%20Mathematical%20Society%20of%20Japan\_%2025,%20no.%204%20(1973): 707--32.
 
-Segal, G. "[http://dx.doi.org/10.1016/0040-9383(74)90022-6)." _Topology_ 13, no. 3 (1974](http://dx.doi.org/10.1016/0040-9383(74)90022-6)."%20_Topology_%2013,%20no.%203%20(1974): 293–312.
+Adams, J. F. *Stable Homotopy and Generalised Homology* *(Chicago Lectures in Mathematics)*. University of Chicago Press, 1995. ISBN: 9780226005249. `
+<span class="math display">
+\begin{align*}reprint of the 1974 original\end{align*}
+<span>`{=html}
 
-Bousfield, A. K. "[http://dx.doi.org/10.1016/0040-9383(75)90023-3)." _Topology_ 14, no. 2 (1975](http://dx.doi.org/10.1016/0040-9383(75)90023-3)."%20_Topology_%2014,%20no.%202%20(1975): 133–50.
+Segal, G. "[http://dx.doi.org/10.1016/0040-9383(74)90022-6).\" *Topology* 13, no. 3 (1974](http://dx.doi.org/10.1016/0040-9383(74)90022-6)."%20_Topology\_%2013,%20no.%203%20(1974): 293--312.
 
-Griffiths, P. A., and J. W. Morgan. _Rational Homotopy Theory and Differential Forms_. Birkh ̈auser, 1981. ISBN: 9783764330415.
+Bousfield, A. K. "[http://dx.doi.org/10.1016/0040-9383(75)90023-3).\" *Topology* 14, no. 2 (1975](http://dx.doi.org/10.1016/0040-9383(75)90023-3)."%20_Topology\_%2014,%20no.%202%20(1975): 133--50.
 
-Adams, J. F. "Prerequisites (on equivariant stable homotopy theory) for Carlsson's lecture." In _Algebraic Topology_ _(Lecture Notes in Mathematics)_. Vol. 1051. Springer-Verlag, 1984, pp. 483–532. ISBN: 9780387129020.
+Griffiths, P. A., and J. W. Morgan. *Rational Homotopy Theory and Differential Forms*. Birkh ̈auser, 1981. ISBN: 9783764330415.
 
-Waldhausen, F. "Algebraic K-theory of Spaces." In _Algebraic and Geometric Topology_ _(Lecture Notes in Mathematics)_. Vol. 1126. Springer, 1985, pp. 318–419. ISBN: 9783540152354.
+Adams, J. F. "Prerequisites (on equivariant stable homotopy theory) for Carlsson's lecture." In *Algebraic Topology* *(Lecture Notes in Mathematics)*. Vol. 1051. Springer-Verlag, 1984, pp. 483--532. ISBN: 9780387129020.
+
+Waldhausen, F. "Algebraic K-theory of Spaces." In *Algebraic and Geometric Topology* *(Lecture Notes in Mathematics)*. Vol. 1126. Springer, 1985, pp. 318--419. ISBN: 9783540152354.
 
 -   Atiyah, M. F. Thom complexes. Proc. London Math. Soc. (3) 11 1961 291--310.
 -   Adams, J. F. Vector fields on spheres. Ann. of Math. (2) 75 1962 603--632.
 -   Atiyah, M. F.; Segal, G. B. Equivariant $K$-theory and completion. J. Differential Geometry 3 1969 1--18.
--   Atiyah, M. F.; Singer, I. M. Index theory for skew-adjoint Fredholm operators. Inst. Hautes Études Sci. Publ. Math. No. 37 1969 5--26.
+-   Atiyah, M. F.; Singer, I. M. Index theory for skew-adjoint Fredholm operators. Inst. Hautes Études Sci. Publ. Math. No. 37 1969 5--26.
 -   Quillen, Daniel Elementary proofs of some results of cobordism theory using Steenrod operations. Advances in Math. 7 1971 29--56 (1971).
 -   Segal, Graeme Categories and cohomology theories. Topology 13 (1974), 293--312.
 -   Snaith, V. P. A stable decomposition of $\\Omega \\sp{n}S\\sp{n}X$. J. London Math. Soc. (2) 7 (1974), 577--583.
@@ -101,6 +125,7 @@ Waldhausen, F. "Algebraic K-theory of Spaces." In _Algebraic and Geometric Topol
 -   Aguilar, M. A.; Prieto, Carlos Quasifibrations and Bott periodicity. II Iberoamerican Conference on Topology and its Applications (Morelia, 1997). Topology Appl. 98 (1999), no. 1-3, 3--17.
 
 # Algebraic Geometry
+
 -   Abramovich, Temkin, and Włodarczyk: Functorial embedded resolution via weighted blowings up
 -   Araujo, Druel, Kovács: Cohomological characterizations of projective spaces and hyperquadrics.
 -   Bayer, Lahoz, Macrì, Nuer, Perry, and Stellari: Stability conditions in families
@@ -112,7 +137,7 @@ Waldhausen, F. "Algebraic K-theory of Spaces." In _Algebraic and Geometric Topol
 -   Bridgeland: Stability conditions on triangulated categories
 -   Cesnavicius and Scholze: Purity for flat cohomology
 -   Eisenbud and Schreyer: Betti numbers of graded modules and cohomology of vector bundles.
--   Esnault and Mehta: Simply connected projective manifolds in characteristic p>0 have no nontrivial stratified bundles
+-   Esnault and Mehta: Simply connected projective manifolds in characteristic p\>0 have no nontrivial stratified bundles
 -   Hassett, Pirutka, and Tschinkel: Stable rationality of quadric surface bundles over surfaces
 -   Huh: Milnor numbers of projective hypersurfaces and the chromatic polynomial of graphs.
 -   Kuznetsov, Homological projective duality
