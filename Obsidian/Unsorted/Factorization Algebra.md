@@ -1,1 +1,14 @@
-![](../attachments/Pasted%20image%2020211003180628.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+![[../attachments/Pasted%20image%2020211003180628.png]]

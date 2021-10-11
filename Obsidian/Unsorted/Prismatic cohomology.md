@@ -1,1 +1,14 @@
-http://www-personal.umich.edu/~bhattb/teaching/prismatic-columbia/lecture1-overview.pdf
+
+
+
+
+
+
+
+
+
+
+
+
+
+http://www-personal.umich.edu/\~bhattb/teaching/prismatic-columbia/lecture1-overview.pdf

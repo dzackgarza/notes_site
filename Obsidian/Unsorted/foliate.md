@@ -1,13 +1,30 @@
 ---
-aliases: ["foliated", "foliation"]
+aliases:
+- foliated
+- foliation
 ---
+
+-   [Definitions](#definitions)
+-   [Results](#results)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Definitions
 
-- Definition: ?
-- Leaves: ?
-
+-   Definition: ?
+-   Leaves: ?
 
 # Results
 
-Leaf spaces of a foliations are examples of [stack.md](stack.md)
+Leaf spaces of a foliations are examples of [[stack.md | stack.html]]
