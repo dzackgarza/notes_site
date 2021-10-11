@@ -17,6 +17,6 @@ done < <(find ./Obsidian -type f -iname "*.md" )
 
 rm tikz.*;
 find ./Obsidian -type f -iname '*.yaml' -exec rm {} \;
-sed -i '/file:\/\//d' ./Unsorted/**/*.md;
+sed -i '/file:\/\//d' ./Obsidian/**/*.md;
 
 emanote -L ./Obsidian gen ./site;
