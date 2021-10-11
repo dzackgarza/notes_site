@@ -1,14 +1,1 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
--   Tame inertia: ?
+- Tame inertia: ?

@@ -1,14 +1,1 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-See [[Langlands | Langlands.html]]?
+See [Langlands](Langlands.md)?

@@ -1,28 +1,12 @@
 ---
-aliases:
-- dual
-- duals
+aliases: ["dual", "duals"]
 ---
 
+For $(X, \tensor, \one)$ a [monoidal category](Monoidal%20category.md), right duals: existence of two morphisms
+\[
+\eps: X\dual \tensor X &\to \one &&\text{evaluation} \\
+\eta: \one &\to X\tensor X\dual &&\text{coevaluation}
+,\]
+along with some diagram.
 
-
-
-
-
-
-
-
-
-
-
-
-
-For $(X, \otimes, \one)$ a [[monoidal category | Monoidal%20category.html]], right duals: existence of two morphisms `
-<span class="math display">
-\begin{align*}
-{\varepsilon}: X {}^{ \vee }\otimes X &\to \one &&\text{evaluation} \\
-\eta: \one &\to X\otimes X {}^{ \vee }&&\text{coevaluation}
-,\end{align*}
-<span>`{=html} along with some diagram.
-
-Objects admitting a left and right dual admit a [[trace%20(monoidal%20categories).md | trace%20(monoidal%20categories).html]]
+Objects admitting a left and right dual admit a [trace%20(monoidal%20categories).md](trace%20(monoidal%20categories).md)

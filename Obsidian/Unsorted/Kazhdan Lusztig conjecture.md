@@ -1,19 +1,5 @@
 ---
-aliases:
-- Kazhdan Lusztig conjecture
+aliases: ["Kazhdan Lusztig conjecture"]
 ---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-Tags: \#conjectures
+Tags: #conjectures 

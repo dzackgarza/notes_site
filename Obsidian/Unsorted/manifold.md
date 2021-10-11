@@ -1,19 +1,5 @@
 ---
-aliases:
-- smooth manifold
+aliases: ["smooth manifold"]
 ---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
--   [[Manifolds%20Definitions.md | Manifolds%20Definitions.html]]
+- [Manifolds%20Definitions.md](Manifolds%20Definitions.md)

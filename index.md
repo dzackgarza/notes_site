@@ -19,12 +19,14 @@ template:
 
 :::{.flex .items-center .justify-center}
 
+- [[Quick_Notes|Daily Journal]]
 - [[Unsorted]]
-- [[Quick_Notes]]
-- [Browse by tag](-/tags)
 - [Browse all](-/all)
-- [[Blog]]
+- [Browse by tag](-/tags)
+
+
 :::
+
 
 
 ## Recent Posts
@@ -45,7 +47,11 @@ tag:blog/**
 ---
 
 
+
 ## Auxiliary Pages
+
+![[000_Home]]
+
 
 - [[000_Recommendations]]
 - [[000_Todo]]

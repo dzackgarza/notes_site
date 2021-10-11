@@ -1,17 +1,3 @@
 ---
-aliases:
-- Riemann surfaces
+aliases: ["Riemann surfaces"]
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-

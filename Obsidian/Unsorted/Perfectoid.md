@@ -1,18 +1,5 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
--   Perfectoid field
--   [[Smooth algebra | Smooth%20algebra.html]]
--   [Formal spectrum](Formal%20spectrum)
--   [Crystalline cohomology](Crystalline%20cohomology)
--   [[Prismatic cohomology | Prismatic%20cohomology.html]]
+- Perfectoid field
+- [Smooth algebra](Smooth%20algebra.md)
+- [Formal spectrum](Formal%20spectrum)
+- [Crystalline cohomology](Crystalline%20cohomology)
+- [Prismatic cohomology](Prismatic%20cohomology.md)

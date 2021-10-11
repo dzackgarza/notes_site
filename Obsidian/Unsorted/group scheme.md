@@ -1,17 +1,3 @@
 ---
-aliases:
-- Group schemes
+aliases: ["Group schemes"]
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-

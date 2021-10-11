@@ -1,18 +1,4 @@
 ---
-aliases:
-- THH
 date: 2021-04-26
+aliases: ["THH"]
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-

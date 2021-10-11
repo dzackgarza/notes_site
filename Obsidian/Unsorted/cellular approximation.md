@@ -1,14 +1,1 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-Any map $X \xrightarrow{f} Y$ between CW complexes is homotopic to a cellular map.
+Any map $X \mapsvia{f} Y$ between CW complexes is homotopic to a cellular map.

@@ -1,14 +1,1 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 Also cosimplicial objects?

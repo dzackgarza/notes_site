@@ -1,14 +1,1 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
--   Gives rise to Gysin sequences
+- Gives rise to Gysin sequences

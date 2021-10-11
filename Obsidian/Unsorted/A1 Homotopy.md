@@ -1,14 +1,1 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 https://dornsife.usc.edu/assets/sites/1176/docs/PDF/MATH599.S16.pdf

@@ -1,26 +1,12 @@
--   [Weil Conjectures](#weil-conjectures)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Weil Conjectures
 
-[[Unsorted/Subjects/Weil Conjectures References | Subjects/Weil%20Conjectures%20References.html]]
+[[Subjects/Weil Conjectures References]]
 
-[[2021-04-28_Weil_Conjectures_1 | To%20Review/2021-04-28_Weil_Conjectures_1.html]]
+[[To Review/2021-04-28_Weil_Conjectures_1]]
 
-[[2021-04-28_Weil_Conjectures_2 | To%20Review/2021-04-28_Weil_Conjectures_2.html]]
+[[To Review/2021-04-28_Weil_Conjectures_2]]
 
-[[2021-04-28_Weil_Conjectures_3 | To%20Review/2021-04-28_Weil_Conjectures_3.html]]
+[[To Review/2021-04-28_Weil_Conjectures_3]]
 
-[[2021-04-28_Weil_Conjectures_4 | To%20Review/2021-04-28_Weil_Conjectures_4.html]]
+[[To Review/2021-04-28_Weil_Conjectures_4]]
