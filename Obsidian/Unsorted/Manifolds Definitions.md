@@ -66,11 +66,16 @@ Note that vector fields can be *time-dependent* as a section of $T(M\times I) \t
 
 > Remark: Note that $X(p) \in T_pM$ is a tangent vector at each point, so we can ask that ${\frac{\partial \phi_t}{\partial t}\,} (p) = X(\phi_t(p))$, i.e. that the tangent vectors to a flow are given by a vector field. This works locally, and can be extended globally if $X$ is compactly supported.
 
-**Definition (Interior Product):** Let $M$ be a manifold and $X$ a vector field. The interior product is a map `\begin{align*}
+**Definition (Interior Product):** Let $M$ be a manifold and $X$ a vector field. The interior product is a map
+
+`
+<span class="math display">
+\begin{align*}
 \iota_X: \Omega^{p+1}(M)    &\to \Omega^p(M)    && & \\
 \omega                                      &   \mapsto \iota_X \omega: \Lambda^p TM \to {\mathbb{R}}\\
 & (X_1, \cdots, X_p) \to \omega (\mathbf{X}, X_1, \cdots, X_p)
-.\end{align*}`{=tex}
+\end{align*}
+<span>`{=html}
 
 > Note that this *contracts* a vector field with a differential form, coming from a natural pairing on $(i, j)$ tensors $V^{\otimes i}\otimes(V {}^{ \vee })^{\otimes j}$.
 

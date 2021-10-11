@@ -9,7 +9,7 @@ template:
       bodyClass: overflow-y-scroll 
 ---
 
-# Index
+# Notes Index
 
 ---
 
@@ -40,7 +40,6 @@ tag:blog/**
 
 :::
 
-
 :::
 
 ---
@@ -62,12 +61,5 @@ tag:blog/**
 <!--<iframe src="https://indify.co/widgets/live/countdown/MUneFNuacOw1xMbTKidz"></iframe>-->
 <!--<iframe src="https://indify.co/widgets/live/countdown/2laxmHoH1erwI6jfHCEj"></iframe>-->
 <!--:::-->
-
-
- 
-
-
-
-
 
 

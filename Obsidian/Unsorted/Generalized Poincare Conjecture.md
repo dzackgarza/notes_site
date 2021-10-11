@@ -43,7 +43,7 @@ See Algtop homotopy notes.
 
 # Other Topics
 
-![[_attachments/homology%20sphere.md#%5E8a317f]]
+![[Unsorted/homology%20sphere.md#%5E8a317f]]
 
 # Other Topics
 

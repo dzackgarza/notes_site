@@ -23,7 +23,7 @@ Main Contributions - Singularties: incomplete timelike [black%20hole](black%20ho
 
 History - 1915 [[General%20relativity.md | General%20relativity.html]] established by Einstein - 60s: collaborated with Penrose on singularity theory, he was in his mid-20s - Began developing amyotrophic lateral sclerosis (ALS) - All 3 major contributiosn from above by the mid 70s
 
-Tools Needed: - Vectors - Tensors - Manifolds - Tangent Spaces - [[curvature.md](curvature.md) - [parallel%20transport](parallel%20transport) - [Riemann%20curvature](Riemann%20curvature) - [covariant%20derivative.md](covariant%20derivative.md) - [metric%20tensor.md](metric%20tensor.md) - [Einstein%20equations.md](_attachments/Einstein%20equations.md) - The [geodesics.md | geodesics.html]]
+Tools Needed: - Vectors - Tensors - Manifolds - Tangent Spaces - [[curvature.md](curvature.md) - [parallel%20transport](parallel%20transport) - [Riemann%20curvature](Riemann%20curvature) - [covariant%20derivative.md](covariant%20derivative.md) - [metric%20tensor.md](metric%20tensor.md) - [Einstein%20equations.md](Unsorted/Einstein%20equations.md) - The [geodesics.md | geodesics.html]]
 
 # General vs Special Relativity
 
@@ -37,11 +37,11 @@ Story: Hawking did his thesis in the 60s - by then, GR was firmly established ba
 
 However, the same equation that yields these productions also admits singularities. Are these artifacts of the model, or of coordinate choices? Hawking set off to investigate these singularities.
 
-What is the math of GR? We take spacetime to be a 4 dimensional Riemannian manifold. Then equation the pivotal equation is the Einstein [[Einstein%20equations.md | _attachments/Einstein%20equations.html]]
+What is the math of GR? We take spacetime to be a 4 dimensional Riemannian manifold. Then equation the pivotal equation is the Einstein [[Einstein%20equations.md | Unsorted/Einstein%20equations.html]]
 
 A priori, this gives 16 tensor equations, each of which is a nonlinear PDE. Using some symmetry, it can be reduced to around 10 equations, but Einstein believed these would be impossible to analytically solve when he published them (\< 1915).
 
-![[_attachments/Einstein%20equations.md#%5E1adff7]]
+![[Unsorted/Einstein%20equations.md#%5E1adff7]]
 
 From this, it is clear that there are two potential singularities - areas where the metric seems to diverge.
 

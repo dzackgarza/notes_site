@@ -160,7 +160,7 @@ page:
     <link rel="stylesheet" href="https://dzackgarza.com/rawnotes/notes.css">
 
 template:
-  theme: red
+  theme: blue
   name: /templates/layouts/note
   layout:
     base:
