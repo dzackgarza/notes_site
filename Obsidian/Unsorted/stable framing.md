@@ -1,0 +1,17 @@
+---
+aliases:
+- stably framed
+---
+
+
+
+
+
+
+
+
+
+
+
+
+

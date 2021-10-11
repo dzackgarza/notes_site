@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+A [[colimit.md) indexed by a discrete category (that is, a set) is the same thing as a sum (coproduct | colimit.html]]%20indexed%20by%20a%20discrete%20category%20(that%20is,%20a%20set)%20is%20the%20same%20thing%20as%20a%20sum%20(coproduct).

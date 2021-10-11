@@ -1,0 +1,17 @@
+---
+aliases:
+- projective modules
+---
+
+
+
+
+
+
+
+
+
+
+
+
+

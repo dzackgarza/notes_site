@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+![[_attachments/Pasted%20image%2020210613150000.png) ![For $E$ an elliptic curve](_attachments/Pasted%20image%2020210613150012.png) ![](_attachments/Pasted%20image%2020210613150035.png) ![](_attachments/Pasted%20image%2020210613150055.png) ![](_attachments/Pasted%20image%2020210613150103.png) ![](_attachments/Pasted%20image%2020211005005832.png]]

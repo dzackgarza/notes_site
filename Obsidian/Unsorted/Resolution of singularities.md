@@ -1,0 +1,17 @@
+---
+aliases:
+- resolution of singularities
+---
+
+
+
+
+
+
+
+
+
+
+
+
+

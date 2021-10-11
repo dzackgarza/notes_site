@@ -1,0 +1,17 @@
+---
+aliases:
+- simplicial commutative ring
+---
+
+
+
+
+
+
+
+
+
+
+
+
+

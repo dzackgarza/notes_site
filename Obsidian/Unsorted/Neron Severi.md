@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+Describes algebraic equivalence classes of divisors on $X$

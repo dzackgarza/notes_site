@@ -1,0 +1,18 @@
+---
+aliases:
+- symmetric
+- symmetric monoidal
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
