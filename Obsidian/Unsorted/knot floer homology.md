@@ -1,17 +1,3 @@
 ---
-aliases:
-- HFK
+aliases: ["HFK"]
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-

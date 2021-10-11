@@ -1,17 +1,3 @@
 ---
-aliases:
-- exotic
+aliases: ["exotic"]
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,17 +1,4 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
--   [Hasse-Weil zeta function](Hasse-Weil%20zeta%20function)
--   [Arithmetic zeta function](Arithmetic%20zeta%20function)
--   [Dedekind zeta function](Dedekind%20zeta%20function)
--   [L function](L%20function)
+- [Hasse-Weil zeta function](Hasse-Weil%20zeta%20function)
+- [Arithmetic zeta function](Arithmetic%20zeta%20function)
+- [Dedekind zeta function](Dedekind%20zeta%20function)
+- [L function](L%20function)

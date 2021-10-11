@@ -1,17 +1,3 @@
 ---
-aliases:
-- natural
+aliases: ["natural"]
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 Maximal ideal?
 
-Using a [[valuation.md), \$v(`\pi`{=tex} | valuation.html]],%20$v(/pi) = 1$.
+Using a [valuation.md), $v(\pi](valuation.md),%20$v(/pi) = 1$.

@@ -1,19 +1,5 @@
 ---
-aliases:
-- L spaces
+aliases: ["L spaces"]
 ---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-Tags: \#conjectures
+Tags: #conjectures 

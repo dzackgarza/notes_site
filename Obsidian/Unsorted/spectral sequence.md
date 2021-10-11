@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
--   [Adams%20Spectral%20Sequence](Adams%20Spectral%20Sequence)
--   [[Atiyah%20Hirzebruch%20spectral%20sequence.md | Atiyah%20Hirzebruch%20spectral%20sequence.html]]
--   [[Adams-Novikov%20spectral%20sequence.md | Adams-Novikov%20spectral%20sequence.html]]
+- [Adams%20Spectral%20Sequence](Adams%20Spectral%20Sequence)
+- [Atiyah%20Hirzebruch%20spectral%20sequence.md](Atiyah%20Hirzebruch%20spectral%20sequence.md)
+- [Adams-Novikov%20spectral%20sequence.md](Adams-Novikov%20spectral%20sequence.md)

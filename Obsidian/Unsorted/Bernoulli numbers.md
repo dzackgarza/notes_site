@@ -1,17 +1,3 @@
 ---
-aliases:
-- Bernoulli
+aliases: ["Bernoulli"]
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-

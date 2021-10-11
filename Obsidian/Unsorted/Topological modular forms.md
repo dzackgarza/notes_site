@@ -1,18 +1,3 @@
 ---
-aliases:
-- tmf
-- TMF
+aliases: ["tmf", "TMF"]
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-

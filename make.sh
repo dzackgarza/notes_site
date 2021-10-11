@@ -3,6 +3,8 @@
 rm -rf ./site/*;
 rm -rf ./Obsidian/*;
 cp -r ~/Notes/Obsidian/* ./Obsidian;
+rm -rf ./site;
+mkdir ./site;
 #mkdir figures;
 
 #shopt -s globstar
@@ -17,6 +19,6 @@ done < <(find ./Obsidian -type f -iname "*.md" )
 
 rm tikz.*;
 find ./Obsidian -type f -iname '*.yaml' -exec rm {} \;
-sed -i '/file:\/\//d' ./Obsidian/**/*.md;
+#sed -i '/file:\/\//d' ./Obsidian/**/*.md;
 
 emanote -L ./Obsidian gen ./site;

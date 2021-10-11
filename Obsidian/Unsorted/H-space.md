@@ -1,14 +1,1 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
--   Slogan: a group up to homotopy
+- Slogan: a group up to homotopy

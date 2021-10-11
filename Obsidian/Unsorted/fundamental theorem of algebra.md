@@ -1,14 +1,2 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
--   ![[_attachments/FundThmAlg_DFile.pdf]]
+- ![](_attachments/FundThmAlg_DFile.pdf)

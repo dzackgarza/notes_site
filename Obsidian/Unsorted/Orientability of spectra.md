@@ -1,17 +1,3 @@
 ---
-aliases:
-- orientability
+aliases: ["orientability"]
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-

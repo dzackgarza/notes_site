@@ -1,14 +1,2 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-Tags: \#conjectures
+Tags: #conjectures 

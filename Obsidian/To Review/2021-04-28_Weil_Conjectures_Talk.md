@@ -1,464 +1,416 @@
 ---
-aspectratio: 169
+title: CRAG 
+subtitle: The Weil Conjectures 
 author: D. Zack Garza
-colortheme: default
 date: April 2020
+theme: Berkeley 
+colortheme: default 
 fontfamily: noto-sans
-fontsize: 9pt
+aspectratio: 169
 header-includes:
-- |
-  ```{=tex}
-  \usepackage{cmbright}
-  ```
-- |
-  ```{=tex}
-  \usepackage{caption}
-  ```
-subtitle: The Weil Conjectures
-theme: Berkeley
-title: CRAG
+- \usepackage{cmbright}
+- \usepackage{caption}
+fontsize: 9pt
 ---
 
-```{=tex}
-\usepackage{cmbright}
-```
+[Subjects/Weil Conjectures](Subjects/Weil%20Conjectures.md)
 
-```{=tex}
-\usepackage{caption}
-```
-
--   [A Quick Note](#a-quick-note)
--   [Generating Functions](#generating-functions)
-    -   [Varieties](#varieties)
-    -   [Point Counts](#point-counts)
-    -   [Why Generating Functions?](#why-generating-functions)
-    -   [Why Generating Functions?](#why-generating-functions-1)
-    -   [Exponential](#exponential)
--   [Zeta Functions](#zeta-functions)
-    -   [Definition: Local Zeta Function](#definition-local-zeta-function)
--   [Examples](#examples)
-    -   [Example: A Point](#example-a-point)
-    -   [Example: The Affine Line](#example-the-affine-line)
-    -   [Example: Affine m-space](#example-affine-m-space)
-    -   [Example: Projective Line](#example-projective-line)
--   [The Weil Conjectures](#the-weil-conjectures)
-    -   [Weil 1](#weil-1)
-    -   [Weil 2](#weil-2)
-    -   [Weil 3](#weil-3)
-    -   [Why is (3) called the "Riemann Hypothesis"?](#why-is-3-called-the-riemann-hypothesis)
-    -   [Why is (3) called the "Riemann Hypothesis"?](#why-is-3-called-the-riemann-hypothesis-1)
-    -   [Analogy to Riemann Hypothesis](#analogy-to-riemann-hypothesis)
-    -   [Analogy with Riemann Hypothesis](#analogy-with-riemann-hypothesis)
-    -   [Precise Relation](#precise-relation)
--   [Weil for Curves](#weil-for-curves)
-    -   [Weil for Curves](#weil-for-curves-1)
-    -   [The Projective Line](#the-projective-line)
-    -   [Elliptic Curves](#elliptic-curves)
-    -   [Elliptic Curves: Weil 1](#elliptic-curves-weil-1)
-    -   [Elliptic Curves: Weil 2 and 3](#elliptic-curves-weil-2-and-3)
-    -   [History](#history)
--   [Weil for Projective m-space](#weil-for-projective-m-space)
-    -   [Setup](#setup)
-    -   [q-Analogs and Grassmannians](#q-analogs-and-grassmannians)
-    -   [Proof continued](#proof-continued)
-    -   [Counting Points](#counting-points)
-    -   [Computing the Zeta Function](#computing-the-zeta-function)
-    -   [Checking the Weil Conjectures](#checking-the-weil-conjectures)
-    -   [Checking](#checking)
-    -   [An Easier Proof: "Paving by Affines"](#an-easier-proof-paving-by-affines)
-    -   [An Easier Proof: "Paving"](#an-easier-proof-paving)
--   [Grassmannians](#grassmannians)
-    -   [Motivation](#motivation)
-    -   [Grassmannian](#grassmannian)
--   [Weil's Proof](#weils-proof)
-    -   [Diagonal Hypersurfaces](#diagonal-hypersurfaces)
-    -   [A Diagonal Hypersurface](#a-diagonal-hypersurface)
-    -   [A Diagonal Hypersurface](#a-diagonal-hypersurface-1)
-    -   [A Diagonal Hypersurface](#a-diagonal-hypersurface-2)
-    -   [A Diagonal Hypersurface](#a-diagonal-hypersurface-3)
-    -   [A Diagonal Hypersurface](#a-diagonal-hypersurface-4)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[[Subjects/Weil Conjectures | Subjects/Weil%20Conjectures.html]]
-
-Tags: \#talk \#numbertheory \#algebraic_topology
+Tags: #talk #numbertheory #algebraic_topology 
 
 ## A Quick Note
 
--   A big thanks to Daniel Litt for organizing this reading seminar, recommending papers, helping with questions!!
+- A big thanks to Daniel Litt for organizing this reading seminar, recommending papers, helping with questions!!
 
--   Goals for this talk:
-
-    -   Understand the Weil conjectures,
-    -   Understand *why* the relevant objects should be interesting,
-    -   See elementary but concrete examples,
-    -   Count all of the things!
+- Goals for this talk: 
+  - Understand the Weil conjectures, 
+  - Understand *why* the relevant objects should be interesting,
+  - See elementary but concrete examples,
+  - Count all of the things!
 
 # Generating Functions
 
-## Varieties
 
-Fix $q$ a prime and ${\mathbb{F}}_q$ the (unique) finite field with $q$ elements, along with its (unique) degree $n$ extensions `
-<span class="math display">
-\begin{align*}
-{\mathbb{F}}_{q^n} = \left\{{x\in \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{F}}\mkern-1.5mu}\mkern 1.5mu_q {~\mathrel{\Big|}~}x^{q^n} - x = 0}\right\} \quad \forall~ n\in {\mathbb{Z}}^{\geq 1}
-\end{align*}
-<span>`{=html}
+## Varieties 
+
+Fix $q$ a prime and $\FF_q$ the (unique) finite field with $q$ elements, along with its (unique) degree $n$ extensions 
+$$
+\FF_{q^n} = \theset{x\in \bar \FF_q \suchthat x^{q^n} - x = 0} \quad \forall~ n\in \ZZ^{\geq 1}
+$$ 
 
 Definition (Projective Algebraic Varieties)
+:  Let $J = \gens{f_1, \cdots, f_M} \normal k[x_0, \cdots, x_n]$
+    be an ideal, then a *projective algebraic* variety $X\subset \PP^n_\FF$ can be described as 
+    $$
+    X = V(J) = \theset{\vector{x} \in \PP^n_{\FF_q} \suchthat f_1(\vector x) = \cdots = f_M(\vector x) = \vector 0}
+    $$
+    where $J$ is generated by *homogeneous* polynomials in $n+1$ variables, i.e. there is a fixed $d = \deg f_i \in \ZZ^{\geq 1}$ such that 
 
-:   Let $J = \left\langle{f_1, \cdots, f_M}\right\rangle {~\trianglelefteq~}k[x_0, \cdots, x_n]$ be an ideal, then a *projective algebraic* variety $X\subset {\mathbb{P}}^n_{\mathbb{F}}$ can be described as `
-    <span class="math display">
     \begin{align*}
-    X = V(J) = \left\{{\mathbf{x} \in {\mathbb{P}}^n_{{\mathbb{F}}_q} {~\mathrel{\Big|}~}f_1(\mathbf{x}) = \cdots = f_M(\mathbf{x}) = \mathbf{0}}\right\}
-    \end{align*}
-    <span>`{=html} where $J$ is generated by *homogeneous* polynomials in $n+1$ variables, i.e. there is a fixed $d = \deg f_i \in {\mathbb{Z}}^{\geq 1}$ such that
+    f(\vector x) = \sum_{\substack{\vector I = (i_1, \cdots, i_n) \\ \sum_j i_j = d}} \alpha_{\vector I} \cdot x_0^{i_1}\cdots x_n^{i_n} 
+    \qtext{ and } f(\lambda \cdot \vector x) = \lambda^d f(\vector x), \lambda \in \FF\units
+    .\end{align*}
 
-    `\begin{align*}
-    f(\mathbf{x}) = \sum_{\substack{\mathbf{I} = (i_1, \cdots, i_n) \\ \sum_j i_j = d}} \alpha_{\mathbf{I}} \cdot x_0^{i_1}\cdots x_n^{i_n} 
-    {\quad \operatorname{ and } \quad} f(\lambda \cdot \mathbf{x}) = \lambda^d f(\mathbf{x}), \lambda \in {\mathbb{F}}^{\times}
-    .\end{align*}`{=tex}
 
 ## Point Counts
 
--   For a fixed variety $X$, we can consider its ${\mathbb{F}}_q{\hbox{-}}$points $X({\mathbb{F}}_q)$.
-    -   Note that $\# X({\mathbb{F}}_q) < \infty$ is an integer
--   For any $L/{\mathbb{F}}_q$, we can also consider $X(L)$
-    -   For $[L: {\mathbb{F}}_q]$ finite, $\# X(L) < \infty$ and are integers for every such $n$.
-    -   In particular, we can consider the finite counts $\# X({\mathbb{F}}_{q^n})$ for any $n\geq 2$.
--   So we can consider the sequence
+- For a fixed variety $X$, we can consider its $\FF_q\dash$points $X(\FF_q)$.
+  - Note that $\# X(\FF_q) < \infty$ is an integer
+- For any $L/\FF_q$, we can also consider $X(L)$
+  - For $[L: \FF_q]$ finite, $\# X(L) < \infty$ and are integers for every such $n$.
+  - In particular, we can consider the finite counts $\# X(\FF_{q^n})$ for any $n\geq 2$.
+- So we can consider the sequence
 
-```{=tex}
 \small
-```
-`\begin{align*}
-[N_1, N_2, \cdots , N_n, \cdots ] \coloneqq[\# X({\mathbb{F}}_q), ~ \#X ({\mathbb{F}}_{q^2}), \cdots, ~\# X({\mathbb{F}}_{q^n}), \cdots]
-.\end{align*}`{=tex} `\normalsize`{=tex}
+\begin{align*}
+[N_1, N_2, \cdots , N_n, \cdots ] \definedas [\# X(\FF_q), ~ \#X (\FF_{q^2}), \cdots, ~\# X(\FF_{q^n}), \cdots]
+.\end{align*}
+\normalsize
 
--   Idea: associate some generating function (a formal power series) encoding the sequence, e.g. `
-    <span class="math display">
-    \begin{align*}F(z) = \sum_{n=1}^\infty N_n z^n = N_1z + N_2 z^2 + \cdots .\end{align*}
-    <span>`{=html}
+- Idea: associate some generating function (a formal power series) encoding the sequence, e.g. $$F(z) = \sum_{n=1}^\infty N_n z^n = N_1z + N_2 z^2 + \cdots .$$
 
 ## Why Generating Functions?
 
-For an *ordinary* [generating function](generating%20function), the coefficients are related to the real-analytic properties of $F$: `\begin{align*}
-[z^n] \cdot F(z) = [z^n]\cdot T_{F, z=0}(z) = \frac{1}{n!} \qty{{\frac{\partial }{\partial z}\,}}^{n} F(z) \Bigg\rvert_{z = 0} = N_n
-\end{align*}`{=tex}
+For an *ordinary* [generating function](generating%20function), the coefficients are related to the real-analytic properties of $F$:
+\begin{align*}
+[z^n] \cdot F(z) = [z^n]\cdot T_{F, z=0}(z) = \frac{1}{n!} \qty{\dd{}{z}}^{n} F(z) \Bigg\rvert_{z = 0} = N_n
+\end{align*}
 
-and also to the complex analytic properties: `\begin{align*}
-[z^n] \cdot F(z) \coloneqq\frac{1}{2\pi i} \oint_{{\mathbb{S}}^1} {F(z) \over z^{n+1}}~dz = \frac{1}{2\pi i} \oint_{{\mathbb{S}}^1} \frac{N_n}{z} ~dz = N_n
-.\end{align*}`{=tex}
+and also to the complex analytic properties:
+\begin{align*}
+[z^n] \cdot F(z) \definedas \frac{1}{2\pi i} \oint_{\SS^1} {F(z) \over z^{n+1}}~dz = \frac{1}{2\pi i} \oint_{\SS^1} \frac{N_n}{z} ~dz = N_n
+.\end{align*}
 
 > Using the Residue theorem. The latter form is very amenable to computer calculation.
 
 ## Why Generating Functions?
 
--   An OGF is an infinite series, which we can interpret as an analytic function ${\mathbb{C}}\to {\mathbb{C}}$
+- An OGF is an infinite series, which we can interpret as an analytic function $\CC\to \CC$ 
 
--   In nice situations, we can hope for a closed-form representation.
+- In nice situations, we can hope for a closed-form representation.
 
--   A useful example: by integrating a geometric series we can derive
+- A useful example: by integrating a geometric series we can derive
 
-`\begin{align*}
+\begin{align*}
 {1 \over 1-z} 
 &= \sum_{n=0}^\infty z^n  
 \hspace{5em} \qty{ = 1 + z + z^2 + \cdots} \\
 \implies \int {1 \over 1-z} 
 &= \int \sum_{n = 0}^\infty z^n \\
-&= \sum_{n=0}^\infty \int z^n \quad{for } {\left\lvert {z} \right\rvert} <  1 {\quad \operatorname{by uniform convergence} \quad} \\
+&= \sum_{n=0}^\infty \int z^n \quad{for } \abs{z} <  1 \qtext{by uniform convergence} \\
 &= \sum_{n=0}^\infty \frac{1}{n+1}z^{n+1} 
 \\
 \implies -\log\qty{1-z} 
 &= \sum_{n=1}^\infty {z^n \over n}  
 \hspace{5em} \qty{= z + {z^2 \over 2} + {z^3 \over 3} + \cdots} 
-.\end{align*}`{=tex}
+.\end{align*}
 
-## Exponential
+## Exponential 
 
--   For completeness, also recall that `
-    <span class="math display">
-    \begin{align*}
-    \exp(z) \coloneqq\sum_{n=0}^\infty {z^n \over n!}
-    \end{align*}
-    <span>`{=html}
+- For completeness, also recall that 
+$$
+\exp(z) \definedas \sum_{n=0}^\infty {z^n \over n!}
+$$
 
--   We can regard $\exp, \log$ as elements in the ring of formal power series ${\mathbb{Q}}[[z]]$.
+- We can regard $\exp, \log$ as elements in the ring of formal power series $\QQ[[z]]$.
 
--   In particular, for any $p(z) \in z\cdot {\mathbb{Q}}[[z]]$ we can consider $\exp(p(z)), \log(1 + p(z))$
+- In particular, for any $p(z) \in z\cdot \QQ[[z]]$ we can consider $\exp(p(z)), \log(1 + p(z))$
 
--   Since ${\mathbb{Q}}\hookrightarrow{\mathbb{C}}$, we can consider these as a complex-analytic functions, ask where they converge, etc.
+- Since $\QQ \injects \CC$, we can consider these as a complex-analytic functions, ask where they converge, etc.
+
 
 # Zeta Functions
 
 ## Definition: Local Zeta Function
 
-Problem: count points of a (smooth?) projective variety $X/{\mathbb{F}}$ in all (finite) degree $n$ extensions of ${\mathbb{F}}$.
+Problem: count points of a (smooth?) projective variety $X/\FF$ in all (finite) degree $n$ extensions of $\FF$.
 
 Definition (Local Zeta Function)
-
 :   The *local zeta function* of an algebraic variety $X$ is the following formal power series:
 
-    `\begin{align*}
-    Z_X(z) &= \exp\qty{ \sum_{n=1}^\infty N_n {z^n \over n} } \in {\mathbb{Q}}[[z]] {\quad \operatorname{where} \quad} N_n \coloneqq\# X({\mathbb{F}}_n)
-    .\end{align*}`{=tex}
+    \begin{align*}
+    Z_X(z) &= \exp\qty{ \sum_{n=1}^\infty N_n {z^n \over n} } \in \QQ[[z]] \qtext{where} N_n \definedas \# X(\FF_n)
+    .\end{align*}
 
-Note that `\begin{align*}
-z \qty{{\frac{\partial }{\partial z}\,}} \log Z_X(z) 
-&= z {\frac{\partial }{\partial z}\,} \qty{N_1z + N_2 {z^2 \over 2} + N_3 {z^3 \over 3} + \cdots}  \\
+Note that
+\begin{align*}
+z \qty{\dd{}{z}} \log Z_X(z) 
+&= z \dd{}{z} \qty{N_1z + N_2 {z^2 \over 2} + N_3 {z^3 \over 3} + \cdots}  \\
 &= z \qty{N_1 + N_2 z +  N_3 z^2 + \cdots } \hspace{5em} \text{(unif. conv.)}\\
 &= N_1 z + N_2 z^2 + \cdots
 = \sum_{n=1}^\infty N_n z^n 
-,\end{align*}`{=tex} which is an *ordinary* generating function for the sequence $(N_n)$.
+,\end{align*}
+which is an *ordinary* generating function for the sequence $(N_n)$.
 
 # Examples
 
 ## Example: A Point
 
-Take $X = {\operatorname{pt}}= V(\left\{{f(x) = x-c}\right\})/{\mathbb{F}}$ for $c$ a fixed element of ${\mathbb{F}}$. This yields a single point over ${\mathbb{F}}$, then `\begin{align*}
-\#X({\mathbb{F}}_q) &\coloneqq N_1 = 1 \\
-\#X({\mathbb{F}}_{q^2}) &\coloneqq N_2 = 1 \\
+Take $X = \pt = V(\theset{f(x) = x-c})/\FF$ for $c$ a fixed element of $\FF$.
+This yields a single point over $\FF$, then 
+\begin{align*}
+\#X(\FF_q) &\definedas N_1 = 1 \\
+\#X(\FF_{q^2}) &\definedas N_2 = 1 \\
 &\vdots \\
-\#X({\mathbb{F}}_{q^n}) &\coloneqq N_n = 1
-\end{align*}`{=tex}
+\#X(\FF_{q^n}) &\definedas N_n = 1
+\end{align*}
 
-and so `\begin{align*}
-Z_{\operatorname{pt}}(z) 
+and so 
+\begin{align*}
+Z_\pt(z) 
 &= \exp\qty{ 1\cdot z + 1 \cdot {z^2 \over 2} + 1 \cdot {z^3 \over 3} + \cdots } = \exp\qty{\sum_{n=1}^\infty {{z}^n \over n} }  \\
 &= \exp\qty{ -\log\qty{1-z} } \\
 &= {1 \over 1 - z} 
-.\end{align*}`{=tex}
+.\end{align*}
+
 
 > Notice: $Z$ admits a closed form **and** is a rational function.
 
 ## Example: The Affine Line
 
-Take $X = {\mathbb{A}}^1/{\mathbb{F}}$ the affine line over ${\mathbb{F}}$, then We can write `
-<span class="math display">
+Take $X = \AA^1/\FF$ the affine line over $\FF$, then
+We can write 
+$$
+\AA^1(\FF_{q^n}) = \theset{\vector x = [x_1] \suchthat x_1 \in \FF_{q^n}}
+$$ 
+as the set of one-component vectors with entries in $\FF_n$, so
 \begin{align*}
-{\mathbb{A}}^1({\mathbb{F}}_{q^n}) = \left\{{\mathbf{x} = [x_1] {~\mathrel{\Big|}~}x_1 \in {\mathbb{F}}_{q^n}}\right\}
-\end{align*}
-<span>`{=html} as the set of one-component vectors with entries in ${\mathbb{F}}_n$, so `\begin{align*}
-X({\mathbb{F}}_q) &= q \\
-X({\mathbb{F}}_{q^2}) &= q^2 \\
+X(\FF_q) &= q \\
+X(\FF_{q^2}) &= q^2 \\
 &\vdots \\
-X({\mathbb{F}}_{q^n}) &= q^n
-.\end{align*}`{=tex}
+X(\FF_{q^n}) &= q^n
+.\end{align*}
 
-Then `\begin{align*}
+Then
+\begin{align*}
 Z_X(z) 
 &= \exp\qty{\sum_{n=1}^\infty q^n {z^n \over n} }  \\
 &= \exp\qty{\sum_{n=1}^\infty {\qty{qz}^n \over n} }  \\
 &= \exp(-\log(1 - qz)) \\
 &= \frac 1 {1 - qz}
-.\end{align*}`{=tex}
+.\end{align*}
+
+
 
 ## Example: Affine m-space
 
-Take $X = {\mathbb{A}}^m/{\mathbb{F}}$ the affine line over ${\mathbb{F}}$, then We can write `
-<span class="math display">
-\begin{align*}
-{\mathbb{A}}^m({\mathbb{F}}_{q^n}) = \left\{{\mathbf{x} = [x_1, \cdots, x_m] {~\mathrel{\Big|}~}x_i \in {\mathbb{F}}_{q^n}}\right\}
-\end{align*}
-<span>`{=html} as the set of one-component vectors with entries in ${\mathbb{F}}_n$, so `\noindent`{=tex}
-```{=tex}
+Take $X = \AA^m/\FF$ the affine line over $\FF$, then
+We can write 
+$$
+\AA^m(\FF_{q^n}) = \theset{\vector x = [x_1, \cdots, x_m] \suchthat x_i \in \FF_{q^n}}
+$$ 
+as the set of one-component vectors with entries in $\FF_n$, so
+\noindent
 \begin{minipage}{.45\textwidth}
 \small
 \begin{align*}
-X({\mathbb{F}}_q) &= q^m \\
-X({\mathbb{F}}_{q^2}) &= (q^2)^m \\
+X(\FF_q) &= q^m \\
+X(\FF_{q^2}) &= (q^2)^m \\
 &\vdots \\
-X({\mathbb{F}}_{q^n}) &= q^{nm}
+X(\FF_{q^n}) &= q^{nm}
 .\end{align*}
    \normalsize
 \end{minipage}
 \begin{minipage}{.45\textwidth}
    \centering
     \includegraphics[width = .5\linewidth]{figures/image_2020-04-23-00-21-46.png}
-\captionof{figure}{${\mathbb{A}}^2 / {\mathbb{F}}_3 ~(q=3, m = 2, n = 1)$}
+\captionof{figure}{$\AA^2 / \FF_3 ~(q=3, m = 2, n = 1)$}
 \end{minipage}
-```
-Then `\small`{=tex} `\begin{align*}
+
+Then
+\small
+\begin{align*}
 Z_X(z) 
 &= \exp\qty{\sum_{n=1}^\infty q^{nm} {z^n \over n} }  
 = \exp\qty{\sum_{n=1}^\infty {\qty{q^m z}^n \over n} }  \\
 &= \exp(-\log(1 - q^mz)) \\
 &= \frac 1 {1 - q^mz}
-.\end{align*}`{=tex} `\normalsize`{=tex}
+.\end{align*}
+\normalsize
 
 ## Example: Projective Line
 
-Take $X = {\mathbb{P}}^1/{\mathbb{F}}$, we can still count by enumerating coordinates: `\small`{=tex} `\begin{align*}
-{\mathbb{P}}^1({\mathbb{F}}_{q^n}) 
-&= \left\{{[x_1: x_2] {~\mathrel{\Big|}~}x_1, x_2 \neq 0 \in {\mathbb{F}}_{q^n}}\right\}/\sim  
-~= \left\{{[x_1: 1] {~\mathrel{\Big|}~}x_1 \in {\mathbb{F}}_{q^n}}\right\} {\textstyle\coprod}\left\{{[1: 0]}\right\}
-.\end{align*}`{=tex} `\normalsize`{=tex}
+Take $X = \PP^1/\FF$, we can still count by enumerating coordinates:
+\small
+\begin{align*}
+\PP^1(\FF_{q^n}) 
+&= \theset{[x_1: x_2] \suchthat x_1, x_2 \neq 0 \in \FF_{q^n}}/\sim  
+~= \theset{[x_1: 1] \suchthat x_1 \in \FF_{q^n}} \disjoint \theset{[1: 0]}
+.\end{align*}
+\normalsize
 
 Thus
 
-`\noindent`{=tex}
-```{=tex}
+\noindent
 \begin{minipage}{.45\textwidth}
 \small
     \begin{align*}
-    X({\mathbb{F}}_q) &= q + 1\\
-    X({\mathbb{F}}_{q^2}) &= q^2 + 1 \\
+    X(\FF_q) &= q + 1\\
+    X(\FF_{q^2}) &= q^2 + 1 \\
     &\vdots \\
-    X({\mathbb{F}}_{q^n}) &= q^n + 1
+    X(\FF_{q^n}) &= q^n + 1
     .\end{align*}
     \normalsize
 \end{minipage}
 \begin{minipage}{.45\textwidth}
    \centering
     \includegraphics[width = .5\linewidth]{figures/image_2020-04-23-00-07-42.png}
-\captionof{figure}{${\mathbb{P}}^1 / {\mathbb{F}}_3 ~(q=3, n = 1)$}
+\captionof{figure}{$\PP^1 / \FF_3 ~(q=3, n = 1)$}
 \end{minipage}
-```
-Thus `\small`{=tex} `\begin{align*}
+
+Thus
+\small
+\begin{align*}
 Z_X(z) 
 &= \exp\qty{\sum_{n=1}^\infty \qty{q^n + 1} {z^n \over n} }  \\
 &= \exp\qty{\sum_{n=1}^\infty {q^n } {z^n \over n} + \sum_{n=1}^\infty 1 \cdot {z^n \over n}}\\
 &= {1 \over (1-qz)(1-z)}
-.\end{align*}`{=tex} `\normalsize`{=tex}
+.\end{align*}
+\normalsize
+
 
 # The Weil Conjectures
 
-## Weil 1
+##  Weil 1
 
 (Weil 1949)
 
-Let $X$ be a smooth projective variety of dimension $N$ over ${\mathbb{F}}_{q}$ for $q$ a prime, let $Z_X(z)$ be its zeta function, and define $\zeta_X(s) = Z_X(q^{-s})$.
+Let $X$ be a smooth projective variety of dimension $N$ over $\FF_{q}$ for $q$ a prime,  let $Z_X(z)$ be its zeta function, and define $\zeta_X(s) = Z_X(q^{-s})$. 
 
-1.  (Rationality)
+
+1. (Rationality) 
 
     $Z_X(z)$ is a rational function:
 
-    `\begin{align*}
-     Z_X(z) &= 
-     {p_1(z) \cdot p_3(z) \cdots p_{2N-1}(z) 
-     \over 
-     p_0(z) \cdot p_2(z) \cdots p_{2N}(z)} \in {\mathbb{Q}}(z),\quad\text{i.e. }\quad p_i(z) \in {\mathbb{Z}}[z] \\ \\
-     P_0(z) &= 1-z \\
-     P_{2N}(z) &= 1 - q^N z \\
-     P_j(z) &= \prod_{j=1}^{\beta_i} \qty{1 - a_{j, k} z} {\quad \operatorname{for some reciprocal roots} \quad} a_{j, k} \in {\mathbb{C}}
-     \end{align*}`{=tex} where we've factored each $P_i$ using its reciprocal roots $a_{ij}$.
+    \begin{align*}
+    Z_X(z) &= 
+    {p_1(z) \cdot p_3(z) \cdots p_{2N-1}(z) 
+    \over 
+    p_0(z) \cdot p_2(z) \cdots p_{2N}(z)} \in \QQ(z),\quad\text{i.e. }\quad p_i(z) \in \ZZ[z] \\ \\
+    P_0(z) &= 1-z \\
+    P_{2N}(z) &= 1 - q^N z \\
+    P_j(z) &= \prod_{j=1}^{\beta_i} \qty{1 - a_{j, k} z} \qtext{for some reciprocal roots} a_{j, k} \in \CC
+    \end{align*}
+    where we've factored each $P_i$ using its reciprocal roots $a_{ij}$.
 
-    `\small`{=tex} In particular, this implies the existence of a meromorphic continuation of the associated function $\zeta_X(s)$, which a priori only converges for $\Re(s)\gg 0$. This also implies that for $n$ large enough, $N_n$ satisfies a linear recurrence relation. `\normalsize`{=tex}
+    \small
+    In particular, this implies the existence of a meromorphic continuation of the associated function $\zeta_X(s)$, which a priori only converges for $\Re(s)\gg 0$.
+    This also implies that for $n$ large enough, $N_n$ satisfies a linear recurrence relation.
+    \normalsize
 
 ## Weil 2
 
-2.  (Functional Equation and Poincare Duality)
+2. (Functional Equation and Poincare Duality) 
 
-    Let $\chi(X)$ be the Euler characteristic of $X$, i.e. the self-intersection number of the diagonal embedding $\Delta \hookrightarrow X\times X$; then $Z_X(z)$ satisfies the following *functional equation*:
+    Let $\chi(X)$ be the Euler characteristic of $X$, i.e. the self-intersection number of the diagonal embedding $\Delta \injects X\cross X$; then $Z_X(z)$ satisfies the following *functional equation*:
 
-    `\begin{align*}
-     Z_X\qty{1 \over q^N z} = \pm \qty{q^{N \over 2} z}^{\chi(X)} ~~Z_X(z)
-     .\end{align*}`{=tex}
+    \begin{align*}
+    Z_X\qty{1 \over q^N z} = \pm \qty{q^{N \over 2} z}^{\chi(X)} ~~Z_X(z)
+    .\end{align*}
 
-    Equivalently, `\begin{align*}
-     \zeta_X(N-s) = \pm \qty{q^{\frac N 2 - s}}^{\chi(X)} ~\zeta_X(s)
-     .\end{align*}`{=tex}
+    Equivalently,
+    \begin{align*}
+    \zeta_X(N-s) = \pm \qty{q^{\frac N 2 - s}}^{\chi(X)} ~\zeta_X(s)
+    .\end{align*}
 
-    > `\small `{=tex}Note that when $N=1$, e.g. for a curve, this relates $\zeta_X(s)$ to $\zeta_X(1-s)$.`\normalsize`{=tex}
-
-    Equivalently, there is an involutive map on the (reciprocal) roots `\begin{align*}
-     z &\iff {q^N \over z} \\
-     \alpha_{j, k} &\iff \alpha_{2N-j, k}
-     \end{align*}`{=tex} which sends interchanges the coefficients in $p_j$ and $p_{2N-j}$.
+    > \small Note that when $N=1$, e.g. for a curve, this relates $\zeta_X(s)$ to $\zeta_X(1-s)$.\normalsize
+  
+    Equivalently, there is an involutive map on the (reciprocal) roots 
+    \begin{align*}
+    z &\iff {q^N \over z} \\
+    \alpha_{j, k} &\iff \alpha_{2N-j, k}
+    \end{align*}
+    which sends interchanges the coefficients in $p_j$ and $p_{2N-j}$.
 
 ## Weil 3
 
-3.  (Riemann Hypothesis)
+3. (Riemann Hypothesis)
 
-    The reciprocal roots $\alpha_{j,k}$ are *algebraic* integers (roots of some monic $p\in {\mathbb{Z}}[x]$) which satisfy `\begin{align*}
-     {\left\lvert {\alpha_{j,k}} \right\rvert}_{\mathbb{C}}= q^{j \over 2},  \quad\quad 1 \leq j \leq 2N-1,~ \forall k
-     .\end{align*}`{=tex}
+    The reciprocal roots $\alpha_{j,k}$ are *algebraic* integers (roots of some monic $p\in \ZZ[x]$) which satisfy 
+    \begin{align*}
+    \abs{\alpha_{j,k}}_\CC = q^{j \over 2},  \quad\quad 1 \leq j \leq 2N-1,~ \forall k
+    .\end{align*}
+  
 
-4.  (Betti Numbers)
 
-    If $X$ is a "good reduction mod $q$" of a nonsingular projective variety $\tilde X$ in characteristic zero, then the $\beta_i = \deg p_i(z)$ are the Betti numbers of the topological space $\tilde X({\mathbb{C}})$.
+4. (Betti Numbers)
+  
+    If $X$ is a "good reduction mod $q$" of a nonsingular projective variety $\tilde X$ in characteristic zero, then the $\beta_i = \deg p_i(z)$ are the Betti numbers of the topological space $\tilde X(\CC)$.
 
-Moral:
+Moral: 
 
--   The Diophantine properties of a variety's zeta function are governed by its (algebraic) topology.
--   Conversely, the analytic properties of encode a lot of geometric/topological/algebraic information.
+- The Diophantine properties of a variety's zeta function are governed by its (algebraic) topology.
+- Conversely, the analytic properties of encode a lot of geometric/topological/algebraic information.
 
 ## Why is (3) called the "Riemann Hypothesis"?
 
-Recall the Riemann zeta function is given by `\begin{align*}
+Recall the Riemann zeta function is given by
+\begin{align*}
 \zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s} = \prod_{p\text{ prime}} {1 \over 1 - p^{-s}}
-.\end{align*}`{=tex}
+.\end{align*}
 
-After modifying $\zeta$ to make it symmetric about $\Re(s) = \frac 1 2$ and eliminate the trivial zeros to obtain $\widehat{\zeta}(s)$, there are three relevant properties
+After modifying $\zeta$ to make it symmetric about $\Re(s) = \frac 1 2$ and eliminate the trivial zeros to obtain $\hat \zeta(s)$, there are three relevant properties
 
-1.  "Rationality": $\widehat{\zeta}(s)$ has a meromorphic continuation to ${\mathbb{C}}$ with simple poles at $s=0, 1$.
-2.  "Functional equation": $\widehat{\zeta}(1-s) = \widehat{\zeta}(s)$
-3.  "Riemann Hypothesis": The only zeros of $\widehat{\zeta}$ have $\Re(s) = \frac 1 2$.
+1. "Rationality": $\hat \zeta(s)$ has a meromorphic continuation to $\CC$ with simple poles at $s=0, 1$. 
+2. "Functional equation": $\hat \zeta(1-s) = \hat \zeta(s)$
+3. "Riemann Hypothesis": The only zeros of $\hat \zeta$ have $\Re(s) = \frac 1 2$.
+
 
 ## Why is (3) called the "Riemann Hypothesis"?
 
 Suppose it holds for some $X$. Use the facts:
 
-a.  ${\left\lvert {\exp\qty{z}} \right\rvert} = \exp\qty{\Re(z)}$ and
-b.  $a^z \coloneqq\exp\qty{z ~\operatorname{Log}(a)}$,
+a. $\abs{\exp\qty{z}} = \exp\qty{\Re(z)}$ and 
+b. $a^z \definedas \exp\qty{z ~\Log(a)}$,
 
-and to replace the polynomials $P_j$ with `\begin{align*}
-L_j(s) \coloneqq P_j(q^{-s}) = \prod_{k=1}^{\beta_j} \qty{1 - \alpha_{j, k} q^{-s}}
-.\end{align*}`{=tex}
+and to replace the polynomials $P_j$ with 
+\begin{align*}
+L_j(s) \definedas P_j(q^{-s}) = \prod_{k=1}^{\beta_j} \qty{1 - \alpha_{j, k} q^{-s}}
+.\end{align*}
+
 
 ## Analogy to Riemann Hypothesis
 
-Now consider the roots of $L_j(s)$: we have `\small`{=tex} `\begin{align*}
+Now consider the roots of $L_j(s)$: we have
+\small
+\begin{align*}
 L_j(s_0) = 0 
-\iff (1 - \alpha_{j, k} q^{-s}) &= 0 {\quad \operatorname{for some} \quad} k\\
+\iff (1 - \alpha_{j, k} q^{-s}) &= 0 \qtext{for some} k\\
 \iff q^{-s_0} &= {1 \over \alpha_{j, k}} \\
-\iff {\left\lvert {q^{-s_0}} \right\rvert} &= {\left\lvert {1 \over \alpha_{j, k}} \right\rvert} \quad\quad \stackrel{\text{\tiny by assumption}}{=} q^{ -{j \over 2}} \\ \\
-\iff q^{-\frac j 2} \stackrel{(a)}= \exp\qty{- \frac j 2  \cdot \operatorname{Log}(q)} &= {\left\lvert { \exp\qty{-s_0 \cdot \operatorname{Log}(q)} } \right\rvert} \\
-&\stackrel{(b)}= {\left\lvert { \exp\qty{-\qty{\Re(s_0) + i\cdot \Im(s_0)} \cdot \operatorname{Log}(q)} } \right\rvert}  \\
-&\stackrel{(a)}= \exp\qty{-\qty{\Re(s_0)} \cdot \operatorname{Log}(q)}  \\ \\
-\iff - \frac j 2 \cdot \operatorname{Log}(q) &= -\Re(s_0) \cdot \operatorname{Log}(q) {\quad \operatorname{by injectivity} \quad} \\
+\iff \abs{q^{-s_0}} &= \abs{1 \over \alpha_{j, k}} \quad\quad \stackrel{\text{\tiny by assumption}}{=} q^{ -{j \over 2}} \\ \\
+\iff q^{-\frac j 2} \stackrel{(a)}= \exp\qty{- \frac j 2  \cdot \Log(q)} &= \abs{ \exp\qty{-s_0 \cdot \Log(q)} } \\
+&\stackrel{(b)}= \abs{ \exp\qty{-\qty{\Re(s_0) + i\cdot \Im(s_0)} \cdot \Log(q)} }  \\
+&\stackrel{(a)}= \exp\qty{-\qty{\Re(s_0)} \cdot \Log(q)}  \\ \\
+\iff - \frac j 2 \cdot \Log(q) &= -\Re(s_0) \cdot \Log(q) \qtext{by injectivity} \\
 \iff \Re(s_0) = \frac j 2
-.\end{align*}`{=tex} `\normalsize`{=tex}
+.\end{align*}
+\normalsize
 
 ## Analogy with Riemann Hypothesis
 
-Roughly speaking, we can apply $\operatorname{Log}$ (a conformal map) to send the $\alpha_{j, k}$ to zeros of the $L_j$, this says that the zeros all must lie on the "critical lines" $\frac{j}{2}$.
+Roughly speaking, we can apply $\Log$ (a conformal map) to send the $\alpha_{j, k}$ to zeros of the $L_j$, this says that the zeros all must lie on the "critical lines" $\frac{j}{2}$.
 
-```{=tex}
 \begin{figure}[h]
 \centering
 \includegraphics[width = 1.0\textwidth]{figures/image_2020-04-23-02-26-27.png} 
 \end{figure}
-```
-In particular, the zeros of $L_1$ have real part $\frac 1 2$ (analogy: classical [[../Unsorted/RH | ../Unsorted/RH.html]]).
+
+In particular, the zeros of $L_1$ have real part $\frac 1 2$ (analogy: classical [../Unsorted/RH](../Unsorted/RH.md)).
 
 ## Precise Relation
 
--   Difficult to find in the literature!
--   Idea: make a similar definition for schemes, then take $X = \operatorname{Spec}{\mathbb{Z}}$.
--   Define the "reductions mod $p$" $X_p$ for closed points $p$.
--   Define the *local* zeta functions $\zeta_{X_p}(s) = Z_{X_p}(p^{-s})$.
--   (Potentially incorrect) Evaluate to find $Z_{X_p}(z) = {1 \over 1 - z}$.
--   Take a product over all closed points to define
+- Difficult to find in the literature! 
+- Idea: make a similar definition for schemes, then take $X = \spec \ZZ$.
+- Define the "reductions mod $p$" $X_p$ for closed points $p$.
+- Define the *local* zeta functions $\zeta_{X_p}(s) = Z_{X_p}(p^{-s})$.
+- (Potentially incorrect) Evaluate to find $Z_{X_p}(z) = {1 \over 1 - z}$.
+- Take a product over all closed points to define
 
-`\begin{align*}
+\begin{align*}
 L_X(s) 
 &= \prod_{p\text{ prime}} \zeta_{X_p}(p^{-s}) \\
 &= \prod_{p\text{ prime}} \qty{ 1 \over 1 - p^{-s}} \\
 &= \zeta(s)
-,\end{align*}`{=tex}
+,\end{align*}
 
 which is the Euler product expansion of the classical Riemann Zeta function.
 
@@ -466,477 +418,491 @@ which is the Euler product expansion of the classical Riemann Zeta function.
 
 # Weil for Curves
 
-## Weil for Curves
+## Weil for Curves 
 
-The Weil conjectures take on a particularly nice form for curves. Let $X/{\mathbb{F}}_q$ be a smooth projective curve of genus $g$, then
+The Weil conjectures take on a particularly nice form for curves.
+Let $X/\FF_q$ be a smooth projective curve of genus $g$, then
 
-1.  (Rationality) `
-    <span class="math display">
-    \begin{align*}Z_X(z) = {p_1(z) \over p_0(z) p_2(z)} = {p_1(z) \over (1-z)(1-qz)}\end{align*}
-    <span>`{=html}
-2.  (Functional Equation) `
-    <span class="math display">
-    \begin{align*}Z_X\qty{1 \over qz} = \qty{z\sqrt q}^{2-2g} Z_X(z)\end{align*}
-    <span>`{=html}
-3.  (Riemann Hypothesis) `
-    <span class="math display">
-    \begin{align*}p_1(z) = \prod_{i=1}^{\beta_1} (1 - a_iz ) {\quad \operatorname{where} \quad} {\left\lvert {a_i} \right\rvert} = \sqrt{q}\end{align*}
-    <span>`{=html}
-4.  (Betti Numbers) ${\mathcal{P}}_{\Sigma_g}(x) = 1 + 2g\cdot x + x^2 \implies \deg p_1 = \beta_1 = 2g$.
+1. (Rationality) $$Z_X(z) = {p_1(z) \over p_0(z) p_2(z)} = {p_1(z) \over (1-z)(1-qz)}$$
+2. (Functional Equation) $$Z_X\qty{1 \over qz} = \qty{z\sqrt q}^{2-2g} Z_X(z)$$
+3. (Riemann Hypothesis) $$p_1(z) = \prod_{i=1}^{\beta_1} (1 - a_iz ) \qtext{where} \abs{a_i} = \sqrt{q}$$
+4. (Betti Numbers) $\mcp_{\Sigma_g}(x) = 1 + 2g\cdot x + x^2 \implies \deg p_1 = \beta_1 = 2g$.
 
-```{=tex}
+
 \tiny
-```
-> ${\mathcal{P}}$ here is the Poincaré polynomial, the generating function for the Betti numbers. $\Sigma_g$ is the surface (real 2-dimensional smooth manifold) of genus $g$. `\normalsize`{=tex}
+> $\mcp$ here is the Poincaré polynomial, the generating function for the Betti numbers.
+> $\Sigma_g$ is the surface (real 2-dimensional smooth manifold) of genus $g$.
+\normalsize
 
 ## The Projective Line
 
-Recall $Z_{{\mathbb{P}}^1/{\mathbb{F}}_q}(z) = {1 \over (1-z)(1-qz)}$.
+Recall $Z_{\PP^1/\FF_q}(z) = {1 \over (1-z)(1-qz)}$.
 
-1.  Rationality: Clear!
+1. Rationality: Clear!
+2. Functional Equation: $g=0 \implies 2g-2 = 2$
+\begin{align*}
+Z_{\PP^1}\qty{{1 \over qz}}
+= {1 \over (1-{1 \over qz})(1 - {q \over qz}) }  
+= {qz^2 \over (1-z)(1-qz)} 
+= {\qty{\sqrt q z}^2 \over (1-z)(1-qz) }
+.\end{align*}
 
-2.  Functional Equation: $g=0 \implies 2g-2 = 2$ `\begin{align*}
-    Z_{{\mathbb{P}}^1}\qty{{1 \over qz}}
-    = {1 \over (1-{1 \over qz})(1 - {q \over qz}) }  
-    = {qz^2 \over (1-z)(1-qz)} 
-    = {\qty{\sqrt q z}^2 \over (1-z)(1-qz) }
-    .\end{align*}`{=tex}
+3. Riemann Hypothesis: Nothing to check (no $p_1(z)$)
+4. Betti numbers: Use the fact that $\mcp_{\CP^1} = 1 + 0\cdot x + x^2$, and indeed $\deg p_0 = \deg p_2 = 1,~ \deg p_1 = 0$.
 
-3.  Riemann Hypothesis: Nothing to check (no $p_1(z)$)
+> Note that even Betti numbers show up as degrees in the denominator, odd in the numerator.
+> Allows us to immediately guess the zeta function for $\PP^n/\FF_q$ by knowing $H^* \CP^\infty$!
 
-4.  Betti numbers: Use the fact that ${\mathcal{P}}_{{\mathbb{CP}}^1} = 1 + 0\cdot x + x^2$, and indeed $\deg p_0 = \deg p_2 = 1,~ \deg p_1 = 0$.
 
-> Note that even Betti numbers show up as degrees in the denominator, odd in the numerator. Allows us to immediately guess the zeta function for ${\mathbb{P}}^n/{\mathbb{F}}_q$ by knowing $H^* {\mathbb{CP}}^\infty$!
+## Elliptic Curves 
 
-## Elliptic Curves
-
-```{=tex}
 \begin{figure}[h]
 \caption{Some Elliptic Curves}
 \centering
 \includegraphics[width = 0.9\textwidth]{figures/image_2020-04-23-02-40-31.png} 
 \end{figure}
-```
-Consider $E/{\mathbb{F}}_q$.
 
--   (Nontrivial!) The number of points is given by `
-    <span class="math display">
-    \begin{align*}
-    N_n \coloneqq E({\mathbb{F}}_{q^n}) = (q^n + 1) - ( \alpha^n + {\mkern 1.5mu\overline{\mkern-1.5mu\alpha\mkern-1.5mu}\mkern 1.5mu}^n ) {\quad \operatorname{where} \quad} {\left\lvert {\alpha} \right\rvert} = {\left\lvert {\mkern 1.5mu\overline{\mkern-1.5mu\alpha\mkern-1.5mu}\mkern 1.5mu} \right\rvert} = \sqrt{q}
-    \end{align*}
-    <span>`{=html}
-    -   **Proof**: Involves trace (or eigenvalues?) of Frobenius, (could use references)
--   $\dim_{\mathbb{C}}E/{\mathbb{C}}= N = 1$ and $g=1$.
+Consider $E/\FF_q$. 
 
-The Weil Conjectures say we should be able to write `\begin{align*}
+- (Nontrivial!) The number of points is given by
+$$
+N_n \definedas E(\FF_{q^n}) = (q^n + 1) - ( \alpha^n + {\bar \alpha}^n ) \qtext{where} \abs{\alpha} = \abs{\bar \alpha} = \sqrt{q}
+$$
+  - **Proof**: Involves trace (or eigenvalues?) of Frobenius, (could use references)
+
+- $\dim_\CC E/\CC = N = 1$ and $g=1$.
+
+
+
+The Weil Conjectures say we should be able to write 
+\begin{align*}
 Z_E(z) = {p_1(z)  \over p_0(z) p_2(z)} = 
 {p_1(z) \over (1-z) (1 - qz)} =
 { (1 - a_{1}z)(1 - a_{2}z)  \over (1-z)(1- qz)}
-.\end{align*}`{=tex}
+.\end{align*}
 
 ## Elliptic Curves: Weil 1
 
-1.  Rationality: using the point count, we can compute `\small`{=tex} `\begin{align*}
-    Z_E(z) 
-    &= \exp \sum_{n=1}^\infty \# E({\mathbb{F}}_{q^n}) {z^n \over n} \\
-    &= \exp \sum_{n=1}^\infty \qty{q^n + 1 - \qty{\alpha^n + \mkern 1.5mu\overline{\mkern-1.5mu\alpha\mkern-1.5mu}\mkern 1.5mu^n}} {z^n \over n} \\
-    &=
-    \exp \qty{ \sum_{n=1}^\infty q^n\cdot {z^n \over n} }
-    \exp \qty{ \sum_{n=1}^\infty 1\cdot {z^n \over n} } \\
-    & \hspace{5em} \exp \qty{ \sum_{n=1}^\infty -\alpha^n \cdot {z^n \over n} }
-    \exp \qty{ \sum_{n=1}^\infty -\mkern 1.5mu\overline{\mkern-1.5mu\alpha\mkern-1.5mu}\mkern 1.5mu^n\cdot{z^n \over n} } \\ \\
-    &=
-    \exp\qty{-\log\qty{1-qz} }
-    \cdot \exp\qty{-\log\qty{1-z} } \\
-    &\hspace{5em} \exp\qty{\log\qty{1- \alpha z} }
-    \cdot \exp\qty{\log\qty{1 - \mkern 1.5mu\overline{\mkern-1.5mu\alpha \mkern-1.5mu}\mkern 1.5muz} } \\ \\ 
-    &= {(1-\alpha z)(1-\mkern 1.5mu\overline{\mkern-1.5mu\alpha \mkern-1.5mu}\mkern 1.5muz) \over (1-z)(1-qz)} \in {\mathbb{Q}}(z)
-    ,\end{align*}`{=tex} `\normalsize`{=tex} which is a rational function of the expected form (Weil 1).
+1. Rationality: using the point count, we can compute 
+\small
+\begin{align*}
+Z_E(z) 
+&= \exp \sum_{n=1}^\infty \# E(\FF_{q^n}) {z^n \over n} \\
+&= \exp \sum_{n=1}^\infty \qty{q^n + 1 - \qty{\alpha^n + \bar\alpha^n}} {z^n \over n} \\
+&=
+\exp \qty{ \sum_{n=1}^\infty q^n\cdot {z^n \over n} }
+\exp \qty{ \sum_{n=1}^\infty 1\cdot {z^n \over n} } \\
+& \hspace{5em} \exp \qty{ \sum_{n=1}^\infty -\alpha^n \cdot {z^n \over n} }
+\exp \qty{ \sum_{n=1}^\infty -\bar\alpha^n\cdot{z^n \over n} } \\ \\
+&=
+\exp\qty{-\log\qty{1-qz} }
+\cdot \exp\qty{-\log\qty{1-z} } \\
+&\hspace{5em} \exp\qty{\log\qty{1- \alpha z} }
+\cdot \exp\qty{\log\qty{1 - \bar \alpha z} } \\ \\ 
+&= {(1-\alpha z)(1-\bar \alpha z) \over (1-z)(1-qz)} \in \QQ(z)
+,\end{align*}
+\normalsize
+which is a rational function of the expected form (Weil 1).
 
-```{=tex}
 \tiny
-```
-> Note that the "expected" point counts show up in the denominator, along with the even Betti numbers, while the "correction" factor appears in the denominator and odd Betti numbers. `\normalsize`{=tex}
+> Note that the "expected" point counts show up in the denominator, along with the even Betti numbers, while the "correction" factor appears in the denominator and odd Betti numbers.
+\normalsize
+
 
 ## Elliptic Curves: Weil 2 and 3
 
-2.  Functional Equation: we use the equivalent formulation of "Poincaré duality": `\begin{align*}
-    {(1-\alpha z)(1-\mkern 1.5mu\overline{\mkern-1.5mu\alpha \mkern-1.5mu}\mkern 1.5muz) \over (1-z)(1-qz)} =  
-    {p_1(z) \over p_0(z) p_2(z)}  \implies 
-    \begin{cases}
-    z &\iff {q \over z} \\
-    \alpha_{j, k} &\iff \alpha_{2-j, k}
-    \end{cases}
-    \end{align*}`{=tex}
+2. Functional Equation: we use the equivalent formulation of "Poincaré duality": 
+\begin{align*}
+{(1-\alpha z)(1-\bar \alpha z) \over (1-z)(1-qz)} =  
+{p_1(z) \over p_0(z) p_2(z)}  \implies 
+\begin{cases}
+z &\iff {q \over z} \\
+\alpha_{j, k} &\iff \alpha_{2-j, k}
+\end{cases}
+\end{align*}
 
 This amounts to checking that the coefficients of $p_0, p_2$ are interchanged, and that the two coefficients of $p_1$ are interchanged:
 
-`\begin{align*}
-\mathrm{Coefs}(p_0) = \left\{{1}\right\} &\xrightarrow{z\to {q\over z}} \left\{{1 \over q}\right\} = \mathrm{Coefs}(p_2)  \\
-\mathrm{Coefs}(p_1) = \left\{{\alpha, \mkern 1.5mu\overline{\mkern-1.5mu\alpha\mkern-1.5mu}\mkern 1.5mu}\right\} &\xrightarrow{z\to {q\over z}}  \left\{{{q \over \alpha}, {q \over \mkern 1.5mu\overline{\mkern-1.5mu\alpha\mkern-1.5mu}\mkern 1.5mu} }\right\} = \left\{{\mkern 1.5mu\overline{\mkern-1.5mu\alpha\mkern-1.5mu}\mkern 1.5mu, \alpha}\right\} {\quad \operatorname{using} \quad} \alpha\mkern 1.5mu\overline{\mkern-1.5mu\alpha \mkern-1.5mu}\mkern 1.5mu= q
-.\end{align*}`{=tex}
+\begin{align*}
+\mathrm{Coefs}(p_0) = \theset{1} &\mapsvia{z\to {q\over z}} \theset{1 \over q} = \mathrm{Coefs}(p_2)  \\
+\mathrm{Coefs}(p_1) = \theset{\alpha, \bar \alpha} &\mapsvia{z\to {q\over z}}  \theset{{q \over \alpha}, {q \over \bar\alpha} } = \theset{\bar \alpha, \alpha} \qtext{using} \alpha\bar\alpha = q
+.\end{align*}
 
-3.  RH: Assumed as part of the point count (${\left\lvert {\alpha } \right\rvert}= q^{1\over 2}$)
+3. RH: Assumed as part of the point count ($\abs \alpha = q^{1\over 2}$)
 
-4.  Betti Numbers: ${\mathcal{P}}_{\Sigma_1}(x) = 1 + 2x + x^2$, and indeed $\deg p_0 = \deg p_2 = 1,~ \deg p_1 = 2$.
+4. Betti Numbers: $\mcp_{\Sigma_1}(x) = 1 + 2x + x^2$, and indeed $\deg p_0 = \deg p_2 = 1,~ \deg p_1 = 2$.
 
 ## History
 
--   1801, Gauss: Point count and RH showed for specific elliptic curves
+- 1801, Gauss: Point count and RH showed for specific elliptic curves
 
--   1924, Artin: Conjectured for algebraic curves ,
+- 1924, Artin: Conjectured for algebraic curves , 
 
--   1934, Hasse: proved for elliptic curves.
+- 1934, Hasse:  proved for elliptic curves.
 
--   1949, Weil: Proved for smooth projective curves over finite fields, proposed generalization to projective varieties
+- 1949, Weil: Proved for smooth projective curves over finite fields, proposed generalization to projective varieties
 
--   1960, Dwork: Rationality via $p{\hbox{-}}$adic analysis
+- 1960, Dwork: Rationality via $p\dash$adic analysis
 
--   1965, Grothendieck et al.: Rationality, functional equation, Betti numbers using étale cohomology
+- 1965, Grothendieck et al.: Rationality, functional equation, Betti numbers using  étale cohomology 
+  - Trace of Frobenius on $\ell\dash$adic cohomology
+  - Expected proof via *the standard conjectures*. Wide open!
 
-    -   Trace of Frobenius on $\ell{\hbox{-}}$adic cohomology
-    -   Expected proof via *the standard conjectures*. Wide open!
+- 1974, Deligne: Riemann Hypothesis using étale  cohomology, circumvented the standard conjectures
 
--   1974, Deligne: Riemann Hypothesis using étale cohomology, circumvented the standard conjectures
+- Recent: [Hasse-Weil conjecture](Hasse-Weil%20conjecture) for arbitrary algebraic varieties over number fields
+  - Similar requirements on $L\dash$functions: functional equation, meromorphic continuation
+  - 2001: Full [modularity](../Unsorted/modular%20form.md) theorem proved, extending Wiles, implies Hasse-Weil for elliptic curves
+  - Inroad to [Langlands](../Unsorted/Langlands.md): show every $L$ function coming from an algebraic variety also comes from an automorphic representation.
 
--   Recent: [Hasse-Weil conjecture](Hasse-Weil%20conjecture) for arbitrary algebraic varieties over number fields
-
-    -   Similar requirements on $L{\hbox{-}}$functions: functional equation, meromorphic continuation
-    -   2001: Full [[modularity | ../Unsorted/modular%20form.html]] theorem proved, extending Wiles, implies Hasse-Weil for elliptic curves
-    -   Inroad to [[Langlands | ../Unsorted/Langlands.html]]: show every $L$ function coming from an algebraic variety also comes from an automorphic representation.
 
 # Weil for Projective m-space
 
-## Setup
+## Setup 
 
-Take $X = {\mathbb{P}}^m/{\mathbb{F}}$ We can write `
-<span class="math display">
-\begin{align*}
-{\mathbb{P}}^m({\mathbb{F}}_{q^n}) = {\mathbb{A}}^{m+1}({\mathbb{F}}_{q^n}) \setminus \left\{{\mathbf{0}}\right\}/\sim ~= \left\{{\mathbf{x} = [x_0, \cdots, x_m] {~\mathrel{\Big|}~}x_i \in {\mathbb{F}}_{q^n}}\right\}/\sim
-\end{align*}
-<span>`{=html}
+Take $X = \PP^m/\FF$ 
+We can write 
+$$
+\PP^m(\FF_{q^n}) = \AA^{m+1}(\FF_{q^n}) \setminus \theset{\vector 0}/\sim ~= \theset{\vector x = [x_0, \cdots, x_m] \suchthat x_i \in \FF_{q^n}}/\sim
+$$
 
 But how many points are actually in this space?
 
-```{=tex}
 \begin{figure}[h]
-\caption{Points and Lines in ${\mathbb{P}}^2/{{\mathbb{F}}_3}$}
+\caption{Points and Lines in $\PP^2/{\FF_3}$}
 \centering
 \includegraphics[width = 0.4\textwidth]{figures/image_2020-04-19-22-32-07.png} 
 \end{figure}
-```
+
 > A nontrivial combinatorial problem!
 
-## q-Analogs and Grassmannians
 
-To illustrate, this can be done combinatorially: identify ${\mathbb{P}}^m_{\mathbb{F}}= {\operatorname{Gr}}_{{\mathbb{F}}}(1, m+1)$ as the space of lines in ${\mathbb{A}}^{m+1}_{\mathbb{F}}$.
+## q-Analogs and Grassmannians 
+
+To illustrate, this can be done combinatorially:
+identify $\PP^m_\FF = \Gr_{\FF}(1, m+1)$ as the space of lines in $\AA^{m+1}_\FF$.
 
 Theorem
-:   The number of $k{\hbox{-}}$dimensional subspaces of ${\mathbb{A}}^N_{{\mathbb{F}}_q}$ is the $q{\hbox{-}}$analog of the binomial coefficient: `\begin{align*}
-    \genfrac{[}{]}{0pt}{}{N}{k}_q \coloneqq\frac{(q^N - 1)(q^{N-1}-1) \cdots (q^{N - (k-1)} -  1)}{(q^k-1)(q^{k-1} - 1) \cdots (q-1)}
-    .\end{align*}`{=tex}
+:   The number of $k\dash$dimensional subspaces of $\AA^N_{\FF_q}$ is the $q\dash$analog of the binomial coefficient:
+    \begin{align*}
+    \genfrac{[}{]}{0pt}{}{N}{k}_q \definedas \frac{(q^N - 1)(q^{N-1}-1) \cdots (q^{N - (k-1)} -  1)}{(q^k-1)(q^{k-1} - 1) \cdots (q-1)}
+    .\end{align*}
 
 > Remark: Note $\lim_{q\to 1} \genfrac{[}{]}{0pt}{}{N}{k}_q = {N \choose k}$, the usual binomial coefficient.
 
-**Proof:** To choose a $k{\hbox{-}}$dimensional subspace,
-
--   Choose a nonzero vector $\mathbf{v}_1 \in {\mathbb{A}}^n_{\mathbb{F}}$ in $q^N - 1$ ways.
-    -   For next step, note that $\#{\operatorname{span}}\left\{{\mathbf{v}_1}\right\} = \#\left\{{\lambda \mathbf{v}_1 {~\mathrel{\Big|}~}\lambda \in {\mathbb{F}}_q}\right\} = \# {\mathbb{F}}_q = q$.
--   Choose a nonzero vector $\mathbf{v}_2$ *not* in the span of $\mathbf{v}_1$ in $q^N - q$ ways.
-    -   Now note $\# {\operatorname{span}}\left\{{\mathbf{v}_1, \mathbf{v}_2}\right\} = \# \left\{{\lambda_1 \mathbf{v}_1 + \lambda_2 \mathbf{v}_2 {~\mathrel{\Big|}~}\lambda_i \in {\mathbb{F}}}\right\} = q\cdot q = q^2$.
+**Proof:**  To choose a $k\dash$dimensional subspace, 
+  
+- Choose a nonzero vector $\vector v_1 \in \AA^n_\FF$ in $q^N - 1$ ways.
+  - For next step, note that $\#\spanof\theset{\vector v_1} = \#\theset{\lambda \vector v_1 \suchthat \lambda \in \FF_q} = \# \FF_q = q$.
+  
+- Choose a nonzero vector $\vector v_2$ *not* in the span of $\vector v_1$ in $q^N - q$ ways.
+  - Now note $\# \spanof\theset{\vector v_1, \vector v_2} = \# \theset{\lambda_1 \vector v_1 + \lambda_2 \vector v_2 \suchthat \lambda_i \in \FF} = q\cdot q = q^2$.
 
 ## Proof continued
 
--   Choose a nonzero vector $\mathbf{v}_3$ *not* in the span of $\mathbf{v}_1, \mathbf{v}_2$ in $q^N -q^2$ ways.
+- Choose a nonzero vector $\vector v_3$ *not* in the span of $\vector v_1, \vector v_2$ in $q^N -q^2$ ways.
 
--   $\cdots$ until $\mathbf{v}_k$ is chosen in `
-    <span class="math display">
-    \begin{align*}(q^N-1)(q^N-q) \cdots (q^N - q^{k-1}) {\quad \operatorname{ways} \quad}.\end{align*}
-    <span>`{=html}
+- $\cdots$ until $\vector v_k$ is chosen in $$(q^N-1)(q^N-q) \cdots (q^N - q^{k-1}) \qtext{ways}.$$ 
+  - This yields a $k\dash$tuple of linearly independent vectors spanning a $k\dash$dimensional subspace $V_k$
 
-    -   This yields a $k{\hbox{-}}$tuple of linearly independent vectors spanning a $k{\hbox{-}}$dimensional subspace $V_k$
+- This overcounts because many linearly independent sets span $V_k$,  we need to divide out by the number of ways to choose a basis inside of $V_k$.
 
--   This overcounts because many linearly independent sets span $V_k$, we need to divide out by the number of ways to choose a basis inside of $V_k$.
+- By the same argument, this is given by $$(q^k-1)(q^k-q) \cdots (q^k - q^{k-1})$$ 
 
--   By the same argument, this is given by `
-    <span class="math display">
-    \begin{align*}(q^k-1)(q^k-q) \cdots (q^k - q^{k-1})\end{align*}
-    <span>`{=html}
 
-Thus `\small`{=tex} `\begin{align*}
+Thus
+\small
+\begin{align*}
 \# \text{subspaces} 
 &= \frac{ (q^N-1)(q^N-q)(q^N - q^2) \cdots (q^N - q^{k-1}) }{ (q^k-1)(q^k-q)(q^k-q^2) \cdots (q^k - q^{k-1})}\\ \\
 &= {q^N - 1 \over q^k - 1} \cdot \qty{q \over q} {q^{N-1} - 1 \over q^{k-1} - 1} \cdot \qty{q^2 \over q^2}{q^{N-2} - 1 \over q^{k-2} - 1} \cdots \qty{q^{k-1} \over q^{k-1}}{q^{N - (k-1)} - 1 \over q^{k - (k-1) - 1}} \\ 
 &= \frac{(q^N - 1)(q^{N-1}-1) \cdots (q^{N - (k-1)} -  1)}{(q^k-1)(q^{k-1} - 1) \cdots (q-1)}
-.\end{align*}`{=tex} `\normalsize`{=tex}
+.\end{align*}
+\normalsize
 
-$\hfill\blacksquare$
+$\qed$
 
-## Counting Points
+## Counting Points 
 
 > Note that we've actually computed the number of points in any Grassmannian.
 
-Identify ${\mathbb{P}}^m_{\mathbb{F}}= {\operatorname{Gr}}_{{\mathbb{F}}}(1, m+1)$ as the space of lines in ${\mathbb{A}}^{m+1}_{\mathbb{F}}$.
+Identify $\PP^m_\FF = \Gr_{\FF}(1, m+1)$ as the space of lines in $\AA^{m+1}_\FF$.
 
-We obtain a simplification (importantly, a *sum formula*) when setting $k=1$: `\begin{align*}
+We obtain a simplification (importantly, a *sum formula*) when setting $k=1$:
+\begin{align*}
 \genfrac{[}{]}{0pt}{}{m+1 }{1}_q = {q^{m+1}-1 \over q - 1} = q^{m} + q^{m-1} + \cdots + q + 1 = \sum_{j=0}^{m} q^j
-.\end{align*}`{=tex}
+.\end{align*}
 
-Thus `\begin{align*}
-X({\mathbb{F}}_q) &= \sum_{j=0}^{m} q^j  \\
-X({\mathbb{F}}_{q^2}) &= \sum_{j=0}^{m} \qty{q^2}^j  \\
+Thus
+\begin{align*}
+X(\FF_q) &= \sum_{j=0}^{m} q^j  \\
+X(\FF_{q^2}) &= \sum_{j=0}^{m} \qty{q^2}^j  \\
 &\vdots \\
-X({\mathbb{F}}_{q^n}) &= \sum_{j=0}^{m} \qty{q^n}^j
-.\end{align*}`{=tex}
+X(\FF_{q^n}) &= \sum_{j=0}^{m} \qty{q^n}^j
+.\end{align*}
 
-## Computing the Zeta Function
+## Computing the Zeta Function 
 
-So `\begin{align*}
+So
+\begin{align*}
 Z_X(z) 
 &= \exp\qty{ \sum_{n=1}^\infty \sum_{j=0}^{m} \qty{q^n}^j {z^n \over n} } \\
 &= \exp\qty{ \sum_{n=1}^\infty \sum_{j=0}^{m} {\qty{q^jz}^n \over n} } \\
 &= \exp\qty{ \sum_{j=0}^{m} \sum_{n=1}^\infty {\qty{q^jz}^n \over n} } \\
 &= \exp\qty{ \sum_{j=0}^{m-1} -\log(1 - q^j z) } \\
-&= \prod_{j=0}^{m} \qty{1-q^jz}^{-1}\\
+&= \prod_{j=0}^{m} \qty{1-q^jz}\inv \\
 &=
 \qty{1 \over 1 - z} \qty{1 \over 1 - qz} \qty{1 \over 1 - q^2 z} \cdots \qty{1 \over 1- q^m z}
-,\end{align*}`{=tex}
+,\end{align*}
 
-> Miraculously, still a rational function! Consequence of sum formula, works in general.
+> Miraculously, still a rational function! Consequence of sum formula, works in general. 
 
 ## Checking the Weil Conjectures
 
-`\begin{align*}
+\begin{align*}
 Z_X(z) = \prod_{j=0}^m \qty{1 \over 1 - q^j z} 
-.\end{align*}`{=tex}
+.\end{align*}
 
-1.  Rationality: Clear!
+1. Rationality: Clear!
 
-2.  Functional Equation: Less clear, but true:
+2. Functional Equation: Less clear, but true:
 
-`\begin{align*}
+\begin{align*}
 Z_X\left(\frac{1}{q^{m} z}\right) 
 &=\frac{1}{\left(1-1 / q^{m} t\right)\left(1-q / q^{m} t\right) \cdots\left(1-q^{m} / q^{m} z\right)} \\
 &=\frac{q^{m} z \cdot q^{m-1} z \ldots q z \cdot z}{(1-z)(1-q z) \ldots\left(1-q^{m} z\right)} \\
 &=q^{m(m+1) \over 2} z^{m+1} \cdot Z_X(z)\\
 &= \qty{q^{m\over 2}z}^{\chi(X)} \cdot Z_X(z) \\
-.\end{align*}`{=tex}
+.\end{align*}
 
 ## Checking
 
-`\begin{align*}
+\begin{align*}
 Z_X(z) = \prod_{j=0}^m \qty{1 \over 1 - q^j z} 
-.\end{align*}`{=tex}
+.\end{align*}
 
-3.  Riemann Hypothesis: Reduces to the statement $\left\{{ \alpha_i }\right\} = \left\{{{q^m \over \alpha_j }}\right\}$.
+3. Riemann Hypothesis: Reduces to the statement $\theset{ \alpha_i } = \theset{{q^m \over \alpha_j }}$.
+  - Clear since $\alpha_j = q^j$ and every $\alpha_i$ is a lower power of $q$.
 
--   Clear since $\alpha_j = q^j$ and every $\alpha_i$ is a lower power of $q$.
-
-4.  Betti Numbers: Use the fact that ${\mathcal{P}}_{{\mathbb{CP}}^m}(x) = 1 + x^2 + x^4 + \cdots + x^{2m}$
-
--   Only even dimensions, and correspondingly no numerator.
+4. Betti Numbers: Use the fact that $\mcp_{\CP^m}(x) = 1 + x^2 + x^4 + \cdots + x^{2m}$
+  - Only even dimensions, and correspondingly no numerator.
 
 ## An Easier Proof: "Paving by Affines"
 
-Quick recap: `\begin{align*}
-Z_{{\operatorname{pt}}} = {1 \over 1 - z} && Z_{{\mathbb{P}}^1}(z) = {1 \over 1 - qz} && Z_{{\mathbb{A}}^1}(z) = {1\over (1-z)(1-qz)}
-.\end{align*}`{=tex}
+Quick recap:
+\begin{align*}
+Z_{\pt} = {1 \over 1 - z} && Z_{\PP^1}(z) = {1 \over 1 - qz} && Z_{\AA^1}(z) = {1\over (1-z)(1-qz)}
+.\end{align*}
 
-Note that ${\mathbb{P}}^1 = {\mathbb{A}}^1 {\textstyle\coprod}\left\{{\infty}\right\}$ and correspondingly $Z_{{\mathbb{P}}^1}(z) = Z_{{\mathbb{A}}^1}(z) \cdot Z_{{\operatorname{pt}}}(z)$. This works in general:
+Note that $\PP^1 = \AA^1 \disjoint \theset{\infty}$ and correspondingly $Z_{\PP^1}(z) = Z_{\AA^1}(z) \cdot Z_{\pt}(z)$.
+This works in general:
 
 Lemma (Excision)
-:   If $Y/{\mathbb{F}}_q \subset X/{\mathbb{F}}_q$ is a closed subvariety, for $U = X\setminus Y$, $Z_X(z) = Z_Y(z) \cdot Z_{U}(z)$.
+: If $Y/\FF_q \subset X/\FF_q$ is a closed subvariety, for $U = X\setminus Y$, $Z_X(z) = Z_Y(z) \cdot Z_{U}(z)$.
 
-**Proof**: Let $N_n = \# Y({\mathbb{F}}_{q^n})$ and $M_n = \# U({\mathbb{F}}_{q^n})$, then `\begin{align*}
+**Proof**:
+Let $N_n = \# Y(\FF_{q^n})$ and $M_n = \# U(\FF_{q^n})$, then
+\begin{align*}
 \zeta_X(z) 
 &= \exp\qty{\sum_{n=1}^\infty \qty{N_n + M_n} {z^n \over n} }  \\
 &= \exp\qty{\sum_{n=1}^\infty N_n \cdot {z^n \over n} + \sum_{n=1}^\infty M_n \cdot {z^n \over n}}\\
 &= \exp\qty{\sum_{n=1}^\infty N_n \cdot {z^n \over n}} \cdot \exp\qty{\sum_{n=1}^\infty M_n \cdot {z^n \over n}}
 = \zeta_Y(z) \cdot \zeta_U(z)
-.\end{align*}`{=tex}
+.\end{align*}
+
 
 ## An Easier Proof: "Paving"
 
-Note that geometry can help us here: we have a decomposition ${\mathbb{P}}^n = {\mathbb{P}}^{n-1} {\textstyle\coprod}{\mathbb{A}}^n$, and thus inductively a stratification `\begin{align*}
-{\mathbb{P}}^m = {\textstyle\coprod}_{j=0}^m {\mathbb{A}}^j = {\mathbb{A}}^0 {\textstyle\coprod}{\mathbb{A}}^1 {\textstyle\coprod}\cdots {\textstyle\coprod}{\mathbb{A}}^m
-.\end{align*}`{=tex}
-
-Recalling that `
-<span class="math display">
+Note that geometry can help us here: we have a decomposition $\PP^n = \PP^{n-1} \disjoint \AA^n$, and thus inductively a stratification 
 \begin{align*}
-Z_{X{\textstyle\coprod}Y}(z) = Z_X(z) \cdot Z_Y(z)
-\end{align*}
-<span>`{=html}
+\PP^m = \disjoint_{j=0}^m \AA^j = \AA^0 \disjoint \AA^1 \disjoint \cdots \disjoint \AA^m
+.\end{align*}
 
-and $Z_{{\mathbb{A}}^j}(z) = {1 \over 1 - q^j z}$, we have `\begin{align*}
-Z_{{\mathbb{P}}^m}(z) = \prod_{j=0}^m Z_{{\mathbb{A}}^j}(z) = \prod_{j=0}^m {1 \over 1 - q^j z}
-.\end{align*}`{=tex}
+Recalling that 
+$$
+Z_{X\disjoint Y}(z) = Z_X(z) \cdot Z_Y(z)
+$$
 
-# Grassmannians
+and $Z_{\AA^j}(z) = {1 \over 1 - q^j z}$, we have
+\begin{align*}
+Z_{\PP^m}(z) = \prod_{j=0}^m Z_{\AA^j}(z) = \prod_{j=0}^m {1 \over 1 - q^j z}
+.\end{align*}
+
+
+# Grassmannians 
 
 ## Motivation
 
-Consider now $X = {\operatorname{Gr}}(k, m) / {\mathbb{F}}$ -- by the previous computation, we know `\begin{align*}
-X({\mathbb{F}}_{q^n}) = 
-\genfrac{[}{]}{0pt}{}{m}{k}_{q^n} \coloneqq\frac{(q^{nm} - 1)(q^{{nm}-1}-1) \cdots (q^{{nm} - n(k-1)} -  1)}{(q^{nk}-1)(q^{n(k-1)} - 1) \cdots (q^n-1)}
-\end{align*}`{=tex}
-
-but the corresponding Zeta function is much more complicated than the previous examples: `\begin{align*}
-Z_X(z) &= \exp\qty{ \sum_{n=1}^\infty \genfrac{[}{]}{0pt}{}{m}{k}_{q^n}   {z^n \over n} } = \cdots ?
-.\end{align*}`{=tex}
-
-Since $\dim_{\mathbb{C}}{\operatorname{Gr}}_{\mathbb{C}}(k, m) = 2k(m-k)$, by Weil we should expect `
-<span class="math display">
+Consider now $X = \Gr(k, m) / \FF$ -- by the previous computation, we know
 \begin{align*}
-Z_X(z) = \prod_{j=0}^{2k(m-k)} \frac{p_{2(j+1)}(z)}{p_{2j}(z)}
+X(\FF_{q^n}) = 
+\genfrac{[}{]}{0pt}{}{m}{k}_{q^n} \definedas \frac{(q^{nm} - 1)(q^{{nm}-1}-1) \cdots (q^{{nm} - n(k-1)} -  1)}{(q^{nk}-1)(q^{n(k-1)} - 1) \cdots (q^n-1)}
 \end{align*}
-<span>`{=html} with $\deg p_j = \beta_j$.
+
+but the corresponding Zeta function is much more complicated than the previous examples:
+\begin{align*}
+Z_X(z) &= \exp\qty{ \sum_{n=1}^\infty \genfrac{[}{]}{0pt}{}{m}{k}_{q^n}   {z^n \over n} } = \cdots ?
+.\end{align*}
+
+Since $\dim_\CC \Gr_\CC (k, m) = 2k(m-k)$, by Weil we should expect 
+$$
+Z_X(z) = \prod_{j=0}^{2k(m-k)} \frac{p_{2(j+1)}(z)}{p_{2j}(z)}
+$$ 
+with $\deg p_j = \beta_j$.
 
 ## Grassmannian
-
-It turns out that (proof omitted) one can show `\begin{align*}
+It turns out that (proof omitted) one can show
+\begin{align*}
 \genfrac{[}{]}{0pt}{}{m}{k}_{q} = \sum_{j=0}^{k(m-k)} \lambda_{m, k}(j) q^j \implies Z_X(z) = \prod_{j=0}^{k(m-k)} \qty{ \frac{1}{ 1 - q^j x} }^{\lambda_{m, k}(j)}
-\end{align*}`{=tex}
+\end{align*}
 
 where $\lambda_{m, k}$ is the number of integer partitions of of $[i]$ into at most $m-k$ parts, each of size at most $k$.
 
--   One proof idea: use combinatorial identities to write $q{\hbox{-}}$analog $\genfrac{[}{]}{0pt}{}{m}{k}_{q}$ as a *sum*
--   Second proof idea: "pave by affines" (need a reference!)
+- One proof idea: use combinatorial identities to write $q\dash$analog $\genfrac{[}{]}{0pt}{}{m}{k}_{q}$ as a *sum*
+- Second proof idea: "pave by affines" (need a reference!)
 
-This lets us conclude that the Poincare polynomial of the complex Grassmannian is given by `
-<span class="math display">
-\begin{align*}
-{\mathcal{P}}_{{\operatorname{Gr}}_{\mathbb{C}}(m, k)}(x) = \sum_{n=1}^{k(m-k)} \lambda_{m, k}(n) x^{2n},
-\end{align*}
-<span>`{=html}
+This lets us conclude that the Poincare polynomial of the complex Grassmannian is given by 
+$$
+\mcp_{\Gr_\CC(m, k)}(x) = \sum_{n=1}^{k(m-k)} \lambda_{m, k}(n) x^{2n},
+$$
 
-> In particular, the $H^* {\operatorname{Gr}}_{\mathbb{C}}(m, k)$ vanishes in odd degree.
+> In particular, the $H^* \Gr_\CC(m, k)$ vanishes in odd degree.
+
 
 # Weil's Proof
+
 
 ## Diagonal Hypersurfaces
 
 Proof of rationality of $Z_X(T)$ for $X$ a diagonal hypersurface.
 
--   Set $q$ to be a prime power and consider $X/{\mathbb{F}}_q$ defined by `
-    <span class="math display">
-    \begin{align*}X = V(a_0x_0^{n} + \cdots + a_r x_r^{n}) \subset {\mathbb{F}}_q^{r+1}.\end{align*}
-    <span>`{=html}
--   We want to compute $N = \# X$.
--   Set $d_i = \gcd(n_i, q-1)$.
--   Define the character `\begin{align*}
-    \psi_q: {\mathbb{F}}_q & \to {\mathbb{C}}^{\times}\\
-    a &\mapsto \exp\qty{2\pi i ~\operatorname{Tr}_{{\mathbb{F}}_q/{\mathbb{F}}_p}(a) \over p} 
-    .\end{align*}`{=tex}
-    -   By Artin's theorem for linear independence of characters, $\psi_q \not \equiv 1$ and every additive character of ${\mathbb{F}}_q$ is of the form $a \mapsto \psi_q(ca)$ for some $c\in {\mathbb{F}}_q$.
--   Shorthand notation: say $a\sim 0 \iff a \equiv 0 \operatorname{mod}1$.
+- Set $q$ to be a prime power and consider $X/\FF_q$ defined by $$X = V(a_0x_0^{n} + \cdots + a_r x_r^{n}) \subset \FF_q^{r+1}.$$
+- We want to compute $N = \# X$.
+- Set $d_i = \gcd(n_i, q-1)$. 
+- Define the character
+  \begin{align*}
+  \psi_q: \FF_q & \to \CC\units \\
+  a &\mapsto \exp\qty{2\pi i ~\Tr_{\FF_q/\FF_p}(a) \over p} 
+  .\end{align*}
+  - By Artin's theorem for linear independence of characters, $\psi_q \not \equiv 1$ and every additive character of $\FF_q$ is of the form $a \mapsto \psi_q(ca)$ for some $c\in \FF_q$.
+
+
+- Shorthand notation: say $a\sim 0 \iff a \equiv 0 \mod 1$.
+
+
 
 ## A Diagonal Hypersurface
 
--   Fix an injective multiplicative map `\begin{align*}
-    \phi: \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{F}}\mkern-1.5mu}\mkern 1.5mu_q^{\times}\to {\mathbb{C}}^{\times}
-    .\end{align*}`{=tex}
+- Fix an injective multiplicative map
+\begin{align*}
+\phi: \bar{\FF}_q\units \to \CC\units
+.\end{align*}
 
--   Define `\begin{align*}
-    \chi_{\alpha, n}: {\mathbb{F}}_{q^n}^{\times}&\to {\mathbb{C}}^{\times}\\
-    x & \mapsto \phi(x)^{\alpha\qty{q^n-1}} \\ \\
-    \quad {\quad \operatorname{for} \quad} \alpha \in {\mathbb{Q}}/{\mathbb{Z}}, n\in {\mathbb{Z}}, & \quad \alpha\qty{q^n-1} \equiv 0 \operatorname{mod}1 
-    .\end{align*}`{=tex}
+- Define
+\begin{align*}
+\chi_{\alpha, n}: \FF_{q^n}\units &\to \CC\units \\
+x & \mapsto \phi(x)^{\alpha\qty{q^n-1}} \\ \\
+\quad \qtext{for} \alpha \in \QQ/\ZZ, n\in \ZZ, & \quad \alpha\qty{q^n-1} \equiv 0 \mod 1 
+.\end{align*}
 
-    -   Extend this to ${\mathbb{F}}_{q^n}$ by `\begin{align*}
-        \begin{cases}
-        1 & \alpha \equiv0 \operatorname{mod}1 \\
-        0 & \text{else} 
-        \end{cases}
-        .\end{align*}`{=tex}
-    -   Set $\chi_\alpha = \chi_{\alpha, 1}$.
+  - Extend this to $\FF_{q^n}$ by 
+  \begin{align*}
+  \begin{cases}
+  1 & \alpha \equiv0 \mod 1 \\
+  0 & \text{else} 
+  \end{cases}
+  .\end{align*}
+  - Set $\chi_\alpha = \chi_{\alpha, 1}$.
+- Proposition: $$\alpha(q-1) \equiv 0 \mod 1 \implies \chi_{\alpha, n}(x) = \chi_\alpha(\mathrm{Nm}_{\FF_{q^n} / \FF_q }(x) )$$
+- Proposition: $$d \definedas \gcd(n, q-1), u \in \FF_q \implies \#\theset {x\in \FF_q \suchthat x^n = u} = \sum_{d\alpha \sim 0} \chi_\alpha(u)$$
 
--   Proposition: `
-    <span class="math display">
-    \begin{align*}\alpha(q-1) \equiv 0 \operatorname{mod}1 \implies \chi_{\alpha, n}(x) = \chi_\alpha(\mathrm{Nm}_{{\mathbb{F}}_{q^n} / {\mathbb{F}}_q }(x) )\end{align*}
-    <span>`{=html}
-
--   Proposition: `
-    <span class="math display">
-    \begin{align*}d \coloneqq\gcd(n, q-1), u \in {\mathbb{F}}_q \implies \#\left\{{x\in {\mathbb{F}}_q {~\mathrel{\Big|}~}x^n = u}\right\} = \sum_{d\alpha \sim 0} \chi_\alpha(u)\end{align*}
-    <span>`{=html}
 
 ## A Diagonal Hypersurface
 
--   This implies `\begin{align*}
-    N &= \sum_{\substack{\alpha = [\alpha_0, \cdots, \alpha_r] \\ d_i \alpha_i \sim 0}} \quad \sum_{\substack{\mathbf{u} = [u_0, \cdots ,u_r] \\ \Sigma~ a_i u_i = 0}}
-    \quad \prod_{j=0}^r \chi_{\alpha_j}(u_j) \\ \\ 
-    &= q^r + \sum_{\substack{\alpha,~ \alpha_i \in (0, 1) \\ d_i \alpha_i \sim 0}} 
-    \qty{ \prod_{j=0}^r \chi_{\alpha_j}(a_j ^{-1}) \sum_{\Sigma~ u_i=0}  \quad \prod_{j=0}^r \chi_{\alpha_j}(u_j) }
-    .\end{align*}`{=tex} since the inner sum is zero if some *but not all* of the $\alpha_i \sim 0$.
+- This implies
+\begin{align*}
+N &= \sum_{\substack{\alpha = [\alpha_0, \cdots, \alpha_r] \\ d_i \alpha_i \sim 0}} \quad \sum_{\substack{\vector u = [u_0, \cdots ,u_r] \\ \Sigma~ a_i u_i = 0}}
+\quad \prod_{j=0}^r \chi_{\alpha_j}(u_j) \\ \\ 
+&= q^r + \sum_{\substack{\alpha,~ \alpha_i \in (0, 1) \\ d_i \alpha_i \sim 0}} 
+\qty{ \prod_{j=0}^r \chi_{\alpha_j}(a_j \inv ) \sum_{\Sigma~ u_i=0}  \quad \prod_{j=0}^r \chi_{\alpha_j}(u_j) }
+.\end{align*}
+  since the inner sum is zero if some *but not all* of the $\alpha_i \sim 0$.
 
--   Evaluate the innermost sum by restricting to $u_0 \neq 0$ and setting $u_i = u_0 v_i$ and $v_0 \coloneqq 1$: `\begin{align*}
-    \sum_{\Sigma~ u_i=0}  \quad \prod_{j=0}^r \chi_{\alpha_j}(u_j)
-    &=
-    \sum_{u_0 \neq 0} \chi_{_{\Sigma ~ \alpha_i}}(u_0) 
-    \sum_{\Sigma ~v_i = 0} ~\prod_{j=0}^r \chi_{\alpha_j} (v_j)  \\
-    &=
-    \begin{cases}
-    \qty{q-1} \sum_{\Sigma~ v_i = 0} ~\prod_{j=0}^r \chi_{\alpha_j}(v_j)  & {\quad \operatorname{if} \quad} \sum \alpha_i \sim 0 \\
-    0 & {\quad \operatorname{else} \quad}
-    \end{cases}
-    .\end{align*}`{=tex}
+- Evaluate the innermost sum by restricting to $u_0 \neq 0$ and setting $u_i = u_0 v_i$ and $v_0 \definedas 1$:
+\begin{align*}
+\sum_{\Sigma~ u_i=0}  \quad \prod_{j=0}^r \chi_{\alpha_j}(u_j)
+&=
+\sum_{u_0 \neq 0} \chi_{_{\Sigma ~ \alpha_i}}(u_0) 
+\sum_{\Sigma ~v_i = 0} ~\prod_{j=0}^r \chi_{\alpha_j} (v_j)  \\
+&=
+\begin{cases}
+\qty{q-1} \sum_{\Sigma~ v_i = 0} ~\prod_{j=0}^r \chi_{\alpha_j}(v_j)  & \qtext{if} \sum \alpha_i \sim 0 \\
+0 & \qtext{else}
+\end{cases}
+.\end{align*}
 
-## A Diagonal Hypersurface
-
--   Define the *Jacobi sum* for $\alpha$ where $\sum \alpha_i \sim 0$: `\begin{align*}
-    J(\alpha) \coloneqq\qty {1 \over q-1} \sum_{\Sigma~ u_i = 0} ~\prod_{j=0}^r \chi_{\alpha_j}(u_j) = \sum_{\Sigma~ v_i = 0} ~\prod_{j=1}^r \chi_{\alpha_j}(v_j) 
-    \end{align*}`{=tex}
-
--   Express $N$ in terms of Jacobi sums as `\begin{align*}
-    N = q^r + \qty{q-1} \sum_{\substack{\Sigma \alpha_i \sim 0 \\ d_i \alpha_i \sim 0 \\ \alpha\in (0, 1)}} \prod_{j=0}^r \chi_{\alpha_j}(a_j^{-1}) J(\alpha)
-    .\end{align*}`{=tex}
-
--   Evaluate $J(\alpha)$ using Gauss sums: for $\chi: {\mathbb{F}}_q \to {\mathbb{C}}$ a multiplicative character, define `\begin{align*}
-    G(\chi) &\coloneqq\sum_{x\in {\mathbb{F}}_q} \chi(x) \psi_q(x)
-    .\end{align*}`{=tex}
-
--   Proposition: for any $\chi \neq \chi_0$,
-
-    -   ${\left\lvert {G(\chi)} \right\rvert} = q^{1 \over 2}$
-    -   $G(\chi) G(\mkern 1.5mu\overline{\mkern-1.5mu\chi\mkern-1.5mu}\mkern 1.5mu) = q \chi(-1)$
-    -   $G(\chi_0) = 0$ `\begin{align*}
-        \chi(t) = {G(\chi) \over q} \sum_{x\in {\mathbb{F}}_q} \mkern 1.5mu\overline{\mkern-1.5mu\chi\mkern-1.5mu}\mkern 1.5mu(x) \psi_q(tx) 
-        .\end{align*}`{=tex}
 
 ## A Diagonal Hypersurface
 
--   Proposition: if `\begin{align*}
-    \sum \alpha_i \sim 0 \implies J(\alpha) = {1 \over q} \prod_{k=1}^r G(\chi_{\alpha_k}) {\quad \operatorname{and} \quad} {\left\lvert {J(\alpha)} \right\rvert} = q^{r - 1\over 2}
-    .\end{align*}`{=tex}
+- Define the *Jacobi sum* for $\alpha$ where $\sum \alpha_i \sim 0$:
+\begin{align*}
+J(\alpha) \definedas  \qty {1 \over q-1} \sum_{\Sigma~ u_i = 0} ~\prod_{j=0}^r \chi_{\alpha_j}(u_j) = \sum_{\Sigma~ v_i = 0} ~\prod_{j=1}^r \chi_{\alpha_j}(v_j) 
+\end{align*}
 
--   We thus obtain `\begin{align*}
-    N = q^r + \qty{q-1 \over q} \sum_{\substack{\Sigma \alpha_i \sim 0 \\ d_i \alpha_i \sim 0 \\ \alpha\in (0, 1)}} ~\prod_{j=0}^r \chi_{\alpha_j}(a_j^{-1}) G(\chi_{\alpha_j})
-    .\end{align*}`{=tex}
+- Express $N$ in terms of Jacobi sums as 
+\begin{align*}
+N = q^r + \qty{q-1} \sum_{\substack{\Sigma \alpha_i \sim 0 \\ d_i \alpha_i \sim 0 \\ \alpha\in (0, 1)}} \prod_{j=0}^r \chi_{\alpha_j}(a_j\inv ) J(\alpha)
+.\end{align*}
 
--   We now ask for number of points in ${\mathbb{F}}_{q^\nu}$ and consider a point count `\begin{align*}
-    \mkern 1.5mu\overline{\mkern-1.5muN\mkern-1.5mu}\mkern 1.5mu_\nu = \# \left\{{[x_0: \cdots : x_r] \in {\mathbb{P}}^r_{{\mathbb{F}}_q^\nu} {~\mathrel{\Big|}~}\sum_{i=0}^r a_i x_i^n = 0}\right\}
-    .\end{align*}`{=tex}
+- Evaluate $J(\alpha)$ using Gauss sums: for $\chi: \FF_q \to \CC$ a multiplicative character, define
+\begin{align*}
+G(\chi) &\definedas  \sum_{x\in \FF_q} \chi(x) \psi_q(x)
+.\end{align*}
 
--   Theorem (Davenport, Hasse) `
-    <span class="math display">
-    \begin{align*}\qty{q-1}\alpha \sim 0 \implies -G(\chi_{\alpha, \nu}) = \qty{-G(\chi_\alpha)}^\nu.\end{align*}
-    <span>`{=html}
+- Proposition: for any $\chi \neq \chi_0$, 
+  - $\abs{G(\chi)} = q^{1 \over 2}$
+  - $G(\chi) G(\bar \chi) = q \chi(-1)$
+  - $G(\chi_0) = 0$
+  \begin{align*}
+  \chi(t) = {G(\chi) \over q} \sum_{x\in \FF_q} \bar \chi(x) \psi_q(tx) 
+  .\end{align*}
 
 ## A Diagonal Hypersurface
 
--   We have a relation $\qty{q^\nu - 1} \mkern 1.5mu\overline{\mkern-1.5muN\mkern-1.5mu}\mkern 1.5mu_\nu = N_\nu$.
--   This lets us write `\begin{align*}
-    \mkern 1.5mu\overline{\mkern-1.5muN\mkern-1.5mu}\mkern 1.5mu_\nu = \sum_{j=0}^{r-1} q^{j\nu} + \sum_{\substack{\sum \alpha_i ~\sim 0 \\ \gcd(n, q^\nu - 1)\alpha_i \sim 0 \\ \alpha_i \in (0, 1) }} 
-     \prod_{j=0}^r \mkern 1.5mu\overline{\mkern-1.5mu\chi\mkern-1.5mu}\mkern 1.5mu_{\alpha_{j, \nu}}(a_i) J_\nu(\alpha)
-    .\end{align*}`{=tex}
--   Set `\begin{align*}
-    \mu(\alpha) &= \min\left\{{\mu {~\mathrel{\Big|}~}\qty{q^\mu - 1} \alpha \sim 0}\right\} \\
-    C(\alpha) &= (-1)^{r+1} \prod_{j=1}^r \mkern 1.5mu\overline{\mkern-1.5mu\chi\mkern-1.5mu}\mkern 1.5mu_{\alpha_0, \mu(\alpha)}(a_j) \cdot J_{\mu(\alpha)}(\alpha)
-    .\end{align*}`{=tex}
--   Plugging into the zeta function $Z$ yields `\begin{align*}
-    \exp\qty{\sum_{\nu = 1}^\infty \mkern 1.5mu\overline{\mkern-1.5muN\mkern-1.5mu}\mkern 1.5mu_\nu {T^\nu \over \nu} }
-    = \prod_{j=0}^{r-1} \qty{1 \over 1 - q^j T}
-    \prod_{\substack{\sum \alpha_i \sim 0 \\ \gcd(n, q^\nu - 1)\alpha_i \sim 0 \\ \alpha_i \in (0, 1) }}
-    \qty{1 - C(\alpha) T^{\mu(\alpha)}}^{(-1)^r \over \mu(\alpha)}
-    ,\end{align*}`{=tex} which is evidently a rational function! $\hfill\blacksquare$
+- Proposition: if 
+\begin{align*}
+\sum \alpha_i \sim 0 \implies J(\alpha) = {1 \over q} \prod_{k=1}^r G(\chi_{\alpha_k}) \qtext{and} \abs{J(\alpha)} = q^{r - 1\over 2}
+.\end{align*}
+- We thus obtain
+\begin{align*}
+N = q^r + \qty{q-1 \over q} \sum_{\substack{\Sigma \alpha_i \sim 0 \\ d_i \alpha_i \sim 0 \\ \alpha\in (0, 1)}} ~\prod_{j=0}^r \chi_{\alpha_j}(a_j\inv ) G(\chi_{\alpha_j})
+.\end{align*}
+- We now ask for number of points in $\FF_{q^\nu}$ and consider a point count 
+\begin{align*}
+\bar{N}_\nu = \# \theset{[x_0: \cdots : x_r] \in \PP^r_{\FF_q^\nu} \suchthat \sum_{i=0}^r a_i x_i^n = 0}
+.\end{align*}
+
+- Theorem (Davenport, Hasse) $$\qty{q-1}\alpha \sim 0 \implies -G(\chi_{\alpha, \nu}) = \qty{-G(\chi_\alpha)}^\nu.$$
+
+## A Diagonal Hypersurface
+
+- We have a relation $\qty{q^\nu - 1} \bar N_\nu = N_\nu$.
+- This lets us write
+\begin{align*}
+\bar N_\nu = \sum_{j=0}^{r-1} q^{j\nu} + \sum_{\substack{\sum \alpha_i ~\sim 0 \\ \gcd(n, q^\nu - 1)\alpha_i \sim 0 \\ \alpha_i \in (0, 1) }} 
+ \prod_{j=0}^r \bar \chi_{\alpha_{j, \nu}}(a_i) J_\nu(\alpha)
+.\end{align*}
+- Set
+\begin{align*}
+\mu(\alpha) &= \min\theset{\mu \suchthat \qty{q^\mu - 1} \alpha \sim 0} \\
+C(\alpha) &= (-1)^{r+1} \prod_{j=1}^r \bar \chi_{\alpha_0, \mu(\alpha)}(a_j) \cdot J_{\mu(\alpha)}(\alpha)
+.\end{align*}
+- Plugging into the zeta function $Z$ yields
+\begin{align*}
+\exp\qty{\sum_{\nu = 1}^\infty \bar N_\nu {T^\nu \over \nu} }
+= \prod_{j=0}^{r-1} \qty{1 \over 1 - q^j T}
+\prod_{\substack{\sum \alpha_i \sim 0 \\ \gcd(n, q^\nu - 1)\alpha_i \sim 0 \\ \alpha_i \in (0, 1) }}
+\qty{1 - C(\alpha) T^{\mu(\alpha)}}^{(-1)^r \over \mu(\alpha)}
+,\end{align*}
+which is evidently a rational function!
+$\qed$

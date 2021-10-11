@@ -1,17 +1,3 @@
 ---
-aliases:
-- global Langlands
+aliases: ["global Langlands"]
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-

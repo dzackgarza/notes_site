@@ -1,16 +1,3 @@
+Slogan: derivatives of the identity functor, $\partial_* I$, on a suitable model category should come equipped with a natural [operad.md](operad.md) structure. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-Slogan: derivatives of the identity functor, $\partial_* I$, on a suitable model category should come equipped with a natural [[operad.md | operad.html]] structure.
-
-It is conjectured that in the category of algebras over a reduced operad $\mathcal{O}$ in spectra that the derivatives of the identity should be equivalent to $\mathcal{O}$ as operads.
+It is conjectured that in the category of algebras over a reduced operad $\mathcal{O}$ in spectra that the derivatives of the identity should be equivalent to $\mathcal{O}$ as operads. 
