@@ -1,0 +1,1696 @@
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <title>
+    Real Analysis Qual Prep Week 2: Measure Theory, Fubini Tonelli – My Emanote Site
+  </title>
+  
+    
+      <meta property='og:description' content />
+      <meta property='og:site_name' content='MyEmanoteSite' />
+    
+    
+      <base href='/' />
+      <link href='favicon.svg' rel='icon' />
+    
+    <meta name='generator' content='Emanote' />
+
+  
+  <!-- CSSSTART -->
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
+  <!-- CSSEND -->
+
+  <!-- Heist error element -->
+  <style type='text/css'>
+    strong.error {
+      color: lightcoral;
+      font-size: 90%;
+      font-family: monospace;
+    }
+  </style>
+  <!-- What goes in this file will appear on near the end of <head>--><link rel='preload' href='_emanote-static/fonts/Nunito/Nunito-Regular.ttf' as='font' type='font/ttf' crossorigin />
+<link rel='preload' href='_emanote-static/fonts/Nunito/Nunito-ExtraBold.ttf' as='font' type='font/ttf' crossorigin />
+
+<style>
+  @font-face {
+    font-family: 'Nunito';
+    src: url('_emanote-static/fonts/Nunito/Nunito-Regular.ttf') format("truetype");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Nunito-Bold';
+    src: url('_emanote-static/fonts/Nunito/Nunito-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+  }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  header,
+  .header-font {
+    font-family: 'Nunito-Bold', sans-serif;
+  }
+</style>
+
+  <head-main></head-main>
+</head>
+
+<!-- DoNotFormat -->
+
+
+
+<!-- DoNotFormat -->
+
+<body class='bg-gray-400 overflow-y-scroll'>
+  
+    <div class='container mx-auto'>
+
+      <nav id='breadcrumbs' class='w-full text-gray-700 md:hidden'>
+  <div class='flex justify-left'>
+    <div class='w-full px-2 py-2 bg-gray-50'>
+      <ul class='flex flex-wrap text-lg'>
+        <li class='inline-flex items-center'>
+          
+            
+              <img style='width: 1rem;' src='favicon.svg' />
+            
+          
+        </li>
+        
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='index.html'>
+                index
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='Workshops.html'>
+                Workshops
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='Workshops/Real%20Analysis.html'>
+                Real Analysis
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+        
+      </ul>
+    </div>
+    <button class='inline px-2 py-1 text-white bg-blue-600 outline-none cursor-pointer focus:outline-none' title='Toggle sidebar' type='button' onclick="toggleHidden('sidebar')">
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'></path>
+      </svg>
+    </button>
+    <script>
+      function toggleHidden(elemId) {
+        document.getElementById(elemId).classList.toggle("hidden");
+      }
+    </script>
+  </div>
+</nav>
+
+      <div id='container' class='flex flex-nowrap flex-col md:flex-row bg-gray-50 md:mt-8 md:shadow-2xl md:mb-8'>
+        <!-- Sidebar column -->
+        <nav id='sidebar' class='flex-shrink hidden leading-relaxed md:block md:sticky md:top-0 md:h-full md:w-48 xl:w-64'>
+          <div class='px-2 py-2 text-gray-800'>
+
+            <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
+              <a href='-/tags.html' title='View tags'>
+                <svg style='width: 1rem;' class='hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
+                  </path>
+                </svg>
+              </a>
+              <a href='-/all.html' title='Expand full tree'>
+                <svg style='width: 1rem;' class='hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
+                  </path>
+                </svg>
+              </a>
+            </div>
+
+            <div id='site-logo' class='pl-2'>
+              <div class='flex items-center my-2 space-x-2 justify-left'>
+                <a href='' title='Go to Home'>
+                  
+                    
+                      <!-- The style width attribute here is to prevent huge
+                      icon from displaying at those rare occasions when Tailwind
+                      hasn't kicked in immediately on page load 
+                      -->
+                      <img style='width: 1rem;' class='transition transform hover:scale-110 hover:opacity-80' src='favicon.svg' />
+                    
+                  
+                </a>
+                <a class='font-bold truncate' title='Go to Home' href=''>
+                  Home
+                </a>
+              </div>
+            </div>
+
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0001_Graduate Research Index' href='0001_Graduate%20Research%20Index.html'>
+      0001_Graduate Research Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0001_Learning_Index' href='0001_Learning_Index.html'>
+      0001_Learning_Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0009_subject index' href='0009_subject%20index.html'>
+      0009_subject index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Home' href='000_Home.html'>
+      000_Home
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Leisure Reading Projects' href='000_Leisure%20Reading%20Projects.html'>
+      000_Leisure Reading Projects
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Projects Index' href='000_Projects%20Index.html'>
+      000_Projects Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Reading Projects Index' href='000_Reading%20Projects%20Index.html'>
+      000_Reading Projects Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Recommendations' href='000_Recommendations.html'>
+      000_Recommendations
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Talks Index' href='000_Talks%20Index.html'>
+      000_Talks Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Todo' href='000_Todo.html'>
+      000_Todo
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Undergraduate Research Index' href='000_Undergraduate%20Research%20Index.html'>
+      000_Undergraduate Research Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Archive' href='Archive.html'>
+      Archive
+    </a>
+    
+      
+        <span class='text-gray-300' title='4 children inside'>
+          4
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Conferences and Seminars' href='Conferences%20and%20Seminars.html'>
+      Conferences and Seminars
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Learning' href='Learning.html'>
+      Learning
+    </a>
+    
+      
+        <span class='text-gray-300' title='2 children inside'>
+          2
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Projects' href='Projects.html'>
+      Projects
+    </a>
+    
+      
+        <span class='text-gray-300' title='5 children inside'>
+          5
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Subjects' href='Subjects.html'>
+      Subjects
+    </a>
+    
+      
+        <span class='text-gray-300' title='10 children inside'>
+          10
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='To Review' href='To%20Review.html'>
+      To Review
+    </a>
+    
+      
+        <span class='text-gray-300' title='58 children inside'>
+          58
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Unsorted' href='Unsorted.html'>
+      Unsorted
+    </a>
+    
+      
+        <span class='text-gray-300' title='557 children inside'>
+          557
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Workshops' href='Workshops.html'>
+      Workshops
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Algebra' href='Workshops/Algebra.html'>
+      Algebra
+    </a>
+    
+      
+        <span class='text-gray-300' title='6 children inside'>
+          6
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Complex Analysis' href='Workshops/Complex%20Analysis.html'>
+      Complex Analysis
+    </a>
+    
+      
+        <span class='text-gray-300' title='3 children inside'>
+          3
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Real Analysis' href='Workshops/Real%20Analysis.html'>
+      Real Analysis
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Real Analysis Qual Prep Week 1: Preliminaries' href='Workshops/Real%20Analysis/Real%20Week%201%20Preliminaries.html'>
+      Real Analysis Qual Prep Week 1: Preliminaries
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+  
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
+        </path>
+      </svg>
+      
+  
+    <a class='font-bold text-blue-600 hover:underline truncate' title='Real Analysis Qual Prep Week 2: Measure Theory, Fubini Tonelli' href='Workshops/Real%20Analysis/Real%20Week%202%20Measure%20Theory.html'>
+      Real Analysis Qual Prep Week 2: Measure Theory, Fubini Tonelli
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Topology' href='Workshops/Topology.html'>
+      Topology
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Workshop Index' href='Workshops/Workshop%20Index.html'>
+      Workshop Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='_HTT' href='_HTT.html'>
+      _HTT
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='consistant-report' href='consistant-report.html'>
+      consistant-report
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='figures' href='figures.html'>
+      figures
+    </a>
+    
+      
+        <span class='text-gray-300' title='4 children inside'>
+          4
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+
+          </div>
+        </nav>
+
+        <!-- Main body column -->
+        <div class='flex-1 w-full overflow-x-auto bg-white'>
+          <main class='px-4 py-4'>
+            <h1 class='flex items-end justify-center mb-4 p-3 bg-blue-100 text-5xl font-extrabold text-black rounded'>
+  <a class='z-40 tracking-tighter '>
+    Real Analysis Qual Prep Week 2: Measure Theory, Fubini Tonelli
+  </a>
+</h1>
+            <article class='overflow-auto'>
+  <!-- What goes in this file will appear on top of note body-->
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#study-guide' class='text-blue-600 font-bold hover:underline'>Study Guide</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#convergence-tipstricks' class='text-blue-600 font-bold hover:underline'>Convergence Tips/Tricks</a>
+        </li>
+      
+        <li>
+          <a href='#measure-theory' class='text-blue-600 font-bold hover:underline'>Measure Theory</a>
+        </li>
+      
+        <li>
+          <a href='#fubini-tonelli' class='text-blue-600 font-bold hover:underline'>Fubini-Tonelli</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#qual-problems' class='text-blue-600 font-bold hover:underline'>Qual Problems</a>
+        </li>
+      
+    </ul>
+  <h1 id='study-guide' class='pb-2 mb-2 text-5xl font-bold text-center'>Study Guide</h1>
+    <p class='mb-3'>
+      References:
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Folland’s “Real Analysis: Modern Techniques”, Ch.1
+        </li>
+      
+        <li>
+          Stein and Shakarchi Ch.1, Ch.2
+        </li>
+      
+    </ul>
+  <h2 id='convergence-tipstricks' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Convergence Tips/Tricks</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Our favorite tools: <strong>metrics</strong> and <strong>norms</strong>!
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <img class='inline mb-3' src='Workshops/Real%20Analysis/_attachments/Pasted%20image%2020210528184220.png' alt='[[_attachments/Pasted image 20210528184220.png]]' style='width: inherit;' />
+        </li>
+      
+        <li>
+          So show things are equal by showing <span class='math inline'>\({\left\lvert {x-y} \right\rvert} = 0\)</span>. Know the triangle inequality by heart!
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <strong>Uniform convergence</strong>:
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <img class='inline mb-3' src='Workshops/Real%20Analysis/_attachments/Pasted%20image%2020210528182641.png' alt='[[_attachments/Pasted image 20210528182641.png]]' style='width: inherit;' />
+        </li>
+      
+        <li>
+          Negating: find a bad <span class='math inline'>\({\varepsilon}\)</span> and a single bad point <span class='math inline'>\(x\)</span>.
+        </li>
+      
+        <li>
+          Showing a sum converges uniformly: remember that <span class='math inline'>\(\sum_{k\geq 1} a_k\)</span> is <em>defined</em> to be <span class='math inline'>\(\lim_{N\to\infty} \sum_{k\leq N} a_k\)</span>. So the trick is to define <span class='math inline'>\(f_n(x) := \sum_{k\leq n} a_k\)</span> and then apply the usual criteria above.
+        </li>
+      
+        <li>
+          It’s sometimes useful to trade the <span class='math inline'>\(\forall x\)</span> in the definition with <span class='math inline'>\(\sup_{x\in X} {\left\lvert {f_n(x) - f(x)} \right\rvert} &lt; {\varepsilon}\)</span> instead.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Compare and contrast to <strong>pointwise convergence</strong>, which is strictly weaker:
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <img class='inline mb-3' src='Workshops/Real%20Analysis/_attachments/Pasted%20image%2020210528182925.png' alt='[[_attachments/Pasted image 20210528182925.png]]' style='width: inherit;' />
+        </li>
+      
+        <li>
+          The main difference: pointwise can depend on the <span class='math inline'>\(x\)</span> and the <span class='math inline'>\({\varepsilon}\)</span>, but uniform needs one <span class='math inline'>\({\varepsilon}\)</span> that works for <em>all</em> <span class='math inline'>\(x\)</span> simultaneously.
+        </li>
+      
+        <li>
+          Note uniform implies pointwise but not conversely.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          The sup norm: <span class='math inline'>\({\left\lVert {f} \right\rVert}_\infty := \sup_{x\in X} {\left\lvert {f_n(x)} \right\rvert}\)</span>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          A useful way to force uniform convergence: bound your sequence uniformly by a sequence that goes to zero:
+        </li>
+      
+        <li>
+          <img class='inline mb-3' src='Workshops/Real%20Analysis/_attachments/Pasted%20image%2020210528183356.png' alt='[[_attachments/Pasted image 20210528183356.png]]' style='width: inherit;' />
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <strong>Sups and infs</strong>: sup is the least upper bound, inf is the greatest lower bound.
+        </li>
+      
+        <li>
+          The <span class='math inline'>\(p-\)</span>test: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+\sum_{n\geq 1} {1 \over n^p} < \infty \iff p>1
+\end{align*}
+<span></span>
+        </li>
+      
+        <li>
+          Useful fact: convergent sums have <strong>small tails</strong>, i.e.  <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+\sum_{n\geq 1} a_n < \infty \implies \lim_{N\to\infty}\sum_{n\geq N} a_n = 0
+\end{align*}
+<span></span>
+        </li>
+      
+        <li>
+          So try bounding things from above by the <em>tail</em> of a sum!
+        </li>
+      
+        <li>
+          If you can’t bound by a tail: as long as you have control over the coefficients, you can pick them to make the sum to converge “fast enough”.
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Example: for a fixed <span class='math inline'>\({\varepsilon}\)</span>, choose <span class='math inline'>\(a_n = 1/2^n\)</span>. Note that <span class='math inline'>\(\sum_{n\geq 1} 1/2^n = 1\)</span>, so choose <span class='math inline'>\(a_n := {\varepsilon}/2^n\)</span>: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+\cdots \leq \sum_{n\geq 1} a_n := \sum_{n\geq 1} {{\varepsilon}\over 2^n} = {\varepsilon}\to 0
+\end{align*}
+<span></span>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          The <span class='math inline'>\({\varepsilon}/3\)</span> trick:
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <img class='inline mb-3' src='Workshops/Real%20Analysis/_attachments/Pasted%20image%2020210528183619.png' alt='[[_attachments/Pasted image 20210528183619.png]]' style='width: inherit;' />
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <strong>The <span class='math inline'>\(M{\hbox{-}}\)</span>test</strong>:
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <img class='inline mb-3' src='Workshops/Real%20Analysis/_attachments/Pasted%20image%2020210528183827.png' alt='[[_attachments/Pasted image 20210528183827.png]]' style='width: inherit;' />
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  <h2 id='measure-theory' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Measure Theory</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\(F_\sigma\)</span> sets: unions of closed sets (<span class='math inline'>\(F\)</span> for <em>fermi</em>, French for closed. Sigma for sums, ie unions)
+        </li>
+      
+        <li>
+          <span class='math inline'>\(G_\delta\)</span> sets: intersections of open sets
+        </li>
+      
+        <li>
+          <span class='math inline'>\(\sigma\)</span> algebras: closed under complements, countable intersections, countable unions
+        </li>
+      
+        <li>
+          Some of the most useful properties of measures:
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      ![[_attachments/Pasted%20image%2020210528184432.png) <span title='Link is broken'><s>![](_attachments/Pasted%20image%2020210528184444.png)</s>❌</span> ![](_attachments/Pasted%20image%2020210528184451.png]]
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          The proof of continuity of measure contains a very useful trick: replace a sequence of sets <span class='math inline'>\(\left\{{E_k}\right\}\)</span> with a sequence of <em>disjoint</em> sets that either union or intersect to the same thing.
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Example: if <span class='math inline'>\(A_1 \subseteq A_2 \subseteq \cdots\)</span>, set <span class='math inline'>\(F_1=A_1\)</span> and <span class='math inline'>\(F_k = A_k \setminus A_{k-1}\)</span> for <span class='math inline'>\(k\geq 2\)</span>. Then <span class='math inline'>\(\displaystyle\bigcup_{k\geq 1} A_k = \displaystyle\coprod_{k\geq 1} F_k\)</span>.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Occasionally you need some properties of <strong>outer measures</strong>:
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      ![[_attachments/Pasted%20image%2020210528184814.png) ![](_attachments/Pasted%20image%2020210528184827.png]]
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Outer measure for <span class='math inline'>\({\mathbb{R}}^n\)</span>: you consider all collections of cubes that cover your set, sum up their volumes, and take the infimum over all such collections:
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      <img class='inline mb-3' src='Workshops/Real%20Analysis/_attachments/Pasted%20image%2020210528184951.png' alt='[[_attachments/Pasted image 20210528184951.png]]' style='width: inherit;' />
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          “Almost everywhere <em>blah</em>” : the set where <em>blah</em> does not happen has measure zero.
+        </li>
+      
+        <li>
+          “Infinitely many/all but finitely many” types of sets, which show up in Borel-Cantelli style problems
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      ![[_attachments/Pasted%20image%2020210528183952.png) ![](_attachments/Pasted%20image%2020210528184004.png]]
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Lemmas that sometimes show up on quals:
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      ![[_attachments/Pasted%20image%2020210528185216.png) ![](_attachments/Pasted%20image%2020210528185223.png]]
+    </p>
+  <h2 id='fubini-tonelli' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Fubini-Tonelli</h2>
+    <p class='mb-3'>
+      Quick statement:
+    </p>
+  
+    <p class='mb-3'>
+      <img class='inline mb-3' src='Workshops/Real%20Analysis/_attachments/Pasted%20image%2020210528185415.png' alt='[[_attachments/Pasted image 20210528185415.png]]' style='width: inherit;' />
+    </p>
+  
+    <p class='mb-3'>
+      Explained in Stein and Shakarchi (Fubini, which requires <strong>integrability</strong>)
+    </p>
+  
+    <p class='mb-3'>
+      ![[_attachments/Pasted%20image%2020210528185725.png) ![](_attachments/Pasted%20image%2020210528185759.png]]
+    </p>
+  
+    <p class='mb-3'>
+      And Tonelli, which only requires <strong>measurability</strong>:
+    </p>
+  
+    <p class='mb-3'>
+      ![[_attachments/Pasted%20image%2020210528185956.png) ![](_attachments/Pasted%20image%2020210528190018.png]]
+    </p>
+  
+    <p class='mb-3'>
+      A more precise statement from Folland:
+    </p>
+  
+    <p class='mb-3'>
+      ![[_attachments/Pasted%20image%2020210528185618.png) ![](_attachments/Pasted%20image%2020210528185433.png]]
+    </p>
+  
+    <p class='mb-3'>
+      Some things that qual questions are commonly based on:
+    </p>
+  
+    <p class='mb-3'>
+      ![[_attachments/Pasted%20image%2020210528190107.png) <span title='Link is broken'><s>![](_attachments/Pasted%20image%2020210528190142.png)</s>❌</span> ![](_attachments/Pasted%20image%2020210528190207.png]]
+    </p>
+  <h1 id='qual-problems' class='pb-2 mb-2 text-5xl font-bold text-center'>Qual Problems</h1>
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Suggested by Peter Woolfitt!
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      Spring 2012 #4
+    </p>
+  
+    <p class='mb-3'>
+      <img class='inline mb-3' src='Workshops/Real%20Analysis/_attachments/Pasted%20image%2020210528180450.png' alt='[[_attachments/Pasted image 20210528180450.png]]' style='width: inherit;' />
+    </p>
+  
+    <p class='mb-3'>
+      Fall 2016 #2
+    </p>
+  
+    <p class='mb-3'>
+      <img class='inline mb-3' src='Workshops/Real%20Analysis/_attachments/Pasted%20image%2020210528181507.png' alt='[[_attachments/Pasted image 20210528181507.png]]' style='width: inherit;' />
+    </p>
+  
+    <p class='mb-3'>
+      Fall 2018 #5
+    </p>
+  
+    <p class='mb-3'>
+      <img class='inline mb-3' src='Workshops/Real%20Analysis/_attachments/Pasted%20image%2020210528181558.png' alt='[[_attachments/Pasted image 20210528181558.png]]' style='width: inherit;' />
+    </p>
+  
+    <p class='mb-3'>
+      Spring 2019 #4: This is an expanded version of Fall 2018 #5 above.
+    </p>
+  
+    <p class='mb-3'>
+      <img class='inline mb-3' src='Workshops/Real%20Analysis/_attachments/Pasted%20image%2020210528181615.png' alt='[[_attachments/Pasted image 20210528181615.png]]' style='width: inherit;' />
+    </p>
+  
+  <!-- What goes in this file will appear below the note body-->
+</article>
+            <div class='flex flex-col lg:flex-row lg:space-x-2'>
+              
+              
+            </div>
+            
+  <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
+    
+  </section>
+
+            <!-- What goes in this file will at the very end of the main div -->
+          </main>
+        </div>
+      </div>
+      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-800'>
+  <div>
+    <a href=''>
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'></path>
+      </svg>
+    </a>
+  </div>
+  <div>
+    Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
+    
+      
+        <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
+          0.3.6.1
+        </span>
+      
+    
+  </div>
+  <div>
+    <a href='-/all.html' title='View Index'>
+      <svg style='width: 1rem;' class='hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
+        </path>
+      </svg>
+    </a>
+
+  </div>
+</footer>
+    </div>
+  
+</body>
+
+</html>
