@@ -1,3 +1,18 @@
 ---
-aliases: ["symmetric", "symmetric monoidal"]
+aliases:
+- symmetric
+- symmetric monoidal
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+

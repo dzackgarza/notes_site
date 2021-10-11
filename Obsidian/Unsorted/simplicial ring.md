@@ -1,3 +1,17 @@
 ---
-aliases: ["simplicial commutative ring"]
+aliases:
+- simplicial commutative ring
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+

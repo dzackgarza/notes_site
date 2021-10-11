@@ -1,0 +1,2163 @@
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <title>
+    Homological Algebra Talk – My Emanote Site
+  </title>
+  
+    
+      <meta property='og:description' content />
+      <meta property='og:site_name' content='MyEmanoteSite' />
+    
+    
+      <base href='/' />
+      <link href='favicon.svg' rel='icon' />
+    
+    <meta name='generator' content='Emanote' />
+
+  
+  <!-- CSSSTART -->
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
+  <!-- CSSEND -->
+
+  <!-- Heist error element -->
+  <style type='text/css'>
+    strong.error {
+      color: lightcoral;
+      font-size: 90%;
+      font-family: monospace;
+    }
+  </style>
+  <!-- What goes in this file will appear on near the end of <head>--><link rel='preload' href='_emanote-static/fonts/Nunito/Nunito-Regular.ttf' as='font' type='font/ttf' crossorigin />
+<link rel='preload' href='_emanote-static/fonts/Nunito/Nunito-ExtraBold.ttf' as='font' type='font/ttf' crossorigin />
+
+<style>
+  @font-face {
+    font-family: 'Nunito';
+    src: url('_emanote-static/fonts/Nunito/Nunito-Regular.ttf') format("truetype");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Nunito-Bold';
+    src: url('_emanote-static/fonts/Nunito/Nunito-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+  }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  header,
+  .header-font {
+    font-family: 'Nunito-Bold', sans-serif;
+  }
+</style>
+
+  <head-main></head-main>
+</head>
+
+<!-- DoNotFormat -->
+
+
+
+<!-- DoNotFormat -->
+
+<body class='bg-gray-400 overflow-y-scroll'>
+  
+    <div class='container mx-auto'>
+
+      <nav id='breadcrumbs' class='w-full text-gray-700 md:hidden'>
+  <div class='flex justify-left'>
+    <div class='w-full px-2 py-2 bg-gray-50'>
+      <ul class='flex flex-wrap text-lg'>
+        <li class='inline-flex items-center'>
+          
+            
+              <img style='width: 1rem;' src='favicon.svg' />
+            
+          
+        </li>
+        
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='index.html'>
+                index
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='Subjects.html'>
+                Subjects
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+        
+      </ul>
+    </div>
+    <button class='inline px-2 py-1 text-white bg-blue-600 outline-none cursor-pointer focus:outline-none' title='Toggle sidebar' type='button' onclick="toggleHidden('sidebar')">
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'></path>
+      </svg>
+    </button>
+    <script>
+      function toggleHidden(elemId) {
+        document.getElementById(elemId).classList.toggle("hidden");
+      }
+    </script>
+  </div>
+</nav>
+
+      <div id='container' class='flex flex-nowrap flex-col md:flex-row bg-gray-50 md:mt-8 md:shadow-2xl md:mb-8'>
+        <!-- Sidebar column -->
+        <nav id='sidebar' class='flex-shrink hidden leading-relaxed md:block md:sticky md:top-0 md:h-full md:w-48 xl:w-64'>
+          <div class='px-2 py-2 text-gray-800'>
+
+            <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
+              <a href='-/tags.html' title='View tags'>
+                <svg style='width: 1rem;' class='hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
+                  </path>
+                </svg>
+              </a>
+              <a href='-/all.html' title='Expand full tree'>
+                <svg style='width: 1rem;' class='hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
+                  </path>
+                </svg>
+              </a>
+            </div>
+
+            <div id='site-logo' class='pl-2'>
+              <div class='flex items-center my-2 space-x-2 justify-left'>
+                <a href='' title='Go to Home'>
+                  
+                    
+                      <!-- The style width attribute here is to prevent huge
+                      icon from displaying at those rare occasions when Tailwind
+                      hasn't kicked in immediately on page load 
+                      -->
+                      <img style='width: 1rem;' class='transition transform hover:scale-110 hover:opacity-80' src='favicon.svg' />
+                    
+                  
+                </a>
+                <a class='font-bold truncate' title='Go to Home' href=''>
+                  Home
+                </a>
+              </div>
+            </div>
+
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0001_Graduate Research Index' href='0001_Graduate%20Research%20Index.html'>
+      0001_Graduate Research Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0001_Learning_Index' href='0001_Learning_Index.html'>
+      0001_Learning_Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0009_subject index' href='0009_subject%20index.html'>
+      0009_subject index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Home' href='000_Home.html'>
+      000_Home
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Leisure Reading Projects' href='000_Leisure%20Reading%20Projects.html'>
+      000_Leisure Reading Projects
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Projects Index' href='000_Projects%20Index.html'>
+      000_Projects Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Reading Projects Index' href='000_Reading%20Projects%20Index.html'>
+      000_Reading Projects Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Recommendations' href='000_Recommendations.html'>
+      000_Recommendations
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Talks Index' href='000_Talks%20Index.html'>
+      000_Talks Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Todo' href='000_Todo.html'>
+      000_Todo
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Undergraduate Research Index' href='000_Undergraduate%20Research%20Index.html'>
+      000_Undergraduate Research Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Archive' href='Archive.html'>
+      Archive
+    </a>
+    
+      
+        <span class='text-gray-300' title='4 children inside'>
+          4
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Conferences and Seminars' href='Conferences%20and%20Seminars.html'>
+      Conferences and Seminars
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Learning' href='Learning.html'>
+      Learning
+    </a>
+    
+      
+        <span class='text-gray-300' title='2 children inside'>
+          2
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Projects' href='Projects.html'>
+      Projects
+    </a>
+    
+      
+        <span class='text-gray-300' title='5 children inside'>
+          5
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Subjects' href='Subjects.html'>
+      Subjects
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Algebraic Geometry' href='Subjects/Algebraic%20Geometry.html'>
+      Algebraic Geometry
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Algebraic Topology' href='Subjects/Algebraic%20Topology.html'>
+      Algebraic Topology
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Contact' href='Subjects/Contact.html'>
+      Contact
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+  
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
+        </path>
+      </svg>
+      
+  
+    <a class='font-bold text-blue-600 hover:underline truncate' title='Homological Algebra Talk' href='Subjects/Homological%20Algebra%20Talk.html'>
+      Homological Algebra Talk
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Stein Manifolds' href='Subjects/Stein%20Manifolds.html'>
+      Stein Manifolds
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Translation Surfaces' href='Subjects/Translation%20Surfaces.html'>
+      Translation Surfaces
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Weil Conjectures' href='Subjects/Weil%20Conjectures.html'>
+      Weil Conjectures
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Weil Conjectures References' href='Subjects/Weil%20Conjectures%20References.html'>
+      Weil Conjectures References
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='homotopy theory' href='Subjects/homotopy%20theory.html'>
+      homotopy theory
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='mapping class group' href='Subjects/mapping%20class%20group.html'>
+      mapping class group
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='To Review' href='To%20Review.html'>
+      To Review
+    </a>
+    
+      
+        <span class='text-gray-300' title='58 children inside'>
+          58
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Unsorted' href='Unsorted.html'>
+      Unsorted
+    </a>
+    
+      
+        <span class='text-gray-300' title='557 children inside'>
+          557
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Workshops' href='Workshops.html'>
+      Workshops
+    </a>
+    
+      
+        <span class='text-gray-300' title='5 children inside'>
+          5
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='_HTT' href='_HTT.html'>
+      _HTT
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='consistant-report' href='consistant-report.html'>
+      consistant-report
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='figures' href='figures.html'>
+      figures
+    </a>
+    
+      
+        <span class='text-gray-300' title='4 children inside'>
+          4
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+
+          </div>
+        </nav>
+
+        <!-- Main body column -->
+        <div class='flex-1 w-full overflow-x-auto bg-white'>
+          <main class='px-4 py-4'>
+            <h1 class='flex items-end justify-center mb-4 p-3 bg-blue-100 text-5xl font-extrabold text-black rounded'>
+  <a class='z-40 tracking-tighter '>
+    Homological Algebra Talk
+  </a>
+</h1>
+            <article class='overflow-auto'>
+  <!-- What goes in this file will appear on top of note body-->
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#homological-algebra' class='text-blue-600 font-bold hover:underline'>Homological Algebra</a>
+        </li>
+      
+        <li>
+          <a href='#what-is-homological-algebra' class='text-blue-600 font-bold hover:underline'>What is Homological Algebra</a>
+        </li>
+      
+        <li>
+          <a href='#content' class='text-blue-600 font-bold hover:underline'>Content</a>
+        </li>
+      
+        <li>
+          <a href='#what-is-homology' class='text-blue-600 font-bold hover:underline'>What is homology?</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#how-was-homology-first-formulated' class='text-blue-600 font-bold hover:underline'>How was homology first formulated?</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#some-algebraic-background' class='text-blue-600 font-bold hover:underline'>Some Algebraic Background</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#kernels-cokernels-and-abelian-categories' class='text-blue-600 font-bold hover:underline'>Kernels, Cokernels, and Abelian Categories</a>
+        </li>
+      
+        <li>
+          <a href='#exactness' class='text-blue-600 font-bold hover:underline'>Exactness</a>
+        </li>
+      
+        <li>
+          <a href='#prototypes' class='text-blue-600 font-bold hover:underline'>Prototypes</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#nifty-application-in-vector-spaces-every-short-exact-sequence-splits.' class='text-blue-600 font-bold hover:underline'>Nifty application: In vector spaces, every short exact sequence splits.</a>
+        </li>
+      
+        <li>
+          <a href='#example-a-ses-that-doesnt-split.' class='text-blue-600 font-bold hover:underline'>Example: A SES that doesn’t split.</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#commutative-diagrams' class='text-blue-600 font-bold hover:underline'>Commutative Diagrams</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#the-snake-lemma' class='text-blue-600 font-bold hover:underline'>The Snake Lemma</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#chain-complexes' class='text-blue-600 font-bold hover:underline'>Chain Complexes</a>
+        </li>
+      
+        <li>
+          <a href='#homology-from-chain-complexes' class='text-blue-600 font-bold hover:underline'>Homology From Chain Complexes</a>
+        </li>
+      
+        <li>
+          <a href='#applying-the-snake-lemma' class='text-blue-600 font-bold hover:underline'>Applying the Snake Lemma</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      <span title='Link is broken'><s>[[../../00_Talks Index.md | 000_Talks%20Index.html]]</s>❌</span>
+    </p>
+  <h1 id='homological-algebra' class='pb-2 mb-2 text-5xl font-bold text-center'>Homological Algebra</h1>
+    <p class='mb-3'>
+      <span title='Link is broken'><s>[[../Classical homological algebra.md | ../Unsorted/Classical%20homological%20algebra.html]]</s>❌</span>
+    </p>
+  
+    <p class='mb-3'>
+      Goal: provide some background for <a href='https://www.youtube.com/watch?v=etbcKWEKnvg' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>https://www.youtube.com/watch?v=etbcKWEKnvg</a>!
+    </p>
+  <h1 id='what-is-homological-algebra' class='pb-2 mb-2 text-5xl font-bold text-center'>What is Homological Algebra</h1>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Why was it invented?
+        </li>
+      
+        <li>
+          What is it used for?
+        </li>
+      
+        <li>
+          What are some easily understandable results that rely on it?
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Universal coefficient theorem?
+        </li>
+      
+        <li>
+          Used to prove Fermat’s Last Theorem (cohomology in relation to modular elliptic curves)
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Where does it come up
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Stoke’s theorem: an integral over an <span class='math inline'>\(n\)</span>-dimensional region <span class='math inline'>\(R\)</span> of a manifold can be realized as an <span class='math inline'>\(n-1\)</span> dimensional integral over <span class='math inline'>\({{\partial}}R\)</span>.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  <h1 id='content' class='pb-2 mb-2 text-5xl font-bold text-center'>Content</h1>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Homology and cohomology
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Used to detect <span class='math inline'>\(n\)</span>-dimensional holes, distinguishes manifolds. Given a manifold <span class='math inline'>\(M\)</span>,
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          A <em>cycle</em> is a closed submanifold
+        </li>
+      
+        <li>
+          A <em>boundary</em> is a cycle which is also the boundary of another cycle
+        </li>
+      
+        <li>
+          A <em>homology class</em> is an equivalence of <strong>cycles modulo boundaries</strong>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          If such a class is nontrivial, this represents a cycle that is <em>not</em> the boundary of any submanifold - i.e. a hole.
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          That is, a cycle would be considered a “trivial hole” if it is a boundary, and two “different” cycles would be considered the same hole if their difference is a k-boundary.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Easy example: all paths on <span class='math inline'>\(S^2\)</span> are homotopic to a point, not the case for <span class='math inline'>\(S^1 \times S^1\)</span>.
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Note: <span class='math inline'>\(S^n \neq \prod_{i=1}^n S^1\)</span>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Construction: a generalization of the Euler characteristic computation
+        </li>
+      
+        <li>
+          Index by the integers, <span class='math inline'>\(H_i\)</span>. We can look at the Betti numbers, <span class='math inline'>\(b_i = \text{dim}_{{\mathbb{Q}}}H_i(X: {\mathbb{Q}})\)</span>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Give the number of <span class='math inline'>\(n\)</span>-dimensional cuts that must be made to disconnect a surface
+        </li>
+      
+        <li>
+          <span class='math inline'>\(b_0\)</span> is the number of connected components
+        </li>
+      
+        <li>
+          <span class='math inline'>\(b_1\)</span> is the number of holes
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\(H_1(S^1\times S^1) = {\mathbb{Z}}\oplus {\mathbb{Z}}\)</span>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <span class='math inline'>\(b_2\)</span> is the number of “2-dimensional” holes, i.e. an empty volume.
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Number of plugs you’d need to blow air into to inflate the object!
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Modules
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Most important classes
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Projective
+        </li>
+      
+        <li>
+          Injective
+        </li>
+      
+        <li>
+          Flat
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Other nifty types (not mutually exclusive)
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Free
+        </li>
+      
+        <li>
+          Graded
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Short Exact Sequences
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Splitting of sequences
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Realize as an isomorphism
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Importance/use of exactness
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Chain Complexes and maps
+        </li>
+      
+        <li>
+          Tensor Product and Hom
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          As an adjoint pair
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Derived Functors
+        </li>
+      
+        <li>
+          <span class='math inline'>\(\operatorname{Tor}\)</span>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Generalize the tensor product: <span class='math inline'>\(\text{Tor}^R_0(A,B) \cong A \otimes_R B\)</span>.
+        </li>
+      
+        <li>
+          Formally: For a fixed module <span class='math inline'>\(M\)</span> over a ring <span class='math inline'>\(R\)</span>, derived functor of <span class='math inline'>\(M \otimes_R {-}\)</span>
+        </li>
+      
+        <li>
+          Measures failure of tensor product to preserve exact sequences
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Projective Resolutions
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Exists for any module <span class='math inline'>\(M\)</span>, yielding an exact sequence <span class='math inline'>\(\cdots \to Pn \to \cdots \to P_1 \to P_0 \twoheadrightarrow M \to 0\)</span>
+        </li>
+      
+        <li>
+          Projective resolution of <span class='math inline'>\(M\)</span> can be used to calculate <span class='math inline'>\(\text{Tor}_n^R(M,N)\)</span> for all <span class='math inline'>\(n\)</span>.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          $\operatorname{Ext} $
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Derived functor of <span class='math inline'>\(\hom_R(M, {-})\)</span>
+        </li>
+      
+        <li>
+          Measures failure of <span class='math inline'>\(\hom\)</span> to preserve exactness
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Spectral Sequences
+        </li>
+      
+        <li>
+          Snake Lemma
+        </li>
+      
+    </ul>
+  <h1 id='what-is-homology' class='pb-2 mb-2 text-5xl font-bold text-center'>What is homology?</h1>
+    <p class='mb-3'>
+      “Homology” as a word just denotes some kind of study of “sameness”, which depends on what context you’re in.
+    </p>
+  
+    <p class='mb-3'>
+      It arose out of topology, where we are interested in studying when two manifolds are the “same” up to certain kinds of maps. Most generally, we look at continuous maps between spaces, but one could also look at smooth maps (differential geometry), or holomorphic maps (complex analysis).
+    </p>
+  
+    <p class='mb-3'>
+      This sameness can be useful, because you may end up working with some complicated, unknown sort of object, but maybe you’re only interested in the maps into or out of that object (for example, maybe smooth solutions to a differential equation on a manifold). If you know that there is another space that is the “same” up to smooth maps and much easier to deal with, you may be able to pull back results on the easier, well-known object into your complicated object and learn more about what you have.
+    </p>
+  
+    <p class='mb-3'>
+      When you just restrict to continuous maps, though, the discerning feature of spaces is their number of “holes”. We say that two spaces are <em>homeomorphic</em> if they are equivalent up to continuous maps, which you can alternatively think of as saying that one space can be continuously deformed into the other one. The classic example is that the torus (i.e. the surface of a donut) is equivalent to a coffee cup, due to the fact that both are missing a “hole”.
+    </p>
+  
+    <p class='mb-3'>
+      We have this intuitive notion, but since we are mathematicians, we need to make that precise! And of course, generalize. There are many different ways of defining what exactly an “<span class='math inline'>\(n\)</span>-dimensional hole” should mean, and homology started off as one of them that wound up being useful and quite successful.
+    </p>
+  <h2 id='how-was-homology-first-formulated' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>How was homology first formulated?</h2>
+    <p class='mb-3'>
+      There are many different ways to formulate the original homology, but they all roughly follow the same motto: “cycles mod boundaries”.
+    </p>
+  
+    <p class='mb-3'>
+      This originates from the world of manifolds, which are distinguished as topological spaces by their number of holes. One way to measure <span class='math inline'>\(n\)</span>-dimensional holes is to consider <em>k-cycles</em> on the manifold for <span class='math inline'>\(1\leq k \leq n\)</span>, which are a bit like cutting instructions. A 1-cycle is a set of points to remove, puncturing the manifold. A 2-cycle is a loop you could take scissors to, and in general a <span class='math inline'>\(d\)</span>-cycle is a <span class='math inline'>\(d\)</span>-dimensional submanifold.
+    </p>
+  
+    <p class='mb-3'>
+      Manifolds may or may not have boundaries (<strong>picture: manifold with boundary</strong>), which means that cycles may have boundaries. So to measure the holes, we “mod out” by those cycles that are actually just the boundary of higher-dimensional cycles. (<strong>picture: quotienting as collapsing to a point</strong>). We call the equivalence classes generated by this quotient <strong>homology classes</strong>, and say that two cycles in the same class are <em>homologous</em>.
+    </p>
+  
+    <p class='mb-3'>
+      For example, on <span class='math inline'>\(S^2\)</span>, every 1-cycle is homologous to zero - any path that is drawn can just be shrunk to a point, there is no obstruction. But on <span class='math inline'>\(T\)</span>, there are two non-trivial one-cycles - a meridian and the equator. So we can use this formulation to distinguish spaces!
+    </p>
+  
+    <p class='mb-3'>
+      As it turns out, when this is formalized, we can lift these kinds of facts about manifolds and boundaries and cycles over to the world of algebra in a functorial way.
+    </p>
+  
+    <p class='mb-3'>
+      For a space <span class='math inline'>\(X\)</span> and every <span class='math inline'>\(n\)</span>, one can form a group <span class='math inline'>\(H_n(X)\)</span> called the <em><span class='math inline'>\(n\)</span>-th homology group</em> that encodes the information of what <span class='math inline'>\(n\)</span>-dimensional holes are in <span class='math inline'>\(X\)</span>. We can assemble all of these together in a <em>graded</em> structure, something indexed by integers, and just generally look at <span class='math inline'>\(H(X) = H_0(X) \oplus H_1(X) \oplus \cdots\)</span> where the grading just indicates the dimension to extract.
+    </p>
+  
+    <p class='mb-3'>
+      Intuitively, <span class='math inline'>\(H_0(X)\)</span> tells you about the number of connected components, <span class='math inline'>\(H_1(X)\)</span> is the number of “areas” missing from <span class='math inline'>\(X\)</span>, <span class='math inline'>\(H_2(X)\)</span> is the number of “volumes” missing, and so on. For these examples, we read off the number by how many times <span class='math inline'>\({\mathbb{Z}}\)</span> appears in the group.
+    </p>
+  
+    <p class='mb-3'>
+      Some examples:
+    </p>
+  
+    <p class='mb-3'>
+      <span class='math inline'>\(H(S^1) = ({\mathbb{Z}}, {\mathbb{Z}}, 0, 0, \cdots)\)</span> So we have 1 connected component, 1 one-dimensional hole, and that’s it.
+    </p>
+  
+    <p class='mb-3'>
+      <span class='math inline'>\(H(B^2) = ({\mathbb{Z}}, 0, 0 , \cdots)\)</span> So the filled in 2-dimensional ball has no holes.
+    </p>
+  
+    <p class='mb-3'>
+      <span class='math inline'>\(H(S^2) = ({\mathbb{Z}}, 0, {\mathbb{Z}}, 0, \cdots)\)</span> So we have one connected component, no one-dimensional holes, and one two-dimensional hole.
+    </p>
+  
+    <p class='mb-3'>
+      <span class='math inline'>\(H_k(S^n) = \mathbf{1}[k = 0, n]\)</span> In general, the <span class='math inline'>\(n\)</span>-sphere has one connected component and one <span class='math inline'>\(n\)</span>-dimensional hole.
+    </p>
+  <h1 id='some-algebraic-background' class='pb-2 mb-2 text-5xl font-bold text-center'>Some Algebraic Background</h1>
+    <p class='mb-3'>
+      In order to generalize and apply homology to other areas, we need to pull in a little bit of algebra. First, we need to talk about chain complexes. These can generally be formulated in what are called <em>abelian categories</em>, but we’ll stay a little more concrete than that for now.
+    </p>
+  <h2 id='kernels-cokernels-and-abelian-categories' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Kernels, Cokernels, and Abelian Categories</h2>
+    <p class='mb-3'>
+      Let’s get some terminology out of the way first, starting with something you may be familiar with: kernels.
+    </p>
+  
+    <p class='mb-3'>
+      You might remember this from linear algebra, so let’s work in the category of vector spaces for a moment. Given a linear map <span class='math inline'>\(T: V \to W\)</span>, one interesting thing to look at is <span class='math inline'>\(\left\{{v\in V \mathrel{\Big|}T(V) =0 \in W}\right\}\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      If <span class='math inline'>\(V,W\)</span> are finite dimensional, then after picking a basis there is a matrix <span class='math inline'>\(A\)</span> associated to <span class='math inline'>\(T\)</span>, and so this is the set of all solutions to the homogeneous equation <span class='math inline'>\(Ax = 0\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      We refer to this set as the <strong>kernel</strong> of <span class='math inline'>\(T\)</span>. In the finite dimensional setting, this is equivalent to the nullspace of <span class='math inline'>\(A\)</span>. Notice that <span class='math inline'>\(T\)</span> is injective (i.e. one-to-one) if and only if <span class='math inline'>\(Ax = 0\)</span> implies <span class='math inline'>\(x = 0\)</span>, so the kernel is trivial. This holds in many categories!
+    </p>
+  
+    <p class='mb-3'>
+      Staying in the finite setting, we know that <span class='math inline'>\(Ax\)</span> lives somewhere in <span class='math inline'>\(W\)</span>, and it is in fact a subspace. In a general setting, it’s not <em>all</em> of <span class='math inline'>\(W\)</span> - this would require that <span class='math inline'>\(W\)</span> and <span class='math inline'>\(V\)</span> had the same dimension (so <span class='math inline'>\(A\)</span> was square), and also that <span class='math inline'>\(A\)</span> had full rank (so <span class='math inline'>\(A\)</span> is not singular).
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Note that if we were looking at groups, there is an entirely analogous procedure - <span class='math inline'>\(T\)</span> would instead be a homomorphism, and the image <span class='math inline'>\(\text{im}~T\)</span> would be a normal subgroup in <span class='math inline'>\(W\)</span>.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      In either case, we can always form the quotient <span class='math inline'>\(W / \text{im}~T\)</span>, and this is what we’ll refer to as the <strong>cokernel</strong>.
+    </p>
+  
+    <p class='mb-3'>
+      In matrices, we just have
+    </p>
+  
+    <p class='mb-3'>
+      <span class='math inline'>\(\ker A = \left\{{x \mathrel{\Big|}Ax = 0}\right\}\)</span>
+    </p>
+  
+    <p class='mb-3'>
+      and
+    </p>
+  
+    <p class='mb-3'>
+      <span class='math inline'>\(\text{coker}~A = \left\{{y \mathrel{\Big|}y^T A = 0}\right\}\)</span>
+    </p>
+  
+    <p class='mb-3'>
+      Intuitively, both the kernel and cokernel carry a lot of information about the map.
+    </p>
+  
+    <p class='mb-3'>
+      The kernel measures how far the map is from an injection - this is because if the kernel is trivial, then the map is injective, so kernel size somehow measures “distance” from injectivity - larger kernels correspond less injectivity.
+    </p>
+  
+    <p class='mb-3'>
+      The cokernel measures how far the map is from a surjection. This is because if the cokernel is trivial, then <span class='math inline'>\(\text{im}~ T\)</span> is the entire target space, and thus <span class='math inline'>\(T\)</span> is surjective.
+    </p>
+  
+    <p class='mb-3'>
+      (Advanced note: in full generality, the kernel is defined in terms of a universal property. The cokernel is the categorical dual of the kernel, and satisfies a similar universal property. Duality is important!)
+    </p>
+  <h2 id='exactness' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Exactness</h2>
+    <p class='mb-3'>
+      Next let’s talk a little bit about exactness. Consider a diagram such as this:
+    </p>
+  
+    <p class='mb-3'>
+      <span class='math inline'>\(0 \hookrightarrow A \xrightarrow{f} B \xrightarrow{g} C \twoheadrightarrow 0\)</span>
+    </p>
+  
+    <p class='mb-3'>
+      where <span class='math inline'>\(A,B,C\)</span> are modules (or groups or rings or even vector spaces if you prefer), <span class='math inline'>\(f, g\)</span> maps between them as indicated, where left end of the sequence is the inclusion of the trivial module into <span class='math inline'>\(A\)</span> and the right end is a map sending every element to the single element of the trivial module.
+    </p>
+  
+    <p class='mb-3'>
+      We say this kind of sequence is <strong>exact</strong> if <span class='math inline'>\(\text{im} f = \ker g\)</span>. What does this mean for elements? Well, if <span class='math inline'>\(a\in A\)</span>, then <span class='math inline'>\(f(a) \in B\)</span>. But if <span class='math inline'>\(g\)</span> is defined everywhere on <span class='math inline'>\(B\)</span>, then it’s certainly defined for <span class='math inline'>\(f(a)\)</span>, and <span class='math inline'>\(f(a) \in \ker g\)</span> means that <span class='math inline'>\(g(f(a)) = 0\)</span> in <span class='math inline'>\(C\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      Equivalently, this just means that <span class='math inline'>\((g\circ f)(a) = 0\)</span> for every element in <span class='math inline'>\(A\)</span>, or that <span class='math inline'>\(g\circ f\)</span> is the zero map.
+    </p>
+  
+    <p class='mb-3'>
+      One concrete benefit of this abstraction is that if we have
+    </p>
+  
+    <p class='mb-3'>
+      <span class='math inline'>\(0 \hookrightarrow A \xrightarrow{f} B \twoheadrightarrow 0\)</span>,
+    </p>
+  
+    <p class='mb-3'>
+      then <span class='math inline'>\(f\)</span> is an isomorphism, and <span class='math inline'>\(A \cong B\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      Another benefit is that if we have a diagram where an <span class='math inline'>\(h\)</span> exists such as this
+    </p>
+  
+    <p class='mb-3'>
+      <span class='math inline'>\(0 \hookrightarrow A \xrightarrow{f} B \xtofrom[h]{g} C \twoheadrightarrow 0\)</span>
+    </p>
+  
+    <p class='mb-3'>
+      where <span class='math inline'>\(g \circ h = \operatorname{id}_C\)</span> then (in an <em>abelian category</em>) this sequence is said to <em>split</em>, and <span class='math inline'>\(C \cong B /A\)</span>. In other words, this is a generalization of the first isomorphism theorem.
+    </p>
+  
+    <p class='mb-3'>
+      In some instances, this also gives <span class='math inline'>\(B \cong A \oplus C\)</span> for some notion of “direct sum” appropriate to the category you’re working in.
+    </p>
+  
+    <p class='mb-3'>
+      Informally, when the sequence splits, this says that <span class='math inline'>\(B\)</span> is somehow a composite object, inside of which <span class='math inline'>\(A\)</span> and <span class='math inline'>\(C\)</span> are embedded.
+    </p>
+  <h2 id='prototypes' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Prototypes</h2>
+    <p class='mb-3'>
+      Here are some places exact sequences naturally arise:
+    </p>
+  
+    <p class='mb-3'>
+      For <span class='math inline'>\(N \unlhd G\)</span> a group, <span class='math inline'>\(0 \to N \to G \to G/N \to 0\)</span>
+    </p>
+  
+    <p class='mb-3'>
+      For two distinct groups <span class='math inline'>\(H, K\)</span>, <span class='math inline'>\(0 \to H \to H\times K \to K \to 0\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      For two “related” groups, <span class='math inline'>\(H, K\)</span>, where <span class='math inline'>\(\phi: K \to\text{Aut}(K)\)</span>: <span class='math inline'>\(0 \to H \to H \rtimes_\phi K \to K \to 0\)</span>
+    </p>
+  
+    <p class='mb-3'>
+      The “extension” problem: given <span class='math inline'>\(A, C\)</span>, and <span class='math inline'>\(0 \to A \to* \to C \to 0\)</span>,
+    </p>
+  
+    <p class='mb-3'>
+      what can be filled in for <span class='math inline'>\(*\)</span> to generate an exact sequence? Any such <span class='math inline'>\(*\)</span> yields an “extension of <span class='math inline'>\(A\)</span> by <span class='math inline'>\(C\)</span>”. In the category of groups, we have a classification of all finite <em>simple</em> groups, so a general solution to this problem would yield a classification of <strong>all</strong> finite groups (!!!)
+    </p>
+  <h3 id='nifty-application-in-vector-spaces-every-short-exact-sequence-splits' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Nifty application: In vector spaces, every short exact sequence splits.</h3>
+    <p class='mb-3'>
+      Let <span class='math inline'>\(T: U \to V\)</span> be a linear operator between vector spaces, let <span class='math inline'>\(A = \text{nullspace}~T\)</span>, <span class='math inline'>\(B=V\)</span>, <span class='math inline'>\(C = \text{range}~T\)</span>, then take <span class='math inline'>\(f = \operatorname{id}_V\)</span> and <span class='math inline'>\(g = T\)</span>. Then we recover the rank-nullity theorem from linear algebra, <span class='math inline'>\(V \cong \ker T \oplus \text{im} T\)</span> where <span class='math inline'>\(\oplus\)</span> is the orthogonal direct sum. (Note that this can also be interpreted as the fact that the map <span class='math inline'>\(T\)</span> <em>factors</em> into two other maps, one injective and one surjective).
+    </p>
+  <h3 id='example-a-ses-that-doesnt-split' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Example: A SES that doesn’t split.</h3>
+    <p class='mb-3'>
+      Take <span class='math inline'>\({\mathbb{Z}}\xrightarrow{\times n}{\mathbb{Z}}\xrightarrow{\operatorname{mod}n} {\mathbb{Z}}/n{\mathbb{Z}}\)</span>, where <span class='math inline'>\(n &gt; 1\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      This is exact, since <span class='math inline'>\(x \mapsto nx \mapsto 0\)</span>, so the composite is the zero map. But there is no map <span class='math inline'>\(g\)</span> that can invert the <span class='math inline'>\(f(x) = x\operatorname{mod}n\)</span> map, since <span class='math inline'>\(x\in {\mathbb{Z}}\mapsto f(x) \in [0, n-1]\)</span> means that <span class='math inline'>\({\left\lvert {(g\circ f)(x)} \right\rvert} \leq n &lt; {\left\lvert {{\mathbb{Z}}} \right\rvert}\)</span>, and the composite can’t be surjective. (E.g. this sequence throws away too much information to split!)
+    </p>
+  <h2 id='commutative-diagrams' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Commutative Diagrams</h2>
+    <p class='mb-3'>
+      This one is easy - we say a diagram involving maps between objects if it doesn’t matter which path you take between two nodes - the composition of maps yields the same thing in the destination.
+    </p>
+  
+    <p class='mb-3'>
+      <a href='http://mathworld.wolfram.com/images/eps-gif/SnakeLemma_1000.gif' class='text-blue-600 hover:underline' data-wikilink-type='WikiLinkEmbed' target='_blank' rel='noopener'></a>
+    </p>
+  <h1 id='the-snake-lemma' class='pb-2 mb-2 text-5xl font-bold text-center'>The Snake Lemma</h1>
+    <p class='mb-3'>
+      So now we can describe what is happening in the movie scene! (Note: this is probably the most advanced mathematics ever displayed in a movie.)
+    </p>
+  
+    <p class='mb-3'>
+      In any abelian category, we can consider things like commutative diagrams and exact sequences - so let’s do just this.
+    </p>
+  
+    <p class='mb-3'>
+      What this lemma does, in essence, is give you some information about what happens when you “transform” an exact sequence, or alternatively gives you a way to go back and forth between short and long exact sequences by a “connecting homomorphism”. The point of this is that the connecting map you obtain actually tells you about the <em>existence</em> of the related kernels and cokernels, providing valuable information about the intermediate maps.
+    </p>
+  
+    <p class='mb-3'>
+      So the setup is this - you have one exact sequence <span class='math inline'>\(A,B,C,f,g\)</span> and some transformation <span class='math inline'>\(F = (a,b,c)\)</span> that has three maps as its components, and the image of these happens to land on another exact sequence <span class='math inline'>\(A', B', C', f', g'\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Snake_lemma_origin.svg/375px-Snake_lemma_origin.svg.png' alt='Snake lemma origin.svg' />
+    </p>
+  
+    <p class='mb-3'>
+      As is almost always the case in algebra, we glean a lot of information from the kernels of maps, so one might ask about what’s going on with the kernels of <span class='math inline'>\(a,b,c\)</span>, and it turns out they’re given by something like this:
+    </p>
+  
+    <p class='mb-3'>
+      <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Snake_lemma_complete.svg/500px-Snake_lemma_complete.svg.png' alt='Snake lemma complete.svg' />
+    </p>
+  
+    <p class='mb-3'>
+      <a href='http://mathworld.wolfram.com/images/eps-gif/SnakeLemma2_1201.gif' class='text-blue-600 hover:underline' data-wikilink-type='WikiLinkEmbed' target='_blank' rel='noopener'></a>
+    </p>
+  
+    <p class='mb-3'>
+      What this says is that there is <em>another</em> exact sequence that you get for free, of the form
+    </p>
+  
+    <p class='mb-3'>
+      <span class='math inline'>\(\ker a \to\ker b \to\ker c \xrightarrow{d} \operatorname{coker}a \to\operatorname{coker}b \to\operatorname{coker}c\)</span>.
+    </p>
+  <h2 id='chain-complexes' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Chain Complexes</h2>
+    <p class='mb-3'>
+      When we have a sequence that is exact everywhere, we say it is a <em>long exact sequence</em>
+    </p>
+  
+    <p class='mb-3'>
+      A <em>chain complex</em> <span class='math inline'>\(\left\{{(C_i, {\partial}_i}\right\}\)</span> is a sequence, where each <span class='math inline'>\(C_i\)</span> is a module (or a group or vector space, if you want) and each <span class='math inline'>\({\partial}_i\)</span> is a morphism (or homomorphism), which are usually denoted the <em>boundary maps</em> or <em>differentials</em>, satisfying the condition <span class='math inline'>\({\partial}_{n+1} \circ {\partial}_{n} = 0\)</span> (so it is exact everywhere).
+    </p>
+  
+    <p class='mb-3'>
+      Diagrammatically, we have something like this:
+    </p>
+  
+    <p class='mb-3'>
+      <span class='math inline'>\(\cdots \xrightarrow{{\partial}_{n+1}} A_{n+1} \xrightarrow{{\partial}_{n}} A_n \to\xrightarrow{{\partial}_{n-1}} A_{n-1} \cdots \xrightarrow{{\partial}_{2}} A_1 \xrightarrow{{\partial}_{1}} A_0 \xrightarrow{{\partial}_{0}} A_{-1} \xrightarrow{{\partial}_{-1}} \cdots\)</span>
+    </p>
+  
+    <p class='mb-3'>
+      Every exact sequence is a chain complex, so this can be thought of as a generalization of exact sequences.
+    </p>
+  
+    <p class='mb-3'>
+      Often, you’ll see notation abused here, and people will refer to “the” boundary map <span class='math inline'>\({\partial}\)</span>. Then the relevant condition is that <span class='math inline'>\({\partial}^2 = 0\)</span>.
+    </p>
+  <h2 id='homology-from-chain-complexes' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Homology From Chain Complexes</h2>
+    <p class='mb-3'>
+      For some “nice enough” topological spaces <span class='math inline'>\(X\)</span>, we can construct a set of building blocks in each dimension <span class='math inline'>\(d\)</span>, usually referred to as <span class='math inline'>\(d\)</span>-simplexes, and build <span class='math inline'>\(X\)</span> as some combination of those. In fact, if <span class='math inline'>\(X\)</span> in an <span class='math inline'>\(n\)</span>-dimensional manifold, you only need simplexes of degree <span class='math inline'>\(n\)</span> or lower.
+    </p>
+  
+    <p class='mb-3'>
+      So for spaces that can be decomposed (or built, depending on your viewpoint) in this way, we can let <span class='math inline'>\(C_n\)</span> be the collection of all of the <span class='math inline'>\(n\)</span> simplexes. Moreover, some <span class='math inline'>\(n\)</span>-simplexes have <span class='math inline'>\(n-1\)</span> simplexes as boundaries, so we can define the map <span class='math inline'>\({\partial}_n: C_n \to C_{n-1}\)</span> that takes a simplex to its boundary. Since “boundaries don’t have boundaries”, it turns out that this defines a differential as defined above, and thus <span class='math inline'>\(\left\{{(C_i, {\partial}_i)}\right\}_{i=1}^n\)</span> forms a chain complex.
+    </p>
+  
+    <p class='mb-3'>
+      We can then take the <span class='math inline'>\(n\)</span>-th homology of <span class='math inline'>\(X\)</span> to be the generalization of “cycles mod boundaries”, and define <span class='math inline'>\(H_n(X) = \ker {\partial}_n / \text{im} ~{\partial}_{n+1}\)</span>.4. Given a short exact sequence of chain complexes, we can always “pass to homology” in this way.
+    </p>
+  <h2 id='applying-the-snake-lemma' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Applying the Snake Lemma</h2>
+    <p class='mb-3'>
+      <strong>Theorem</strong>: Any short exact sequence of chain complexes induces a long exact sequence of homology modules.
+    </p>
+  
+    <p class='mb-3'>
+      Let
+    </p>
+  
+    <p class='mb-3'>
+      <span class='math inline'>\(0 \to A \xrightarrow{f} B \xrightarrow{g} C \to 0\)</span>
+    </p>
+  
+    <p class='mb-3'>
+      be a short exact sequence of modules. Then there is a long exact sequence in homology,
+    </p>
+  
+    <p class='mb-3'>
+      <span class='math inline'>\(\to\cdots H_k(A) \xrightarrow{f^*} H_k(B) \xrightarrow{g^*} H_k(C) \xrightarrow{\delta} H_{k-1} (A) \to\cdots\)</span>
+    </p>
+  
+    <p class='mb-3'>
+      A critical part of this is the fact that we get a map <span class='math inline'>\(\delta: H_k(C) \to H_{k-1}(A)\)</span>, so we can work our way towards lower dimensions. (It also helps if <span class='math inline'>\(A\)</span> is somehow an easier object to work with)
+    </p>
+  
+    <p class='mb-3'>
+      Thinking of <span class='math inline'>\(B\)</span> as an “extension of <span class='math inline'>\(A\)</span> by <span class='math inline'>\(C\)</span>”, if we can find choices of <span class='math inline'>\(B\)</span> that fit the extension and make the sequence exact, we can glean information about all three objects together.
+    </p>
+  
+    <p class='mb-3'>
+      How is this used? In topology, the idea is that if we know how to glue a space together from small parts, and we understand the gluing maps well enough, then we have an avenue to understand the entire space (via its homology <span class='math inline'>\(H_k(X)\)</span> for all <span class='math inline'>\(k\)</span>).
+    </p>
+  
+    <p class='mb-3'>
+      One way this is explicitly used is to build the Mayer-Vietoris sequence, which allows us to compute the homology of two spaces whenever we know the homologies of both their union and intersection. (One usually takes these two spaces to be subspaces of a larger space we are interested in).
+    </p>
+  
+    <p class='mb-3'>
+      For example, take the torus <span class='math inline'>\(T\)</span> and cut it with a plane through the center into <span class='math inline'>\(T = U \coprod V\)</span>. Then both <span class='math inline'>\(U, V\)</span> are cylinders (<span class='math inline'>\(S^1 \times I\)</span>), and <span class='math inline'>\(U \cap V = S^1 \coprod S^1\)</span>, two disjoint circles. As seen earlier, we can compute homologies for spheres, and this gives us a way of combining that information to compute the homology of something a bit more complicated.
+    </p>
+  
+  <!-- What goes in this file will appear below the note body-->
+</article>
+            <div class='flex flex-col lg:flex-row lg:space-x-2'>
+              
+              
+            </div>
+            
+  <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
+    
+  </section>
+
+            <!-- What goes in this file will at the very end of the main div -->
+          </main>
+        </div>
+      </div>
+      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-800'>
+  <div>
+    <a href=''>
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'></path>
+      </svg>
+    </a>
+  </div>
+  <div>
+    Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
+    
+      
+        <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
+          0.3.6.1
+        </span>
+      
+    
+  </div>
+  <div>
+    <a href='-/all.html' title='View Index'>
+      <svg style='width: 1rem;' class='hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
+        </path>
+      </svg>
+    </a>
+
+  </div>
+</footer>
+    </div>
+  
+</body>
+
+</html>

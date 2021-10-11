@@ -1,3 +1,18 @@
 ---
-aliases: ["Perf", "perfect complex"]
+aliases:
+- Perf
+- perfect complex
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+

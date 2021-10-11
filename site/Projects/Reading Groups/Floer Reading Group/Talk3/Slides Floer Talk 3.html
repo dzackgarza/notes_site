@@ -1,0 +1,3284 @@
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <title>
+    Section 8.6 - 8.8: Setup for Computing the Index – My Emanote Site
+  </title>
+  
+    
+      <meta property='og:description' content />
+      <meta property='og:site_name' content='MyEmanoteSite' />
+    
+    
+      <base href='/' />
+      <link href='favicon.svg' rel='icon' />
+    
+    <meta name='generator' content='Emanote' />
+
+  
+  <!-- CSSSTART -->
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
+  <!-- CSSEND -->
+
+  <!-- Heist error element -->
+  <style type='text/css'>
+    strong.error {
+      color: lightcoral;
+      font-size: 90%;
+      font-family: monospace;
+    }
+  </style>
+  <!-- What goes in this file will appear on near the end of <head>--><link rel='preload' href='_emanote-static/fonts/Nunito/Nunito-Regular.ttf' as='font' type='font/ttf' crossorigin />
+<link rel='preload' href='_emanote-static/fonts/Nunito/Nunito-ExtraBold.ttf' as='font' type='font/ttf' crossorigin />
+
+<style>
+  @font-face {
+    font-family: 'Nunito';
+    src: url('_emanote-static/fonts/Nunito/Nunito-Regular.ttf') format("truetype");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Nunito-Bold';
+    src: url('_emanote-static/fonts/Nunito/Nunito-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+  }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  header,
+  .header-font {
+    font-family: 'Nunito-Bold', sans-serif;
+  }
+</style>
+
+  <head-main></head-main>
+</head>
+
+<!-- DoNotFormat -->
+
+
+
+<!-- DoNotFormat -->
+
+<body class='bg-gray-400 overflow-y-scroll'>
+  
+    <div class='container mx-auto'>
+
+      <nav id='breadcrumbs' class='w-full text-gray-700 md:hidden'>
+  <div class='flex justify-left'>
+    <div class='w-full px-2 py-2 bg-gray-50'>
+      <ul class='flex flex-wrap text-lg'>
+        <li class='inline-flex items-center'>
+          
+            
+              <img style='width: 1rem;' src='favicon.svg' />
+            
+          
+        </li>
+        
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='index.html'>
+                index
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='Projects.html'>
+                Projects
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='Projects/Reading%20Groups.html'>
+                Reading Groups
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='Projects/Reading%20Groups/Floer%20Reading%20Group.html'>
+                Floer Reading Group
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk3.html'>
+                Talk3
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+        
+      </ul>
+    </div>
+    <button class='inline px-2 py-1 text-white bg-blue-600 outline-none cursor-pointer focus:outline-none' title='Toggle sidebar' type='button' onclick="toggleHidden('sidebar')">
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'></path>
+      </svg>
+    </button>
+    <script>
+      function toggleHidden(elemId) {
+        document.getElementById(elemId).classList.toggle("hidden");
+      }
+    </script>
+  </div>
+</nav>
+
+      <div id='container' class='flex flex-nowrap flex-col md:flex-row bg-gray-50 md:mt-8 md:shadow-2xl md:mb-8'>
+        <!-- Sidebar column -->
+        <nav id='sidebar' class='flex-shrink hidden leading-relaxed md:block md:sticky md:top-0 md:h-full md:w-48 xl:w-64'>
+          <div class='px-2 py-2 text-gray-800'>
+
+            <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
+              <a href='-/tags.html' title='View tags'>
+                <svg style='width: 1rem;' class='hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
+                  </path>
+                </svg>
+              </a>
+              <a href='-/all.html' title='Expand full tree'>
+                <svg style='width: 1rem;' class='hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
+                  </path>
+                </svg>
+              </a>
+            </div>
+
+            <div id='site-logo' class='pl-2'>
+              <div class='flex items-center my-2 space-x-2 justify-left'>
+                <a href='' title='Go to Home'>
+                  
+                    
+                      <!-- The style width attribute here is to prevent huge
+                      icon from displaying at those rare occasions when Tailwind
+                      hasn't kicked in immediately on page load 
+                      -->
+                      <img style='width: 1rem;' class='transition transform hover:scale-110 hover:opacity-80' src='favicon.svg' />
+                    
+                  
+                </a>
+                <a class='font-bold truncate' title='Go to Home' href=''>
+                  Home
+                </a>
+              </div>
+            </div>
+
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0001_Graduate Research Index' href='0001_Graduate%20Research%20Index.html'>
+      0001_Graduate Research Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0001_Learning_Index' href='0001_Learning_Index.html'>
+      0001_Learning_Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0009_subject index' href='0009_subject%20index.html'>
+      0009_subject index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Home' href='000_Home.html'>
+      000_Home
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Leisure Reading Projects' href='000_Leisure%20Reading%20Projects.html'>
+      000_Leisure Reading Projects
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Projects Index' href='000_Projects%20Index.html'>
+      000_Projects Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Reading Projects Index' href='000_Reading%20Projects%20Index.html'>
+      000_Reading Projects Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Recommendations' href='000_Recommendations.html'>
+      000_Recommendations
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Talks Index' href='000_Talks%20Index.html'>
+      000_Talks Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Todo' href='000_Todo.html'>
+      000_Todo
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Undergraduate Research Index' href='000_Undergraduate%20Research%20Index.html'>
+      000_Undergraduate Research Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Archive' href='Archive.html'>
+      Archive
+    </a>
+    
+      
+        <span class='text-gray-300' title='4 children inside'>
+          4
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Conferences and Seminars' href='Conferences%20and%20Seminars.html'>
+      Conferences and Seminars
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Learning' href='Learning.html'>
+      Learning
+    </a>
+    
+      
+        <span class='text-gray-300' title='2 children inside'>
+          2
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Projects' href='Projects.html'>
+      Projects
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Book Notes' href='Projects/Book%20Notes.html'>
+      Book Notes
+    </a>
+    
+      
+        <span class='text-gray-300' title='6 children inside'>
+          6
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Current Projects' href='Projects/Current%20Projects.html'>
+      Current Projects
+    </a>
+    
+      
+        <span class='text-gray-300' title='2 children inside'>
+          2
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Independent Study' href='Projects/Independent%20Study.html'>
+      Independent Study
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Quals' href='Projects/Quals.html'>
+      Quals
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Reading Groups' href='Projects/Reading%20Groups.html'>
+      Reading Groups
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Floer Reading Group' href='Projects/Reading%20Groups/Floer%20Reading%20Group.html'>
+      Floer Reading Group
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Talk1' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk1.html'>
+      Talk1
+    </a>
+    
+      
+        <span class='text-gray-300' title='4 children inside'>
+          4
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Talk2' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk2.html'>
+      Talk2
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Talk3' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk3.html'>
+      Talk3
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Section 8.6 - 8.8: Setup for Computing the Index' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk3/2020-05-17%20Floer%20Reading.html'>
+      Section 8.6 - 8.8: Setup for Computing the Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+  
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
+        </path>
+      </svg>
+      
+  
+    <a class='font-bold text-blue-600 hover:underline truncate' title='Section 8.6 - 8.8: Setup for Computing the Index' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk3/Slides%20Floer%20Talk%203.html'>
+      Section 8.6 - 8.8: Setup for Computing the Index
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Talk4' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk4.html'>
+      Talk4
+    </a>
+    
+      
+        <span class='text-gray-300' title='2 children inside'>
+          2
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Talk5' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk5.html'>
+      Talk5
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Talk6' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk6.html'>
+      Talk6
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Talk7' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk7.html'>
+      Talk7
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Juvitop Fall 2020 - Cobordism Hypothesis' href='Projects/Reading%20Groups/Juvitop%20Fall%202020%20-%20Cobordism%20Hypothesis.html'>
+      Juvitop Fall 2020 - Cobordism Hypothesis
+    </a>
+    
+      
+        <span class='text-gray-300' title='2 children inside'>
+          2
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+  
+</div>
+    
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Subjects' href='Subjects.html'>
+      Subjects
+    </a>
+    
+      
+        <span class='text-gray-300' title='10 children inside'>
+          10
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='To Review' href='To%20Review.html'>
+      To Review
+    </a>
+    
+      
+        <span class='text-gray-300' title='58 children inside'>
+          58
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Unsorted' href='Unsorted.html'>
+      Unsorted
+    </a>
+    
+      
+        <span class='text-gray-300' title='557 children inside'>
+          557
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Workshops' href='Workshops.html'>
+      Workshops
+    </a>
+    
+      
+        <span class='text-gray-300' title='5 children inside'>
+          5
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='_HTT' href='_HTT.html'>
+      _HTT
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='consistant-report' href='consistant-report.html'>
+      consistant-report
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='figures' href='figures.html'>
+      figures
+    </a>
+    
+      
+        <span class='text-gray-300' title='4 children inside'>
+          4
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+
+          </div>
+        </nav>
+
+        <!-- Main body column -->
+        <div class='flex-1 w-full overflow-x-auto bg-white'>
+          <main class='px-4 py-4'>
+            <h1 class='flex items-end justify-center mb-4 p-3 bg-blue-100 text-5xl font-extrabold text-black rounded'>
+  <a class='z-40 tracking-tighter '>
+    Section 8.6 - 8.8: Setup for Computing the Index
+  </a>
+</h1>
+            <article class='overflow-auto'>
+  <!-- What goes in this file will appear on top of note body-->
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#intro' class='text-blue-600 font-bold hover:underline'>Intro</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#outline' class='text-blue-600 font-bold hover:underline'>Outline</a>
+        </li>
+      
+        <li>
+          <a href='#map' class='text-blue-600 font-bold hover:underline'>Map</a>
+        </li>
+      
+        <li>
+          <a href='#destination' class='text-blue-600 font-bold hover:underline'>Destination</a>
+        </li>
+      
+        <li>
+          <a href='#review-from-last-time' class='text-blue-600 font-bold hover:underline'>Review From Last Time</a>
+        </li>
+      
+        <li>
+          <a href='#strategy' class='text-blue-600 font-bold hover:underline'>Strategy</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#review' class='text-blue-600 font-bold hover:underline'>8.6 Review</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#review-8.6.1-unwrappingreduction' class='text-blue-600 font-bold hover:underline'>Review: 8.6.1, Unwrapping/Reduction</a>
+        </li>
+      
+        <li>
+          <a href='#toward-8.6.3-injectivity-rv-is-open' class='text-blue-600 font-bold hover:underline'>Toward 8.6.3, Injectivity: <span class='math inline'>\(R(v)\)</span> is Open</a>
+        </li>
+      
+        <li>
+          <a href='#sketch-of-proof-rv-is-open' class='text-blue-600 font-bold hover:underline'>Sketch of Proof: <span class='math inline'>\(R(v)\)</span> is Open</a>
+        </li>
+      
+        <li>
+          <a href='#toward-8.6.3-injectivity-rv-is-dense' class='text-blue-600 font-bold hover:underline'>Toward 8.6.3, Injectivity: <span class='math inline'>\(R(v)\)</span> is Dense</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#rv-is-dense-in-mathbbr2' class='text-blue-600 font-bold hover:underline'>8.6.3: <span class='math inline'>\(R(v)\)</span> is dense in <span class='math inline'>\({\mathbb{R}}^2\)</span></a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#step-1-exclude-critical-points-cap-multiple-points' class='text-blue-600 font-bold hover:underline'>Step 1: Exclude critical points <span class='math inline'>\(\cap\)</span> multiple points</a>
+        </li>
+      
+        <li>
+          <a href='#step-1-exclude-critical-points-cap-multiple-points-1' class='text-blue-600 font-bold hover:underline'>Step 1: Exclude critical points <span class='math inline'>\(\cap\)</span> multiple points</a>
+        </li>
+      
+        <li>
+          <a href='#step-1-exclude-critical-points-cap-multiple-points-2' class='text-blue-600 font-bold hover:underline'>Step 1: Exclude critical points <span class='math inline'>\(\cap\)</span> multiple points</a>
+        </li>
+      
+        <li>
+          <a href='#step-1-exclude-critical-points-cap-multiple-points-3' class='text-blue-600 font-bold hover:underline'>Step 1: Exclude critical points <span class='math inline'>\(\cap\)</span> multiple points</a>
+        </li>
+      
+        <li>
+          <a href='#step-1-exclude-critical-points-cap-multiple-points-4' class='text-blue-600 font-bold hover:underline'>Step 1: Exclude critical points <span class='math inline'>\(\cap\)</span> multiple points</a>
+        </li>
+      
+        <li>
+          <a href='#step-1-exclude-critical-points-cap-multiple-points-5' class='text-blue-600 font-bold hover:underline'>Step 1: Exclude critical points <span class='math inline'>\(\cap\)</span> multiple points</a>
+        </li>
+      
+        <li>
+          <a href='#step-2-failure-of-injectivity-in-small-boxes' class='text-blue-600 font-bold hover:underline'>Step 2: Failure of Injectivity in Small Boxes</a>
+        </li>
+      
+        <li>
+          <a href='#step-2-failure-of-injectivity-in-small-boxes-1' class='text-blue-600 font-bold hover:underline'>Step 2: Failure of Injectivity in Small Boxes</a>
+        </li>
+      
+        <li>
+          <a href='#step-2-failure-of-injectivity-in-small-boxes-2' class='text-blue-600 font-bold hover:underline'>Step 2: Failure of Injectivity in Small Boxes</a>
+        </li>
+      
+        <li>
+          <a href='#step-3-final-contradiction' class='text-blue-600 font-bold hover:underline'>Step 3: Final Contradiction</a>
+        </li>
+      
+        <li>
+          <a href='#step-3-final-contradiction-1' class='text-blue-600 font-bold hover:underline'>Step 3: Final Contradiction</a>
+        </li>
+      
+        <li>
+          <a href='#step-3-final-contradiction-2' class='text-blue-600 font-bold hover:underline'>Step 3: Final Contradiction</a>
+        </li>
+      
+        <li>
+          <a href='#step-3-final-contradiction-3' class='text-blue-600 font-bold hover:underline'>Step 3: Final Contradiction</a>
+        </li>
+      
+        <li>
+          <a href='#the-continuation-principle' class='text-blue-600 font-bold hover:underline'>The Continuation Principle</a>
+        </li>
+      
+        <li>
+          <a href='#the-continuation-principle-1' class='text-blue-600 font-bold hover:underline'>The Continuation Principle</a>
+        </li>
+      
+        <li>
+          <a href='#similarity-principle' class='text-blue-600 font-bold hover:underline'>Similarity Principle</a>
+        </li>
+      
+        <li>
+          <a href='#similarity-principle-1' class='text-blue-600 font-bold hover:underline'>Similarity Principle</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#section' class='text-blue-600 font-bold hover:underline'>8.7</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#outline-1' class='text-blue-600 font-bold hover:underline'>8.7 Outline</a>
+        </li>
+      
+        <li>
+          <a href='#outline-step-1-dim-ker-l-infty' class='text-blue-600 font-bold hover:underline'>8.7 Outline: Step 1, <span class='math inline'>\(\dim \ker L &lt; \infty\)</span></a>
+        </li>
+      
+        <li>
+          <a href='#outline-dim-ker-l-infty' class='text-blue-600 font-bold hover:underline'>8.7 Outline: <span class='math inline'>\(\dim \ker L &lt; \infty\)</span></a>
+        </li>
+      
+        <li>
+          <a href='#outline-dim-ker-l-infty-1' class='text-blue-600 font-bold hover:underline'>8.7 Outline: <span class='math inline'>\(\dim \ker L &lt; \infty\)</span></a>
+        </li>
+      
+        <li>
+          <a href='#outline-dim-ker-l-infty-2' class='text-blue-600 font-bold hover:underline'>8.7 Outline: <span class='math inline'>\(\dim \ker L &lt; \infty\)</span></a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#section-1' class='text-blue-600 font-bold hover:underline'>8.8</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#outline-2' class='text-blue-600 font-bold hover:underline'>8.8: Outline</a>
+        </li>
+      
+        <li>
+          <a href='#replacing-l' class='text-blue-600 font-bold hover:underline'>8.8: Replacing <span class='math inline'>\(L\)</span></a>
+        </li>
+      
+        <li>
+          <a href='#replacing-l-1' class='text-blue-600 font-bold hover:underline'>8.8: Replacing <span class='math inline'>\(L\)</span></a>
+        </li>
+      
+        <li>
+          <a href='#l_0-leadsto-l_1' class='text-blue-600 font-bold hover:underline'>8.8: <span class='math inline'>\(L_0 \leadsto L_1\)</span></a>
+        </li>
+      
+        <li>
+          <a href='#index-of-l_1' class='text-blue-600 font-bold hover:underline'>8.8: Index of <span class='math inline'>\(L_1\)</span></a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  <h1 id='intro' class='pb-2 mb-2 text-5xl font-bold text-center'>Intro</h1><h2 id='outline' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Outline</h2>
+    <p class='mb-3'>
+      What we’re trying to prove:
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          8.1.5: <span class='math inline'>\((d{\mathcal{F}})_u\)</span> is a Fredholm operator of index <span class='math inline'>\(\mu(x) - \mu(y)\)</span>.
+        </li>
+      
+    </ul>
+  <pre class='pandoc-raw-"tex"'>\begin{center}
+\includegraphics[width = 0.3\textwidth]{figures/image_2020-05-11-00-55-25.png} 
+\end{center}
+</pre>
+    <p class='mb-3'>
+      Used to show:
+    </p>
+  <pre class='pandoc-raw-"tex"'>\scriptsize
+</pre>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          8.1.4: <span class='math inline'>\(\Gamma: W^{1, p} \times C_{\varepsilon}^\infty \to L^p\)</span> has a continuous right-inverse and is surjective
+        </li>
+      
+        <li>
+          8.1.3: <span class='math inline'>\({\mathcal{Z}}(x, y, J)\)</span> is a Banach manifold
+        </li>
+      
+        <li>
+          8.1.1: <span class='math inline'>\(h\in {\mathcal{H}}_{\text{reg}}, H_0 + h\)</span> nondegenerate and <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}(d{\mathcal{F}})_u \text{ surjective } \forall ~u\in {\mathcal{M}}(H_0 + h, J).\end{align*}
+<span></span>
+        </li>
+      
+        <li>
+          8.1.2: For <span class='math inline'>\(h \in {\mathcal{H}}_{\text{reg}}\)</span> and <span class='math inline'>\(x, y\sim {\operatorname{pt}}\)</span> of <span class='math inline'>\(H_0\)</span>, <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}\dim_{\text{mfd}} {\mathcal{M}}(x, y, H_0 + h) = \mu(x) - \mu(y).\end{align*}
+<span></span> <pre class='pandoc-raw-"tex"'>\normalsize</pre>
+        </li>
+      
+    </ul>
+  <h2 id='map' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Map</h2><pre class='pandoc-raw-"tex"'>\begin{center}
+\includegraphics[width = 0.7\textwidth]{figures/image_2020-05-13-18-45-19.png} 
+\end{center}
+</pre><pre class='pandoc-raw-"tex"'>\tiny
+</pre>
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+8.1.4: & \Gamma: W^{1, p} \times C_{\varepsilon}^\infty \to L^p \text{ cts right-inverse}
+\qquad 8.1.3: {\mathcal{Z}}(x, y, J)  \text{a Banach manifold} \\
+8.1.1: & h\in {\mathcal{H}}_{\text{reg}}, H_0 + h \text{ nondegenerate and } (d{\mathcal{F}})_u \text{ surjective } \forall ~u\in {\mathcal{M}}(H_0 + h, J) \\
+8.1.2: & h \in {\mathcal{H}}_{\text{reg}}\text{ and } x, y\sim {\operatorname{pt}}\text{ of } H_0 \implies  \dim_{\text{mfd}} {\mathcal{M}}(x, y, H_0 + h) = \mu(x) - \mu(y)
+.\end{align*}</pre> <pre class='pandoc-raw-"tex"'>\normalsize</pre>
+    </p>
+  <h2 id='destination' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Destination</h2>
+    <p class='mb-3'>
+      What we’re working toward now:
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          8.1.5: <span class='math inline'>\((d{\mathcal{F}})_u\)</span> is a Fredholm operator of index <span class='math inline'>\(\mu(x) - \mu(y)\)</span>.
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      Outline for today:
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          8.6: Filling in lemmas used in previous sections
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Sketch proof of 8.6.3, statement of <strong>Somewhere Injectivity</strong>
+        </li>
+      
+        <li>
+          Statement of <strong>Continuation Principle</strong>
+        </li>
+      
+        <li>
+          Statement of <strong>Similarity Principle</strong>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          High-level outlines
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          8.7: Proving the operator is Fredholm
+        </li>
+      
+        <li>
+          8.8: Computing its index
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  <h2 id='review-from-last-time' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Review From Last Time</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\(u \in C^\infty({\mathbb{R}}\times S^1; W)\)</span> is a solution to the Floer equation
+        </li>
+      
+        <li>
+          <span class='math inline'>\(C(u)\)</span> the critical points and <span class='math inline'>\(R(u)\)</span> the regular points of <span class='math inline'>\(u\)</span>: <pre class='pandoc-raw-"tex"'>\scriptsize</pre> <pre class='pandoc-raw-"tex"'>\begin{align*}
+C(u) &\coloneqq\left\{{(s_0, t_0) \in {\mathbb{R}}\times S^1 {~\mathrel{\Big|}~}{\frac{\partial u}{\partial s}\,}(s_0, t_0) = 0 }\right\} \\
+R(u) &\coloneqq\left\{{(s_0, t_0) \in C(u)^c {~\mathrel{\Big|}~}v(s, t) \neq x^\pm(t),~~s\neq s_0 \implies u(s, t_0) \neq u(s_0, t_0)}\right\}
+.\end{align*}</pre> <pre class='pandoc-raw-"tex"'>\normalsize</pre>
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      <strong>WTS</strong>: <span class='math inline'>\(C(u)\)</span> is discrete and <span class='math inline'>\(R(u)\)</span> is open/dense in <span class='math inline'>\({\mathbb{R}}\times S^1\)</span>
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Strategy: “unwrap” <span class='math inline'>\(u\)</span> to an easier solution <span class='math inline'>\(v\)</span> on <span class='math inline'>\({\mathbb{R}}^2\)</span>.
+        </li>
+      
+    </ul>
+  <h2 id='strategy' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Strategy</h2><pre class='pandoc-raw-"tex"'>\scriptsize
+</pre>
+    <p class='mb-3'>
+      Strategy:
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      “Unwrapping” <span class='math inline'>\(u\)</span>. Replace <pre class='pandoc-raw-"tex"'>\begin{align*}
+{\frac{\partial u}{\partial s}\,} + J(t, u) \qty{{\frac{\partial u}{\partial t}\,} - X(t, u)} = 0 {\quad \operatorname{where} \quad} u \in C^\infty({\color{blue}{\mathbb{R}}\times S^1}; W)
+\end{align*}</pre> with a Cauchy-Riemann equation on <span class='math inline'>\({\mathbb{R}}^2\)</span>: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}{\frac{\partial v}{\partial s}\,} + J {\frac{\partial v}{\partial t}\,} = 0 {\quad \operatorname{where} \quad} v\in C^\infty({\color{blue}{\mathbb{R}}^2}; W)\end{align*}
+<span></span> <em>(Reduces to showing statements for <span class='math inline'>\(v\)</span> instead of <span class='math inline'>\(u\)</span>)</em>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Show <span class='math inline'>\(R(v)\subset {\mathbb{R}}^2\)</span> is open (short)
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Show <span class='math inline'>\(R(v) \subset {\mathbb{R}}^2\)</span> is dense (main obstacle)
+    </p>
+  
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      Main Ingredients:
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Continuation Principle
+        </li>
+      
+        <li>
+          Similarity Principle <pre class='pandoc-raw-"tex"'>\normalsize</pre>
+        </li>
+      
+    </ul>
+  <h1 id='86-review' class='pb-2 mb-2 text-5xl font-bold text-center'>8.6 Review</h1><h2 id='review-861-unwrappingreduction' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Review: 8.6.1, Unwrapping/Reduction</h2><pre class='pandoc-raw-"tex"'>\scriptsize
+</pre>
+    <p class='mb-3'>
+      If <span class='math inline'>\(u\)</span> is a solution to the following equation: <pre class='pandoc-raw-"tex"'>\begin{align*}
+\frac{\partial u}{\partial s}+J(t, u)\left(\frac{\partial u}{\partial t}-X(t, u)\right)=0
+\end{align*}</pre> Then there exist
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          An almost complex structure <span class='math inline'>\(J_1\)</span>
+        </li>
+      
+        <li>
+          A diffeomorphism <span class='math inline'>\(\varphi\)</span> on <span class='math inline'>\(W\)</span> ?
+        </li>
+      
+        <li>
+          A map <span class='math inline'>\(v \in C^\infty({\mathbb{R}}^2; W)\)</span>
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      where <pre class='pandoc-raw-"tex"'>\begin{align*}
+{\frac{\partial v}{\partial s}\,} + J_1(v) {\frac{\partial v}{\partial t}\,} &= 0 \\
+v(s, t+1) &= \varphi(v(s, t)) \\
+C(u) = C(v) \quad &\text{and }\quad  R(u) = R(v)
+.\end{align*}</pre>
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Recall definition of <span class='math inline'>\(v\)</span>: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}v(s, t) \coloneqq\psi_t^{-1}\qty{ u(s, t) }\end{align*}
+<span></span>
+        </li>
+      
+    </ul>
+  <pre class='pandoc-raw-"tex"'>\normalsize
+</pre><h2 id='toward-8.6.3-injectivity-rv-is-open' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Toward 8.6.3, Injectivity: <span class='math inline'>\(R(v)\)</span> is Open</h2>
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+C(u) &\coloneqq\left\{{(s_0, t_0) \in {\mathbb{R}}\times S^1 {~\mathrel{\Big|}~}{\frac{\partial u}{\partial s}\,}(s_0, t_0) = 0 }\right\} \\
+R(u) &\coloneqq\left\{{(s_0, t_0) \in C(u)^c {~\mathrel{\Big|}~}v(s, t) \neq x^\pm(t),~~s\neq s_0 \implies u(s, t_0) \neq u(s_0, t_0)}\right\}
+.\end{align*}</pre>
+    </p>
+  <pre class='pandoc-raw-"tex"'>\begin{center}
+\includegraphics[width = 0.5\textwidth]{figures/image_2020-05-13-23-51-21.png} 
+\end{center}
+</pre><h2 id='sketch-of-proof-rv-is-open' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Sketch of Proof: <span class='math inline'>\(R(v)\)</span> is Open</h2><pre class='pandoc-raw-"tex"'>\scriptsize
+</pre>
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+C(u) &\coloneqq\left\{{(s_0, t_0) \in {\mathbb{R}}\times S^1 {~\mathrel{\Big|}~}{\frac{\partial u}{\partial s}\,}(s_0, t_0) = 0 }\right\} \\
+R(u) &\coloneqq\left\{{(s_0, t_0) \in C(u)^c {~\mathrel{\Big|}~}v(s, t) \neq x^\pm(t),~~s\neq s_0 \implies u(s, t_0) \neq u(s_0, t_0)}\right\}
+.\end{align*}</pre> Proving <span class='math inline'>\(R(v)\)</span> is open: contradict zero derivative.
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Use sequential characterization of being a closed set
+        </li>
+      
+        <li>
+          Construct a sequence in <span class='math inline'>\(R(v)^c\)</span> converging to a point in <span class='math inline'>\(R(v)\)</span>.
+        </li>
+      
+        <li>
+          First two conditions of <span class='math inline'>\(R(v)\)</span> are open, so extract a sequence failing injectivity
+        </li>
+      
+        <li>
+          Show it is bounded
+        </li>
+      
+        <li>
+          Apply Bolzano-Weierstrass to extract a convergent subsequence
+        </li>
+      
+        <li>
+          Use quotient definition of <span class='math inline'>\({\frac{\partial v}{\partial s}\,}\)</span>, show it is zero, contradiction. <pre class='pandoc-raw-"tex"'>\normalsize</pre>
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      <span class='math inline'>\(\hfill\blacksquare\)</span>
+    </p>
+  <h2 id='toward-8.6.3-injectivity-rv-is-dense' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Toward 8.6.3, Injectivity: <span class='math inline'>\(R(v)\)</span> is Dense</h2>
+    <p class='mb-3'>
+      Define <strong>multiple points</strong>:
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Set <span class='math inline'>\(\mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{R}}\mkern-1.5mu}\mkern 1.5mu= {\mathbb{R}}{\textstyle\coprod}\left\{{\pm \infty}\right\}\)</span>, extend <span class='math inline'>\(v: {\mathbb{R}}^2 \to W\)</span> to <pre class='pandoc-raw-"tex"'>\begin{align*}
+v: \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{R}}\mkern-1.5mu}\mkern 1.5mu\times{\mathbb{R}}&\to W \\
+v(\pm \infty, t) &= x^\pm(t)
+.\end{align*}</pre>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Define the set of <em>multiple points over <span class='math inline'>\((s_0, {\color{red}t_0})\)</span></em>: <pre class='pandoc-raw-"tex"'>\scriptsize</pre> <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+M(s_0, {\color{red}t_0}) \coloneqq\left\{{ (s', {\color{red}t_0}) \in {\mathbb{R}}^2 {~\mathrel{\Big|}~}s\neq s'\in \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{R}}\mkern-1.5mu}\mkern 1.5mu, \quad v(s', {\color{red}t_0}) = v(s_0, {\color{red}t_0}) }\right\}
+\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      <em>Multiple points</em> are where injectivity fails in <span class='math inline'>\(s\)</span>.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Characterizes <span class='math inline'>\(R(v) \subset C(v)^c\)</span> as points which don’t admit multiples. <pre class='pandoc-raw-"tex"'>\normalsize</pre>
+    </p>
+  
+        </li>
+      
+    </ul>
+  <h1 id='rv-is-dense-in-mathbbr2' class='pb-2 mb-2 text-5xl font-bold text-center'>8.6.3: <span class='math inline'>\(R(v)\)</span> is dense in <span class='math inline'>\({\mathbb{R}}^2\)</span></h1><h2 id='step-1-exclude-critical-points-cap-multiple-points' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Step 1: Exclude critical points <span class='math inline'>\(\cap\)</span> multiple points</h2><pre class='pandoc-raw-"tex"'>\scriptsize
+</pre>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Suffices to show <span class='math inline'>\(R(v)\)</span> is dense in <span class='math inline'>\(C(v)^c\)</span> <pre class='pandoc-raw-"tex"'>\begin{align*}
+(s, t) \in C(v)^c \implies \exists (s_n ,t)\subset C(v)^c  \overset{n\to\infty}\to (s, t)~ 
+\text{ with } v(s_n, t) \neq x^\pm(t)~\forall n
+.\end{align*}</pre>
+        </li>
+      
+        <li>
+          Why? E.g. <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+v(s + {1\over n}, t) = x^+(t) \implies {\frac{\partial v}{\partial s}\,} = 0 \implies (s+{1\over n}, t)\in C(v)
+.\end{align*}
+<span></span>
+        </li>
+      
+        <li>
+          Then suffices to show every <span class='math inline'>\((s_0, t_0) \in {\mathbb{R}}\times[0, 1]\)</span> with (importantly) <pre class='pandoc-raw-"tex"'>\begin{align}
+{\frac{\partial v}{\partial s}\,}{(s_0, t_0)} \neq 0 {\quad \operatorname{and} \quad} v(s_0, t_0) \neq x^{\pm}(t_0)
+.\end{align}</pre> is the limit of a sequence of points in <span class='math inline'>\(R(v)\)</span>.
+        </li>
+      
+        <li>
+          Proceed by assuming this is not the case, toward a contradiction. <pre class='pandoc-raw-"tex"'>\normalsize</pre>
+        </li>
+      
+    </ul>
+  <h2 id='step-1-exclude-critical-points-cap-multiple-points-1' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Step 1: Exclude critical points <span class='math inline'>\(\cap\)</span> multiple points</h2>
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align}
+{\frac{\partial v}{\partial s}\,}{(s_0, t_0)} \neq 0 {\quad \operatorname{and} \quad} v(s_0, t_0) \neq x^{\pm}(t_0)
+.\end{align}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      A Small Ball Avoids Critical Points in the Image
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Surround <span class='math inline'>\((s_0, t_0)\)</span> by a ball <span class='math inline'>\(B_{\varepsilon}(s_0, t_0) \subset R(v)^c\)</span>
+        </li>
+      
+        <li>
+          We can choose <span class='math inline'>\({\varepsilon}\)</span> small enough and <span class='math inline'>\(M\gg 1\)</span> big enough, defining <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}\mathbb{M} = [-M, M] \subset {\mathbb{R}},\end{align*}
+<span></span> such that several properties hold:
+        </li>
+      
+    </ul>
+  <h2 id='step-1-exclude-critical-points-cap-multiple-points-2' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Step 1: Exclude critical points <span class='math inline'>\(\cap\)</span> multiple points</h2><pre class='pandoc-raw-"tex"'>\scriptsize
+</pre>
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+{\frac{\partial v}{\partial s}\,}{(s_0, t_0)} \neq 0 {\quad \operatorname{and} \quad} v(s_0, t_0) \neq x^{\pm}(t_0)
+.\end{align*}</pre>
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          Translate to far enough to get a point outside the image of the ball: <pre class='pandoc-raw-"tex"'>\begin{align*}
+(s, t) \in \mathbb{M}^c &\times[t_0-{\varepsilon}, t_0+{\varepsilon}]\subset {\mathbb{R}}\times I \implies \\
+v(s, t) \cap v(B_{\varepsilon}(s_0, t_0) = \emptyset &{\quad \operatorname{and} \quad} x^\pm(t) \not \in v(B_{\varepsilon}(s_0, t_0))
+.\end{align*}</pre> <pre class='pandoc-raw-"tex"'>\scriptsize</pre>
+        </li>
+      
+    </ul>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Idea: else, cook up sequences forcing <span class='math inline'>\(v(s_0, t_0) = x^\pm(t_0)\)</span>, contradicting open conditions <pre class='pandoc-raw-"tex"'>\normalsize</pre>
+        </li>
+      
+    </ul>
+  
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          For <span class='math inline'>\(t \in B_{\varepsilon}(t_0)\)</span>, <span class='math inline'>\(B_{\varepsilon}(s_0) \hookrightarrow W\)</span> is an injective immersion <pre class='pandoc-raw-"tex"'>\normalsize</pre>
+        </li>
+      
+    </ul>
+  <h2 id='step-1-exclude-critical-points-cap-multiple-points-3' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Step 1: Exclude critical points <span class='math inline'>\(\cap\)</span> multiple points</h2><pre class='pandoc-raw-"tex"'>\scriptsize
+</pre>
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          Translated boxes that miss the image of <span class='math inline'>\(B_{\varepsilon}(s_0, t_0)\)</span> <em>and</em> contain no multiple points over <span class='math inline'>\((s_0, t_0)\)</span>
+        </li>
+      
+        <li>
+          <span class='math inline'>\(B_{\varepsilon}(s_0) \hookrightarrow W\)</span> immersively
+        </li>
+      
+    </ul>
+  <pre class='pandoc-raw-"tex"'>\begin{center}
+\includegraphics[width = 0.8\textwidth]{figures/image_2020-05-21-16-18-58.png} 
+\end{center}
+</pre>
+    <p class='mb-3'>
+      Combine 1 and 2 to show that
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\(v\)</span> is locally constant
+        </li>
+      
+        <li>
+          <span class='math inline'>\((s_0 ,t_0) \in C(v)\)</span>
+        </li>
+      
+        <li>
+          Every point in <span class='math inline'>\(B_{\varepsilon}(s_0, t_0)\)</span> satisfies open conditions <pre class='pandoc-raw-"tex"'>\begin{align*}
+{\frac{\partial v}{\partial s}\,}{(s_0, t_0)} \neq 0 {\quad \operatorname{and} \quad} v(s_0, t_0) \neq x^{\pm}(t_0)
+.\end{align*}</pre>
+        </li>
+      
+    </ul>
+  <pre class='pandoc-raw-"tex"'>\normalsize
+</pre><h2 id='step-1-exclude-critical-points-cap-multiple-points-4' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Step 1: Exclude critical points <span class='math inline'>\(\cap\)</span> multiple points</h2><pre class='pandoc-raw-"tex"'>\scriptsize
+</pre>
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}{\left\lvert {\mathbb{M}_C} \right\rvert}\coloneqq{\left\lvert {\qty{\mathbb{M} \times I} \cap C(v)} \right\rvert} < \infty\end{align*}
+<span></span> since it’s the intersection of a compact and a discrete set
+        </li>
+      
+    </ul>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Perturb <span class='math inline'>\((s_0, t_0)\)</span> so that <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}(s, t) \in \mathbb{M}_C \implies v(s_0, t_0) \neq v(s, t).\end{align*}
+<span></span>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Possible since <span class='math inline'>\((s_0, t_0) \not\in C(v) \implies v\)</span> is non-constant in a neighborhood of <span class='math inline'>\((s_0, t_0)\)</span>.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Decrease <span class='math inline'>\({\varepsilon}\)</span> so that <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}v(B_{\varepsilon}(s_0, t_0)) \cap v(\mathbb{M}_C) = \emptyset.\end{align*}
+<span></span>
+        </li>
+      
+    </ul>
+  <h2 id='step-1-exclude-critical-points-cap-multiple-points-5' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Step 1: Exclude critical points <span class='math inline'>\(\cap\)</span> multiple points</h2>
+    <p class='mb-3'>
+      <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}v(B_{\varepsilon}(s_0, t_0)) \cap v(\mathbb{M}_C) = \emptyset.\end{align*}
+<span></span> <pre class='pandoc-raw-"tex"'>\scriptsize</pre> This means that in the thick strip containing <span class='math inline'>\((s_0, t_0)\)</span>, no critical points land in its image.
+    </p>
+  <pre class='pandoc-raw-"tex"'>\begin{center}
+\includegraphics[width = 0.7\textwidth]{figures/image_2020-05-21-16-27-40.png} 
+\end{center}
+</pre>
+    <p class='mb-3'>
+      Conclude that we <em>only</em> have to consider injectivity, not critical points that are also multiple points.
+    </p>
+  <h2 id='step-2-failure-of-injectivity-in-small-boxes' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Step 2: Failure of Injectivity in Small Boxes</h2><pre class='pandoc-raw-"tex"'>\scriptsize
+</pre>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Define the set of multiple points over <span class='math inline'>\(s_0\)</span>: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+\mathbb{S}_M(t_0) = \left\{{s_1, \cdots, s_N}\right\} =\left\{{s_i \in [-M, M] {~\mathrel{\Big|}~}v(s_i, t_0) = v(s_0, t_0)}\right\}
+,\end{align*}
+<span></span>
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Finite, since infinite <span class='math inline'>\(\implies\)</span> limit point <span class='math inline'>\(\implies {\frac{\partial v}{\partial s}\,} = 0.~ \Rightarrow\!\Leftarrow\)</span>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Lemma: For every <span class='math inline'>\({\varepsilon}&gt;0\)</span> there exists a <span class='math inline'>\(\delta &gt; 0\)</span> such that defining <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}\Delta_0 = [s_0-\delta, s_0 + \delta] \times[t_0-\delta, t_0 + \delta]\end{align*}
+<span></span> then <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}(s, t)\in \Delta_0 \implies \exists s' \in B_{\varepsilon}(s_j) \text{ s.t. } v(s, t) = v(s', t)\end{align*}
+<span></span> for some <span class='math inline'>\(1 \leq j \leq N\)</span>.
+    </p>
+  
+        </li>
+      
+    </ul>
+  <pre class='pandoc-raw-"tex"'>\normalsize
+</pre><h2 id='step-2-failure-of-injectivity-in-small-boxes-1' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Step 2: Failure of Injectivity in Small Boxes</h2><pre class='pandoc-raw-"tex"'>\scriptsize
+</pre>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      In words: for every <span class='math inline'>\({\varepsilon}\)</span>, we can find a <span class='math inline'>\(\delta{\hbox{-}}\)</span>box <span class='math inline'>\(\Delta_0 \ni (s_0, t_0)\)</span> such that every point in <span class='math inline'>\(\Delta_0\)</span> is a multiple point over <em>some</em> point in an epsilon ball around <em>some</em> point in <span class='math inline'>\(\mathbb{S}_M(t_0)\)</span>.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Fix <span class='math inline'>\({\varepsilon}' &lt;{\varepsilon}/2\)</span> form Step 1 and apply the lemma to <span class='math inline'>\({\varepsilon}'\)</span> to produce <span class='math inline'>\(\delta\)</span> and <span class='math inline'>\(\Delta_0\)</span>.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Apply the lemma: shrink <span class='math inline'>\(\Delta_0\)</span> to a closed delta ball <span class='math inline'>\(\mkern 1.5mu\overline{\mkern-1.5muB\mkern-1.5mu}\mkern 1.5mu_\delta(s_0, t_0)\)</span>.
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <strong>Upshot</strong>: Every point in <span class='math inline'>\(\Delta_0\)</span> is a multiple point over some <span class='math inline'>\(s_j\)</span>.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  <pre class='pandoc-raw-"tex"'>\begin{center}
+\includegraphics[width = 0.8\textwidth]{figures/image_2020-05-21-16-35-57.png} 
+\end{center}
+</pre><pre class='pandoc-raw-"tex"'>\normalsize
+</pre><h2 id='step-2-failure-of-injectivity-in-small-boxes-2' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Step 2: Failure of Injectivity in Small Boxes</h2><pre class='pandoc-raw-"tex"'>\scriptsize
+</pre>
+    <p class='mb-3'>
+      <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+\mathbb{S}_M(t_0) = \left\{{s_1, \cdots, s_N}\right\} =\left\{{s_i \in [-M, M] {~\mathrel{\Big|}~}v(s_i, t_0) = v(s_0, t_0)}\right\}
+\end{align*}
+<span></span>
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          So partition the ball up: define <span class='math inline'>\(\Sigma_j\)</span>: all multiple points over <span class='math inline'>\(s_j \in \mathbb{S}_M(t_0)\)</span>.
+        </li>
+      
+        <li>
+          Take smaller <span class='math inline'>\(\rho{\hbox{-}}\)</span>ball some <span class='math inline'>\((s_\star, t_\star) \in \Sigma_1^\circ\)</span>, choose <span class='math inline'>\({\varepsilon}'\)</span> small enough such that <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+B_\rho(s_\star, t_\star) \cap\qty{ [s_1-{\varepsilon}', s_1 + {\varepsilon}'] \times[t_0-\delta, t_0 + \delta] } = \emptyset
+.\end{align*}
+<span></span>
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      <strong>Upshot</strong>: the shaded region is disjoint from the <span class='math inline'>\(\rho{\hbox{-}}\)</span>ball.
+    </p>
+  <pre class='pandoc-raw-"tex"'>\begin{center}
+\includegraphics[width = 0.4\textwidth]{figures/image_2020-05-21-16-35-57.png} 
+\end{center}
+\begin{center}
+\includegraphics[width = 0.8\textwidth]{figures/image_2020-05-21-16-38-55.png} 
+\end{center}
+\normalsize
+</pre><h2 id='step-3-final-contradiction' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Step 3: Final Contradiction</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Construct <span class='math inline'>\(v_1, v_2\)</span> which
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Satisfy the same Cauchy-Riemann equations
+        </li>
+      
+        <li>
+          Are equal at the origin
+        </li>
+      
+        <li>
+          Have nonzero derivative at the origin.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          We want to show they are equal on <span class='math inline'>\({\mathbb{R}}^2\)</span>
+        </li>
+      
+        <li>
+          Constructing them: use points from step 2 to translate
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Obtain <span class='math inline'>\((s_\star, t_\star)\)</span> and <span class='math inline'>\((s_\star', t_\star)\)</span> from previous step.
+        </li>
+      
+        <li>
+          Define <pre class='pandoc-raw-"tex"'>\begin{align*}
+\begin{array}{ll}
+v_{1}(s, t)=v\left(s+s_{\star}, t+t_{\star}\right) &\implies v_1(z) = v(z + w_1)\\
+v_{2}(s, t)=v\left(s+s_{\star}^{\prime}, t+t_{\star}\right) &\implies v_2(z) = v(z + w_2)
+\end{array}
+\end{align*}</pre>
+        </li>
+      
+        <li>
+          Satisfy the same CR equations
+        </li>
+      
+        <li>
+          By construction, they coincide at <span class='math inline'>\((0, 0)\)</span> since <span class='math inline'>\(v(s_\star, t_\star) = v(s_\star', t_\star)\)</span>.
+        </li>
+      
+        <li>
+          Derivatives at the origin are nonzero, coming from the fact that <span class='math inline'>\({\frac{\partial v}{\partial s}\,}(s_\star, t_\star) \neq 0\)</span>.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  <h2 id='step-3-final-contradiction-1' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Step 3: Final Contradiction</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Now work at zero: for every <span class='math inline'>\((s, t) \in B_\rho(0, 0)\)</span> there exists a multiple point <span class='math inline'>\(s' \in B_{2{\varepsilon}'}(0)\)</span> over <span class='math inline'>\(s\)</span>.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Use the following extension lemma, consequence of <strong>Continuation Principle</strong>: in this situation, with <span class='math inline'>\(X_t \equiv 0\)</span> on <span class='math inline'>\(B_{\varepsilon}(\mathbf{0})\)</span>, then <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}z\in B_{\varepsilon}(\mathbf{0}) \implies v_1(z) = v_2(z).\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Define <pre class='pandoc-raw-"tex"'>\begin{align*}
+\mathcal{F}: \mathrm{C}^{\infty}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) & \longrightarrow \mathrm{C}^{\infty}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) \\
+w &\longmapsto \qty{{\frac{\partial }{\partial s}\,} + J\cdot {\frac{\partial }{\partial t}\,}  }w
+\end{align*}</pre>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Since <span class='math inline'>\(v_1, v_2\)</span> satisfy the same CR equation, <span class='math inline'>\({\mathcal{F}}(v_1) = {\mathcal{F}}(v_2)\)</span>
+    </p>
+  
+        </li>
+      
+    </ul>
+  <h2 id='step-3-final-contradiction-2' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Step 3: Final Contradiction</h2>
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+\mathcal{F}: \mathrm{C}^{\infty}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) & \longrightarrow \mathrm{C}^{\infty}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) \\
+w &\longmapsto \qty{{\frac{\partial }{\partial s}\,} + J\cdot {\frac{\partial }{\partial t}\,}  }w
+\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      Linearize <span class='math inline'>\({\mathcal{F}}\)</span> as we did for the Floer operator to obtain <pre class='pandoc-raw-"tex"'>\begin{align*}
+\qty{d{\mathcal{F}}}_{\cdots}(Y) = \qty{ {\frac{\partial }{\partial s}\,} + J_0 \cdot {\frac{\partial }{\partial t}\,} + \tilde S } Y
+.\end{align*}</pre> where <span class='math inline'>\(\tilde S: I \times{\mathbb{R}}^2 \to \endo({\mathbb{R}}^{2n})\)</span>
+    </p>
+  <h2 id='step-3-final-contradiction-3' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Step 3: Final Contradiction</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Set <span class='math inline'>\(Y = v_1 - v_2\)</span>, then <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+S = \int_{[0, 1]} \tilde S  \implies S\qty{ {\frac{\partial }{\partial s}\,} + J_0 \cdot {\frac{\partial }{\partial t}\,} + S } Y = 0
+\end{align*}
+<span></span>
+        </li>
+      
+        <li>
+          From above, <span class='math inline'>\(Y \equiv 0\)</span> in <span class='math inline'>\(B_{\varepsilon}(\mathbf{0})\)</span>, apply <strong>Continuation Principle</strong> to obtain <span class='math inline'>\(v_1 = v_2\)</span> on <span class='math inline'>\({\mathbb{R}}^2\)</span>
+        </li>
+      
+        <li>
+          Inductive argument to show <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+\forall k\in{\mathbb{Z}},\quad v(s, t) = v(k(s_\star' - s_\star), t) \overset{k\to \infty}\longrightarrow x^\pm(t),
+\end{align*}
+<span></span> which contradicts an open condition. <span class='math inline'>\(\hfill\blacksquare\)</span>
+        </li>
+      
+    </ul>
+  <h2 id='the-continuation-principle' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>The Continuation Principle</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Take the perturbed CR equation <pre class='pandoc-raw-"tex"'>\begin{align*}
+\qty{{\frac{\partial }{\partial s}\,} + J_0 \cdot {\frac{\partial }{\partial t}\,} + S }Y &= 0 {\quad \operatorname{where} \quad}
+S: {\mathbb{R}}^2 \longrightarrow \endo({\mathbb{R}}^{2n}) 
+\end{align*}</pre> where <span class='math inline'>\(J_0\)</span> is the standard complex structure on <span class='math inline'>\({\mathbb{R}}^{2n}\)</span>.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Define an <em>infinite-order zero</em> <span class='math inline'>\(z\)</span> of an arbitrary function <span class='math inline'>\(f\)</span> as <pre class='pandoc-raw-"tex"'>\begin{align*}
+z_0 \in Z_\infty \iff \sup_{B_r(z_0)} {{\left\lvert {f(z)} \right\rvert} \over r^k} \overset{r\to 0}\to 0 \quad \forall k\in {\mathbb{Z}}^{\geq 0}
+,\end{align*}</pre> or for a smooth function, <pre class='pandoc-raw-"tex"'>\begin{align*}
+z_0\in Z_\infty \iff f^{(k)}(z_0)= 0 \quad \forall k \in {\mathbb{Z}}^{\geq 0}
+.\end{align*}</pre>
+    </p>
+  
+        </li>
+      
+    </ul>
+  <h2 id='the-continuation-principle-1' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>The Continuation Principle</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Statement: If <span class='math inline'>\(Y\)</span> solves CR on <span class='math inline'>\(U \subset {\mathbb{R}}^2\)</span> then the set <pre class='pandoc-raw-"tex"'>\begin{align*}
+C \coloneqq\left\{{(s, t)\in U {~\mathrel{\Big|}~}~Y \text{ is an infinite-order zero at } (s, t)}\right\}
+.\end{align*}</pre>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Explanation: for <span class='math inline'>\(f\)</span> smooth, <span class='math inline'>\(Z_\infty\)</span> is closed. For <span class='math inline'>\(f\)</span> holomorphic, it is clopen.
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          From complex analysis: for a connected domain <span class='math inline'>\(\Omega\)</span>, the only clopen subsets are <span class='math inline'>\(\emptyset,\Omega\)</span>, so nonempty and <span class='math inline'>\(f =g\)</span> on a connected subset implies <span class='math inline'>\(f = g\)</span> on <span class='math inline'>\(\Omega\)</span>.
+        </li>
+      
+        <li>
+          In particular, <span class='math inline'>\(Y = 0\)</span> on <span class='math inline'>\(U' \subseteq U\)</span> implies <span class='math inline'>\(Y = 0\)</span> on <span class='math inline'>\(U\)</span>.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Proof is a consequence of the <strong>Similarity Principle</strong>
+    </p>
+  
+        </li>
+      
+    </ul>
+  <h2 id='similarity-principle' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Similarity Principle</h2><pre class='pandoc-raw-"tex"'>\scriptsize
+</pre>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Recall definition of perturbed CR equation: <pre class='pandoc-raw-"tex"'>\begin{align*}
+\qty{{\frac{\partial }{\partial s}\,} + J_0 \cdot {\frac{\partial }{\partial t}\,} + S }Y &= 0 {\quad \operatorname{where} \quad}
+S: {\mathbb{R}}^2 \longrightarrow \endo({\mathbb{R}}^{2n}) 
+\end{align*}</pre>
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      Let
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\(Y \in C^\infty(B_{\varepsilon}; {\mathbb{C}}^n)\)</span>, or more generally <span class='math inline'>\(W^{1, p}( B_{\varepsilon}; {\mathbb{C}}^n)\)</span>, be a solution
+        </li>
+      
+        <li>
+          <span class='math inline'>\(S \in C^\infty({\mathbb{R}}^2, \endo({\mathbb{R}}^2) )\)</span> or more generally <span class='math inline'>\(L^p(B_{\varepsilon}; \endo_{\mathbb{R}}({\mathbb{R}}^{2n}))\)</span>
+        </li>
+      
+        <li>
+          <span class='math inline'>\(p &gt; 2\)</span>
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      Then there exist <pre class='pandoc-raw-"tex"'>\begin{align*}
+\delta &\in (0, {\varepsilon}), \\
+\sigma &\in C^\infty(B_\delta, {\mathbb{C}}^n) \\
+A &\in W^{1, p}(B_\delta, \operatorname{GL}({\mathbb{R}}^{2n}))
+.\end{align*}</pre> such that <pre class='pandoc-raw-"tex"'>\begin{align*}
+\forall(s, t) \in B_{\delta}, ~~\quad Y(s, t)=A(s, t) \cdot \sigma(s+i t) {\quad \operatorname{ and } \quad} 
+J_0 A(s, t) = A(s, t)J_0
+.\end{align*}</pre>
+    </p>
+  <pre class='pandoc-raw-"tex"'>\normalsize
+</pre><h2 id='similarity-principle-1' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Similarity Principle</h2>
+    <p class='mb-3'>
+      Used to prove:
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\(C(v)\)</span> is discrete
+        </li>
+      
+        <li>
+          “Extension” lemma used to prove <span class='math inline'>\(R(v)\)</span> is dense
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      Some ideas from proof:
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Matrix <span class='math inline'>\(A\)</span> will look like the fundamental matrix of solutions to an equation
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Compactify to get <span class='math inline'>\(B_\delta \subset S^2\)</span>, if <span class='math inline'>\(Y: S^2 \to {\mathbb{C}}^n\)</span> then we can consider <span class='math inline'>\(\mkern 1.5mu\overline{\mkern-1.5muY\mkern-1.5mu}\mkern 1.5mu\)</span> as a section of the bundle
+    </p>
+  
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+\left(A^{0,1} T^{\star} S^{2}\right)^{n}=\Lambda^{0,1} T^{\star} S^{2} \otimes \mathbb{C}^{n} 
+.\end{align*}</pre>
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\(\mkern 1.5mu\overline{\mkern-1.5muY\mkern-1.5mu}\mkern 1.5mu = 0\)</span> makes <span class='math inline'>\(Y\)</span> a holomorphic sphere in <span class='math inline'>\({\mathbb{C}}^n\)</span>.
+        </li>
+      
+    </ul>
+  <h1 id='87' class='pb-2 mb-2 text-5xl font-bold text-center'>8.7</h1><h2 id='87-outline' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>8.7 Outline</h2>
+    <p class='mb-3'>
+      What we’re trying to prove
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          8.1.5: <span class='math inline'>\((d{\mathcal{F}})_u\)</span> is a Fredholm operator of index <span class='math inline'>\(\mu(x) - \mu(y)\)</span>.
+        </li>
+      
+    </ul>
+  <pre class='pandoc-raw-"tex"'>\scriptsize
+</pre>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Setup <pre class='pandoc-raw-"tex"'>\begin{align*}
+S^\pm(t) &= \lim_{s\to \pm \infty} S(s, t), \\
+R^\pm_t &\text{a solution to the IVP} \\ 
+{\frac{\partial }{\partial t}\,}R &= J_0 S^\pm R,\quad R_0^\pm  = \operatorname{id}
+.\end{align*}</pre>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Statement: if <span class='math inline'>\(\operatorname{det}(\operatorname{id}- R^\pm_1) \neq 0\)</span> then the operator <pre class='pandoc-raw-"tex"'>\begin{align*}
+L: W^{1, p}({\mathbb{R}}\times S^1; {\mathbb{R}}^{2n}) &\to L^p({\mathbb{R}}\times S^1; {\mathbb{R}}^{2n})\\
+L&= \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu+ S(s, t) &
+.\end{align*}</pre> is Fredholm for every <span class='math inline'>\(p&gt;1\)</span>.
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      <em>(i.e. index makes sense, <span class='math inline'>\(\dim \ker L, \dim \operatorname{coker}L &lt; \infty\)</span>)</em>
+    </p>
+  
+    </blockquote>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Most of the work: <span class='math inline'>\(\dim(\ker L) &lt; \infty\)</span> and <span class='math inline'>\(\operatorname{im}(L)\)</span> closed.
+    </p>
+  
+        </li>
+      
+    </ul>
+  <pre class='pandoc-raw-"tex"'>\normalsize
+</pre><h2 id='outline-step-1-dim-ker-l-infty' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>8.7 Outline: Step 1, <span class='math inline'>\(\dim \ker L &lt; \infty\)</span></h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Main ingredients:
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <strong>Elliptic regularity</strong>: For <span class='math inline'>\(Y \in L^p({\mathbb{R}}\times S^1)\)</span> a weak solution of the linearized Floer equation <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}LY = 0 \implies Y\in W^{1, p}({\mathbb{R}}\times S^1)\cap C^\infty.\end{align*}
+<span></span>
+        </li>
+      
+        <li>
+          A consequence of the <strong>Calderón-Zygmund (CZ) Inequality</strong>: For <span class='math inline'>\(Y\in W^{1, p}({\mathbb{R}}\times S^1; {\mathbb{R}}^{2n})\)</span> and <span class='math inline'>\(p&gt;1\)</span>, <pre class='pandoc-raw-"tex"'>\begin{align}
+{\left\lVert {Y} \right\rVert}_{W^{1, p}({\mathbb{R}}\times S^1; {\mathbb{R}}^{2n})} \leq C \qty{{\left\lVert {LY} \right\rVert}_{L^p({\mathbb{R}}\times S^1)} + {\left\lVert {Y} \right\rVert}_{L^p({\color{blue}{\mathbb{R}}} \times S^1)}}
+\end{align}</pre> for some constant <span class='math inline'>\(C\)</span>. <pre class='pandoc-raw-"tex"'>\scriptsize</pre>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Strategy: split into cases
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Case 1: <span class='math inline'>\(S(s, t) = S(t)\)</span> doesn’t depend on <span class='math inline'>\(s\)</span>.
+        </li>
+      
+        <li>
+          Case 2: <span class='math inline'>\(S(s, t)\)</span> <em>does</em> depend on <span class='math inline'>\(s\)</span> <pre class='pandoc-raw-"tex"'>\scriptsize</pre>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  <h2 id='outline-dim-ker-l-infty' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>8.7 Outline: <span class='math inline'>\(\dim \ker L &lt; \infty\)</span></h2>
+    <p class='mb-3'>
+      CZ inequality: <pre class='pandoc-raw-"tex"'>\begin{align}
+{\left\lVert {Y} \right\rVert}_{W^{1, p}({\mathbb{R}}\times S^1; {\mathbb{R}}^{2n})} \leq C \qty{{\left\lVert {LY} \right\rVert}_{L^p({\mathbb{R}}\times S^1)} + {\left\lVert {Y} \right\rVert}_{L^p({\color{blue}{\mathbb{R}}} \times S^1)}}
+\end{align}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      Step 1: <span class='math inline'>\(S(s, t) = S(t)\)</span> doesn’t depend on <span class='math inline'>\(s\)</span>, prove improved estimate.
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Consider the “asymptotic operator” <pre class='pandoc-raw-"tex"'>\begin{align*}
+D: W^{1, p}({\mathbb{R}}\times S^1; {\mathbb{R}}^{2n}) &\to L^p({\mathbb{R}}\times S^1) \\
+D = \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu+ S(t) &= \lim_{s\to \pm\infty} L \coloneqq\lim_{s\to \pm\infty} \qty{\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu+ S(s, t)}
+.\end{align*}</pre>
+        </li>
+      
+        <li>
+          Show for <span class='math inline'>\(p&gt;1, D\)</span> is invertible.
+        </li>
+      
+        <li>
+          Invertibility improves estimate: replace <span class='math inline'>\(\color{blue}{\mathbb{R}}\)</span> with <span class='math inline'>\(\color{blue} [-M, M]\)</span>.
+        </li>
+      
+    </ul>
+  <h2 id='outline-dim-ker-l-infty-1' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>8.7 Outline: <span class='math inline'>\(\dim \ker L &lt; \infty\)</span></h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Step 2: <span class='math inline'>\(S(s, t)\)</span> does depend on <span class='math inline'>\(s\)</span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Improved estimate in Step 1 allows replacing weak soln: <pre class='pandoc-raw-"tex"'>\begin{align*}
+Y \in L^p({\color{blue}{\mathbb{R}}} \times S^1; \cdot) &\leadsto Y\in L^p({\color{blue}[-M, M]} \times S^1, \cdot)
+.\end{align*}</pre>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Then restrict <pre class='pandoc-raw-"tex"'>\begin{align*}
+L: W^{1, p}({\mathbb{R}}\times S^1; {\mathbb{R}}^{2n}) &\to L^p({\mathbb{R}}\times S^1; {\mathbb{R}}^{2n})\\
+L&\coloneqq\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu+ S(s, t) & \\ \\
+\leadsto L_M : W^{1, p}({\mathbb{R}}\times S^1) &\to L^p({\color{blue}[-M, M]} \times S^1) 
+.\end{align*}</pre>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Since the restriction is a <em>compact</em> operator, it is “semi-Fredholm”, apply a theorem: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+\text{CZ inequality satisfied} \implies \dim \ker L_M < \infty, \operatorname{im}L_M \text{ closed}
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+    </ul>
+  <h2 id='outline-dim-ker-l-infty-2' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>8.7 Outline: <span class='math inline'>\(\dim \ker L &lt; \infty\)</span></h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Will need some real/functional analysis to invert operators:
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          “Variation of constants”
+        </li>
+      
+        <li>
+          Hilbert spaces and Spectrum of an operator
+        </li>
+      
+        <li>
+          <em>Hille-Yosida</em> theory: existence and uniqueness for operator IVPs, e.g. <span class='math inline'>\({\frac{\partial Y}{\partial s}\,} = -AY\)</span>
+        </li>
+      
+        <li>
+          Young’s Inequality (some convolution integrals)
+        </li>
+      
+        <li>
+          Holder’s Inequality
+        </li>
+      
+        <li>
+          Distribution theory
+        </li>
+      
+        <li>
+          Rellich’s Theorem (Multiple uses)
+        </li>
+      
+        <li>
+          Hahn-Banach Theorem
+        </li>
+      
+        <li>
+          Riesz Representation Theorem
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Conclude 8.7 by showing <span class='math inline'>\(L\)</span> is Fredholm:
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\(\dim \ker L &lt; \infty\)</span> (long)
+        </li>
+      
+        <li>
+          <span class='math inline'>\(\dim \operatorname{coker}L &lt; \infty\)</span> (very short)
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      <span class='math inline'>\(\hfill\blacksquare\)</span>
+    </p>
+  <h1 id='88' class='pb-2 mb-2 text-5xl font-bold text-center'>8.8</h1><h2 id='outline-2' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>8.8: Outline</h2>
+    <p class='mb-3'>
+      What we’re trying to prove
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      8.1.5: <span class='math inline'>\((d{\mathcal{F}})_u\)</span> is a Fredholm operator of index <span class='math inline'>\(\mu(x) - \mu(y)\)</span>.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Define <pre class='pandoc-raw-"tex"'>\begin{align*}
+L: W^{1, p}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) & \longrightarrow L^{p}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) \\
+Y & \longmapsto \frac{\partial Y}{\partial s}+J_{0} \frac{\partial Y}{\partial t}+S(s, t) Y
+\end{align*}</pre>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      8.7: Shows <span class='math inline'>\(L\)</span> is Fredholm
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      By the end of 8.8: replace <span class='math inline'>\(L\)</span> by <span class='math inline'>\(L_1\)</span> with the same <em>index</em>
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <em>(not the same kernel/cokernel)</em>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Compute <span class='math inline'>\(\mathop{\mathrm{ind}}L_1\)</span>: explicitly describe <span class='math inline'>\(\ker L_1, \operatorname{coker}L_1\)</span>.
+    </p>
+  
+        </li>
+      
+    </ul>
+  <h2 id='replacing-l' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>8.8: Replacing <span class='math inline'>\(L\)</span></h2>
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+L: W^{1, p}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) & \longrightarrow L^{p}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) \\
+Y & \longmapsto \frac{\partial Y}{\partial s}+J_{0} \frac{\partial Y}{\partial t}+S(s, t) Y
+\end{align*}</pre>
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Replace in two steps:
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\(L \leadsto L_0\)</span>, modified in a <span class='math inline'>\(B_{\varepsilon}(0)\)</span> in <span class='math inline'>\(s\)</span>.
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Use invariance of index under small perturbations.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <span class='math inline'>\(L_0 \leadsto L_1\)</span> by a homotopy, where <span class='math inline'>\(S_\lambda: S \leadsto S(s)\)</span> a diagonal matrix that is a constant matrix <em>outside</em> <span class='math inline'>\(B_{\varepsilon}(0)\)</span>.
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Use invariance of index under homotopy.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  <h2 id='replacing-l-1' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>8.8: Replacing <span class='math inline'>\(L\)</span></h2><pre class='pandoc-raw-"tex"'>\scriptsize
+</pre>
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+S(s, t) \overset{s\to\pm\infty}\to S^{\pm}(t) \\
+R^\pm_t \text{a solution to the IVP} \quad \quad &{\frac{\partial }{\partial t}\,}R = J_0 S^\pm R,\quad R_0^\pm  = \operatorname{id}
+.\end{align*}</pre>
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Use the fact <span class='math inline'>\(S: {\mathbb{R}}\times S^1 \to \operatorname{Mat}(2n;{\mathbb{R}})\)</span> and <span class='math inline'>\(S^\pm(t)\)</span> are symmetric.
+        </li>
+      
+        <li>
+          Take corresponding symplectic paths <span class='math inline'>\(R^\pm: I \to {\mathsf{Sp}}(2n; {\mathbb{R}})\)</span>.
+        </li>
+      
+        <li>
+          <span class='math inline'>\(L\)</span> will be a Fredholm operator if <pre class='pandoc-raw-"tex"'>\begin{align*}
+R^\pm \in {\mathcal{S}}\coloneqq\left\{{R: I \to {\mathsf{Sp}}(2n; {\mathbb{R}}) {~\mathrel{\Big|}~}R(0) = \operatorname{id}, ~~\operatorname{det}(R(1) - \operatorname{id})\neq 0}\right\}
+.\end{align*}</pre> <pre class='pandoc-raw-"tex"'>\normalsize</pre>
+        </li>
+      
+        <li>
+          Theorem 8.8.1: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}\mathop{\mathrm{ind}}(L) = \mu(R^-(t)) - \mu(R^+(t)) = \mu(x) - \mu(y).\end{align*}
+<span></span>
+        </li>
+      
+    </ul>
+  <h2 id='l_0-leadsto-l_1' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>8.8: <span class='math inline'>\(L_0 \leadsto L_1\)</span></h2><pre class='pandoc-raw-"tex"'>\scriptsize
+</pre>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Prop 8.8.2: Construct an operator <pre class='pandoc-raw-"tex"'>\begin{align*}
+L_{1}: W^{1, p}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) & \longrightarrow L^{p}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) \\
+Y & \longmapsto \frac{\partial Y}{\partial s}+J_{0} \frac{\partial Y}{\partial t}+S(s) Y
+\end{align*}</pre> where <span class='math inline'>\(S: {\mathbb{R}}\to\operatorname{Mat}(2n; {\mathbb{R}})\)</span> is a path of diagonal matrices depending on <span class='math inline'>\(\mathop{\mathrm{ind}}(R^\pm(t))\)</span>; then <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}\mathop{\mathrm{ind}}(L) = \mathop{\mathrm{ind}}(L_1) = \mathop{\mathrm{ind}}(R^-(t)) - \mathop{\mathrm{ind}}(R^+(t)).\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Idea of proof: take a homotopy of operators <pre class='pandoc-raw-"tex"'>\begin{align*}
+L_{\lambda}: W^{1, p}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) & \longrightarrow L^{p}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) \\
+Y & \longmapsto \frac{\partial Y}{\partial s}+J_{0} \frac{\partial Y}{\partial t}+S_{\lambda}(s, t) Y
+\end{align*}</pre> which are all Fredholm and all have the same index, then take time 1. <pre class='pandoc-raw-"tex"'>\normalsize</pre>
+    </p>
+  
+        </li>
+      
+    </ul>
+  <h2 id='index-of-l_1' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>8.8: Index of <span class='math inline'>\(L_1\)</span></h2>
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+L_{1}: W^{1, p}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) & \longrightarrow L^{p}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) \\
+Y & \longmapsto \frac{\partial Y}{\partial s}+J_{0} \frac{\partial Y}{\partial t}+S(s) Y
+\end{align*}</pre>
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Use the fact that <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}\operatorname{coker}L_1 \cong \ker L_1^*,\end{align*}
+<span></span> and we can explicitly write the adjoint of <span class='math inline'>\(L_1\)</span>.
+        </li>
+      
+        <li>
+          Get a formula that resembles the Morse case
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <em>(Counting number of eigenvalues that change sign).</em>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      <span class='math inline'>\(\hfill\blacksquare\)</span>
+    </p>
+  
+  <!-- What goes in this file will appear below the note body-->
+</article>
+            <div class='flex flex-col lg:flex-row lg:space-x-2'>
+              
+              
+            </div>
+            
+  <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
+    
+  </section>
+
+            <!-- What goes in this file will at the very end of the main div -->
+          </main>
+        </div>
+      </div>
+      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-800'>
+  <div>
+    <a href=''>
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'></path>
+      </svg>
+    </a>
+  </div>
+  <div>
+    Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
+    
+      
+        <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
+          0.3.6.1
+        </span>
+      
+    
+  </div>
+  <div>
+    <a href='-/all.html' title='View Index'>
+      <svg style='width: 1rem;' class='hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
+        </path>
+      </svg>
+    </a>
+
+  </div>
+</footer>
+    </div>
+  
+</body>
+
+</html>

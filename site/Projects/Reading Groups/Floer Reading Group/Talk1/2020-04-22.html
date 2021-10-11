@@ -1,0 +1,2489 @@
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <title>
+    Linearization Continued – My Emanote Site
+  </title>
+  
+    
+      <meta property='og:description' content />
+      <meta property='og:site_name' content='MyEmanoteSite' />
+    
+    
+      <base href='/' />
+      <link href='favicon.svg' rel='icon' />
+    
+    <meta name='generator' content='Emanote' />
+
+  
+  <!-- CSSSTART -->
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
+  <!-- CSSEND -->
+
+  <!-- Heist error element -->
+  <style type='text/css'>
+    strong.error {
+      color: lightcoral;
+      font-size: 90%;
+      font-family: monospace;
+    }
+  </style>
+  <!-- What goes in this file will appear on near the end of <head>--><link rel='preload' href='_emanote-static/fonts/Nunito/Nunito-Regular.ttf' as='font' type='font/ttf' crossorigin />
+<link rel='preload' href='_emanote-static/fonts/Nunito/Nunito-ExtraBold.ttf' as='font' type='font/ttf' crossorigin />
+
+<style>
+  @font-face {
+    font-family: 'Nunito';
+    src: url('_emanote-static/fonts/Nunito/Nunito-Regular.ttf') format("truetype");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Nunito-Bold';
+    src: url('_emanote-static/fonts/Nunito/Nunito-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+  }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  header,
+  .header-font {
+    font-family: 'Nunito-Bold', sans-serif;
+  }
+</style>
+
+  <head-main></head-main>
+</head>
+
+<!-- DoNotFormat -->
+
+
+
+<!-- DoNotFormat -->
+
+<body class='bg-gray-400 overflow-y-scroll'>
+  
+    <div class='container mx-auto'>
+
+      <nav id='breadcrumbs' class='w-full text-gray-700 md:hidden'>
+  <div class='flex justify-left'>
+    <div class='w-full px-2 py-2 bg-gray-50'>
+      <ul class='flex flex-wrap text-lg'>
+        <li class='inline-flex items-center'>
+          
+            
+              <img style='width: 1rem;' src='favicon.svg' />
+            
+          
+        </li>
+        
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='index.html'>
+                index
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='Projects.html'>
+                Projects
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='Projects/Reading%20Groups.html'>
+                Reading Groups
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='Projects/Reading%20Groups/Floer%20Reading%20Group.html'>
+                Floer Reading Group
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk1.html'>
+                Talk1
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+        
+      </ul>
+    </div>
+    <button class='inline px-2 py-1 text-white bg-blue-600 outline-none cursor-pointer focus:outline-none' title='Toggle sidebar' type='button' onclick="toggleHidden('sidebar')">
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'></path>
+      </svg>
+    </button>
+    <script>
+      function toggleHidden(elemId) {
+        document.getElementById(elemId).classList.toggle("hidden");
+      }
+    </script>
+  </div>
+</nav>
+
+      <div id='container' class='flex flex-nowrap flex-col md:flex-row bg-gray-50 md:mt-8 md:shadow-2xl md:mb-8'>
+        <!-- Sidebar column -->
+        <nav id='sidebar' class='flex-shrink hidden leading-relaxed md:block md:sticky md:top-0 md:h-full md:w-48 xl:w-64'>
+          <div class='px-2 py-2 text-gray-800'>
+
+            <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
+              <a href='-/tags.html' title='View tags'>
+                <svg style='width: 1rem;' class='hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
+                  </path>
+                </svg>
+              </a>
+              <a href='-/all.html' title='Expand full tree'>
+                <svg style='width: 1rem;' class='hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
+                  </path>
+                </svg>
+              </a>
+            </div>
+
+            <div id='site-logo' class='pl-2'>
+              <div class='flex items-center my-2 space-x-2 justify-left'>
+                <a href='' title='Go to Home'>
+                  
+                    
+                      <!-- The style width attribute here is to prevent huge
+                      icon from displaying at those rare occasions when Tailwind
+                      hasn't kicked in immediately on page load 
+                      -->
+                      <img style='width: 1rem;' class='transition transform hover:scale-110 hover:opacity-80' src='favicon.svg' />
+                    
+                  
+                </a>
+                <a class='font-bold truncate' title='Go to Home' href=''>
+                  Home
+                </a>
+              </div>
+            </div>
+
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0001_Graduate Research Index' href='0001_Graduate%20Research%20Index.html'>
+      0001_Graduate Research Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0001_Learning_Index' href='0001_Learning_Index.html'>
+      0001_Learning_Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0009_subject index' href='0009_subject%20index.html'>
+      0009_subject index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Home' href='000_Home.html'>
+      000_Home
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Leisure Reading Projects' href='000_Leisure%20Reading%20Projects.html'>
+      000_Leisure Reading Projects
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Projects Index' href='000_Projects%20Index.html'>
+      000_Projects Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Reading Projects Index' href='000_Reading%20Projects%20Index.html'>
+      000_Reading Projects Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Recommendations' href='000_Recommendations.html'>
+      000_Recommendations
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Talks Index' href='000_Talks%20Index.html'>
+      000_Talks Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Todo' href='000_Todo.html'>
+      000_Todo
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Undergraduate Research Index' href='000_Undergraduate%20Research%20Index.html'>
+      000_Undergraduate Research Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Archive' href='Archive.html'>
+      Archive
+    </a>
+    
+      
+        <span class='text-gray-300' title='4 children inside'>
+          4
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Conferences and Seminars' href='Conferences%20and%20Seminars.html'>
+      Conferences and Seminars
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Learning' href='Learning.html'>
+      Learning
+    </a>
+    
+      
+        <span class='text-gray-300' title='2 children inside'>
+          2
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Projects' href='Projects.html'>
+      Projects
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Book Notes' href='Projects/Book%20Notes.html'>
+      Book Notes
+    </a>
+    
+      
+        <span class='text-gray-300' title='6 children inside'>
+          6
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Current Projects' href='Projects/Current%20Projects.html'>
+      Current Projects
+    </a>
+    
+      
+        <span class='text-gray-300' title='2 children inside'>
+          2
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Independent Study' href='Projects/Independent%20Study.html'>
+      Independent Study
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Quals' href='Projects/Quals.html'>
+      Quals
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Reading Groups' href='Projects/Reading%20Groups.html'>
+      Reading Groups
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Floer Reading Group' href='Projects/Reading%20Groups/Floer%20Reading%20Group.html'>
+      Floer Reading Group
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Talk1' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk1.html'>
+      Talk1
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Floer Talk' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk1/2020-04-11%20Floer%20Reading.html'>
+      Floer Talk
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+  
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
+        </path>
+      </svg>
+      
+  
+    <a class='font-bold text-blue-600 hover:underline truncate' title='Linearization Continued' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk1/2020-04-22.html'>
+      Linearization Continued
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Linearization and Transversality' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk1/slides.html'>
+      Linearization and Transversality
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Notation' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk1/notation.html'>
+      Notation
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Talk2' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk2.html'>
+      Talk2
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Talk3' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk3.html'>
+      Talk3
+    </a>
+    
+      
+        <span class='text-gray-300' title='2 children inside'>
+          2
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Talk4' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk4.html'>
+      Talk4
+    </a>
+    
+      
+        <span class='text-gray-300' title='2 children inside'>
+          2
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Talk5' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk5.html'>
+      Talk5
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Talk6' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk6.html'>
+      Talk6
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Talk7' href='Projects/Reading%20Groups/Floer%20Reading%20Group/Talk7.html'>
+      Talk7
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Juvitop Fall 2020 - Cobordism Hypothesis' href='Projects/Reading%20Groups/Juvitop%20Fall%202020%20-%20Cobordism%20Hypothesis.html'>
+      Juvitop Fall 2020 - Cobordism Hypothesis
+    </a>
+    
+      
+        <span class='text-gray-300' title='2 children inside'>
+          2
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+  
+</div>
+    
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Subjects' href='Subjects.html'>
+      Subjects
+    </a>
+    
+      
+        <span class='text-gray-300' title='10 children inside'>
+          10
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='To Review' href='To%20Review.html'>
+      To Review
+    </a>
+    
+      
+        <span class='text-gray-300' title='58 children inside'>
+          58
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Unsorted' href='Unsorted.html'>
+      Unsorted
+    </a>
+    
+      
+        <span class='text-gray-300' title='557 children inside'>
+          557
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Workshops' href='Workshops.html'>
+      Workshops
+    </a>
+    
+      
+        <span class='text-gray-300' title='5 children inside'>
+          5
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='_HTT' href='_HTT.html'>
+      _HTT
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='consistant-report' href='consistant-report.html'>
+      consistant-report
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='figures' href='figures.html'>
+      figures
+    </a>
+    
+      
+        <span class='text-gray-300' title='4 children inside'>
+          4
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+
+          </div>
+        </nav>
+
+        <!-- Main body column -->
+        <div class='flex-1 w-full overflow-x-auto bg-white'>
+          <main class='px-4 py-4'>
+            <h1 class='flex items-end justify-center mb-4 p-3 bg-blue-100 text-5xl font-extrabold text-black rounded'>
+  <a class='z-40 tracking-tighter '>
+    Linearization Continued
+  </a>
+</h1>
+            <article class='overflow-auto'>
+  <!-- What goes in this file will appear on top of note body-->
+  <pre class='pandoc-raw-"tex"'>\usepackage{cmbright}
+</pre>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#review' class='text-blue-600 font-bold hover:underline'>Review</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#definitions' class='text-blue-600 font-bold hover:underline'>Definitions</a>
+        </li>
+      
+        <li>
+          <a href='#the-frame' class='text-blue-600 font-bold hover:underline'>The Frame</a>
+        </li>
+      
+        <li>
+          <a href='#charts' class='text-blue-600 font-bold hover:underline'>Charts</a>
+        </li>
+      
+        <li>
+          <a href='#add-a-tangent' class='text-blue-600 font-bold hover:underline'>Add a Tangent</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#leibniz-rule' class='text-blue-600 font-bold hover:underline'>8.4.1: Leibniz Rule</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#leibniz-rule-1' class='text-blue-600 font-bold hover:underline'>Leibniz Rule</a>
+        </li>
+      
+        <li>
+          <a href='#order-1' class='text-blue-600 font-bold hover:underline'>Order 1</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#order-0-part-is-symmetric-in-the-limit' class='text-blue-600 font-bold hover:underline'>Order 0 Part is Symmetric in the Limit</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#order-0-part-is-symmetric-in-the-limit-1' class='text-blue-600 font-bold hover:underline'>8.4.4: Order 0 Part is Symmetric in the Limit</a>
+        </li>
+      
+        <li>
+          <a href='#proof' class='text-blue-600 font-bold hover:underline'>Proof</a>
+        </li>
+      
+        <li>
+          <a href='#proof-blue-term-vanishes' class='text-blue-600 font-bold hover:underline'>Proof: Blue Term Vanishes</a>
+        </li>
+      
+        <li>
+          <a href='#proof-orange-term-vanishes-1-and-3' class='text-blue-600 font-bold hover:underline'>Proof: Orange Term Vanishes (1 and 3)</a>
+        </li>
+      
+        <li>
+          <a href='#proof-symmetry' class='text-blue-600 font-bold hover:underline'>Proof: Symmetry</a>
+        </li>
+      
+        <li>
+          <a href='#proof-symmetry-1' class='text-blue-600 font-bold hover:underline'>Proof: Symmetry</a>
+        </li>
+      
+        <li>
+          <a href='#proof-symmetry-2' class='text-blue-600 font-bold hover:underline'>Proof: Symmetry</a>
+        </li>
+      
+        <li>
+          <a href='#proof-symmetry-3' class='text-blue-600 font-bold hover:underline'>Proof: Symmetry</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#lemma-that-concludes-the-proof' class='text-blue-600 font-bold hover:underline'>Lemma That Concludes the Proof</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#lemma' class='text-blue-600 font-bold hover:underline'>Lemma</a>
+        </li>
+      
+        <li>
+          <a href='#proof-of-lemma' class='text-blue-600 font-bold hover:underline'>Proof of Lemma</a>
+        </li>
+      
+        <li>
+          <a href='#proof-of-lemma-1' class='text-blue-600 font-bold hover:underline'>Proof of Lemma</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#linearization-of-hamiltons-equation' class='text-blue-600 font-bold hover:underline'>8.4.6: Linearization of Hamilton’s Equation</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#linearization-of-hamiltons-equation-1' class='text-blue-600 font-bold hover:underline'>Linearization of Hamilton’s Equation</a>
+        </li>
+      
+        <li>
+          <a href='#proof-1' class='text-blue-600 font-bold hover:underline'>Proof</a>
+        </li>
+      
+        <li>
+          <a href='#proof-2' class='text-blue-600 font-bold hover:underline'>Proof</a>
+        </li>
+      
+        <li>
+          <a href='#proof-3' class='text-blue-600 font-bold hover:underline'>Proof</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      <span title='Link is broken'><s>[[Floer Reading Group Fall 2020 | ../../../../Unsorted/Floer%20Reading%20Group%20Fall%202020.html]]</s>❌</span>
+    </p>
+  <h1 id='review' class='pb-2 mb-2 text-5xl font-bold text-center'>Review</h1><h2 id='definitions' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Definitions</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      The Floer equation is given by <pre class='pandoc-raw-"tex"'>\begin{align*}
+\frac{\partial u}{\partial s}+J(u) \frac{\partial u}{\partial t}+\operatorname{grad} H_{t}(u)=0
+.\end{align*}</pre>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      We fixed a solution and lifted it to a sphere: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+u \in C^\infty(S^1\times{\mathbb{R}}; W) \quad\mapsto\quad \tilde u \in C^\infty(S^2; W) 
+\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      We use the assumption:
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      For every <span class='math inline'>\(w\in C^\infty(S^2, W)\)</span> there exists a symplectic trivialization of the fiber bundle <span class='math inline'>\(w^* TW\)</span>, i.e. <span class='math inline'>\({\left\langle {c_1(TW)},~{\pi_2(W)} \right\rangle} = 0\)</span> where <span class='math inline'>\(c_1\)</span> denotes the first Chern class of the bundle <span class='math inline'>\(TW\)</span>.
+    </p>
+  
+    </blockquote>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      We use this trivialize the pullback <span class='math inline'>\(\tilde u ^* TW\)</span> to obtain an orthonormal unitary frame <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}\left\{{Z_i}\right\}_{i=1}^{2n} \subset T_{u(s, t)} W\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+    </ul>
+  <h2 id='the-frame' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>The Frame</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      We used the chosen frame <span class='math inline'>\(\left\{{Z_i}\right\}\)</span> to define a chart centered at <span class='math inline'>\(u\)</span> of <span class='math inline'>\({\mathcal{P}}^{1, p}(x, y)\)</span> given by <pre class='pandoc-raw-"tex"'>\begin{align*}
+\iota: W^{1, p}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) & \longrightarrow \mathcal{P}^{1, p}(x, y) \\
+Y = \left(y_{1}, \dots, y_{2 n}\right) & \longmapsto \exp _{u}\left(\sum y_{i} Z_{i}\right)
+.\end{align*}</pre>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      We regard <span class='math inline'>\(Y(s, t)\)</span> as a tangent vector to <span class='math inline'>\(W\)</span> in some Euclidean embedding.
+    </p>
+  
+        </li>
+      
+    </ul>
+  <h2 id='charts' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Charts</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          We seek to compute the composite map in charts:
+        </li>
+      
+    </ul>
+  <pre class='pandoc-raw-"tex"'>\begin{center}
+\includegraphics[height= 0.5\textheight]{figures/image_2020-04-16-01-11-02.png} 
+\end{center}
+</pre><h2 id='add-a-tangent' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Add a Tangent</h2><pre class='pandoc-raw-"tex"'>\begin{center}
+\begin{tikzcd}[ampersand replacement=\&, matrix scale=0.002]
+{\mathcal{F}}(u) =
+\& \frac{\partial u}{\partial s} 
+\& + J(u) \frac{\partial u}{\partial t} 
+\& - J(u)X_{t}(u) \\
+\mathcal{F}(u+Y) =
+\& \frac{\partial(u+Y)}{\partial s}
+\&+ J(u+Y) \frac{\partial(u+Y)}{\partial t}
+\&- J(u+Y) X_{t}(u+Y)
+\end{tikzcd}
+\end{center}
+</pre>
+    <p class='mb-3'>
+      Extract the part that is linear in <span class='math inline'>\(Y\)</span> and collect terms:
+    </p>
+  
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+&(d \mathcal{F})_{u}(Y)  \\
+& = {\color{red}\frac{\partial Y}{\partial s}} +(d J)_{u}(Y) \frac{\partial u}{\partial t} + {\color{red} J(u) \frac{\partial Y}{\partial t}} -(d J)_{u}(Y) X_{t}-J(u)\left(d X_{t}\right)_{u}(Y) \\ 
+& = 
+\qty{ {\color{red}\frac{\partial Y}{\partial s}} + {\color{red} J(u) \frac{\partial Y}{\partial t}}}  \\
+& \hspace{2em} + \qty{ (d J)_{u}(Y) \frac{\partial u}{\partial t} - (d J)_{u}(Y) X_{t}-J(u)\left(d X_{t}\right)_{u}(Y)} \\
+.\end{align*}</pre>
+    </p>
+  <h1 id='841-leibniz-rule' class='pb-2 mb-2 text-5xl font-bold text-center'>8.4.1: Leibniz Rule</h1><h2 id='leibniz-rule' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Leibniz Rule</h2>
+    <p class='mb-3'>
+      Recall the Leibniz rule <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}(dJ)(Y) \cdot v = d(Jv)(Y) - J dv(Y)\end{align*}
+<span></span> <pre class='pandoc-raw-"tex"'>\begin{align*}
+(d \mathcal{F})_{u}(Y)
+& = 
+\qty{ {\color{red}\frac{\partial Y}{\partial s}} + {\color{red} J(u) \frac{\partial Y}{\partial t}}}  \\
+& \quad + \qty{ (d J)_{u}(Y) \frac{\partial u}{\partial t} - (d J)_{u}(Y) X_{t}-J(u)\left(d X_{t}\right)_{u}(Y)} \\ 
+&= \sum_{i=1}^{2n} \qty{ {\frac{\partial y_i}{\partial s}\,} Z_i + {\frac{\partial y_i}{\partial t}\,} J(u) Z_i} \\
+& + \sum_{i=1}^{2n} y_i \Bigg( {\frac{\partial Z_i}{\partial s}\,} + J(u) {\frac{\partial Z_i}{\partial t}\,} + (dJ)_u (Z_i) {\frac{\partial u}{\partial t}\,}  \\
+&\hspace{5em}- J(u) (dX_t)_u Z_i - (dJ)_u (Z_i) X_t \Bigg)
+.\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      Use the fact that this is <span class='math inline'>\(O_1 + O_0\)</span> in <span class='math inline'>\(Y\)</span>.
+    </p>
+  <h2 id='order-1' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Order 1</h2>
+    <p class='mb-3'>
+      Study <span class='math inline'>\(O_1\)</span> first, which (claim) reduces to <pre class='pandoc-raw-"tex"'>\begin{align*}
+O_1 = \sum_{i=1}^{2n} \qty{{\frac{\partial y_i}{\partial s}\,} + J_0 {\frac{\partial y_i}{\partial t}\,}  }Z_i = \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu(y_1, \cdots, y_{2n})
+.\end{align*}</pre> where <span class='math inline'>\(J_0\)</span> is the standard complex structure on <span class='math inline'>\({\mathbb{R}}^{2n} = {\mathbb{C}}^n\)</span>
+    </p>
+  
+    <p class='mb-3'>
+      Use this to write <pre class='pandoc-raw-"tex"'>\begin{align*}
+(d{\mathcal{F}})_u &= {\color{red} \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5muY} + SY
+\end{align*}</pre> where <span class='math inline'>\(S\in C^\infty({\mathbb{R}}\times S^1; \endo({\mathbb{R}}^n))\)</span> is a linear operator of order 0.
+    </p>
+  <h1 id='order-0-part-is-symmetric-in-the-limit' class='pb-2 mb-2 text-5xl font-bold text-center'>Order 0 Part is Symmetric in the Limit</h1><h2 id='844-order-0-part-is-symmetric-in-the-limit' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>8.4.4: Order 0 Part is Symmetric in the Limit</h2>
+    <dl class='flex flex-col mb-3'>
+      
+        <div class='my-1'>
+          <dt class='font-bold text-l'>
+            Theorem (8.4.4, CR + Symmetric in the Limit)
+          </dt>
+          
+            <div class='flex flex-col pl-1'>
+              <dd class='pl-2 my-1 text-gray-700 border-l-2'>
+                
+    <p class='mb-3'>
+      If <span class='math inline'>\(u\)</span> solves Floer’s equation, then <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+(d{\mathcal{F}})_u = \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu+ S( s, t)
+\end{align*}
+<span></span> where
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          <span class='math inline'>\(S\)</span> is linear
+        </li>
+      
+        <li>
+          <span class='math inline'>\(S\)</span> tends to a symmetric operator as <span class='math inline'>\(s\to \pm \infty\)</span>, and
+        </li>
+      
+        <li>
+          We have the limiting behavior <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}{\frac{\partial S}{\partial s}\,}(s, t)  \overset{s\to\pm\infty}\to 0 {\quad \operatorname{uniformly in $t$} \quad}\end{align*}
+<span></span>
+        </li>
+      
+    </ul>
+  
+              </dd>
+            </div>
+          
+        </div>
+      
+    </dl>
+  <h2 id='proof' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Proof</h2>
+    <p class='mb-3'>
+      Collect terms in the order zero part: <pre class='pandoc-raw-"tex"'>\begin{align*}
+O_0 = S(y_1, \cdots , y_{2n}) 
+&= \sum_{i=1}^{2n} y_i \Bigg[ {\color{orange} {\frac{\partial Z_i}{\partial s}\,}} + J(u) {\frac{\partial Z_i}{\partial t}\,} + {\color{blue} (dJ)_u (Z_i) {\frac{\partial u}{\partial t}\,}}  \\
+&\hspace{5em}  - J(u) (dX_t)_u Z_i - {\color{blue} (dJ)_u (Z_i) X_t} \Bigg] \\
+&= \sum_{i=1}^{2n} y_i \Bigg[ {\color{orange} {\frac{\partial Z_i}{\partial s}\,} } + { \color{blue} (dJ)_u (Z_i) \qty{ {\frac{\partial u}{\partial t}\,} - (Z_i) X_t} } \\
+&\hspace{5em} + {\color{red} J(u) {\frac{\partial Z_i}{\partial t}\,}  - J(u) (dX_t)_u Z_i} \Bigg]
+.\end{align*}</pre>
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Claim: the terms in blue and orange vanish in the limit <span class='math inline'>\(s \to \pm \infty\)</span>, so it suffices to prove that the red term limits to a symmetric operator.
+        </li>
+      
+    </ul>
+  <h2 id='proof-blue-term-vanishes' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Proof: Blue Term Vanishes</h2>
+    <p class='mb-3'>
+      <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+{ \color{blue} (dJ)_u (Z_i) \qty{ {\frac{\partial u}{\partial t}\,} - (Z_i) X_t} } \to 0
+\end{align*}
+<span></span>
+    </p>
+  
+    <p class='mb-3'>
+      The term in blue vanishes: since <span class='math inline'>\(u\)</span> is a solution and
+    </p>
+  
+    <p class='mb-3'>
+      <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}{\frac{\partial u}{\partial s}\,} \overset{s\to \pm \infty}\to 0 {\quad \operatorname{uniformly} \quad}\end{align*}
+<span></span>
+    </p>
+  
+    <p class='mb-3'>
+      as do its derivatives, we have
+    </p>
+  
+    <p class='mb-3'>
+      <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*} \qty{ {\frac{\partial u}{\partial t}\,} - X_t(u)} \overset{s\to \pm\infty}\to 0 \end{align*}
+<span></span>
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      This seems to be the full argument for the blue term.
+    </p>
+  
+    </blockquote>
+  <h2 id='proof-orange-term-vanishes-1-and-3' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Proof: Orange Term Vanishes (1 and 3)</h2>
+    <p class='mb-3'>
+      <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+{\color{orange} {\frac{\partial Z_i}{\partial s}\,} } \overset{s\to \pm \infty}\to 0 
+\end{align*}
+<span></span>
+    </p>
+  
+    <p class='mb-3'>
+      Follows since the frame <span class='math inline'>\(Z_i\)</span> was chosen such that
+    </p>
+  
+    <p class='mb-3'>
+      <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}{\frac{\partial }{\partial s}\,}, \quad \frac{{\partial}^2}{{\partial}s^2}, \quad \frac{{\partial}^2}{{\partial}s~{\partial}t} \quad \curvearrowright Z_i \overset{s\to \pm\infty}\to 0\quad \text{for each } i\end{align*}
+<span></span>
+    </p>
+  
+    <p class='mb-3'>
+      This also implies
+    </p>
+  
+    <p class='mb-3'>
+      <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*} {\frac{\partial S}{\partial s}\,} \overset{s\to \pm\infty}\to 0.\end{align*}
+<span></span>
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      This shows parts (1) and (3) of the theorem: linearity and limits to zero uniformly in <span class='math inline'>\(t\)</span>?
+    </p>
+  
+    </blockquote>
+  <h2 id='proof-symmetry' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Proof: Symmetry</h2>
+    <p class='mb-3'>
+      Write the remaining red term as
+    </p>
+  
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+A \coloneqq A\left(y_{1}, \ldots, y_{2 n}\right)=\sum y_{i}\left( {\color{red} J(u) \frac{\partial Z_{i}}{\partial t}-J(u)\left(d X_{t}\right)_{u}\left(Z_{i}\right) } \right)
+.\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      Extract the <span class='math inline'>\(j\)</span>th component: <pre class='pandoc-raw-"tex"'>\begin{align*}
+A_j = \sum y_{i}\left\langle J(u) \frac{\partial Z_{i}}{\partial t}-J(u)\left(d X_{t}\right)_{u}\left(Z_{i}\right), \quad Z_{j}\right\rangle
+.\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      We’ll show that `\begin{align*} \lim <em>{s \rightarrow \pm \infty} &\left\langle J(u) \frac{\partial Z</em>{\color{red} i}}{\partial t}-J(u)\left(d X_{t}\right)<em>{u}\left(Z</em>{\color{red} i}\right), Z_{\color{red} j}\right\rangle \
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          &\left\langle J(u) \frac{\partial Z_{\color{red} j}}{\partial t}-J(u)\left(d X_{t}\right)<em>{u} Z</em>{\color{red}j}, ~~~Z_{\color{red} i}\right\rangle=0 .\end{align*}`{=tex}
+        </li>
+      
+    </ul>
+  <h2 id='proof-symmetry-1' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Proof: Symmetry</h2>
+    <p class='mb-3'>
+      Use the fact that the frame <span class='math inline'>\(\left\{{Z_i}\right\}\)</span> is unitary: <pre class='pandoc-raw-"tex"'>\begin{align*}
+0 &=\frac{\partial}{\partial t}\left\langle J(u) Z_{i}, Z_{j}\right\rangle \\
+&=\left\langle(d J)_{u}\left(\frac{\partial u}{\partial t}\right) Z_{i}, Z_{j}\right\rangle+\left\langle J(u) \frac{\partial Z_{i}}{\partial t}, Z_{j}\right\rangle+\left\langle {\color{red} J(u) } Z_{i}, \frac{\partial Z_{j}}{\partial t}\right\rangle \\
+&=
+\left\langle(d J)_{u}\left(\frac{\partial u}{\partial t}\right) Z_{i}, Z_{j}\right\rangle+\left\langle J(u) \frac{\partial Z_{i}}{\partial t}, Z_{j}\right\rangle-\left\langle Z_{i}, {\color{red} J(u)} \frac{\partial Z_{j}}{\partial t}\right\rangle
+.\end{align*}</pre>
+    </p>
+  <h2 id='proof-symmetry-2' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Proof: Symmetry</h2>
+    <p class='mb-3'>
+      Therefore it suffices to show <pre class='pandoc-raw-"tex"'>\begin{align*}
+-&\left\langle J(u)\left(d X_{t}\right)_{u}\left(Z_{i}\right), \quad Z_{j}\right\rangle \\
++&\left\langle J(u)\left(d X_{t}\right)_{u}\left(Z_{j}\right), \quad Z_{i}\right\rangle \\
+-&\left\langle(d J)_{u}\left(\frac{\partial u}{\partial t}\right) Z_{i}, \quad Z_{j}\right\rangle \\ \\
+&\overset{s\to \pm\infty}\to 0
+.\end{align*}</pre>
+    </p>
+  <h2 id='proof-symmetry-3' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Proof: Symmetry</h2>
+    <p class='mb-3'>
+      Using the fact that <pre class='pandoc-raw-"tex"'>\begin{align*}
+\qty{ {\frac{\partial u}{\partial t}\,} - X_t(u)} \overset{s\to \pm\infty}\to 0
+\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      we can equivalently show <pre class='pandoc-raw-"tex"'>\begin{align*}
+&- \left\langle J(u)\left(d X_{t}\right)_{u}\left(Z_{i}\right), \quad Z_{j}\right\rangle \\
+&+ \left\langle J(u)\left(d X_{t}\right)_{u} \left(Z_{j}\right), \quad Z_{i}\right\rangle \\
+&- \left\langle(d J)_{u}\left(X_{t}\right) Z_{i}, \hspace{2.5em} Z_{j}\right\rangle \\ \\
+&\overset{s\to \pm\infty}\to 0
+\end{align*}</pre>
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      For a fixed <span class='math inline'>\((s, t)\)</span>, this expression only depends on <span class='math inline'>\(Z_i\)</span> at the point <span class='math inline'>\(u(s, t)\)</span>.
+    </p>
+  
+    </blockquote>
+  <h1 id='lemma-that-concludes-the-proof' class='pb-2 mb-2 text-5xl font-bold text-center'>Lemma That Concludes the Proof</h1><h2 id='lemma' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Lemma</h2>
+    <p class='mb-3'>
+      <strong>Lemma</strong>: For <span class='math inline'>\(p\in W\)</span>, <span class='math inline'>\(\left\{{Z_i}\right\}\)</span> a unitary basis of <span class='math inline'>\(T_p W\)</span>, <pre class='pandoc-raw-"tex"'>\begin{align*}
+&- \left\langle J(p)\left(d X_{t}\right)_{p}\left(Z_{i}\right), \quad Z_{j}\right\rangle \\
+&+ \left\langle J(p)\left(d X_{t}\right)_{p}\left(Z_{j}\right), \quad Z_{i}\right\rangle \\
+&- \left\langle(d J)_{p}\left(X_{t}\right) Z_{i}, \hspace{2.5em} Z_{j}\right\rangle \\
+&= 0
+.\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Claim</strong>: This lemma immediately concludes the previous proof?
+    </p>
+  <h2 id='proof-of-lemma' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Proof of Lemma</h2>
+    <p class='mb-3'>
+      Extend <span class='math inline'>\(\left\{{Z_i}\right\}\)</span> to a chart containing <span class='math inline'>\(p\)</span> and use the Leibniz rule to rewrite
+    </p>
+  <pre class='pandoc-raw-"tex"'>\small
+</pre>
+    <p class='mb-3'>
+      `\begin{align*}
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          \left\langle J(p)\left(d X_{t}\right)<em>{p}\left(Z</em>{i}\right), Z_{j}\right\rangle
+        </li>
+      
+    </ul>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          \left\langle J(p)\left(d X_{t}\right)<em>{p}\left(Z</em>{j}\right), Z_{i}\right\rangle
+        </li>
+      
+    </ul>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          \left\langle(d J)<em>{p}\left(X</em>{t}\right) Z_{i}, Z_{j}\right\rangle = 0 \end{align*}<code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>{=tex} </code>\normalsize<code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>{=tex} as </code>\footnotesize<code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>{=tex} </code>\begin{align*} &- \left\langle J\left(d X_{t}\right)\left(Z_{i}\right),Z_{j}\right\rangle
+        </li>
+      
+    </ul>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          \left\langle J\left(d X_{t}\right)\left(Z_{j}\right), Z_{i}\right\rangle
+        </li>
+      
+        <li>
+          \left\langle J\left(d Z_{i}\right)\left(X_{t}\right), Z_{j}\right\rangle
+        </li>
+      
+    </ul>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          {\color{red} \left\langle d\left(J Z_{i}\right)\left(X_{t}\right), Z_{j}\right\rangle } \ \ &=\left\langle J\left[X_{t}, Z_{i}\right], Z_{j}\right\rangle
+        </li>
+      
+    </ul>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          \left\langle J\left(d X_{t}\right)\left(Z_{j}\right), Z_{i}\right\rangle
+        </li>
+      
+    </ul>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          {\color{red} \left\langle d\left(J Z_{i}\right)\left(X_{t}\right), Z_{j}\right\rangle } .\end{align*}<code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>{=tex} </code>\normalsize`{=tex}
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      where we’ll rewrite the red terms.
+    </p>
+  <h2 id='proof-of-lemma-1' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Proof of Lemma</h2><pre class='pandoc-raw-"tex"'>\scriptsize
+</pre>
+    <p class='mb-3'>
+      Now use <pre class='pandoc-raw-"tex"'>\begin{align*}
+X_t {\left\langle {JZ_i},~{Z_j} \right\rangle} = 0 
+\implies
+\left\langle d\left(J Z_{i}\right)\left(X_{t}\right), Z_{j}\right\rangle+\left\langle J Z_{i},\left(d Z_{j}\right)\left(X_{t}\right)\right\rangle=0
+.\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      We now rewrite the RHS from before: <pre class='pandoc-raw-"tex"'>\begin{align*}
+\left\langle J\left[X_{t}, Z_{i}\right], Z_{j}\right\rangle &+\left\langle J\left(d X_{t}\right)\left(Z_{j}\right), Z_{i}\right\rangle+\left\langle J Z_{i},\left(d Z_{j}\right)\left(X_{t}\right)\right\rangle \\ \\
+&=\left\langle J\left[X_{t}, Z_{i}\right], Z_{j}\right\rangle+\left\langle J\left(d X_{t}\right)\left(Z_{j}\right)-J\left(d Z_{j}\right)\left(X_{t}\right), Z_{i}\right\rangle \\
+&=\left\langle J\left[X_{t}, Z_{i}\right], Z_{j}\right\rangle-\left\langle J\left[X_{t}, Z_{j}\right], Z_{i}\right\rangle \\
+&=\omega\left(\left[X_{t}, Z_{i}\right], Z_{j}\right)-\omega\left(\left[X_{t}, Z_{j}\right], Z_{i}\right)
+.\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      The symmetry follows from <span class='math inline'>\(\omega\)</span> being closed and <pre class='pandoc-raw-"tex"'>\begin{align*}
+0
+&= d \omega\left(X_{t}, Z_{i}, Z_{j}\right) \\
+&= X_{t} \cdot \omega\left(Z_{i}, Z_{j}\right)-Z_{i} \cdot \omega\left(X_{t}, Z_{j}\right)+Z_{j} \cdot \omega\left(X_{t}, Z_{i}\right) \\
+&\quad -\omega\left(\left[X_{t}, Z_{i}\right], Z_{j}\right)+\omega\left(\left[X_{t}, Z_{j}\right], Z_{i}\right)-\omega\left(\left[Z_{i}, Z_{j}\right], X_{t}\right) \\ \\
+&= -X_{t} \cdot\left\langle Z_{i}, J Z_{j}\right\rangle+Z_{i} \cdot\left(d H_{t}\right)\left(Z_{j}\right)-Z_{j} \cdot\left(d H_{t}\right)\left(Z_{i}\right) \\
+&\quad -\left(d H_{t}\right)\left(\left[Z_{i}, Z_{j}\right]\right)-\omega\left(\left[X_{t}, Z_{i}\right], Z_{j}\right)+\omega\left(\left[X_{t}, Z_{j}\right], Z_{i}\right) \\ \\
+&= d\left(d H_{t}\right)\left(Z_{i}, Z_{j}\right)-\omega\left(\left[X_{t}, Z_{i}\right], Z_{j}\right)+\omega\left(\left[X_{t}, Z_{j}\right], Z_{i}\right) \\
+&= -\omega\left(\left[X_{t}, Z_{i}\right], Z_{j}\right)+\omega\left(\left[X_{t}, Z_{j}\right], Z_{i}\right). \hspace{9em} \hfill\blacksquare
+\end{align*}</pre>
+    </p>
+  <h1 id='846-linearization-of-hamiltons-equation' class='pb-2 mb-2 text-5xl font-bold text-center'>8.4.6: Linearization of Hamilton’s Equation</h1><h2 id='linearization-of-hamiltons-equation' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Linearization of Hamilton’s Equation</h2>
+    <p class='mb-3'>
+      Recall <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+\qty{d{\mathcal{F}}}_u = \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5muY + SY = \qty{\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu+ S}Y 
+\end{align*}
+<span></span>
+    </p>
+  
+    <p class='mb-3'>
+      Now think of <span class='math inline'>\(S\)</span> as a map <span class='math inline'>\(Y \mapsto S\cdot Y\)</span>, so <span class='math inline'>\(S\in C^\infty({\mathbb{R}}\times S^1; \endo({\mathbb{R}}^{2n}))\)</span> and define the symmetric operators <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+S^{\pm} \coloneqq\lim_{s\to \pm\infty} S(s, {-}) {\quad \operatorname{respectively} \quad}
+\end{align*}
+<span></span>
+    </p>
+  
+    <dl class='flex flex-col mb-3'>
+      
+        <div class='my-1'>
+          <dt class='font-bold text-l'>
+            Theorem
+          </dt>
+          
+            <div class='flex flex-col pl-1'>
+              <dd class='pl-2 my-1 text-gray-700 border-l-2'>
+                The equation <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+{\partial}_t Y = J_0 S^{\pm} Y
+\end{align*}
+<span></span> is a linearization of Hamilton’s equation <pre class='pandoc-raw-"tex"'>\begin{align*}
+{\frac{\partial z}{\partial t}\,} = X_t(z){\quad \operatorname{at} \quad} 
+\begin{cases}
+x = \lim_{s\to -\infty} u & \text{for } S^- \\
+y = \lim_{s\to \infty} u & \text{for } S^+
+\end{cases}\quad\text{respectively}
+.\end{align*}</pre>
+              </dd>
+            </div>
+          
+        </div>
+      
+    </dl>
+  <h2 id='proof-1' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Proof</h2>
+    <p class='mb-3'>
+      We first linearize Hamilton’s equation at <span class='math inline'>\(x\)</span>: <pre class='pandoc-raw-"tex"'>\begin{align*}
+{\frac{\partial z}{\partial t}\,} = X_t(z) \quad \stackrel{\text{linearized}}\implies \quad {\frac{\partial Y}{\partial t}\,} = (dX_t)_x Y
+.\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      So write <span class='math inline'>\(Y = \sum y_i Z_i\)</span> to obtain <pre class='pandoc-raw-"tex"'>\begin{align*}
+\sum_{i} \frac{\partial y_{i}}{\partial t} Z_{i} &=\sum_{i} y_{i}\left(-\frac{\partial Z_{i}}{\partial t}+\left(d X_{t}\right)\left(Z_{i}\right)\right) \\
+&=\sum_{i} \sum_{j} y_{i}\left\langle-\frac{\partial Z_{i}}{\partial t}+\left(d X_{t}\right)\left(Z_{i}\right), Z_{j}\right\rangle Z_{j} \\
+&=\sum_{i} \sum_{j} y_{j}\left\langle-\frac{\partial Z_{i}}{\partial t}+\left(d X_{t}\right)\left(Z_{j}\right), Z_{i}\right\rangle Z_{i} \\ \\
+\implies
+\frac{\partial y_{i}}{\partial t}
+&=\sum_{j}\left\langle-\frac{\partial Z_{j}}{\partial t}+\left(d X_{t}\right)\left(Z_{j}\right), Z_{i}\right\rangle y_{j}
+.\end{align*}</pre>
+    </p>
+  <h2 id='proof-2' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Proof</h2>
+    <p class='mb-3'>
+      Thus we can rewrite the linearized equation as <pre class='pandoc-raw-"tex"'>\scriptsize</pre> <pre class='pandoc-raw-"tex"'>\begin{align*}
+{\frac{\partial Y}{\partial t}\,} = (dX_t)_x Y = B^- \cdot Y, \quad 
+b_{i j}=\left\langle-\frac{\partial Z_{j}}{\partial t}+\left(d X_{t}\right)_{x}\left(Z_{j}\right), Z_{i}\right\rangle
+.\end{align*}</pre> <pre class='pandoc-raw-"tex"'>\normalsize </pre>
+    </p>
+  
+    <p class='mb-3'>
+      Recall <pre class='pandoc-raw-"tex"'>\scriptsize</pre> <pre class='pandoc-raw-"tex"'>\begin{align*}
+A \coloneqq A\left(y_{1}, \ldots, y_{2 n}\right)=\sum y_{i}\left( {\color{red} J(u) \frac{\partial Z_{i}}{\partial t}-J(u)\left(d X_{t}\right)_{u}\left(Z_{i}\right) } \right)
+.\end{align*}</pre> <pre class='pandoc-raw-"tex"'>\normalsize</pre>
+    </p>
+  
+    <p class='mb-3'>
+      Now take <span class='math inline'>\(s\to -\infty\)</span> and look at the order zero part of <span class='math inline'>\((d{\mathcal{F}})_u\)</span>. By the proof of 8.4.4, we have <pre class='pandoc-raw-"tex"'>\scriptsize</pre> <pre class='pandoc-raw-"tex"'>\begin{align*}
+A\left(\sum y_{i} Z_{i}\right) &=\sum_{i}\left(J(x) \frac{\partial Z_{i}}{\partial t}-J(x)\left(d X_{t}\right)_{x}\left(Z_{i}\right)\right) \\
+&=\sum_{i} \sum_{j} y_{i}\left\langle J \frac{\partial Z_{i}}{\partial t}-J\left(d X_{t}\right)\left(Z_{i}\right), Z_{j}\right\rangle Z_{j} \\
+&=\sum_{i} \sum_{j} y_{j}\left\langle J \frac{\partial Z_{j}}{\partial t}-J\left(d X_{t}\right)\left(Z_{j}\right), Z_{i}\right\rangle Z_{i} \\
+&=\sum_{i} \sum_{j}\left\langle-\frac{\partial Z_{j}}{\partial t}+\left(d X_{t}\right)\left(Z_{j}\right), J Z_{i}\right\rangle {y_{j}} Z_{i}
+.\end{align*}</pre> <pre class='pandoc-raw-"tex"'>\normalsize</pre>
+    </p>
+  <h2 id='proof-3' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Proof</h2>
+    <p class='mb-3'>
+      Deduce that <pre class='pandoc-raw-"tex"'>\begin{align*}
+S = (s_{ij}),\quad & s_{ij} = \left\langle-\frac{\partial Z_{j}}{\partial t}+\left(d X_{t}\right)_{x}\left(Z_{j}\right), ~~J(x) Z_{i}\right\rangle \\ \\ \\
+JZ_i = \begin{cases}
+Z_{i+n} & i \leq n \\
+-Z_{i-n} & i \geq n+1
+\end{cases}
+&\implies 
+s_{ij} = 
+\begin{cases}
+b_{i+n, j} & i \leq n \\
+-b_{i-n, j} & i \geq n+1
+\end{cases} \\ \\
+&\iff S^- = - J_0 B^- 
+.\end{align*}</pre> <span class='math inline'>\(\hfill\blacksquare\)</span>
+    </p>
+  
+  <!-- What goes in this file will appear below the note body-->
+</article>
+            <div class='flex flex-col lg:flex-row lg:space-x-2'>
+              
+              
+            </div>
+            
+  <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
+    
+  </section>
+
+            <!-- What goes in this file will at the very end of the main div -->
+          </main>
+        </div>
+      </div>
+      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-800'>
+  <div>
+    <a href=''>
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'></path>
+      </svg>
+    </a>
+  </div>
+  <div>
+    Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
+    
+      
+        <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
+          0.3.6.1
+        </span>
+      
+    
+  </div>
+  <div>
+    <a href='-/all.html' title='View Index'>
+      <svg style='width: 1rem;' class='hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
+        </path>
+      </svg>
+    </a>
+
+  </div>
+</footer>
+    </div>
+  
+</body>
+
+</html>

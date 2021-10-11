@@ -1,0 +1,2898 @@
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <title>
+    2021-08-25 – My Emanote Site
+  </title>
+  
+    
+      <meta property='og:description' content />
+      <meta property='og:site_name' content='MyEmanoteSite' />
+    
+    
+      <base href='/' />
+      <link href='favicon.svg' rel='icon' />
+    
+    <meta name='generator' content='Emanote' />
+
+  
+  <!-- CSSSTART -->
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
+  <!-- CSSEND -->
+
+  <!-- Heist error element -->
+  <style type='text/css'>
+    strong.error {
+      color: lightcoral;
+      font-size: 90%;
+      font-family: monospace;
+    }
+  </style>
+  <!-- What goes in this file will appear on near the end of <head>--><link rel='preload' href='_emanote-static/fonts/Nunito/Nunito-Regular.ttf' as='font' type='font/ttf' crossorigin />
+<link rel='preload' href='_emanote-static/fonts/Nunito/Nunito-ExtraBold.ttf' as='font' type='font/ttf' crossorigin />
+
+<style>
+  @font-face {
+    font-family: 'Nunito';
+    src: url('_emanote-static/fonts/Nunito/Nunito-Regular.ttf') format("truetype");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Nunito-Bold';
+    src: url('_emanote-static/fonts/Nunito/Nunito-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+  }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  header,
+  .header-font {
+    font-family: 'Nunito-Bold', sans-serif;
+  }
+</style>
+
+  <head-main></head-main>
+</head>
+
+<!-- DoNotFormat -->
+
+
+
+<!-- DoNotFormat -->
+
+<body class='bg-gray-400 overflow-y-scroll'>
+  
+    <div class='container mx-auto'>
+
+      <nav id='breadcrumbs' class='w-full text-gray-700 md:hidden'>
+  <div class='flex justify-left'>
+    <div class='w-full px-2 py-2 bg-gray-50'>
+      <ul class='flex flex-wrap text-lg'>
+        <li class='inline-flex items-center'>
+          
+            
+              <img style='width: 1rem;' src='favicon.svg' />
+            
+          
+        </li>
+        
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='index.html'>
+                index
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='Projects.html'>
+                Projects
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='Projects/Current%20Projects.html'>
+                Current Projects
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='Projects/Current%20Projects/Catalan.html'>
+                Catalan
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+        
+      </ul>
+    </div>
+    <button class='inline px-2 py-1 text-white bg-blue-600 outline-none cursor-pointer focus:outline-none' title='Toggle sidebar' type='button' onclick="toggleHidden('sidebar')">
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'></path>
+      </svg>
+    </button>
+    <script>
+      function toggleHidden(elemId) {
+        document.getElementById(elemId).classList.toggle("hidden");
+      }
+    </script>
+  </div>
+</nav>
+
+      <div id='container' class='flex flex-nowrap flex-col md:flex-row bg-gray-50 md:mt-8 md:shadow-2xl md:mb-8'>
+        <!-- Sidebar column -->
+        <nav id='sidebar' class='flex-shrink hidden leading-relaxed md:block md:sticky md:top-0 md:h-full md:w-48 xl:w-64'>
+          <div class='px-2 py-2 text-gray-800'>
+
+            <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
+              <a href='-/tags.html' title='View tags'>
+                <svg style='width: 1rem;' class='hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
+                  </path>
+                </svg>
+              </a>
+              <a href='-/all.html' title='Expand full tree'>
+                <svg style='width: 1rem;' class='hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
+                  </path>
+                </svg>
+              </a>
+            </div>
+
+            <div id='site-logo' class='pl-2'>
+              <div class='flex items-center my-2 space-x-2 justify-left'>
+                <a href='' title='Go to Home'>
+                  
+                    
+                      <!-- The style width attribute here is to prevent huge
+                      icon from displaying at those rare occasions when Tailwind
+                      hasn't kicked in immediately on page load 
+                      -->
+                      <img style='width: 1rem;' class='transition transform hover:scale-110 hover:opacity-80' src='favicon.svg' />
+                    
+                  
+                </a>
+                <a class='font-bold truncate' title='Go to Home' href=''>
+                  Home
+                </a>
+              </div>
+            </div>
+
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0001_Graduate Research Index' href='0001_Graduate%20Research%20Index.html'>
+      0001_Graduate Research Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0001_Learning_Index' href='0001_Learning_Index.html'>
+      0001_Learning_Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0009_subject index' href='0009_subject%20index.html'>
+      0009_subject index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Home' href='000_Home.html'>
+      000_Home
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Leisure Reading Projects' href='000_Leisure%20Reading%20Projects.html'>
+      000_Leisure Reading Projects
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Projects Index' href='000_Projects%20Index.html'>
+      000_Projects Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Reading Projects Index' href='000_Reading%20Projects%20Index.html'>
+      000_Reading Projects Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Recommendations' href='000_Recommendations.html'>
+      000_Recommendations
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Talks Index' href='000_Talks%20Index.html'>
+      000_Talks Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Todo' href='000_Todo.html'>
+      000_Todo
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Undergraduate Research Index' href='000_Undergraduate%20Research%20Index.html'>
+      000_Undergraduate Research Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Archive' href='Archive.html'>
+      Archive
+    </a>
+    
+      
+        <span class='text-gray-300' title='4 children inside'>
+          4
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Conferences and Seminars' href='Conferences%20and%20Seminars.html'>
+      Conferences and Seminars
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Learning' href='Learning.html'>
+      Learning
+    </a>
+    
+      
+        <span class='text-gray-300' title='2 children inside'>
+          2
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Projects' href='Projects.html'>
+      Projects
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Book Notes' href='Projects/Book%20Notes.html'>
+      Book Notes
+    </a>
+    
+      
+        <span class='text-gray-300' title='6 children inside'>
+          6
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Current Projects' href='Projects/Current%20Projects.html'>
+      Current Projects
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0100_Reading with Phil Summer 2021' href='Projects/Current%20Projects/0100_Reading%20with%20Phil%20Summer%202021.html'>
+      0100_Reading with Phil Summer 2021
+    </a>
+    
+      
+        <span class='text-gray-300' title='8 children inside'>
+          8
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Catalan' href='Projects/Current%20Projects/Catalan.html'>
+      Catalan
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+  
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
+        </path>
+      </svg>
+      
+  
+    <a class='font-bold text-blue-600 hover:underline truncate' title='2021-08-25' href='Projects/Current%20Projects/Catalan/2021-08-25.html'>
+      2021-08-25
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+  
+</div>
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Independent Study' href='Projects/Independent%20Study.html'>
+      Independent Study
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Quals' href='Projects/Quals.html'>
+      Quals
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Reading Groups' href='Projects/Reading%20Groups.html'>
+      Reading Groups
+    </a>
+    
+      
+        <span class='text-gray-300' title='2 children inside'>
+          2
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Subjects' href='Subjects.html'>
+      Subjects
+    </a>
+    
+      
+        <span class='text-gray-300' title='10 children inside'>
+          10
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='To Review' href='To%20Review.html'>
+      To Review
+    </a>
+    
+      
+        <span class='text-gray-300' title='58 children inside'>
+          58
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Unsorted' href='Unsorted.html'>
+      Unsorted
+    </a>
+    
+      
+        <span class='text-gray-300' title='557 children inside'>
+          557
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Workshops' href='Workshops.html'>
+      Workshops
+    </a>
+    
+      
+        <span class='text-gray-300' title='5 children inside'>
+          5
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='_HTT' href='_HTT.html'>
+      _HTT
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='consistant-report' href='consistant-report.html'>
+      consistant-report
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='figures' href='figures.html'>
+      figures
+    </a>
+    
+      
+        <span class='text-gray-300' title='4 children inside'>
+          4
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+
+          </div>
+        </nav>
+
+        <!-- Main body column -->
+        <div class='flex-1 w-full overflow-x-auto bg-white'>
+          <main class='px-4 py-4'>
+            <h1 class='flex items-end justify-center mb-4 p-3 bg-blue-100 text-5xl font-extrabold text-black rounded'>
+  <a class='z-40 tracking-tighter '>
+    2021-08-25
+  </a>
+</h1>
+            <article class='overflow-auto'>
+  <!-- What goes in this file will appear on top of note body-->
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#catalan' class='text-blue-600 font-bold hover:underline'>Catalan</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#last-time' class='text-blue-600 font-bold hover:underline'>Last Time</a>
+        </li>
+      
+        <li>
+          <a href='#today' class='text-blue-600 font-bold hover:underline'>Today</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#preliminaries' class='text-blue-600 font-bold hover:underline'>Preliminaries</a>
+        </li>
+      
+        <li>
+          <a href='#ch-2-q2' class='text-blue-600 font-bold hover:underline'>Ch 2: <span class='math inline'>\(q=2\)</span></a>
+        </li>
+      
+        <li>
+          <a href='#ch.-3-p2' class='text-blue-600 font-bold hover:underline'>Ch. 3: <span class='math inline'>\(p=2\)</span></a>
+        </li>
+      
+        <li>
+          <a href='#lemma-3.2' class='text-blue-600 font-bold hover:underline'>Lemma 3.2</a>
+        </li>
+      
+        <li>
+          <a href='#lemma-3.3' class='text-blue-600 font-bold hover:underline'>Lemma 3.3</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  <h1 id='catalan' class='pb-2 mb-2 text-5xl font-bold text-center'>Catalan</h1>
+    <p class='mb-3'>
+      Website: <a href='https://www.daniellitt.com/ccam' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>https://www.daniellitt.com/ccam</a>
+    </p>
+  <h2 id='last-time' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Last Time</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      The Diophantine equation <span class='math inline'>\(x^p-y^q = 1\)</span> with <span class='math inline'>\(p, q\geq 2\)</span> has only one 4-tuple solution: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+(\pm 3)^2 - 2^3 = 1
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Used Mihăilescu’s work from 2000-2003 to take care of odd prime cases. Leaves some cases:
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\(p=2\)</span> with <span class='math inline'>\(q\)</span> arbitrary,
+        </li>
+      
+        <li>
+          <span class='math inline'>\(q=2\)</span> with <span class='math inline'>\(p\)</span> arbitrary,
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Reduced to elementary number theory!
+    </p>
+  
+        </li>
+      
+    </ul>
+  <h2 id='today' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Today</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Today: the families <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+x^2 - y^q = 1 && x^p - y^2 = 1
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Idea: prove
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\(q=2\)</span> and <span class='math inline'>\(p\geq 2\)</span> arbitrary,
+        </li>
+      
+        <li>
+          <span class='math inline'>\(p=2\)</span> and <span class='math inline'>\(q\geq 5\)</span> arbitrary.
+        </li>
+      
+        <li>
+          Next time: <span class='math inline'>\(p=2, q=3\)</span> in Chapter 4. Note <span class='math inline'>\(x^2 = y^3+1\)</span> is an elliptic curve! Find solutions using descent (Raemeon!)
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Notation:
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\({\operatorname{Ord}}_p(x)\)</span>: the <span class='math inline'>\(p{\hbox{-}}\)</span>adic valuation of <span class='math inline'>\(x\)</span>.
+        </li>
+      
+        <li>
+          <span class='math inline'>\(R^2\)</span> for <span class='math inline'>\(R\)</span> a ring: the set of squares in the ring (not the product!)
+        </li>
+      
+        <li>
+          More generally: <span class='math inline'>\(R^p\)</span> for the set of <span class='math inline'>\(p\)</span>th powers
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  <h3 id='preliminaries' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Preliminaries</h3><div class='lemma proofenv' title='UFD Power Lemma'>
+    <p class='mb-3'>
+      In <span class='math inline'>\(R\)</span> a UFD, if <span class='math inline'>\(\left\langle{a, b}\right\rangle = \left\langle{1}\right\rangle\)</span> and <span class='math inline'>\(ab = c^n \implies a = u_a r^n, b= u_b s^n\)</span> for some units <span class='math inline'>\(u_a, u_b\)</span> and <span class='math inline'>\(r,s \in R\)</span>.
+    </p>
+  </div><div class='example proofenv' title='?'>
+    <p class='mb-3'>
+      Proof omitted, example has essential idea:
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\(a = 2^8 3^4\)</span>,
+        </li>
+      
+        <li>
+          <span class='math inline'>\(b = 5^2 7^6\)</span>
+        </li>
+      
+        <li>
+          <span class='math inline'>\(c^2 = ab\)</span>, so <span class='math inline'>\(n=2\)</span>
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      Then write <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+c^2 = ab = 2^8 3^4 5^2 7^6 = (2^4 3^2 5 7^3)^2 = (2^4 3^2)^2 (5 7^3)^2 \coloneqq r^2 s^2
+.\end{align*}
+<span></span>
+    </p>
+  
+    <p class='mb-3'>
+      Notes:
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      <span class='math inline'>\(n\)</span> had to divide every exponent
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      For this, need coprimality: <span class='math inline'>\(n\)</span> divided every exponent in the factorization of <span class='math inline'>\(c^2\)</span>, but this can go wrong by just splitting up a power:
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\(a= 2^8 3^4 5\)</span>
+        </li>
+      
+        <li>
+          <span class='math inline'>\(b = 5 7^6\)</span>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  </div><div class='lemma proofenv' title='Parity divisibility lemma'>
+    <p class='mb-3'>
+      <span class='math inline'>\(1+i\)</span> divides <span class='math inline'>\(a+bi\)</span> in <span class='math inline'>\({\mathbb{Z}}[i] \iff a,b\)</span> have the same parity.
+    </p>
+  </div><div class='proof proofenv' title='of lemma'><pre class='pandoc-raw-"tex"'>\envlist
+</pre>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Use that <span class='math inline'>\(N(1+i) \divides N(\alpha) \iff (1+i)\divides \alpha\)</span>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\(\impliedby\)</span>: Clear from properties of norm
+        </li>
+      
+        <li>
+          <span class='math inline'>\(\implies\)</span>: Expand <span class='math inline'>\(a+bi = (1+i)(c + di)\)</span> and solve a <span class='math inline'>\(2\times 2\)</span> system.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          So <span class='math inline'>\(2\divides a^2 + b^2\)</span>, forcing them to have the same parity.
+        </li>
+      
+    </ul>
+  </div><div class='lemma proofenv' title='Exc 2.5'>
+    <p class='mb-3'>
+      Extend <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+{\operatorname{Ord}}_2:{\mathbb{Z}}&\to {\mathbb{Z}}_{\geq 0} \leadsto
+{\operatorname{Ord}}_2:{\mathbb{Q}}\to {\mathbb{Z}}_{\geq 0}
+\\ \\
+{\operatorname{Ord}}_2(x/y) &= {\operatorname{Ord}}_2(x) - {\operatorname{Ord}}_2(y) \\
+{\operatorname{Ord}}_2(0) &= \infty
+.\end{align*}
+<span></span> Properties: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+{\operatorname{Ord}}_2(xy)&= {\operatorname{Ord}}_2(x) + {\operatorname{Ord}}_2(y) \\
+{\operatorname{Ord}}_2(x+y) &\geq \min({\operatorname{Ord}}_2(x), {\operatorname{Ord}}_2(y)) && \text{equality iff } {\operatorname{Ord}}_2(x) \neq {\operatorname{Ord}}_2(y)
+.\end{align*}
+<span></span>
+    </p>
+  </div><div class='lemma proofenv' title='Exc 3.2, GCD $q\\dash$division lemma'>
+    <p class='mb-3'>
+      For <span class='math inline'>\(q\)</span> prime, <span class='math inline'>\(x,y\in {\mathbb{Z}}\)</span> distinct with <span class='math inline'>\(\gcd(x, y) = 1\)</span>, <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+\gcd\qty{ {x^q - y^q \over x-y}, x-y } \divides q
+.\end{align*}
+<span></span>
+    </p>
+  
+    <p class='mb-3'>
+      Note: useful because <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+x^q - y^q = (x-y)\qty{x^q - y^q \over x-y}
+.\end{align*}
+<span></span>
+    </p>
+  </div><h3 id='ch-2-q2' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Ch 2: <span class='math inline'>\(q=2\)</span></h3>
+    <p class='mb-3'>
+      <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+x^p - y^2 = 1
+.\end{align*}
+<span></span>
+    </p>
+  
+    <p class='mb-3'>
+      <img class='inline mb-3' src='Projects/Current%20Projects/Catalan/figures/2021-09-10_01-16-59.png' alt='[[Projects/Current Projects/Catalan/figures/2021-09-10_01-16-59.png]]' style='width: inherit;' />
+    </p>
+  
+    <p class='mb-3'>
+      <img class='inline mb-3' src='Projects/Current%20Projects/Catalan/figures/2021-09-10_01-18-12.png' alt='[[Projects/Current Projects/Catalan/figures/2021-09-10_01-18-12.png]]' style='width: inherit;' />
+    </p>
+  
+    <p class='mb-3'>
+      <img class='inline mb-3' src='Projects/Current%20Projects/Catalan/figures/2021-09-10_01-18-33.png' alt='[[Projects/Current Projects/Catalan/figures/2021-09-10_01-18-33.png]]' style='width: inherit;' />
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Proof idea: a 2-adic argument, use properties of <span class='math inline'>\({\mathbb{Z}}[i]\)</span>.
+        </li>
+      
+    </ul>
+  <div class='proposition proofenv' title='2.1: V.A. Lebesgue, 1850'>
+    <p class='mb-3'>
+      The Diophantine equation <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}  
+x^p-  y^2 = 1
+\end{align*}
+<span></span> has no solutions for <span class='math inline'>\(p\geq 2\)</span> and <span class='math inline'>\(x, y\in {\mathbb{Z}}_{\neq 0}\)</span>.
+    </p>
+  </div>
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Note: not Henri Lebesgue, of integral fame, late 1800s. Instead: Victor-Amédée Lebesgue, early 1880s. Simplified <span class='math inline'>\(n=4,5,7\)</span> cases of Fermat’s last theorem.
+    </p>
+  
+    </blockquote>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Take <span class='math inline'>\(x, y\)</span> nonzero solutions, so <span class='math inline'>\(x^p = y^2 + 1\)</span>.
+        </li>
+      
+    </ul>
+  <div class='claim proofenv'>
+    <p class='mb-3'>
+      Can assume <span class='math inline'>\(p\)</span> is odd.
+    </p>
+  </div><div class='proof proofenv' title='of claim'><pre class='pandoc-raw-"tex"'>\envlist
+</pre>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      If not, suppose <span class='math inline'>\(p\)</span> is even.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Factor <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+(x^{p\over 2} - y)(x^{p\over 2} + y) = 1 \implies x^{p\over 2} \pm y = 1
+,\end{align*}
+<span></span> where they both have to have the same sign.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Subtract equations: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+x^{p\over 2} + y &= \pm 1\\
+x^{p\over 2} - y &= \pm 1 \\
+\hline \\
+y-(-y) &= 0 \implies 2y = 0 \implies y=0
+,\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      But we assumed <span class='math inline'>\(y\neq 0\)</span>. <span class='math inline'>\(\contradiction\)</span>
+    </p>
+  
+        </li>
+      
+    </ul>
+  </div><div class='claim proofenv'>
+    <p class='mb-3'>
+      <span class='math inline'>\(x, y\)</span> have opposite parity.
+    </p>
+  </div><div class='proof proofenv' title='?'><pre class='pandoc-raw-"tex"'>\envlist
+</pre>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Reduce <span class='math inline'>\(\operatorname{mod}2\)</span>.
+        </li>
+      
+        <li>
+          <span class='math inline'>\(y\)</span> even <span class='math inline'>\(\implies y = 0 \operatorname{mod}2 \implies y^2 = 0\operatorname{mod}2 \implies x^p = y^2 + 1 = 1 \operatorname{mod}2 \implies x\)</span> odd
+        </li>
+      
+        <li>
+          <span class='math inline'>\(y\)</span> odd <span class='math inline'>\(\implies y = 1 \operatorname{mod}2 \implies y^2 = 1\operatorname{mod}2 \implies x^p = y^2 + 1 = 1 + 1 = 2 = 0 \operatorname{mod}2 \implies x\)</span> even.
+        </li>
+      
+    </ul>
+  </div><div class='claim proofenv'>
+    <p class='mb-3'>
+      <span class='math inline'>\(y\)</span> is even, <span class='math inline'>\(x\)</span> is odd.
+    </p>
+  </div><div class='proof proofenv' title='of claim'><pre class='pandoc-raw-"tex"'>\envlist
+</pre>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Consider <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+x^p = y^2 + 1 \operatorname{mod}4
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Consider all squares in <span class='math inline'>\({\mathbb{Z}}/4\)</span>: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+{\mathbb{Z}}/4 = \left\{{0,1,2,3}\right\} 
+&\implies ({\mathbb{Z}}/4)^2 = \left\{{0,1,4,9}\right\} = \left\{{0,1,0,1}\right\} = \left\{{0, 1}\right\} \\
+&\implies y^2 = 0, 1\operatorname{mod}4
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Toward a contradiction, suppose <span class='math inline'>\(y\)</span> is odd (implicitly: <span class='math inline'>\(x\)</span> is even)
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      <span class='math inline'>\(y^2\)</span> odd <span class='math inline'>\(\implies y^2 = 1,3 \operatorname{mod}4 \implies y^2 = 1 \operatorname{mod}4\)</span> since the only squares mod 4 are 0, 1.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Then <span class='math inline'>\(x^p = y^2 + 1 = 2\operatorname{mod}4\)</span>.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      <span class='math inline'>\(x\)</span> even <span class='math inline'>\(\implies x^n = 0 \operatorname{mod}4\)</span> for any <span class='math inline'>\(n \geq 2\)</span>.
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Why: <span class='math inline'>\(x\)</span> even <span class='math inline'>\(\implies x=0, 2 \operatorname{mod}4 \implies x^2 = 0^2, 2^2 = 0 \operatorname{mod}4\)</span>, etc.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Now have <span class='math inline'>\(x^p = 2\)</span> and <span class='math inline'>\(x^p = 0 \operatorname{mod}4\)</span>. <span class='math inline'>\(\contradiction\)</span>
+    </p>
+  
+        </li>
+      
+    </ul>
+  </div><div class='claim proofenv'>
+    <p class='mb-3'>
+      <span class='math inline'>\(\gcd(1+iy, 1-iy) = 1 \in {\mathbb{Z}}[i]\)</span>.
+    </p>
+  </div><div class='proof proofenv' title='?'><pre class='pandoc-raw-"tex"'>\envlist
+</pre>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Check that <span class='math inline'>\(d\divides 1+iy \implies N(d) \divides 2\)</span> so <span class='math inline'>\(N(d) = \pm 1,2\)</span>.
+        </li>
+      
+        <li>
+          <span class='math inline'>\(N(d) = 1 \iff d\)</span> is a unit
+        </li>
+      
+        <li>
+          <span class='math inline'>\(N(d) = 2 \iff a^2 + b^2 = 2 \implies a=b=1\)</span>
+        </li>
+      
+        <li>
+          <span class='math inline'>\(1+i \notdivides 1 \pm i y\)</span> since <span class='math inline'>\(1, y\)</span> have different parities, using that <span class='math inline'>\(y\)</span> is even.
+        </li>
+      
+    </ul>
+  </div>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Since <span class='math inline'>\(p\)</span> is odd, <span class='math inline'>\(U({\mathbb{Z}}[i]) = \left\{{\pm 1, \pm i}\right\}\)</span> are all <span class='math inline'>\(p\)</span>th powers:
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\((\pm 1)^p = \pm 1\)</span>
+        </li>
+      
+        <li>
+          <span class='math inline'>\(i^p = \pm i \implies (-i)^p = -i^p = \mp i\)</span>.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Factor <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+x^p = y^2 + 1 &= (1+iy)(1-iy) \in ({\mathbb{Z}}[i])^p
+.\end{align*}
+<span></span>
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      Continuing the proof, use that <span class='math inline'>\((1\pm iy)\)</span> are coprime to apply UFD power lemma: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+x^p = y^2 + 1 = (1+iy)(1-iy) &\in ({\mathbb{Z}}[i])^p \\
+\implies 1 + iy &\in ({\mathbb{Z}}[i])^p && \text{by UFD lemma} \\
+\implies 1 + iy &= c^p,\, \exists c\in {\mathbb{Z}}[i]
+.\end{align*}
+<span></span>
+    </p>
+  <div class='claim proofenv'>
+    <p class='mb-3'>
+      <span class='math inline'>\(c + \mkern 1.5mu\overline{\mkern-1.5muc\mkern-1.5mu}\mkern 1.5mu = \pm 2\)</span>, and thus <span class='math inline'>\(c = \pm(1 + bi) \in 1 + i{\mathbb{Z}}\)</span>.
+    </p>
+  </div><div class='proof proofenv' title='?'>
+    <p class='mb-3'>
+      Check <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+c^p + \mkern 1.5mu\overline{\mkern-1.5muc\mkern-1.5mu}\mkern 1.5mu^p = c^p + \mkern 1.5mu\overline{\mkern-1.5muc^p\mkern-1.5mu}\mkern 1.5mu = (1+iy) + (1-iy) = 2
+,\end{align*}
+<span></span>
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Use that <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+z^n - w^n 
+&= (z-w)\sum_{k=0}^{n-1} z^kw^{n-k} \\
+&= (z^{n-1} + z^{n-2}w + \cdots + w^{n-1}) \\ \\ 
+\implies z^n + w^n &= z^n - (-w)^n && \text{for $n$ odd} \\
+&= (z+w)\sum_{k=0}^{n-1} z^k(-w)^{n-k} \\
+&= (z^{n-1} - z^{n-2}w + \cdots + w^{n-1}) && \text{since $n-1$ is even}
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Take <span class='math inline'>\(z= c^p, w=\mkern 1.5mu\overline{\mkern-1.5muc\mkern-1.5mu}\mkern 1.5mu^p\)</span>: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+2 = c^p + \mkern 1.5mu\overline{\mkern-1.5muc\mkern-1.5mu}\mkern 1.5mu^p 
+&= (c+\mkern 1.5mu\overline{\mkern-1.5muc\mkern-1.5mu}\mkern 1.5mu)(c^{p-1} - c^{p-2} \mkern 1.5mu\overline{\mkern-1.5muc\mkern-1.5mu}\mkern 1.5mu + \cdots + \mkern 1.5mu\overline{\mkern-1.5muc\mkern-1.5mu}\mkern 1.5mu^{p-1})
+\\
+\\
+&\implies c+\mkern 1.5mu\overline{\mkern-1.5muc\mkern-1.5mu}\mkern 1.5mu\divides 2 \in {\mathbb{Z}}\\
+&\implies c+\mkern 1.5mu\overline{\mkern-1.5muc\mkern-1.5mu}\mkern 1.5mu = \pm 2 \quad \text{ since } c + \mkern 1.5mu\overline{\mkern-1.5muc\mkern-1.5mu}\mkern 1.5mu \text{ is even}
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Write <span class='math inline'>\(c = b'+ bi, \mkern 1.5mu\overline{\mkern-1.5muc\mkern-1.5mu}\mkern 1.5mu= b' - bi\)</span>, then <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+& \pm 2 = c + \mkern 1.5mu\overline{\mkern-1.5muc\mkern-1.5mu}\mkern 1.5mu = 2b' \\
+&\implies b' = \pm 1 \\
+&\implies c = \pm(1 + bi)
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+    </ul>
+  </div><div class='claim proofenv'>
+    <p class='mb-3'>
+      Since <span class='math inline'>\(y\)</span> is even, <span class='math inline'>\(c = \pm(1 + bi)\)</span> is not divisible by <span class='math inline'>\(1+i\)</span>.
+    </p>
+  </div><div class='proof proofenv' title='of claim'>
+    <p class='mb-3'>
+      Now WTS: <span class='math inline'>\((1+i) \notdivides c\)</span>.
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Toward a contradiction: if so, <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+1+i &\divides c \\
+\implies 1+i &\divides c^p = 1 + iy \\
+\iff 1 &\equiv y \operatorname{mod}2 && \text{by parity divisibility lemma}\\
+\iff y &\text{ is odd} && \contradiction
+.\end{align*}
+<span></span>
+        </li>
+      
+    </ul>
+  </div><div class='remark proofenv'>
+    <p class='mb-3'>
+      Now <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+y \text{ even } &\implies (1+i)\notdivides c = \pm(1 + bi) \\
+&\iff 1 \not\equiv b \operatorname{mod}2 \quad \text{by parity divisibility lemma} \\
+&\iff b \text{ is even} \\
+&\implies c\in 1 + 2i{\mathbb{Z}}
+.\end{align*}
+<span></span>
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Now reduce <span class='math inline'>\(\operatorname{mod}8\)</span> to conclude that we take <span class='math inline'>\(+2\)</span> in the following equation: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+\pm 2 = c^p + \mkern 1.5mu\overline{\mkern-1.5muc\mkern-1.5mu}\mkern 1.5mu^p 
+&= (1+bi)^p + (1-bi)^p \\
+\implies 
+\pm 2 &\equiv
+(1+bi)^p + (1-bi)^p \operatorname{mod}8{\mathbb{Z}}[i]
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Take binomial expansion of this expression to find a relation among the binomial coefficients <span class='math inline'>\({p\choose k}\)</span>: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+{p \choose 2}(bi)^2 + {p\choose 4}(bi)^4 + \cdots + {p\choose p-1} (bi)^{p-1} = 0
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+    </ul>
+  </div><div class='claim proofenv'>
+    <p class='mb-3'>
+      The leading term has the (strictly) <strong>lowest</strong> 2-adic valuation: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+S\coloneqq\sum s_k \coloneqq{\operatorname{Ord}}_2\qty{ {p\choose k}(bi)^k } > {\operatorname{Ord}}_2\qty{ {p\choose 2} (bi)^2 }
+,\end{align*}
+<span></span> also implying that all of the pairs <span class='math inline'>\(({\operatorname{Ord}}_2(s_1), {\operatorname{Ord}}_2(s_k))\)</span> are distinct. Thus <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+{\operatorname{Ord}}_2(S) = \min {\operatorname{Ord}}_2(s_k) = {\operatorname{Ord}}_2(s_1)
+\end{align*}
+<span></span>
+    </p>
+  </div><div class='remark proofenv'><pre class='pandoc-raw-"tex"'>\envlist
+</pre>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Why this finishes the proof: use that <span class='math inline'>\({\operatorname{Ord}}_2(a + b) \geq \min({\operatorname{Ord}}_2(a), {\operatorname{Ord}}_2(b))\)</span> with equality when <span class='math inline'>\({\operatorname{Ord}}_2(a)\neq {\operatorname{Ord}}_2(b)\)</span> are distinct.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Note <span class='math inline'>\(S=0\)</span>, now apply above repeatedly to <span class='math inline'>\(s_1, s_k\)</span> to get <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+{\operatorname{Ord}}_2(s_1) = {\operatorname{Ord}}_2(S) = {\operatorname{Ord}}_2(0) = 0\\
+\implies {\operatorname{Ord}}_2\qty{ {p\choose 2} (bi)^2 } = {\operatorname{Ord}}_2\qty{{b^2p! \over 2(p-2)!} } = 0 \\
+\implies b=0 \quad \text{since $b$ is even}
+,\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Then <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+c = 1+bi = 1+0i = 1 \\
+\implies c=1 \\ \\
+1 = c^p = 1+iy \\
+\implies y=0
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      This contradicts <span class='math inline'>\(y\in {\mathbb{Z}}_{\neq 0}\)</span> and finishes the entire proof.
+    </p>
+  
+        </li>
+      
+    </ul>
+  </div><div class='proof proofenv' title='?'><pre class='pandoc-raw-"tex"'>\envlist
+</pre>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      WTS: <span class='math inline'>\({\operatorname{Ord}}(s_k/s_2) = {\operatorname{Ord}}(s_k) - {\operatorname{Ord}}(s_2) &gt; 0\)</span>. <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+{\operatorname{Ord}}\qty{s_k\over s_2} &\coloneqq
+{\operatorname{Ord}}_2\qty{
+{p\choose k} {p\choose 2}^{-1}(bi)^{k-2} 
+}\\
+&=
+{\operatorname{Ord}}_2\qty{ 
+{p-2\choose k-2}\qty{2 (bi)^{k-2} \over k(k-1)}
+}\\
+&= {\operatorname{Ord}}_2\qty{{p-2 \choose k-2}} + {\operatorname{Ord}}_2\qty{2(bi)^{k-2}} - {\operatorname{Ord}}_2(k(k-1)) \\
+&> 0
+,\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Use that
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Binomial coefficients are integers <span class='math inline'>\(\geq 1\)</span>
+        </li>
+      
+        <li>
+          <span class='math inline'>\(b\)</span> is even,
+        </li>
+      
+        <li>
+          <span class='math inline'>\(f(k) \coloneqq{\log(k) \over k-1}\searrow 0\)</span>, since <span class='math inline'>\(f'(k) &lt; 0\)</span> everywhere,
+        </li>
+      
+        <li>
+          <span class='math inline'>\(f(2) = \log(2) \implies \log(2) &gt; {\log k \over k- 1}\)</span>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Then for any even <span class='math inline'>\(k\geq 4\)</span>, <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+{\operatorname{Ord}}_2( 2(bi)^{k-2} ) &\geq k-1 \\
+&{\color{red}>} {\log k \over \log 2} \\
+&\geq {\operatorname{Ord}}_2(k) \\
+&= {\operatorname{Ord}}_2(k(k-1)) \quad \text{since $k-1$ is odd}\\
+\implies &{\operatorname{Ord}}_2(2(bi)^{k-2}) - {\operatorname{Ord}}_2(k(k-1)) > 0
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+    </ul>
+  </div><h3 id='ch.-3-p2' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Ch. 3: <span class='math inline'>\(p=2\)</span></h3>
+    <p class='mb-3'>
+      <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+x^2 - y^q = 1 
+.\end{align*}
+<span></span> <img class='inline mb-3' src='Projects/Current%20Projects/Catalan/figures/2021-09-10_01-14-53.png' alt='[[Projects/Current Projects/Catalan/figures/2021-09-10_01-14-53.png]]' style='width: inherit;' />
+    </p>
+  
+    <p class='mb-3'>
+      <img class='inline mb-3' src='Projects/Current%20Projects/Catalan/figures/2021-09-10_01-15-04.png' alt='[[Projects/Current Projects/Catalan/figures/2021-09-10_01-15-04.png]]' style='width: inherit;' />
+    </p>
+  
+    <p class='mb-3'>
+      <img class='inline mb-3' src='Projects/Current%20Projects/Catalan/figures/2021-09-10_01-15-14.png' alt='[[Projects/Current Projects/Catalan/figures/2021-09-10_01-15-14.png]]' style='width: inherit;' />
+    </p>
+  
+    <p class='mb-3'>
+      <img class='inline mb-3' src='Projects/Current%20Projects/Catalan/figures/2021-09-10_01-15-31.png' alt='[[Projects/Current Projects/Catalan/figures/2021-09-10_01-15-31.png]]' style='width: inherit;' />
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Proof due to Chao, 1965, adapted by Chein.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Idea: for <span class='math inline'>\(q \geq 5\)</span>, we’ll show <span class='math inline'>\(x^2-y^q=1\)</span> has no solutions <span class='math inline'>\(x, y\in {\mathbb{Z}}_{\neq 0}\)</span>.
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Toward a contradiction, we’ll suppose such solutions exist.
+        </li>
+      
+        <li>
+          Lemmas will give
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\(x\equiv 0\operatorname{mod}q\)</span>
+        </li>
+      
+        <li>
+          <span class='math inline'>\(x \equiv \pm 3 \operatorname{mod}q\)</span>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          But since <span class='math inline'>\(q &gt; 3\)</span>, this is absurd.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  <div class='lemma proofenv' title='3.1'>
+    <p class='mb-3'>
+      For <span class='math inline'>\(q\geq 3 \in {\mathbb{Z}}\)</span> an odd <em>integer</em> and <span class='math inline'>\(x^2-y^q=1\)</span>, we have
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          For some coprime <span class='math inline'>\(a, b\)</span> with <span class='math inline'>\(\gcd(2a, b) = 1\)</span>,
+        </li>
+      
+    </ul>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\(x-1 = 2^{q-1} a^q\)</span>
+        </li>
+      
+        <li>
+          <span class='math inline'>\(x+1 = 2b^q\)</span>
+        </li>
+      
+        <li>
+          <span class='math inline'>\(y=2ab\)</span>
+        </li>
+      
+    </ul>
+  
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          <span class='math inline'>\(y\geq 2^{q-1}-2\)</span>.
+        </li>
+      
+    </ul>
+  </div><h3 id='lemma-32' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Lemma 3.2</h3><div class='lemma proofenv' title='3.2'>
+    <p class='mb-3'>
+      For <span class='math inline'>\(q\geq 3 \in {\mathbb{Z}}\)</span> an odd <em>prime</em> and <span class='math inline'>\(x^2-y^q=1\)</span> for <span class='math inline'>\(x,y\in {\mathbb{Z}}_{\neq 0}\)</span>, <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+x\equiv 0 \operatorname{mod}q
+.\end{align*}
+<span></span>
+    </p>
+  </div>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      By contradiction: suppose <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+x^2 = y^q + 1 && x,y\neq 0, x\not\equiv 0 \operatorname{mod}q
+.\end{align*}
+<span></span> We’ll contradict <span class='math inline'>\(y\neq 0\)</span>.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Write <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+x^2 = y^q + 1 = (y+1)\qty{ y^q + 1 \over y+1}
+,\end{align*}
+<span></span> noting typo in book.
+    </p>
+  
+        </li>
+      
+    </ul>
+  <div class='claim proofenv' title='Exercise 3.2'>
+    <p class='mb-3'>
+      <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+d \coloneqq\gcd\qty{ y+1, \qty{ y^q + 1 \over y+1} } \implies d\divides q \implies d \in \left\{{1, q}\right\}
+.\end{align*}
+<span></span>
+    </p>
+  </div>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Then <span class='math inline'>\(d\divides x^2\)</span> but <span class='math inline'>\(x\not\equiv 0\operatorname{mod}q \implies d\neq q \implies d=1\)</span>.
+        </li>
+      
+    </ul>
+  <div class='claim proofenv' title='Exercise 2.3'>
+    <p class='mb-3'>
+      <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+y+1, \qty{ y^q + 1 \over y+1} \in \pm1 \cdot {\mathbb{Z}}^2 
+.\end{align*}
+<span></span>
+    </p>
+  </div><div class='remark proofenv'><pre class='pandoc-raw-"tex"'>\envlist
+</pre>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\(y^q + 1 = x^2 \in {\mathbb{Z}}^2 \implies y\geq 0\)</span> using that <span class='math inline'>\(q\)</span> is odd.
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          If <span class='math inline'>\(y\leq -1\)</span> then <span class='math inline'>\(y^q\leq -1 \implies y^q+1=x^2\leq -1, \contradiction\)</span>.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <span class='math inline'>\(y\geq 0 \implies y+1 &gt;0\)</span> and <span class='math inline'>\({y^q + 1\over y+1}&gt;0\)</span>.
+        </li>
+      
+        <li>
+          <span class='math inline'>\(y+1&gt;0\)</span> and <span class='math inline'>\(y+1\in \pm1 {\mathbb{Z}}^2 \implies y+1 \in +1{\mathbb{Z}}^2 \implies y+1 = u^2\)</span> for some <span class='math inline'>\(u\in {\mathbb{Z}}_{\neq 0}\)</span>.
+        </li>
+      
+        <li>
+          Consider solutions to <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+f(X, Y) \coloneqq X^2 -yY^2 = 1
+.\end{align*}
+<span></span>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Contains <span class='math inline'>\((u, 1)\)</span> since <span class='math inline'>\(u^2-y\cdot 1 = 1\)</span>
+        </li>
+      
+        <li>
+          Contains <span class='math inline'>\((x, y^{q-1\over 2})\)</span> since <span class='math inline'>\(x^2 - y^q = 1\)</span>.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <span class='math inline'>\(y\neq 0\implies y\geq 1\)</span> is positive
+        </li>
+      
+        <li>
+          <span class='math inline'>\(y=u^2 -1 \geq 1\)</span> is not a square (exercise) <span class='math inline'>\(\implies f\)</span> is a <strong>Pell equation</strong>:
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      <img src='Projects/Current%20Projects/Catalan/figures/2021-09-09_23-31-05.png' alt='x^2-ny^2=1 where n is a nonsquare' />
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      <span class='math inline'>\(y\not\in {\mathbb{Z}}^2 \implies {\mathbb{Q}}[\sqrt y]/{\mathbb{Q}}\)</span> is quadratic and <span class='math inline'>\({\mathbb{Z}}[\sqrt y] \leq {\mathbb{Z}}_K\)</span> is a subring of its ring of integers
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Note: <span class='math inline'>\(R \coloneqq{\mathbb{Z}}[\sqrt y]\)</span> will be the ambient ring for the rest, with <span class='math inline'>\({\mathbb{Z}}{\hbox{-}}\)</span>basis <span class='math inline'>\(\left\{{1, \sqrt y}\right\}\)</span>.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Exercise: <span class='math inline'>\(U({\mathbb{Z}}[\sqrt y]) = \left\langle{-1. {\varepsilon}\coloneqq u + \sqrt y}\right\rangle\)</span> are generators of its unit group, treat them as a <span class='math inline'>\({\mathbb{Z}}{\hbox{-}}\)</span>basis.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Thus <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+x + y^{q-1\over 2}\sqrt{y} = \pm(u + \sqrt y)^m,\quad \exists m\in {\mathbb{Z}}
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      After possibly changing the sign of <span class='math inline'>\(u\)</span>, we can assume <span class='math inline'>\(m\geq 0\)</span>: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+(u + \sqrt y) \cdot -(-u + \sqrt y) = -(u^2 + y) = u^2 - y = 1 \\ 
+\implies (u + \sqrt y)^{-1}= -(-u + \sqrt y)
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Reduce equation mod <span class='math inline'>\(y{\mathbb{Z}}[\sqrt y]\)</span>: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+x + {\color{red} y^{q-1\over 2}\sqrt{y} }  &\equiv \pm(u + \sqrt y)^m \operatorname{mod}yR \\
+\implies 
+x &\equiv \pm(u + \sqrt y)^m \operatorname{mod}yR \\
+&\equiv \pm \sum_{k=0}^m {m\choose k}u^{m-k} (\sqrt y)^k \\
+&\equiv \pm\qty{ u^m + {m\choose 1} u^{m-1}y^{1\over 2} + {m\choose 2}u^{m-2} y^1 + {\color{red} {m\choose 3}u^{m-3}y^{3\over 2} + \cdots} } \\
+&\equiv \pm(u^m + mu^{m-1} y^{1\over 2}) \\
+\implies
+x &\equiv \pm(u^m + mu^{m-1} \sqrt y) \operatorname{mod}yR
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Now equate coefficients: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+mu^{m-1} \equiv 0 \operatorname{mod}yR \implies y\divides mu^{m-1}
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+    </ul>
+  </div><div class='claim proofenv'>
+    <p class='mb-3'>
+      <span class='math inline'>\(y\)</span> is even and <span class='math inline'>\(u\)</span> is odd, since <span class='math inline'>\(y+1 = u^2\)</span>.
+    </p>
+  </div>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Proof: omitted.
+        </li>
+      
+    </ul>
+  <div class='remark proofenv'><pre class='pandoc-raw-"tex"'>\envlist
+</pre>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Given this, since <span class='math inline'>\(y \divides mu^{m-1}\)</span> with <span class='math inline'>\(y\)</span> even and <span class='math inline'>\(u\)</span> odd, <span class='math inline'>\(u^{\ell}\)</span> is odd for all <span class='math inline'>\(\ell\)</span>, <strong>so <span class='math inline'>\(m\)</span> must be even.</strong>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      <span class='math inline'>\(m\)</span> even <span class='math inline'>\(\implies\)</span> this is legal: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+x + y^{q-1\over 2}\sqrt y 
+&= \pm (u + \sqrt y)^m \\
+&= \pm\qty{\qty{u + \sqrt y}^2}^{m\over 2} \\
+&= \pm \qty{u^2 + y + 2u\sqrt y }^{m\over 2} \\ \\
+\implies 
+x + y^{q-1\over 2}\sqrt y &\equiv \pm \qty{ {\color{red} u^2} + y + {\color{red} 2u\sqrt y} }^{m\over 2} \operatorname{mod}uR \\
+&\equiv \pm y^{m\over 2} \\ \\
+\implies x + y^{q-1\over 2}\sqrt y &\equiv \pm y^{m\over 2} + 0\sqrt y \operatorname{mod}uR \\
+\implies u\divides y^{q-1\over 2}
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Now use <span class='math inline'>\(y+1 = u^2 \implies d\coloneqq\gcd(u, y) = 1\)</span>
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Why: <span class='math inline'>\(d\divides y\)</span> and <span class='math inline'>\(d\divides u\)</span> implies <span class='math inline'>\(d\divides u^2\)</span> and <span class='math inline'>\(d\divides u^2-y = 1\)</span>.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Then <span class='math inline'>\(u\divides y^{q-1\over 2}\)</span> and <span class='math inline'>\(\gcd(u, y ) = 1 \implies u = \pm 1\)</span>.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Finish proof: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+y+1 = u^2 = (\pm 1)^2 = 1 \implies y=0, \contradiction
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+    </ul>
+  </div><h3 id='lemma-33' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Lemma 3.3</h3><div class='lemma proofenv' title='3.3'>
+    <p class='mb-3'>
+      For <span class='math inline'>\(q\geq 3 \in {\mathbb{Z}}\)</span> an odd <em>prime</em> and <span class='math inline'>\(x^2-y^q=1\)</span>, <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+x\equiv \pm 3 \operatorname{mod}q
+.\end{align*}
+<span></span>
+    </p>
+  </div>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Trivial if <span class='math inline'>\(q=3\)</span> since <span class='math inline'>\(\pm 3 \equiv 0\operatorname{mod}3\)</span> (applying previous lemma), so assume <span class='math inline'>\(q\geq 5\)</span>.
+        </li>
+      
+    </ul>
+  <div class='lemma proofenv' title='3.1'>
+    <p class='mb-3'>
+      Up to switching <span class='math inline'>\(x\)</span> and <span class='math inline'>\(-x\)</span>,
+    </p>
+  
+    <p class='mb-3'>
+      <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+x-1 &= 2^{q-1} a^q\\
+x+1 &= 2 b^q\\
+y   &= 2ab \\
+\gcd(a, b) = 1 &= \gcd(2a, b)
+.\end{align*}
+<span></span>
+    </p>
+  </div>
+    <p class='mb-3'>
+      Proof omitted.
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Use lemma to write <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+(b^q)^2 - (2a)^q 
+&= \qty{x+1\over 2}^2 - 2(x-1) \\
+&= \qty{x^2 + 2x +1 - 8(x-1)\over 4} \\
+&= \qty{x-3\over 2}^2
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Rewrite the LHS: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+(b^q)^2 - (2a)^q = (b^2 - 2a)\qty{ (b^2)^q - (2a)^q \over b^2 - 2a } \coloneqq\alpha_1 \alpha_2
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      By the GCD <span class='math inline'>\(q{\hbox{-}}\)</span>division lemma (Exc. 3.2), <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+d\coloneqq\gcd( \alpha_1, \alpha_2)\divides q
+\implies
+d\in \left\{{1, q}\right\}
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+    </ul>
+  <div class='claim proofenv'>
+    <p class='mb-3'>
+      <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+d=q
+.\end{align*}
+<span></span>
+    </p>
+  </div><div class='remark proofenv'>
+    <p class='mb-3'>
+      Claim finishes the proof:
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\(q\divides d \implies q\divides \alpha_1\)</span> and <span class='math inline'>\(q\divides \alpha_2\)</span>
+        </li>
+      
+        <li>
+          <span class='math inline'>\(\implies q\divides \alpha_1 \alpha_2 = \qty{x-3\over 2}^2\)</span>
+        </li>
+      
+        <li>
+          <span class='math inline'>\(\implies q\divides {x-3\over 2} \implies x\equiv 3 \operatorname{mod}q\)</span>.
+        </li>
+      
+    </ul>
+  </div>
+    <p class='mb-3'>
+      Proof of claim that <span class='math inline'>\(d=q\)</span>:
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Know <span class='math inline'>\(d\in \left\{{1, q}\right\}\)</span> so toward a contradiction suppose <span class='math inline'>\(d=1\)</span> (we’ll contradict this)
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Then <span class='math inline'>\(\alpha_1 \alpha_2\in {\mathbb{Z}}^2\implies \alpha_1, \alpha_2 \in \pm {\mathbb{Z}}^2\)</span> (by previous lemma)
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Know <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+(b^2)^q - (2a)^q = \qty{x-3\over 2}^2 &\in +1\cdot {\mathbb{Z}}^2 \\
+\implies
+(b^2)^q &\geq (2a)^q \\
+\implies b^2 &\geq 2a \\
+\implies 
+\alpha_1, \alpha_2 &> 0
+.\end{align*}
+<span></span>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Also know <span class='math inline'>\(\alpha_1 = b^2-2a \in +1 \cdot {\mathbb{Z}}\)</span> is a positive square
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      <span class='math inline'>\(y\neq 0, y=2ab \implies a\neq 0\)</span>.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Write <span class='math inline'>\(b^2 - 2a = c^2\)</span> where <span class='math inline'>\(c^2\neq 0\)</span> since <span class='math inline'>\(a\neq 0\)</span>.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Now a contradiction: <span class='math inline'>\({\left\lvert {a} \right\rvert}\geq {\left\lvert {b} \right\rvert}\)</span> and <span class='math inline'>\({\left\lvert {a} \right\rvert} &lt; {\left\lvert {b} \right\rvert}\)</span>.
+    </p>
+  
+        </li>
+      
+    </ul>
+  <div class='claim proofenv'>
+    <p class='mb-3'>
+      <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+{\left\lvert {a} \right\rvert} \geq {\left\lvert {b} \right\rvert}
+.\end{align*}
+<span></span>
+    </p>
+  </div><div class='proof proofenv' title='of claim'><pre class='pandoc-raw-"tex"'>\envlist
+</pre>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Closest squares to <span class='math inline'>\(b^2\)</span> are <span class='math inline'>\((b\pm 1)^2\)</span>, and <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+{\left\lvert {(b\pm 1)^2 - b^2} \right\rvert} 
+&= {\left\lvert { b^2 \pm 2b + 1 - b^2} \right\rvert} \\
+&= {\left\lvert { 1 \pm 2b} \right\rvert} \\
+&\geq 2{\left\lvert {b} \right\rvert} - {\left\lvert {1} \right\rvert}
+.\end{align*}
+<span></span>
+        </li>
+      
+        <li>
+          Write <span class='math inline'>\(c^2 = b^2 - 2a\)</span>, then since <span class='math inline'>\((b\pm 1)\)</span> is the <em>closest</em> square: <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+{\left\lvert {c^2 - b^2} \right\rvert} \geq {\left\lvert { (b\pm 1)^2 - b^2} \right\rvert}\geq 2{\left\lvert {b} \right\rvert} -1 \\
+\implies
+{\left\lvert {c^2 - b^2} \right\rvert} = {\left\lvert { (b^2 - 2a) - b^2} \right\rvert} = {\left\lvert {2a} \right\rvert} \geq 2{\left\lvert {b} \right\rvert}-1 \\
+\implies 2{\left\lvert {a} \right\rvert} \geq 2{\left\lvert {b} \right\rvert} - 1 \\ 
+\implies {\left\lvert {a} \right\rvert} \geq {\left\lvert {b} \right\rvert}
+,\end{align*}
+<span></span> since we’re dealing with integers.
+        </li>
+      
+    </ul>
+  </div><div class='claim proofenv'>
+    <p class='mb-3'>
+      <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+{\left\lvert {a} \right\rvert} < {\left\lvert {b} \right\rvert}
+.\end{align*}
+<span></span>
+    </p>
+  </div><div class='proof proofenv' title='of claim'><pre class='pandoc-raw-"tex"'>\envlist
+</pre>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Recall from lemma that <span class='math inline'>\(x+1 = 2b^q\)</span>
+        </li>
+      
+        <li>
+          Use <span class='math inline'>\(q\geq 5, q-1\geq 4, {\left\lvert {x} \right\rvert} \geq 2\)</span> to write <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+{\left\lvert {a} \right\rvert}^q &= {{\left\lvert {x-1} \right\rvert} \over w^{q-1}} \\
+&\leq {{\left\lvert {x-1} \right\rvert} \over 2^4} \\
+&< {{\left\lvert {x-1} \right\rvert} \over 2} \\
+&= {{\left\lvert {2b^q} \right\rvert} \over 2} \\
+&= {\left\lvert {b} \right\rvert}^q
+,\end{align*}
+<span></span> then take <span class='math inline'>\(q\)</span>th roots.
+        </li>
+      
+    </ul>
+  </div>
+    <p class='mb-3'>
+      This conclude the proof! <span class='math inline'>\(\contradiction\)</span>.
+    </p>
+  
+  <!-- What goes in this file will appear below the note body-->
+</article>
+            <div class='flex flex-col lg:flex-row lg:space-x-2'>
+              
+              
+            </div>
+            
+  <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
+    
+  </section>
+
+            <!-- What goes in this file will at the very end of the main div -->
+          </main>
+        </div>
+      </div>
+      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-800'>
+  <div>
+    <a href=''>
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'></path>
+      </svg>
+    </a>
+  </div>
+  <div>
+    Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
+    
+      
+        <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
+          0.3.6.1
+        </span>
+      
+    
+  </div>
+  <div>
+    <a href='-/all.html' title='View Index'>
+      <svg style='width: 1rem;' class='hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
+        </path>
+      </svg>
+    </a>
+
+  </div>
+</footer>
+    </div>
+  
+</body>
+
+</html>

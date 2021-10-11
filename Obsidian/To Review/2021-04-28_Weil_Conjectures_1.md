@@ -1,21 +1,35 @@
 ---
+date: "2021-04-28 18:11:25"
+tags:
+- Unfiled
 title: Notes on Weil Conjectures
-date: 2021-04-28 18:11:25
-tags: 
-  - Unfiled
 ---
 
-> Reference:
-> Andre Weil, [Numbers of Solutions of Equations in Finite Fields](https://projecteuclid.org/download/pdf_1/euclid.bams/1183513798)
+-   [External Background](#external-background)
+-   [Actual Paper](#actual-paper)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+> Reference: Andre Weil, [Numbers of Solutions of Equations in Finite Fields](https://projecteuclid.org/download/pdf_1/euclid.bams/1183513798)
 
 # External Background
 
-Here we fix a prime $p$ and a system of polynomials $S = \theset{f_i}$ of degree $n$, take the variety $V(S)$ and let
+Here we fix a prime $p$ and a system of polynomials $S = \left\{{f_i}\right\}$ of degree $n$, take the variety $V(S)$ and let
 
-- $a_1$ be its number of points of $\FF_p$
-- $a_2$ be its number of points of $\FF_{p^2}$
-- $\cdots a_n$ be its number of points of $\FF_{p^n}$
+-   $a_1$ be its number of points of ${\mathbb{F}}_p$
+-   $a_2$ be its number of points of ${\mathbb{F}}_{p^2}$
+-   $\cdots a_n$ be its number of points of ${\mathbb{F}}_{p^n}$
 
 Idea: assemble them into a generating function.
 
@@ -23,46 +37,32 @@ For unknown reasons, we put them in a zeta function instead: $\zeta(x) = \exp\qt
 
 Conjectures:
 
-1. $\zeta(x) = \frac{P(x)}{Q(x)}$ is a rational function.
-2. There is an explicit formula $P(x) = \prod_{i\text{ odd}}^{2n-1} P_i(x)$ and $Q(x) = \prod{i\text{ even}}P_i(x)$ with each $P_i \in \ZZ[x]$.
-  - For every root $r$ of every $P_i$, $\frac 1 r$ is algebraic
-  - (Riemann Hypothesis) Every root has modulus equal to $p^{-i/2}$ (???)
-3. (Functional Equation) The function $z \mapsto \frac{1}{p^n z}$ interchanges roots of $P_i$ with roots of $P_{2n-i}$.
-4. (Under some conditions) $\deg P_i = \beta_i(V)$, the $i$th Betti number of $i$.
+1.  $\zeta(x) = \frac{P(x)}{Q(x)}$ is a rational function.
+2.  There is an explicit formula $P(x) = \prod_{i\text{ odd}}^{2n-1} P_i(x)$ and $Q(x) = \prod{i\text{ even}}P_i(x)$ with each $P_i \in {\mathbb{Z}}[x]$.
 
+-   For every root $r$ of every $P_i$, $\frac 1 r$ is algebraic
+-   (Riemann Hypothesis) Every root has modulus equal to $p^{-i/2}$ (???)
 
-Relation to fixed points: In $\FF_{p^m}$, every point is a fixed point of the Frobenius $\Phi_{p^m}$.
-So for any field $F \supset \FF_{p^m}$, the points in $\FF_{p^m}$ are precisely the fixed points of $\Phi_{p^m}: F\to F$ (because enlarging the field can not add more solutions).
+3.  (Functional Equation) The function $z \mapsto \frac{1}{p^n z}$ interchanges roots of $P_i$ with roots of $P_{2n-i}$.
+4.  (Under some conditions) $\deg P_i = \beta_i(V)$, the $i$th Betti number of $i$.
 
-Claim:
-If $S\subset F^d$ is any subset defined by polynomial equations and $x = (x_1, x_2, \cdots, x_n) \in S$ is a point, then $\Phi_{p^m}(x) = (\Phi_{p^m}(x_1), \cdots) \in S$.
-Moreover, the fixed points of $\Phi_{p^m}$ restricted to $S$ are precisely $S \intersect \FF_{p^m}^d$.
+Relation to fixed points: In ${\mathbb{F}}_{p^m}$, every point is a fixed point of the Frobenius $\Phi_{p^m}$. So for any field $F \supset {\mathbb{F}}_{p^m}$, the points in ${\mathbb{F}}_{p^m}$ are precisely the fixed points of $\Phi_{p^m}: F\to F$ (because enlarging the field can not add more solutions).
 
-Compare 2b above: Riemann says roots are along critical strip $\Re(z) = \frac 1 2$; this says roots of $P_i$ are on a circle of radius $p^{i/2}$ about the origin.
-(Note: there is a (conformal?) map that takes the circle to the line, so we can send the roots of $P_i$ to the line $\Re(z) = \frac 1 2$....but not for all $i$ at once.)
+Claim: If $S\subset F^d$ is any subset defined by polynomial equations and $x = (x_1, x_2, \cdots, x_n) \in S$ is a point, then $\Phi_{p^m}(x) = (\Phi_{p^m}(x_1), \cdots) \in S$. Moreover, the fixed points of $\Phi_{p^m}$ restricted to $S$ are precisely $S \cap{\mathbb{F}}_{p^m}^d$.
 
-Consequences:
-[../Unsorted/Riemann zeta function](../Unsorted/Riemann%20zeta%20function.md): error estimates in the prime number theorem agree with probabilistic models
-Weil: error estimates in Ramanujan's $\tau$ is as small as hoped.
+Compare 2b above: Riemann says roots are along critical strip $\Re(z) = \frac 1 2$; this says roots of $P_i$ are on a circle of radius $p^{i/2}$ about the origin. (Note: there is a (conformal?) map that takes the circle to the line, so we can send the roots of $P_i$ to the line $\Re(z) = \frac 1 2$....but not for all $i$ at once.)
 
-Proofs:
-Grothendieck: 1,3, and 4 with etale cohomology. Notably not Weil 2.
-Deligne: Weil 2, The Riemann Hypothesis 
+Consequences: [[../Unsorted/Riemann zeta function | ../Unsorted/Riemann%20zeta%20function.html]]: error estimates in the prime number theorem agree with probabilistic models Weil: error estimates in Ramanujan's $\tau$ is as small as hoped.
 
-Cohomology of Complex Grassmannian:
-Schubert cells exhibit structure as a CW complex with only even-dimensional cells, and $H^{2d}(\Gr(k, \CC^{n+k})) \cong \ZZ^\ell$ where $\ell$ is the number partitions of $[d]$, i.e. solutions to $\sum_{j=1}^k x_j = d$ with $x_j$ weakly increasing, i.e. $x_1 \leq x_2 \leq \cdots x_k$.
-The ring structure is isomorphic to the ring of symmetric polynomials and is generated by Chern classes.
-I.e. $H^*(\Gr(k, \CC^\infty)) \cong \CC[a_1, \cdots, a_k]$ (with $a_k$ Chern classes) which is invariant under the obvious action of the symmetric group $S_k$.
+Proofs: Grothendieck: 1,3, and 4 with etale cohomology. Notably not Weil 2. Deligne: Weil 2, The Riemann Hypothesis
 
-Example from end of paper:
-The number of rational points on $\Gr(m, r, \PP_{\FF_q})$
-\begin{align*}
+Cohomology of Complex Grassmannian: Schubert cells exhibit structure as a CW complex with only even-dimensional cells, and $H^{2d}({\operatorname{Gr}}(k, {\mathbb{C}}^{n+k})) \cong {\mathbb{Z}}^\ell$ where $\ell$ is the number partitions of $[d]$, i.e. solutions to $\sum_{j=1}^k x_j = d$ with $x_j$ weakly increasing, i.e. $x_1 \leq x_2 \leq \cdots x_k$. The ring structure is isomorphic to the ring of symmetric polynomials and is generated by Chern classes. I.e. $H^*({\operatorname{Gr}}(k, {\mathbb{C}}^\infty)) \cong {\mathbb{C}}[a_1, \cdots, a_k]$ (with $a_k$ Chern classes) which is invariant under the obvious action of the symmetric group $S_k$.
+
+Example from end of paper: The number of rational points on ${\operatorname{Gr}}(m, r, {\mathbb{P}}_{{\mathbb{F}}_q})$ `\begin{align*}
 F(x)=\frac{\left(x^{m+1}-1\right)\left(x^{m+1}-x\right) \cdots\left(x^{m+1}-x^{r}\right)}{\left(x^{r+1}-1\right)\left(x^{r+1}-x\right) \cdots\left(x^{r+1}-x^{r}\right)}
-\end{align*}
+\end{align*}`{=tex}
 
-and so the Poincare polynomial for $\Gr(m, r, \PP_\CC)$ is $F(X^2)$.
-
-
+and so the Poincare polynomial for ${\operatorname{Gr}}(m, r, {\mathbb{P}}_{\mathbb{C}})$ is $F(X^2)$.
 
 # Actual Paper
 
@@ -70,139 +70,120 @@ Considers equations of the form $\sum_{i=1}^r a_i x_i^{n_i} = b$.
 
 Examples:
 
-- $ax^3-by^3 = 1$ in $\FF_p$. ($p = 3n+1$, Gauss, when studying "Gaussian sums"/ "cyclotomic periods")
-- $ax^4 - by^4$ in $\FF_p$ ($p = 4n+1$, Gauss)
+-   $ax^3-by^3 = 1$ in ${\mathbb{F}}_p$. ($p = 3n+1$, Gauss, when studying "Gaussian sums"/ "cyclotomic periods")
+-   $ax^4 - by^4$ in ${\mathbb{F}}_p$ ($p = 4n+1$, Gauss)
 
-Can consider corresponding variety $V$ over $\CC$, want to relate numbers of solutions to topological properties of $V$.
+Can consider corresponding variety $V$ over ${\mathbb{C}}$, want to relate numbers of solutions to topological properties of $V$.
 
-Fix a finite field $k$ with $q$ elements, $a_i \in k\setminus 0$, $n_i\in \ZZ_{>0}$, and first discuss $b=0$.
+Fix a finite field $k$ with $q$ elements, $a_i \in k\setminus 0$, $n_i\in {\mathbb{Z}}_{>0}$, and first discuss $b=0$.
 
 Definitions:
 
-\begin{align*}
+`\begin{align*}
 f: k[x_0, \cdots, x_r] \to k \\
 f(x_0, \cdots, x_r) &= a_0 x_0 ^{n_0} + \cdots + a_r x_r^{n_r}
-.\end{align*}
+.\end{align*}`{=tex}
 
-> Only monomials appearing? 
+> Only monomials appearing?
 
-Example:
-Take $k=\ZZ_2$ and $g: k[x, y] \to k$ where $g(x, y) = x^2 + y^2$.
+Example: Take $k={\mathbb{Z}}_2$ and $g: k[x, y] \to k$ where $g(x, y) = x^2 + y^2$.
 
-Non-example:
-$h(x,y) = x^2 + y^2 + xy$.
+Non-example: $h(x,y) = x^2 + y^2 + xy$.
 
-Let $N \definedas \abs{x\in k \suchthat f(x) =0}$ the number of solutions over $k$.
+Let $N \coloneqq{\left\lvert {x\in k {~\mathrel{\Big|}~}f(x) =0} \right\rvert}$ the number of solutions over $k$.
 
-> Note: shouldn't this be the number of solutions in $k^{r+1}$, since a "solution" is an $(r+1)\dash$tuple?
+> Note: shouldn't this be the number of solutions in $k^{r+1}$, since a "solution" is an $(r+1){\hbox{-}}$tuple?
 
-Example:
-For $g$ above, $(x, y) = (0,0),~(1,1)$ are the only two solutions, so here $N = 2$
+Example: For $g$ above, $(x, y) = (0,0),~(1,1)$ are the only two solutions, so here $N = 2$
 
-Define $d_i \definedas \gcd(n_i, q-1)$ 
+Define $d_i \coloneqq\gcd(n_i, q-1)$
 
-Example:
-For $\ZZ_2$, $q=1$ so $d_1 = \gcd(2, 1) = 1$ and $d_2 = \gcd(2, 1)$.
+Example: For ${\mathbb{Z}}_2$, $q=1$ so $d_1 = \gcd(2, 1) = 1$ and $d_2 = \gcd(2, 1)$.
 
 For an arbitrary $u\in k$, define
 
-\begin{align*}
-N_i(u) = \abs{\theset{x\in k \suchthat x^{n_i} = u}}
-,\end{align*}
+`\begin{align*}
+N_i(u) = {\left\lvert {\left\{{x\in k {~\mathrel{\Big|}~}x^{n_i} = u}\right\}} \right\rvert}
+,\end{align*}`{=tex}
 
-i.e. the number of solutions to $x^{n_i} = u$ in $k$, i.e. the number of $d_i$th roots of $u$.
+i.e. the number of solutions to $x^{n_i} = u$ in $k$, i.e. the number of $d_i$th roots of $u$.
 
 This is equal to:
 
-- $1$ if $u = 0$,
-- $d_i$ if $u\neq 0$ is a $d_{i}$th power in $k$
-- $0$ otherwise
+-   $1$ if $u = 0$,
+-   $d_i$ if $u\neq 0$ is a $d_{i}$th power in $k$
+-   $0$ otherwise
 
 > Not entirely clear why case 2 holds. Try for an example in the case $n_i = 2$ to compare to quadratic residues?
 
 Define
 
-\begin{align*}
+`\begin{align*}
 L: k^{r+1} &\to k \\
 L(u) = L(u_0, \cdots, u_r) &= \sum_{i=0}^r a_i u_i 
-.\end{align*}
+.\end{align*}`{=tex}
 
 We'll consider the variety $V(L)$ defined by $L$.
 
 This yields a decomposition
 
-\begin{align*}
-N &= \sum_{u\in k^{r+1} \suchthat L(u) = 0} N_0(u_0) \cdots N_r(u_r) \\
+`\begin{align*}
+N &= \sum_{u\in k^{r+1} {~\mathrel{\Big|}~}L(u) = 0} N_0(u_0) \cdots N_r(u_r) \\
 &= \sum_{u \in V(L)} \prod_{i=0}^r N_i(u_i)
-,\end{align*}
+,\end{align*}`{=tex}
 
-i.e. any solutions to $f = 0$ over $k^{r+1}$ can be found by first choosing a point $u = (u_0, \cdots, u_r)$ in the variety cut out by $L$, so $L(u) = \sum a_i u_i = 0$, then picking an $n_i$the root $s_i \in k$ of each $u_i$ to obtain some $s = (s_0, \cdots, s_r) \in k^{r+1}$.
-Then $u_i = s_i^{n_i}$ implies that $0 = \sum a_i u_i = \sum a_i s_i^{n_i}$, so $s$ is a solution to $f$.
+i.e. any solutions to $f = 0$ over $k^{r+1}$ can be found by first choosing a point $u = (u_0, \cdots, u_r)$ in the variety cut out by $L$, so $L(u) = \sum a_i u_i = 0$, then picking an $n_i$the root $s_i \in k$ of each $u_i$ to obtain some $s = (s_0, \cdots, s_r) \in k^{r+1}$. Then $u_i = s_i^{n_i}$ implies that $0 = \sum a_i u_i = \sum a_i s_i^{n_i}$, so $s$ is a solution to $f$.
 
-Definition:
-Let $G$ be a group and $V$ a vector space over a field $F$, then a representation is morphism of groups $\rho: G \to \GL(V)$.
-For $V$ finite-dimensional, a character of $\rho$ is the function $\chi_\rho: G\to F$ where $g\mapsto \tr(\rho(g))$.
-(Recall that the trace can be defined by choosing a basis for $V$ and taking the trace of the image of $g$, and is basis-independent.)
-A character is irreducible iff ?
+Definition: Let $G$ be a group and $V$ a vector space over a field $F$, then a representation is morphism of groups $\rho: G \to \operatorname{GL}(V)$. For $V$ finite-dimensional, a character of $\rho$ is the function $\chi_\rho: G\to F$ where $g\mapsto {\mathrm{tr}}(\rho(g))$. (Recall that the trace can be defined by choosing a basis for $V$ and taking the trace of the image of $g$, and is basis-independent.) A character is irreducible iff ?
 
-Lemma:
-Let $G = \ZZ/n\ZZ$ and define $\lambda: G \to \CC\units$ where $1 \mapsto \zeta_n$ a primitive $n$th root of unity, then $\theset{\lambda^i \suchthat 0\leq i \leq n-1}$ is a complete set of irreducible characters.
+Lemma: Let $G = {\mathbb{Z}}/n{\mathbb{Z}}$ and define $\lambda: G \to {\mathbb{C}}^{\times}$ where $1 \mapsto \zeta_n$ a primitive $n$th root of unity, then $\left\{{\lambda^i {~\mathrel{\Big|}~}0\leq i \leq n-1}\right\}$ is a complete set of irreducible characters.
 
-Aside, maybe not useful:
-The irreducible characters span the space of class functions $\mathcal{C}(G)$, so we can define a surjective map
+Aside, maybe not useful: The irreducible characters span the space of class functions $\mathcal{C}(G)$, so we can define a surjective map
 
-\begin{align*}
-\Phi: \CC[x] \to \mathcal{C}(G) \\
+`\begin{align*}
+\Phi: {\mathbb{C}}[x] \to \mathcal{C}(G) \\
 f \mapsto f(\lambda)
-\end{align*}
+\end{align*}`{=tex}
 
-and since $\lambda^n = \id_\CC$, we have $\ker \Phi = (x^n - 1)$, so $\mathcal{C}(G) \cong \CC[x]/(x^n-1)$ is a polynomial algebra.
+and since $\lambda^n = \operatorname{id}_{\mathbb{C}}$, we have $\ker \Phi = (x^n - 1)$, so $\mathcal{C}(G) \cong {\mathbb{C}}[x]/(x^n-1)$ is a polynomial algebra.
 
+Let $G = k^{\times}\cong {\mathbb{Z}}/(q-1){\mathbb{Z}}$, and let $\chi: G \to {\mathbb{C}}$ be any character.
 
-Let $G = k\units \cong \ZZ/(q-1)\ZZ$, and let $\chi: G \to \CC$ be any character.
-
-> Note: are the representations actually taking values in $\CC$ here?
+> Note: are the representations actually taking values in ${\mathbb{C}}$ here?
 
 Since $G$ is cyclic, let $\omega$ by any generator; then $\chi$ is fully determined by $\chi(\omega)$.
 
-For $\alpha \in \QQ$ any rational such that $(q-1)\alpha \in \ZZ$, define a character
+For $\alpha \in {\mathbb{Q}}$ any rational such that $(q-1)\alpha \in {\mathbb{Z}}$, define a character
 
-\begin{align*}
-\chi_\alpha: k\units \to \CC \\
+`\begin{align*}
+\chi_\alpha: k^{\times}\to {\mathbb{C}}\\
 \omega \mapsto e^{2\pi i \alpha}
-.\end{align*}
+.\end{align*}`{=tex}
 
-We extend this to a character on $k$ by setting $\chi_\alpha(0) = 1 \iff \alpha\in \ZZ$ and $0$ otherwise.
+We extend this to a character on $k$ by setting $\chi_\alpha(0) = 1 \iff \alpha\in {\mathbb{Z}}$ and $0$ otherwise.
 
-Let $S_i = \theset{\alpha \in \QQ\intersect [0, 1) \suchthat d_i \alpha \in \ZZ}$.
-We can then write
+Let $S_i = \left\{{\alpha \in {\mathbb{Q}}\cap[0, 1) {~\mathrel{\Big|}~}d_i \alpha \in {\mathbb{Z}}}\right\}$. We can then write
 
-
-\begin{align*}
+`\begin{align*}
 N_i(u) &= \sum_{\alpha \in S_i}\chi_\alpha(u)
-.\end{align*}
+.\end{align*}`{=tex}
 
 > Note: no clue why!
 
-A priori, this is a countable infinite sum.
-The claim is that it can in fact be reduced to a finite sum. (?)
+A priori, this is a countable infinite sum. The claim is that it can in fact be reduced to a finite sum. (?)
 
-We can then let $\zeta = \chi_{\frac{1}{d_i}}(u)$, which is $d_i$th root of unity.
-Then $\zeta = 1 \iff u$ is a $d_i$th power in $k\units$.
+We can then let $\zeta = \chi_{\frac{1}{d_i}}(u)$, which is $d_i$th root of unity. Then $\zeta = 1 \iff u$ is a $d_i$th power in $k^{\times}$.
 
 Since both sides equal 1 if $u=0$, we can rewrite this as
 
-\begin{align*}
+`\begin{align*}
 N_i(u) = \sum_{j=1}^{d_i - 1} \zeta^j
-,\end{align*}
+,\end{align*}`{=tex}
 
 and thus
 
-\begin{align*}
+`\begin{align*}
 N = \sum_{u\in V(L)} \chi_{\alpha_0}(u_0) \cdots \chi_{\alpha_r}(u_r) \quad \text{ where } \alpha_i \in [0, 1), ~ d_i\alpha_i \in ZZ
-.\end{align*}
+.\end{align*}`{=tex}
 
 > Definitely countable due to the previous equation, hence the $i$ index. But where did the $\zeta$s go?
-
-
-

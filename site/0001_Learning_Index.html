@@ -1,0 +1,1804 @@
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <title>
+    0001_Learning_Index – My Emanote Site
+  </title>
+  
+    
+      <meta property='og:description' content />
+      <meta property='og:site_name' content='MyEmanoteSite' />
+    
+    
+      <base href='/' />
+      <link href='favicon.svg' rel='icon' />
+    
+    <meta name='generator' content='Emanote' />
+
+  
+  <!-- CSSSTART -->
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
+  <!-- CSSEND -->
+
+  <!-- Heist error element -->
+  <style type='text/css'>
+    strong.error {
+      color: lightcoral;
+      font-size: 90%;
+      font-family: monospace;
+    }
+  </style>
+  <!-- What goes in this file will appear on near the end of <head>--><link rel='preload' href='_emanote-static/fonts/Nunito/Nunito-Regular.ttf' as='font' type='font/ttf' crossorigin />
+<link rel='preload' href='_emanote-static/fonts/Nunito/Nunito-ExtraBold.ttf' as='font' type='font/ttf' crossorigin />
+
+<style>
+  @font-face {
+    font-family: 'Nunito';
+    src: url('_emanote-static/fonts/Nunito/Nunito-Regular.ttf') format("truetype");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Nunito-Bold';
+    src: url('_emanote-static/fonts/Nunito/Nunito-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+  }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  header,
+  .header-font {
+    font-family: 'Nunito-Bold', sans-serif;
+  }
+</style>
+
+  <head-main></head-main>
+</head>
+
+<!-- DoNotFormat -->
+
+
+
+<!-- DoNotFormat -->
+
+<body class='bg-gray-400 overflow-y-scroll'>
+  
+    <div class='container mx-auto'>
+
+      <nav id='breadcrumbs' class='w-full text-gray-700 md:hidden'>
+  <div class='flex justify-left'>
+    <div class='w-full px-2 py-2 bg-gray-50'>
+      <ul class='flex flex-wrap text-lg'>
+        <li class='inline-flex items-center'>
+          
+            
+              <img style='width: 1rem;' src='favicon.svg' />
+            
+          
+        </li>
+        
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='index.html'>
+                index
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+        
+      </ul>
+    </div>
+    <button class='inline px-2 py-1 text-white bg-blue-600 outline-none cursor-pointer focus:outline-none' title='Toggle sidebar' type='button' onclick="toggleHidden('sidebar')">
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'></path>
+      </svg>
+    </button>
+    <script>
+      function toggleHidden(elemId) {
+        document.getElementById(elemId).classList.toggle("hidden");
+      }
+    </script>
+  </div>
+</nav>
+
+      <div id='container' class='flex flex-nowrap flex-col md:flex-row bg-gray-50 md:mt-8 md:shadow-2xl md:mb-8'>
+        <!-- Sidebar column -->
+        <nav id='sidebar' class='flex-shrink hidden leading-relaxed md:block md:sticky md:top-0 md:h-full md:w-48 xl:w-64'>
+          <div class='px-2 py-2 text-gray-800'>
+
+            <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
+              <a href='-/tags.html' title='View tags'>
+                <svg style='width: 1rem;' class='hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
+                  </path>
+                </svg>
+              </a>
+              <a href='-/all.html' title='Expand full tree'>
+                <svg style='width: 1rem;' class='hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
+                  </path>
+                </svg>
+              </a>
+            </div>
+
+            <div id='site-logo' class='pl-2'>
+              <div class='flex items-center my-2 space-x-2 justify-left'>
+                <a href='' title='Go to Home'>
+                  
+                    
+                      <!-- The style width attribute here is to prevent huge
+                      icon from displaying at those rare occasions when Tailwind
+                      hasn't kicked in immediately on page load 
+                      -->
+                      <img style='width: 1rem;' class='transition transform hover:scale-110 hover:opacity-80' src='favicon.svg' />
+                    
+                  
+                </a>
+                <a class='font-bold truncate' title='Go to Home' href=''>
+                  Home
+                </a>
+              </div>
+            </div>
+
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0001_Graduate Research Index' href='0001_Graduate%20Research%20Index.html'>
+      0001_Graduate Research Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+  
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
+        </path>
+      </svg>
+      
+  
+    <a class='font-bold text-blue-600 hover:underline truncate' title='0001_Learning_Index' href='0001_Learning_Index.html'>
+      0001_Learning_Index
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0009_subject index' href='0009_subject%20index.html'>
+      0009_subject index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Home' href='000_Home.html'>
+      000_Home
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Leisure Reading Projects' href='000_Leisure%20Reading%20Projects.html'>
+      000_Leisure Reading Projects
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Projects Index' href='000_Projects%20Index.html'>
+      000_Projects Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Reading Projects Index' href='000_Reading%20Projects%20Index.html'>
+      000_Reading Projects Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Recommendations' href='000_Recommendations.html'>
+      000_Recommendations
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Talks Index' href='000_Talks%20Index.html'>
+      000_Talks Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Todo' href='000_Todo.html'>
+      000_Todo
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Undergraduate Research Index' href='000_Undergraduate%20Research%20Index.html'>
+      000_Undergraduate Research Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Archive' href='Archive.html'>
+      Archive
+    </a>
+    
+      
+        <span class='text-gray-300' title='4 children inside'>
+          4
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Conferences and Seminars' href='Conferences%20and%20Seminars.html'>
+      Conferences and Seminars
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Learning' href='Learning.html'>
+      Learning
+    </a>
+    
+      
+        <span class='text-gray-300' title='2 children inside'>
+          2
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Projects' href='Projects.html'>
+      Projects
+    </a>
+    
+      
+        <span class='text-gray-300' title='5 children inside'>
+          5
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Subjects' href='Subjects.html'>
+      Subjects
+    </a>
+    
+      
+        <span class='text-gray-300' title='10 children inside'>
+          10
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='To Review' href='To%20Review.html'>
+      To Review
+    </a>
+    
+      
+        <span class='text-gray-300' title='58 children inside'>
+          58
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Unsorted' href='Unsorted.html'>
+      Unsorted
+    </a>
+    
+      
+        <span class='text-gray-300' title='557 children inside'>
+          557
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Workshops' href='Workshops.html'>
+      Workshops
+    </a>
+    
+      
+        <span class='text-gray-300' title='5 children inside'>
+          5
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='_HTT' href='_HTT.html'>
+      _HTT
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='consistant-report' href='consistant-report.html'>
+      consistant-report
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='figures' href='figures.html'>
+      figures
+    </a>
+    
+      
+        <span class='text-gray-300' title='4 children inside'>
+          4
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+
+          </div>
+        </nav>
+
+        <!-- Main body column -->
+        <div class='flex-1 w-full overflow-x-auto bg-white'>
+          <main class='px-4 py-4'>
+            <h1 class='flex items-end justify-center mb-4 p-3 bg-blue-100 text-5xl font-extrabold text-black rounded'>
+  <a class='z-40 tracking-tighter '>
+    0001_Learning_Index
+  </a>
+</h1>
+            <article class='overflow-auto'>
+  <!-- What goes in this file will appear on top of note body-->
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#review' class='text-blue-600 font-bold hover:underline'>Review</a>
+        </li>
+      
+        <li>
+          <a href='#infty-categories' class='text-blue-600 font-bold hover:underline'>Infty Categories</a>
+        </li>
+      
+        <li>
+          <a href='#algebraic-geometry' class='text-blue-600 font-bold hover:underline'>Algebraic Geometry</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#schemes' class='text-blue-600 font-bold hover:underline'>Schemes</a>
+        </li>
+      
+        <li>
+          <a href='#stacks' class='text-blue-600 font-bold hover:underline'>Stacks</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#geometric-topology' class='text-blue-600 font-bold hover:underline'>Geometric Topology</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#kirby-calculus' class='text-blue-600 font-bold hover:underline'>Kirby Calculus</a>
+        </li>
+      
+        <li>
+          <a href='#floer-and-symplectic' class='text-blue-600 font-bold hover:underline'>Floer and Symplectic</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#number-theory' class='text-blue-600 font-bold hover:underline'>Number Theory</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#class-field-theory' class='text-blue-600 font-bold hover:underline'>Class Field Theory</a>
+        </li>
+      
+        <li>
+          <a href='#algebraic-number-theory' class='text-blue-600 font-bold hover:underline'>Algebraic Number Theory</a>
+        </li>
+      
+        <li>
+          <a href='#modular-forms' class='text-blue-600 font-bold hover:underline'>Modular Forms</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#representation-theory' class='text-blue-600 font-bold hover:underline'>Representation Theory</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#lie-theory' class='text-blue-600 font-bold hover:underline'>Lie Theory</a>
+        </li>
+      
+        <li>
+          <a href='#categorical-rep-theory' class='text-blue-600 font-bold hover:underline'>Categorical Rep Theory</a>
+        </li>
+      
+        <li>
+          <a href='#representation-stability' class='text-blue-600 font-bold hover:underline'>Representation Stability</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#arithmetic-geometry' class='text-blue-600 font-bold hover:underline'>Arithmetic Geometry</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#abelian-varieties' class='text-blue-600 font-bold hover:underline'>Abelian Varieties</a>
+        </li>
+      
+        <li>
+          <a href='#rational-points' class='text-blue-600 font-bold hover:underline'>Rational Points</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#algebraic-topology' class='text-blue-600 font-bold hover:underline'>Algebraic Topology</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#spectral-sequences' class='text-blue-600 font-bold hover:underline'>Spectral Sequences</a>
+        </li>
+      
+        <li>
+          <a href='#stable-homotopy-theory' class='text-blue-600 font-bold hover:underline'>Stable Homotopy Theory</a>
+        </li>
+      
+        <li>
+          <a href='#k-theory' class='text-blue-600 font-bold hover:underline'>K Theory</a>
+        </li>
+      
+        <li>
+          <a href='#bordism-and-tqfts' class='text-blue-600 font-bold hover:underline'>Bordism and TQFTs</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#mirror-symmetry' class='text-blue-600 font-bold hover:underline'>Mirror Symmetry</a>
+        </li>
+      
+        <li>
+          <a href='#motivic-stuff' class='text-blue-600 font-bold hover:underline'>Motivic Stuff</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#homotopy-of-schemes' class='text-blue-600 font-bold hover:underline'>Homotopy of Schemes</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#derived-geometry' class='text-blue-600 font-bold hover:underline'>Derived Geometry</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#higher-algebra-and-infinity-categories' class='text-blue-600 font-bold hover:underline'>Higher Algebra and Infinity Categories</a>
+        </li>
+      
+        <li>
+          <a href='#hochschild-homology' class='text-blue-600 font-bold hover:underline'>Hochschild homology</a>
+        </li>
+      
+        <li>
+          <a href='#topological-cyclic-homology' class='text-blue-600 font-bold hover:underline'>Topological Cyclic Homology</a>
+        </li>
+      
+        <li>
+          <a href='#langlands' class='text-blue-600 font-bold hover:underline'>Langlands</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#unsorted' class='text-blue-600 font-bold hover:underline'>Unsorted</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#prism-y-p-adic-y-hodge-theory-y-stuff' class='text-blue-600 font-bold hover:underline'>Prism-y p-adic-y Hodge-Theory-y Stuff</a>
+        </li>
+      
+        <li>
+          <a href='#field-theories' class='text-blue-600 font-bold hover:underline'>Field Theories</a>
+        </li>
+      
+        <li>
+          <a href='#full-courses' class='text-blue-600 font-bold hover:underline'>Full Courses</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      Tags: #nograph
+    </p>
+  <h1 id='review' class='pb-2 mb-2 text-5xl font-bold text-center'>Review</h1>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://etale.site/qual-syllabus.pdf' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Qual syllabus: algebraic topology, Riemannian geometry, complex analysis</a> #todo
+        </li>
+      
+        <li>
+          <span title='Link is broken'><s>[[Qual Review | Unsorted/Qual%20Review.html]]</s>❌</span>
+        </li>
+      
+    </ul>
+  <h1 id='infty-categories' class='pb-2 mb-2 text-5xl font-bold text-center'>Infty Categories</h1>
+    <p class='mb-3'>
+      <img class='inline mb-3' src='Unsorted/_attachments/Pasted%20image%2020210717012401.png' alt='[[Unsorted/_attachments/Pasted image 20210717012401.png]]' style='width: inherit;' />
+    </p>
+  <h1 id='algebraic-geometry' class='pb-2 mb-2 text-5xl font-bold text-center'>Algebraic Geometry</h1>
+    <p class='mb-3'>
+      See <span title='Link is broken'><s>[[Algebraic Geometry Basics | Subjects/Algebraic%20Geometry.html]]</s>❌</span>
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Go through Chapters II and III of Hartshorne’s Algebraic Geometry thoroughly
+    </p>
+  
+    </blockquote>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://dongryul-kim.github.io/harvard_notes/Math281x/Notes_Math281x.pdf' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Harvard Math 281 Lecture Notes</a>
+        </li>
+      
+        <li>
+          <a href='https://math.berkeley.edu/~robin/math274root.pdf' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Hartshorne on Deformation Theory</a>
+        </li>
+      
+        <li>
+          <a href='https://www.msri.org/summer_schools/821' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>MSRI Summer School on derived categories of coherent sheaves on algebraic varietes</a>
+        </li>
+      
+        <li>
+          <a href='https://www.msri.org/summer_schools/455' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>MSRI Summer School on toric varieties</a>
+        </li>
+      
+        <li>
+          <a href='http://people.math.harvard.edu/~yifei/indcoh.html' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Seminar: ind-coherent sheaves</a>
+        </li>
+      
+        <li>
+          <a href='http://www.mat.uniroma2.it/~ricerca/geomet/workshops/Zaidenbergnotes.pdf' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Quick Review</a>
+        </li>
+      
+    </ul>
+  <h2 id='schemes' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Schemes</h2>
+    <p class='mb-3'>
+      See <span title='Link is broken'><s>[[schemes | Unsorted/scheme.html]]</s>❌</span>
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://etale.site/livetex/256a.pdf' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>https://etale.site/livetex/256a.pdf</a>
+        </li>
+      
+        <li>
+          <a href='https://dongryul-kim.github.io/harvard_notes/Math233a/Notes_Math233a.pdf' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>https://dongryul-kim.github.io/harvard_notes/Math233a/Notes_Math233a.pdf</a>
+        </li>
+      
+    </ul>
+  <h2 id='stacks' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Stacks</h2>
+    <p class='mb-3'>
+      See <span title='Link is broken'><s>[[stacks | Unsorted/stack.html]]</s>❌</span>
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://etale.site/livetex/stax.pdf' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Seminar notes on stacks</a>
+        </li>
+      
+    </ul>
+  <h1 id='geometric-topology' class='pb-2 mb-2 text-5xl font-bold text-center'>Geometric Topology</h1>
+    <p class='mb-3'>
+      <a href='https://www.msri.org/workshops/375' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>MSRI workshop on low-dimensional topology</a>
+    </p>
+  <h2 id='kirby-calculus' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Kirby Calculus</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://uga.view.usg.edu/d2l/home/2063522' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Kyle’s lecture videos</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Take notes on videos #todo #typesetting
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  <h2 id='floer-and-symplectic' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Floer and Symplectic</h2>
+    <p class='mb-3'>
+      See [<a href='Unsorted/Floer%20homology.html' class='text-blue-600 font-bold hover:underline'>Floer homology</a> and [Symplectic geometry | Unsorted/Symplectic%20geometry.html]]
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://math.berkeley.edu/~auroux/papers/lec-nantes.pdf' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Something?</a>
+        </li>
+      
+        <li>
+          <a href='https://www.notion.so/Full-Courses-5c930f2023a3448aa43b6396e192c4b5' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Full Courses</a>
+        </li>
+      
+        <li>
+          <a href='https://www.notion.so/Just-Resources-8d73c2c7b6374931a1e2fa27665e071f' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Just Resources</a>
+        </li>
+      
+    </ul>
+  <h1 id='number-theory' class='pb-2 mb-2 text-5xl font-bold text-center'>Number Theory</h1><h2 id='class-field-theory' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Class Field Theory</h2>
+    <p class='mb-3'>
+      Advice: - Look at global CFT first, see book of Janusz - Washington’s Cyclotomic Fields. - Harari’s book (?) - Artin and Tate’s notes
+    </p>
+  
+    <p class='mb-3'>
+      Resources
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://math.mit.edu/~poonen/papers/cft.pdf' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Brief summary of statements of CFT</a>
+        </li>
+      
+        <li>
+          <a href='https://ayoucis.wordpress.com/2015/09/01/local-class-field-theory-a-discussion/' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Blogpost introducing CFT “Local class field theory: a discussion”</a>
+        </li>
+      
+        <li>
+          <a href='https://www.jmilne.org/math/CourseNotes/CFT.pdf' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Milne’s Notes</a>
+        </li>
+      
+        <li>
+          <a href='https://www.math.arizona.edu/~cais/scans/Cassels-Frohlich-Algebraic_Number_Theory.pdf' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Cassels-Frohlich</a>
+        </li>
+      
+        <li>
+          <a href='http://www.math.toronto.edu/~ila/Cox-Primes_of_the_form_x2+ny2.pdf' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Cox: Primes of the form…</a>
+        </li>
+      
+        <li>
+          <a href='https://ocw.mit.edu/courses/mathematics/18-786-number-theory-ii-class-field-theory-spring-2016/lecture-notes/' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>OCW Lecture Notes</a>
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      <a href='https://math.mit.edu/nt/old/stage_f17.html' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Seminar on Iwasawa theory</a>
+    </p>
+  <h2 id='algebraic-number-theory' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Algebraic Number Theory</h2>
+    <p class='mb-3'>
+      See <span title='Link is broken'><s>[[Learning Algebraic Number Theory | Unsorted/Learning%20Algebraic%20Number%20Theory.html]]</s>❌</span>
+    </p>
+  <h2 id='modular-forms' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Modular Forms</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://www.math.arizona.edu/~swc/' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>AWS 2021</a>
+        </li>
+      
+    </ul>
+  <h1 id='representation-theory' class='pb-2 mb-2 text-5xl font-bold text-center'>Representation Theory</h1><h2 id='lie-theory' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Lie Theory</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='http://www.math.stonybrook.edu/~jstarr/M552s19/ps.html' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Problem sets</a>
+        </li>
+      
+    </ul>
+  <h2 id='categorical-rep-theory' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Categorical Rep Theory</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://www.msri.org/summer_schools/790' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>MSRI Summer school on Soergel Bimodules</a>
+        </li>
+      
+        <li>
+          <a href='https://www.youtube.com/watch?v=kgu8L6paKNs&list=PL0NRmB0fnLJQiZyGUJyd35rj80k_EgUyt' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>CMSA conference on relations to algebraic geometry and mathematical physics</a>
+        </li>
+      
+    </ul>
+  <h2 id='representation-stability' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Representation Stability</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://www.msri.org/summer_schools/850' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>MSRI Summer School on Representation Stability</a>
+        </li>
+      
+    </ul>
+  <h1 id='arithmetic-geometry' class='pb-2 mb-2 text-5xl font-bold text-center'>Arithmetic Geometry</h1>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://math.mit.edu/nt/index_stage' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>https://math.mit.edu/nt/index_stage</a>
+        </li>
+      
+        <li>
+          <a href='https://math.mit.edu/nt/old/stage_f20.html' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Seminar talks on the Weil conjectures</a>
+        </li>
+      
+        <li>
+          <a href='https://math.mit.edu/nt/old/stage_s19.html' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Seminar on unlikely intersections and o-minimality</a>
+        </li>
+      
+    </ul>
+  <h2 id='abelian-varieties' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Abelian Varieties</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='http://www.math.columbia.edu/~chaoli/docs/AbelianVarieties.html' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>http://www.math.columbia.edu/~chaoli/docs/AbelianVarieties.html</a>
+        </li>
+      
+        <li>
+          <a href='Unsorted/moduli%20stack%20of%20abelian%20varieties.md#%5E7cc3c7' class='text-blue-600 font-bold hover:underline'>Notes from Haiyang</a>
+        </li>
+      
+    </ul>
+  <h2 id='rational-points' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Rational Points</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://web.math.princeton.edu/~shouwu/publications/iccm98.pdf' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>https://web.math.princeton.edu/~shouwu/publications/iccm98.pdf</a>
+        </li>
+      
+    </ul>
+  <h1 id='algebraic-topology' class='pb-2 mb-2 text-5xl font-bold text-center'>Algebraic Topology</h1>
+    <p class='mb-3'>
+      See the Handbook of Homotopy Theory
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://www.uwo.ca/math/faculty/jardine/courses/homalg/lectures_on_homological_algebra.html' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Lectures on Homological Algebra</a>
+        </li>
+      
+        <li>
+          <a href='https://etale.site/livetex/goodwillie.pdf' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Notes on Goodwillie Calculus</a>
+        </li>
+      
+    </ul>
+  <h2 id='spectral-sequences' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Spectral Sequences</h2>
+    <p class='mb-3'>
+      Some stuff from Morgan:
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      …suggest using the Serre spectral sequence to compute the mod 2 cohomology of mod 2 Eilenberg Mac Lane spaces from the path–loop fibration!
+    </p>
+  
+    </blockquote>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      if you compute the cohomology up to say degree 15 or something for <span class='math inline'>\(K({\mathbb{Z}}/2,i)\)</span> and <span class='math inline'>\(i\)</span> up to like maybe 9 or so, ( a bit tedious – I forget what is actually reasonable lol) you start seeing “stability” set in, that is, you start to see the stable cohomology operations mod 2 appearing in the stable range. It’s cool to like be able to check your answer against the formulas for the Steenrod algebra! you can also do this for mod 3 cohomology and <span class='math inline'>\(K({\mathbb{Z}}/3,i)\)</span> or like try it for integral cohomology but the integral one is HARD
+    </p>
+  
+    </blockquote>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      …the <span class='math inline'>\(B_\infty\)</span> construction. The version they use in a paper takes as input a <span title='Link is broken'><s>[[Gamma space | Unsorted/Gamma%20space.html]]</s>❌</span> (which I think you can think about as a sort of rigid model for groupoids –i.e. spaces– equipped with an <span class='math inline'>\(E^\infty\)</span> monoidal structure, i.e. a monoidal structure which is commutative up to really nicely structured homotopies), and outputs a connective spectrum
+    </p>
+  
+    </blockquote>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      The point is that there’s a way to view a discrete (or Top-enriched) groupoid with a monoidal structure (probably under some hypotheses on the monoidal structure – i.e. it should be symmetric monoidal in the discrete case), and then you can plug into the general <span class='math inline'>\(B_\infty\)</span> machinery to get out a connective spectrum
+    </p>
+  
+    </blockquote>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      I think it’d be too much to ask this to work for a general symmetric monoidal category, but you could probably do it after taking the maximal subgroupoid and idk if that would be something interesting? (Also not sure if the maximal subgroupoid inherits a symm monoidal structure? actual yes I guess it does)
+    </p>
+  
+    </blockquote>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      I think the actual <span class='math inline'>\(B_\infty\)</span> construction though is maybe a bit technical and/or disastisfying. Like, you need some formalism to get a spectrum out of a “almost symmetric monoidal space”, and this one works, but it’s a bit mysterious to me….
+    </p>
+  
+    </blockquote>
+  <h2 id='stable-homotopy-theory' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Stable Homotopy Theory</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://www.msri.org/workshops/695' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Summer School on Modern Algebraic Topology</a>
+        </li>
+      
+        <li>
+          <a href='http://jardine.math.uwo.ca/HomTh/' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Homotopy Theory</a>
+        </li>
+      
+        <li>
+          <a href='http://www.ms.uky.edu/~kate/teaching/f19_751.html' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>MA 751: Topics in Topology</a>
+        </li>
+      
+        <li>
+          <a href='http://math.colorado.edu/topology/plan-spring2017.pdf' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Something?</a>
+        </li>
+      
+        <li>
+          <a href='https://cpb-us-e1.wpmucdn.com/s.wayne.edu/dist/0/60/files/2019/11/Beaudry-PartI-annotated.pdf' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Something else?</a>
+        </li>
+      
+        <li>
+          <a href='http://www.birs.ca/events/2020/5-day-workshops/20w5217/videos' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Equivariant stable homotopy and p-adic Hodge theory</a>
+        </li>
+      
+        <li>
+          <a href='https://math.mit.edu/nt/old/stage_f19.html' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Seminar on formal groups and p-divisible groups</a>
+        </li>
+      
+        <li>
+          <a href='https://www.youtube.com/watch?v=jCSEA1nfffY&list=PLYShsxzWr0U3EZobFoA7sJcpjip8zXzui' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Localization of categories</a>
+        </li>
+      
+    </ul>
+  <h2 id='k-theory' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>K Theory</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://people.math.rochester.edu/faculty/doug/otherpapers/zakharevich.pdf' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Survey article from Inna</a>
+        </li>
+      
+        <li>
+          <a href='https://www.uwo.ca/math/faculty/jardine/courses/ktheory/ktheory.html' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Lectures on Algebraic K-theory</a>
+        </li>
+      
+        <li>
+          <img src='Unsorted/_attachments/Pasted%20image%2020210506154540.png' title='fig:' alt='Recommended reading from Atiyah and Park' />
+        </li>
+      
+        <li>
+          <a href='https://pages.uoregon.edu/ddugger/kgeom.pdf' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Dugger’s geometric introduction to K theory</a>
+        </li>
+      
+        <li>
+          <a href='https://www.youtube.com/watch?v=Kagy_cX4hDs' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Youtube lectures: Intro to K Theory</a>
+        </li>
+      
+        <li>
+          <a href='http://math.uchicago.edu/~chicagotopology2/' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>U Chicago Algtop Workshop (including Cobordism)</a>
+        </li>
+      
+        <li>
+          <a href='https://mandal.ku.edu/M996QuillenKTheory/0TheKBooK.pdf' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Quillen K Theory Lecture Notes</a>
+        </li>
+      
+    </ul>
+  <h2 id='bordism-and-tqfts' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Bordism and TQFTs</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://web.ma.utexas.edu/users/dafr/M392C-2012/' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Lectures</a>
+        </li>
+      
+    </ul>
+  <h1 id='mirror-symmetry' class='pb-2 mb-2 text-5xl font-bold text-center'>Mirror Symmetry</h1>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://arxiv.org/pdf/1301.7056.pdf' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Auroux’s introduction</a>
+        </li>
+      
+        <li>
+          <a href='https://www.youtube.com/watch?v=rZhCfvjhwDI&list=PL0NRmB0fnLJSmnJqrOqgiivJQ_BWnlfXm' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>CMSA 2020 Workshop on mirror symmetry (12 videos)</a>
+        </li>
+      
+        <li>
+          <a href='https://www.youtube.com/playlist?list=PL0NRmB0fnLJQRXH3HKos6e4bu8IyfmZCY' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Conference on homological mirror symmetry</a>
+        </li>
+      
+    </ul>
+  <h1 id='motivic-stuff' class='pb-2 mb-2 text-5xl font-bold text-center'>Motivic Stuff</h1>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='attachments/roadmap.pdf' class='text-blue-600 font-bold hover:underline'>Roadmap to learning motivic homotopy theory</a>
+        </li>
+      
+    </ul>
+  <h2 id='homotopy-of-schemes' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Homotopy of Schemes</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='http://people.math.harvard.edu/~gaitsgde/GL/' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Something?</a>
+        </li>
+      
+        <li>
+          Twitter rec: <a href='https://twitter.com/jacobhegna/status/1373792370135867392?s=20' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>https://twitter.com/jacobhegna/status/1373792370135867392?s=20</a>
+        </li>
+      
+    </ul>
+  <h1 id='derived-geometry' class='pb-2 mb-2 text-5xl font-bold text-center'>Derived Geometry</h1>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      <a href='https://www.youtube.com/watch?v=qgxq7xnJJvI&list=PL0NRmB0fnLJRk75jsBXXt7J8TCWY9EpI4' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>CMSA series on derived algebraic and differential geometry</a>
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      <img src='Unsorted/_attachments/essen.pdf' alt='Workshop on derived moduli spaces' />
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      <img src='Unsorted/_attachments/moduli.pdf' alt='Something? Revisit' />
+    </p>
+  
+        </li>
+      
+    </ul>
+  <h2 id='higher-algebra-and-infinity-categories' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Higher Algebra and Infinity Categories</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://www.youtube.com/watch?v=3IjAy0gHRyY' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Higher Algebra courses</a>
+        </li>
+      
+        <li>
+          <a href='https://www.msri.org/workshops/862/schedules/25956' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>MSRI workshops on Infinity Categories</a>
+        </li>
+      
+        <li>
+          <a href='https://www.msri.org/workshops/907' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>MSRI workshop on higher categories and categorification</a>
+        </li>
+      
+        <li>
+          <a href='https://etale.site/livetex/highercats.pdf' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Higher categories student seminar: notes</a>
+        </li>
+      
+    </ul>
+  <h2 id='hochschild-homology' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Hochschild homology</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          See <span title='Link is broken'><s>[[Hochschild homology | Unsorted/Hochschild%20homology.html]]</s>❌</span>
+        </li>
+      
+    </ul>
+  <h2 id='topological-cyclic-homology' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Topological Cyclic Homology</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          See <span title='Link is broken'><s>[[topological Hochschild homology | Unsorted/topological%20Hochschild%20homology.html]]</s>❌</span>
+        </li>
+      
+        <li>
+          <img src='Unsorted/Topological%20cyclic%20homology%201.html' title='fig:' alt='21 Video course' />
+        </li>
+      
+    </ul>
+  <h2 id='langlands' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Langlands</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          See <span title='Link is broken'><s>[[Langlands | Unsorted/Langlands.html]]</s>❌</span>
+        </li>
+      
+        <li>
+          <a href='attachments/Geometric%20Langlands%2C%20Perfectoid%20Spaces%2C%20Fargues-Fontaine%20Overview.pdf' class='text-blue-600 font-bold hover:underline'>Geometric Langlands, Perfectoid Spaces, and the Fargues-Fontaine Curve</a>
+        </li>
+      
+        <li>
+          <a href='attachments/Friedberg%20-%202018%20-%20WHAT%20IS%20...the%20Langlands%20Program.pdf' class='text-blue-600 font-bold hover:underline'>What is the Langlands program?</a>
+        </li>
+      
+        <li>
+          <a href='https://www.msri.org/summer_schools/792' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>MSRI Summer School on automorphic forms and the Langlands program</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://www.youtube.com/playlist?list=PLhsb6tmzSpiysoRR0bZozub-MM0k3mdFR' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Kevin’ Buzzard’s lectures on Youtube</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  <h1 id='unsorted' class='pb-2 mb-2 text-5xl font-bold text-center'>Unsorted</h1><h2 id='prism-y-p-adic-y-hodge-theory-y-stuff' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Prism-y p-adic-y Hodge-Theory-y Stuff</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://math.mit.edu/nt/index_stage' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Seminar on crystalline and prismatic cohomology</a>
+        </li>
+      
+        <li>
+          <a href='https://math.mit.edu/nt/old/stage_s20.html' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Seminar on p-adic modular forms</a>
+        </li>
+      
+        <li>
+          <a href='https://math.mit.edu/nt/old/stage_f18.html' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Seminar on p-adic Hodge theory</a>
+        </li>
+      
+        <li>
+          <a href='https://warwick.ac.uk/fac/sci/maths/research/events/2020-2021/noncommutativehodge-to-derhamdegeneration/' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Noncommutative Hodge-to-de Rham degeneration</a>
+        </li>
+      
+    </ul>
+  <h2 id='field-theories' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Field Theories</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://ww-w.youtube.com/playlist?list=PL80A29806A2EA6B1A' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Lecture series (34 videos) on Topology and Field Theories</a>
+        </li>
+      
+        <li>
+          <a href='https://video-archive.fields.utoronto.ca/list/event/1538' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Fields Summer School</a>
+        </li>
+      
+    </ul>
+  <h2 id='full-courses' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Full Courses</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='https://www.notion.so/Topological-Cyclic-Homology-0db929d8a26943879bb36c916a3877ff' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Topological Cyclic Homology</a>
+        </li>
+      
+        <li>
+          <a href='https://www.notion.so/Higher-Algebra-bfa1645467b2479a979065ab9f48f168' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Higher Algebra</a>
+        </li>
+      
+        <li>
+          <a href='https://www.notion.so/Derived-Algebraic-Geometry-3ee38d9dcb0147c59d5b151669216941' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Derived Algebraic Geometry</a>
+        </li>
+      
+    </ul>
+  
+  <!-- What goes in this file will appear below the note body-->
+</article>
+            <div class='flex flex-col lg:flex-row lg:space-x-2'>
+              
+              
+            </div>
+            
+  <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
+    
+  </section>
+
+            <!-- What goes in this file will at the very end of the main div -->
+          </main>
+        </div>
+      </div>
+      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-800'>
+  <div>
+    <a href=''>
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'></path>
+      </svg>
+    </a>
+  </div>
+  <div>
+    Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
+    
+      
+        <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
+          0.3.6.1
+        </span>
+      
+    
+  </div>
+  <div>
+    <a href='-/all.html' title='View Index'>
+      <svg style='width: 1rem;' class='hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
+        </path>
+      </svg>
+    </a>
+
+  </div>
+</footer>
+    </div>
+  
+</body>
+
+</html>

@@ -1,3 +1,18 @@
 ---
-aliases: ["weak equivalence", "weak equivalences"]
+aliases:
+- weak equivalence
+- weak equivalences
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+

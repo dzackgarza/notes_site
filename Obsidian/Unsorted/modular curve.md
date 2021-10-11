@@ -1,5 +1,19 @@
 ---
-aliases: ["modular curves"]
+aliases:
+- modular curves
 ---
 
-![](_attachments/modularCurves2015.pdf)
+
+
+
+
+
+
+
+
+
+
+
+
+
+![[_attachments/modularCurves2015.pdf]]

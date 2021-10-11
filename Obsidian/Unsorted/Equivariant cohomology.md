@@ -1,11 +1,28 @@
 ---
-aliases: ["equivariant cohomology", "equivariant homology"]
+aliases:
+- equivariant cohomology
+- equivariant homology
 ---
+
+-   [References](#references)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # References
 
-- eCHT course: https://s.wayne.edu/echt/echt-minicourses/
+-   eCHT course: https://s.wayne.edu/echt/echt-minicourses/
 
-- What were Deligne's contributions?
+-   What were Deligne's contributions?
 
-![](../attachments/Pasted%20image%2020210731191619.png)
+![[../attachments/Pasted%20image%2020210731191619.png]]

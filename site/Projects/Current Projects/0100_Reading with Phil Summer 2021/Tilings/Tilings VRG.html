@@ -1,0 +1,3423 @@
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <title>
+    Notes on Tilings – My Emanote Site
+  </title>
+  
+    
+      <meta property='og:description' content />
+      <meta property='og:site_name' content='MyEmanoteSite' />
+    
+    
+      <base href='/' />
+      <link href='favicon.svg' rel='icon' />
+    
+    <meta name='generator' content='Emanote' />
+
+  
+  <!-- CSSSTART -->
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
+  <!-- CSSEND -->
+
+  <!-- Heist error element -->
+  <style type='text/css'>
+    strong.error {
+      color: lightcoral;
+      font-size: 90%;
+      font-family: monospace;
+    }
+  </style>
+  <!-- What goes in this file will appear on near the end of <head>--><link rel='preload' href='_emanote-static/fonts/Nunito/Nunito-Regular.ttf' as='font' type='font/ttf' crossorigin />
+<link rel='preload' href='_emanote-static/fonts/Nunito/Nunito-ExtraBold.ttf' as='font' type='font/ttf' crossorigin />
+
+<style>
+  @font-face {
+    font-family: 'Nunito';
+    src: url('_emanote-static/fonts/Nunito/Nunito-Regular.ttf') format("truetype");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Nunito-Bold';
+    src: url('_emanote-static/fonts/Nunito/Nunito-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+  }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  header,
+  .header-font {
+    font-family: 'Nunito-Bold', sans-serif;
+  }
+</style>
+
+  <head-main></head-main>
+</head>
+
+<!-- DoNotFormat -->
+
+
+
+<!-- DoNotFormat -->
+
+<body class='bg-gray-400 overflow-y-scroll'>
+  
+    <div class='container mx-auto'>
+
+      <nav id='breadcrumbs' class='w-full text-gray-700 md:hidden'>
+  <div class='flex justify-left'>
+    <div class='w-full px-2 py-2 bg-gray-50'>
+      <ul class='flex flex-wrap text-lg'>
+        <li class='inline-flex items-center'>
+          
+            
+              <img style='width: 1rem;' src='favicon.svg' />
+            
+          
+        </li>
+        
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='index.html'>
+                index
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='Projects.html'>
+                Projects
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='Projects/Current%20Projects.html'>
+                Current Projects
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='Projects/Current%20Projects/0100_Reading%20with%20Phil%20Summer%202021.html'>
+                0100_Reading with Phil Summer 2021
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='Projects/Current%20Projects/0100_Reading%20with%20Phil%20Summer%202021/Tilings.html'>
+                Tilings
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+        
+      </ul>
+    </div>
+    <button class='inline px-2 py-1 text-white bg-blue-600 outline-none cursor-pointer focus:outline-none' title='Toggle sidebar' type='button' onclick="toggleHidden('sidebar')">
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'></path>
+      </svg>
+    </button>
+    <script>
+      function toggleHidden(elemId) {
+        document.getElementById(elemId).classList.toggle("hidden");
+      }
+    </script>
+  </div>
+</nav>
+
+      <div id='container' class='flex flex-nowrap flex-col md:flex-row bg-gray-50 md:mt-8 md:shadow-2xl md:mb-8'>
+        <!-- Sidebar column -->
+        <nav id='sidebar' class='flex-shrink hidden leading-relaxed md:block md:sticky md:top-0 md:h-full md:w-48 xl:w-64'>
+          <div class='px-2 py-2 text-gray-800'>
+
+            <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
+              <a href='-/tags.html' title='View tags'>
+                <svg style='width: 1rem;' class='hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
+                  </path>
+                </svg>
+              </a>
+              <a href='-/all.html' title='Expand full tree'>
+                <svg style='width: 1rem;' class='hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
+                  </path>
+                </svg>
+              </a>
+            </div>
+
+            <div id='site-logo' class='pl-2'>
+              <div class='flex items-center my-2 space-x-2 justify-left'>
+                <a href='' title='Go to Home'>
+                  
+                    
+                      <!-- The style width attribute here is to prevent huge
+                      icon from displaying at those rare occasions when Tailwind
+                      hasn't kicked in immediately on page load 
+                      -->
+                      <img style='width: 1rem;' class='transition transform hover:scale-110 hover:opacity-80' src='favicon.svg' />
+                    
+                  
+                </a>
+                <a class='font-bold truncate' title='Go to Home' href=''>
+                  Home
+                </a>
+              </div>
+            </div>
+
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0001_Graduate Research Index' href='0001_Graduate%20Research%20Index.html'>
+      0001_Graduate Research Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0001_Learning_Index' href='0001_Learning_Index.html'>
+      0001_Learning_Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0009_subject index' href='0009_subject%20index.html'>
+      0009_subject index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Home' href='000_Home.html'>
+      000_Home
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Leisure Reading Projects' href='000_Leisure%20Reading%20Projects.html'>
+      000_Leisure Reading Projects
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Projects Index' href='000_Projects%20Index.html'>
+      000_Projects Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Reading Projects Index' href='000_Reading%20Projects%20Index.html'>
+      000_Reading Projects Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Recommendations' href='000_Recommendations.html'>
+      000_Recommendations
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Talks Index' href='000_Talks%20Index.html'>
+      000_Talks Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Todo' href='000_Todo.html'>
+      000_Todo
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='000_Undergraduate Research Index' href='000_Undergraduate%20Research%20Index.html'>
+      000_Undergraduate Research Index
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Archive' href='Archive.html'>
+      Archive
+    </a>
+    
+      
+        <span class='text-gray-300' title='4 children inside'>
+          4
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Conferences and Seminars' href='Conferences%20and%20Seminars.html'>
+      Conferences and Seminars
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Learning' href='Learning.html'>
+      Learning
+    </a>
+    
+      
+        <span class='text-gray-300' title='2 children inside'>
+          2
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Projects' href='Projects.html'>
+      Projects
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Book Notes' href='Projects/Book%20Notes.html'>
+      Book Notes
+    </a>
+    
+      
+        <span class='text-gray-300' title='6 children inside'>
+          6
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Current Projects' href='Projects/Current%20Projects.html'>
+      Current Projects
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='0100_Reading with Phil Summer 2021' href='Projects/Current%20Projects/0100_Reading%20with%20Phil%20Summer%202021.html'>
+      0100_Reading with Phil Summer 2021
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0000_References_Defs' href='Projects/Current%20Projects/0100_Reading%20with%20Phil%20Summer%202021/0000_References_Defs.html'>
+      0000_References_Defs
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='0001_Meetings' href='Projects/Current%20Projects/0100_Reading%20with%20Phil%20Summer%202021/0001_Meetings.html'>
+      0001_Meetings
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='2021-06-09' href='Projects/Current%20Projects/0100_Reading%20with%20Phil%20Summer%202021/2021-06-09.html'>
+      2021-06-09
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='2021-06-16_Lattice_Counts' href='Projects/Current%20Projects/0100_Reading%20with%20Phil%20Summer%202021/2021-06-16_Lattice_Counts.html'>
+      2021-06-16_Lattice_Counts
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='2021-07-02' href='Projects/Current%20Projects/0100_Reading%20with%20Phil%20Summer%202021/2021-07-02.html'>
+      2021-07-02
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='2021-08-15_Wolport_Paper' href='Projects/Current%20Projects/0100_Reading%20with%20Phil%20Summer%202021/2021-08-15_Wolport_Paper.html'>
+      2021-08-15_Wolport_Paper
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='2021-08-25' href='Projects/Current%20Projects/0100_Reading%20with%20Phil%20Summer%202021/2021-08-25.html'>
+      2021-08-25
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Tilings' href='Projects/Current%20Projects/0100_Reading%20with%20Phil%20Summer%202021/Tilings.html'>
+      Tilings
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+  
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
+        </path>
+      </svg>
+      
+  
+    <a class='font-bold text-blue-600 hover:underline truncate' title='Notes on Tilings' href='Projects/Current%20Projects/0100_Reading%20with%20Phil%20Summer%202021/Tilings/Tilings%20VRG.html'>
+      Notes on Tilings
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='sections' href='Projects/Current%20Projects/0100_Reading%20with%20Phil%20Summer%202021/Tilings/sections.html'>
+      sections
+    </a>
+    
+      
+        <span class='text-gray-300' title='6 children inside'>
+          6
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='translation surface' href='Projects/Current%20Projects/0100_Reading%20with%20Phil%20Summer%202021/Tilings/translation%20surface.html'>
+      translation surface
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+  
+</div>
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Catalan' href='Projects/Current%20Projects/Catalan.html'>
+      Catalan
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Independent Study' href='Projects/Independent%20Study.html'>
+      Independent Study
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Quals' href='Projects/Quals.html'>
+      Quals
+    </a>
+    
+      
+        <span class='text-gray-300' title='1 children inside'>
+          1
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Reading Groups' href='Projects/Reading%20Groups.html'>
+      Reading Groups
+    </a>
+    
+      
+        <span class='text-gray-300' title='2 children inside'>
+          2
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Subjects' href='Subjects.html'>
+      Subjects
+    </a>
+    
+      
+        <span class='text-gray-300' title='10 children inside'>
+          10
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='To Review' href='To%20Review.html'>
+      To Review
+    </a>
+    
+      
+        <span class='text-gray-300' title='58 children inside'>
+          58
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Unsorted' href='Unsorted.html'>
+      Unsorted
+    </a>
+    
+      
+        <span class='text-gray-300' title='557 children inside'>
+          557
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Workshops' href='Workshops.html'>
+      Workshops
+    </a>
+    
+      
+        <span class='text-gray-300' title='5 children inside'>
+          5
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='_HTT' href='_HTT.html'>
+      _HTT
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='consistant-report' href='consistant-report.html'>
+      consistant-report
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='figures' href='figures.html'>
+      figures
+    </a>
+    
+      
+        <span class='text-gray-300' title='4 children inside'>
+          4
+        </span>
+      
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+
+          </div>
+        </nav>
+
+        <!-- Main body column -->
+        <div class='flex-1 w-full overflow-x-auto bg-white'>
+          <main class='px-4 py-4'>
+            <h1 class='flex items-end justify-center mb-4 p-3 bg-blue-100 text-5xl font-extrabold text-black rounded'>
+  <a class='z-40 tracking-tighter '>
+    Notes on Tilings
+  </a>
+</h1>
+            <article class='overflow-auto'>
+  <!-- What goes in this file will appear on top of note body-->
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#references-and-basics' class='text-blue-600 font-bold hover:underline'>References and Basics</a>
+        </li>
+      
+        <li>
+          <a href='#notes-on-paper' class='text-blue-600 font-bold hover:underline'>Notes on Paper</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#section-1' class='text-blue-600 font-bold hover:underline'>Section 1</a>
+        </li>
+      
+        <li>
+          <a href='#section-2-motivations' class='text-blue-600 font-bold hover:underline'>Section 2: Motivations</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#thursday-week-1' class='text-blue-600 font-bold hover:underline'>Thursday, Week 1</a>
+        </li>
+      
+        <li>
+          <a href='#thursday-january-16th' class='text-blue-600 font-bold hover:underline'>Thursday January 16th</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#correspondence' class='text-blue-600 font-bold hover:underline'>Correspondence</a>
+        </li>
+      
+        <li>
+          <a href='#moduli-spaces' class='text-blue-600 font-bold hover:underline'>Moduli Spaces</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#thursday-january-23rd' class='text-blue-600 font-bold hover:underline'>Thursday January 23rd</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#counting-square-tiled-surfaces' class='text-blue-600 font-bold hover:underline'>Counting Square Tiled Surfaces</a>
+        </li>
+      
+        <li>
+          <a href='#open-questions' class='text-blue-600 font-bold hover:underline'>Open Questions</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          <a href='#bens-talk-eskins-ramified-coverings-of-a-torus' class='text-blue-600 font-bold hover:underline'>Ben’s Talk: Eskin’s Ramified Coverings of a Torus</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <a href='#quasimodularity' class='text-blue-600 font-bold hover:underline'>Quasimodularity</a>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      [<span title='Link is broken'><s>[2020-01-01-References](sections/2020-01-01-References.md)</s>❌</span> <a href='Projects/Current%20Projects/0100_Reading%20with%20Phil%20Summer%202021/Tilings/sections/2020-01-11.html' class='text-blue-600 font-bold hover:underline'>2020-01-11</a> <a href='Projects/Current%20Projects/0100_Reading%20with%20Phil%20Summer%202021/Tilings/sections/2020-01-16%20Translation%20Surfaces.html' class='text-blue-600 font-bold hover:underline'>2020-01-16 Translation Surfaces</a> <a href='Projects/Current%20Projects/0100_Reading%20with%20Phil%20Summer%202021/Tilings/sections/2020-01-23.html' class='text-blue-600 font-bold hover:underline'>2020-01-23</a> [2020-01-30 Ramified Covering of Torus | Projects/Current%20Projects/0100_Reading%20with%20Phil%20Summer%202021/Tilings/sections/2020-01-30%20Ramified%20Covering%20of%20Torus.html]]
+    </p>
+  
+    <p class='mb-3'>
+      Tags: #algebraic_geometry #topology #research
+    </p>
+  <h1 id='references-and-basics' class='pb-2 mb-2 text-5xl font-bold text-center'>References and Basics</h1>
+    <p class='mb-3'>
+      <strong>References:</strong>
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Survey Paper: Anton Zorich, <a href='https://arxiv.org/abs/math/0609392' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Flat Surfaces</a>
+        </li>
+      
+        <li>
+          Alex Eskin, Andrei Okounkov, <a href='https://arxiv.org/abs/math/0006171' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Asymptotics of numbers of branched coverings of a torus and volumes of moduli spaces of holomorphic differentials</a>
+        </li>
+      
+        <li>
+          Alex Eskin, Howard Masur, Anton Zorich, <a href='https://arxiv.org/abs/math/0202134' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Moduli Spaces of Abelian Differentials: The Principal Boundary, Counting Problems and the Siegel–Veech Constants</a>
+        </li>
+      
+        <li>
+          Alex Eskin, Andrei Okounkov, <a href='https://arxiv.org/abs/math/0505545' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Pillowcases and quasimodular forms</a>
+        </li>
+      
+        <li>
+          Vincent Delecroix, Elise Goujard, Peter Zograf, Anton Zorich, <a href='https://arxiv.org/abs/1903.10904' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Contribution of one-cylinder square-tiled surfaces to Masur-Veech volumes</a>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          See Phil for appendix!
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Engel, <a href='https://arxiv.org/abs/1706.06738' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Hurwitz Theory of Elliptic Orbifolds, I</a>
+        </li>
+      
+        <li>
+          Engel, <a href='https://arxiv.org/abs/1809.07434' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Hurwitz Theory of Elliptic Orbifolds, II</a>
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      <strong>Definition:</strong> A map <span class='math inline'>\(\pi: \Sigma \to \Sigma'\)</span> of Riemann surfaces is said to be <em>ramified</em> at a point <span class='math inline'>\(p\in \Sigma'\)</span> iff in local charts <span class='math inline'>\(\pi\)</span> has the form <span class='math inline'>\(z\mapsto z^n\)</span> for some <span class='math inline'>\(n&gt;1\)</span>.
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      I.e. all points in a punctured neighborhood of <span class='math inline'>\(\pi(p)\)</span> have <span class='math inline'>\(n\)</span> preimages.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      <strong>Definition:</strong> If <span class='math inline'>\(\pi\)</span> is ramified at <span class='math inline'>\(p\)</span>, the number of preimages <span class='math inline'>\(n\)</span> is referred to as <span class='math inline'>\(e_p\)</span>, the <em>ramification index of <span class='math inline'>\(p\)</span></em>.
+    </p>
+  
+    <p class='mb-3'>
+      <em>Fact:</em> <span class='math inline'>\(\mathbf{\beta}(\Sigma_g) = [1, 2g, 1, 0, \cdots]\)</span> and <span class='math inline'>\(\chi(\Sigma) = 2-2g\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Theorem:</strong> If <span class='math inline'>\(\pi\)</span> is an unramified covering map of degree <span class='math inline'>\(n\)</span>, then <span class='math inline'>\(\chi(\Sigma') = n\chi(\Sigma)\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Theorem (Riemann-Hurwitz):</strong> If <span class='math inline'>\(\pi: \Sigma \to \Sigma'\)</span> is a ramified covering map of degree <span class='math inline'>\(N\)</span>, then
+    </p>
+  
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+\chi(\Sigma') = N \chi(\Sigma) - \sum (e_p - 1) \quad\text{ i.e. } 2 g(\Sigma') - 2=  N(2g(\Sigma) - 2)  + \sum (e_p - 1)
+.\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      <em>Another useful form:</em> Let <span class='math inline'>\(r \in \Sigma'\)</span> be the number of ramification points, and <span class='math inline'>\(b\)</span> the number of branch points, i.e. their images in <span class='math inline'>\(\Sigma\)</span>. Then
+    </p>
+  
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+\chi(\Sigma') = N(\chi(\Sigma) - b) + r
+.\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Holomorphic Forms:</strong> A holomorphic <span class='math inline'>\(p{\hbox{-}}\)</span>form on <span class='math inline'>\(X\)</span> is a section of <span class='math inline'>\(\Lambda^p T {}^{ \vee }X\)</span>, the <span class='math inline'>\(p\)</span>th exterior power of the holomorphic cotangent bundle of <span class='math inline'>\(X\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      For <span class='math inline'>\(n = \dim_{\mathbb{C}}X\)</span>, the <span class='math inline'>\(n{\hbox{-}}\)</span>forms are an important special case. Any such form <span class='math inline'>\(w\)</span> is given in local coordinates <span class='math inline'>\((z_1, \cdots, z_n)\)</span> by
+    </p>
+  
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+w = w(z_1, \cdots, z_n) dz_1 \wedge \cdots \wedge dz_n
+\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      for some holomorphic function <span class='math inline'>\(w: {\mathbb{C}}^n \to ?\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Canonical Bundle:</strong> Given a complex manifold <span class='math inline'>\(M\)</span>, we can define the tangent bundle <span class='math inline'>\({\mathbb{C}}^n \to TM \to M\)</span> and the cotangent bundle <span class='math inline'>\({\mathbb{C}}^n \to T {}^{ \vee }M \to M\)</span>, which we’ll just denote <span class='math inline'>\(T {}^{ \vee }M\)</span>. Then the canonical bundle is the bundle <span class='math inline'>\({\mathbb{C}}\to \Lambda^n T {}^{ \vee }M \to M?\)</span>, denoted by <span class='math inline'>\(\omega\)</span>, obtained by taking the <span class='math inline'>\(n\)</span>th exterior power.
+    </p>
+  
+    <p class='mb-3'>
+      It is a theorem that the fibers are in fact complex lines <span class='math inline'>\({\mathbb{C}}^1\)</span>. For vector bundles, this is referred to as the <em>determinant bundle</em>. If <span class='math inline'>\(M\)</span> is a smooth manifold, then <span class='math inline'>\(\omega\)</span> has a global section.
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Note: a holomorphic <span class='math inline'>\(n{\hbox{-}}\)</span>form is exactly the same as a section of the canonical bundle.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      Interesting aside: a Calabi-Yau is a manifold with a nowhere vanishing holomorphic <span class='math inline'>\(n{\hbox{-}}\)</span>form, which implies that the canonical bundle admits a map to a trivial line bundle that is an isomorphism, i.e. the canonical bundle is trivial.
+    </p>
+  
+    <p class='mb-3'>
+      <em>Exercise:</em> For <span class='math inline'>\(\Sigma_g\)</span> a compact Riemann surface of genus <span class='math inline'>\(g\)</span>, the dimension of the space of holomorphic sections of the canonical bundle, i.e. the space of holomorphic differentials on <span class='math inline'>\(\Sigma_G\)</span>, is given by <span class='math inline'>\(\dim H^0(X; \Omega) = g\)</span> (the genus of the surface). Proof: use Riemann-Roch.
+    </p>
+  
+    <p class='mb-3'>
+      Classification of elliptic orbifolds of dimension 2: Define <span class='math inline'>\((n_1, \cdots; m_1, \cdots)\)</span> as the <em>profile</em>, where <span class='math inline'>\(n_i\)</span> are <em>elliptic</em> points (locally look like quotient by <span class='math inline'>\({\mathbb{Z}}/n{\mathbb{Z}}\)</span>), and <span class='math inline'>\(m_i\)</span> are <em>corner reflectors</em> (locally look like quotient by a dihedral group):
+    </p>
+  
+    <p class='mb-3'>
+      <img src='figures/2020-01-29-20:44.png' alt='Image' />\
+    </p>
+  
+    <p class='mb-3'>
+      Conformal (or equivalently complex) structures on a genus <span class='math inline'>\(g\)</span> surface form a moduli space <span class='math inline'>\({\mathcal{M}}_g\)</span> of dimension <span class='math inline'>\(3g-3\)</span> for <span class='math inline'>\(g &gt; 1\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      Let <span class='math inline'>\(\alpha\)</span> be any partition of <span class='math inline'>\(2g-2\)</span>, and <span class='math inline'>\({\mathcal{H}}(\alpha)\)</span> the moduli space of pairs <span class='math inline'>\((\Sigma_g, \omega)\)</span> where <span class='math inline'>\(\Sigma_g\)</span> is a Riemann surface of genus <span class='math inline'>\(g\)</span> and <span class='math inline'>\(\omega\)</span> is a holomorphic 1-form (Abelian differential) on <span class='math inline'>\(M\)</span> with the orders of its zeros given by <span class='math inline'>\(\alpha\)</span>. Letting <span class='math inline'>\({\mathcal{H}}\)</span> be the moduli space of all abelian differentials on Riemann surfaces of genus <span class='math inline'>\(g\)</span> is stratified by <span class='math inline'>\({\mathcal{H}}(\alpha)\)</span> as <span class='math inline'>\(\alpha\)</span> ranges over all partitions. For flat tori, <span class='math inline'>\({\mathcal{H}}= \operatorname{GL}_+(2, {\mathbb{R}})/{\operatorname{SL}}(2, {\mathbb{Z}})\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      For <span class='math inline'>\(\Sigma_g\)</span> a Riemann surface, there is a formula (Gauss-Bonnet in the flat metric) relating the degrees of the zeros of a holomorphic 1-form to the genus:
+    </p>
+  
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+\sum d_j = 2g-2
+.\end{align*}</pre>
+    </p>
+  <h1 id='notes-on-paper' class='pb-2 mb-2 text-5xl font-bold text-center'>Notes on Paper</h1>
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Reference: <a href='https://arxiv.org/abs/math/0609392' class='text-blue-600 hover:underline' target='_blank' rel='noopener'>https://arxiv.org/abs/math/0609392</a>
+    </p>
+  
+    </blockquote>
+  <h2 id='section-1' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Section 1</h2>
+    <p class='mb-3'>
+      Flat surfaces are characterized as surfaces with a flat metric and (finitely many?) cone-like singularities. These surfaces appear to be isomorphic to moduli spaces of holomorphic 1-forms. It is profitable to study the orbit of the surface under the Teichmüller geodesic flow, as well as a <span class='math inline'>\(\operatorname{GL}_n\)</span> action.
+    </p>
+  
+    <p class='mb-3'>
+      Some introductory surveys:
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          A. Eskin [E],
+        </li>
+      
+        <li>
+          G. Forni [For2],
+        </li>
+      
+        <li>
+          P. Hubert and T. Schmidt [HuSdt5]
+        </li>
+      
+        <li>
+          H. Masur [Ma7],
+        </li>
+      
+        <li>
+          H. Masur and S. Tabachnikov [MaT]
+        </li>
+      
+        <li>
+          J. Smillie [S].
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      We usually associate
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Constant positive curvature = <span class='math inline'>\(S^2\)</span>
+        </li>
+      
+        <li>
+          Constant zero curvature = <span class='math inline'>\(S^1 \times S^1 \coloneqq T^1 = \Sigma_1\)</span>
+        </li>
+      
+        <li>
+          Constant negative curvature = <span class='math inline'>\(\Sigma_g\)</span> for <span class='math inline'>\(g\geq 2\)</span>, a surface of higher genus
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      <strong>Proposition:</strong> Any surface can be given a flat metric, possibly introducing singular points.
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Idea: Push all of the curvature into a cone point.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      <em>Example:</em> The standard cube embedded in <span class='math inline'>\({\mathbb{R}}^3\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      This is a flat surface with 8 cone points located at the vertices. Note that the metric is non-degenerate on the edges, since any neighborhood of a point on an edge is still homeomorphic to <span class='math inline'>\({\mathbb{R}}^2\)</span>:
+    </p>
+  
+    <p class='mb-3'>
+      <img src='figures/2020-01-11-23:54.png' alt='Image' />
+    </p>
+  
+    <p class='mb-3'>
+      Any neighborhood of a vertex is isometric to the vertex of the usual notion of a cone. The cone angle can be measured by cutting a cone from the base to the vertex, yielding a flat pattern that sits in <span class='math inline'>\({\mathbb{R}}_2\)</span>, and measuring the “missing” angle in the resulting circle:
+    </p>
+  
+    <p class='mb-3'>
+      <img src='figures/2020-01-12-00:00.png' alt='Image' />
+    </p>
+  
+    <p class='mb-3'>
+      This shows that the cone angle of the cube is <span class='math inline'>\(3\pi/2\)</span>, which coincides with the fact that there are 3 square (and thus 3 right angles) adjacent to any cone point.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Definition:</strong> Geodesic (todo)
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Definition:</strong> Ergodic (todo)
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Here this means that a typical geodesic will visit any region in phase space and time spent in a region is proportional to volume.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      <strong>Definition:</strong> Holonomy and Holonomy group (todo)
+    </p>
+  
+    <p class='mb-3'>
+      General (wildly open) problem:
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Describe the behavior of a generic geodesic on a surface
+        </li>
+      
+        <li>
+          Prove that the geodesic flow is ergodic on a typical flat surface
+        </li>
+      
+        <li>
+          Does almost every surface have a closed geodesic that does not pass through singular points?
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          If so, how many?
+        </li>
+      
+        <li>
+          Find the (asymptotic) number of such closed geodesics of length shorter than <span class='math inline'>\(L\)</span>
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      This remains unsolved for <span class='math inline'>\(S^2\)</span> with 3 singularities (equivalent to a certain billiards problem). It is not even known if any flat sphere admits a single closed geodesic.
+    </p>
+  
+    <p class='mb-3'>
+      Flat surfaces have nontrivial holonomy, which makes them resemble Riemannian manifolds more than flat tori.
+    </p>
+  
+    <p class='mb-3'>
+      If we take the surface and puncture the conical points, it is locally isometric to the punctured Euclidean plane. This allows a notion of parallel transport of tangent vectors.
+    </p>
+  
+    <p class='mb-3'>
+      Parallel transports along homotopically trivial loops are always the identity; otherwise, for homotopically nontrivial loops this rotates the vector by some angle. Parallel transport around a cone point rotates by exactly the cone angle. Nontrivial holonomy forces geodesics to self-intersect many times.
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Exercise: parallel transport a vector around the cone point of a cube.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      The flat torus has trivial linear holonomy – all geodesics either close up, or never self-intersect and produce a dense winding path.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Definition:</strong> A translation surface is closed orientable surface with a flat metric, a finite number of conical singularities, and trivial linear holonomy.
+    </p>
+  
+    <p class='mb-3'>
+      Note that trivial linear holonomy implies that cone angles are all integer multiples of <span class='math inline'>\(2\pi\)</span>.
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Convention: we assume all flat surfaces come with a distinguished direction.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      Remark: Billiards gives rise to a flat surface with nontrivial linear holonomy.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Definition:</strong> A half-translation surface is a surface with a flat metric and holonomy group <span class='math inline'>\({\mathbb{Z}}/(2)\)</span>.
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      In this case, a vector <span class='math inline'>\(\mathbf{v}\)</span> may come back as <span class='math inline'>\(-\mathbf{v}\)</span> after parallel transport.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      We’ll often consider families of flat surface sharing the same genus and number/type of conical singularities. These will correspond to strata of moduli spaces of one-forms.
+    </p>
+  
+    <p class='mb-3'>
+      It will often be useful to let <span class='math inline'>\({\operatorname{SL}}(2, {\mathbb{R}})\)</span> act on these families, consider the orbits, and take its closure.
+    </p>
+  
+    <p class='mb-3'>
+      Central problem / conjecture: Taking the closure of an orbit under the action of <span class='math inline'>\(\operatorname{GL}^+(2, {\mathbb{R}})\)</span> is a complex subvariety, so both the moduli space of holomorphic one-forms and the moduli space of quadratic differentials resemble homogeneous spaces under the action of a unipotent group.
+    </p>
+  
+    <p class='mb-3'>
+      The there is a projection from these orbits (Teichmüller discs) to the moduli space of complex structures (?), which will be denoted <span class='math inline'>\({\mathcal{M}}_g\)</span>. It is well-known that moduli spaces are not homogeneous spaces, but the conjecture here is that they behave as if they were.
+    </p>
+  <h2 id='section-2-motivations' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Section 2: Motivations</h2>
+    <p class='mb-3'>
+      Open problems in rectangular billiards:
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          Describe the behavior of a billiard trajectory in a generic triangle, and prove that the billiard flow is ergodic.
+        </li>
+      
+        <li>
+          Does (almost) any table have at least one regular periodic trajectory? Is it preserved under deformations?
+        </li>
+      
+        <li>
+          Asymptotically in length, how many periodic trajectories are there?
+        </li>
+      
+        <li>
+          Does any obtuse triangle have a single periodic trajectory?
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      <em>Known example:</em> Acute triangles have at least 1, see Fagnano trajectory
+    </p>
+  
+    <p class='mb-3'>
+      <em>Fox-Kershner construction:</em> Yields a way to go from billiard trajectories to geodesics on a flat surface. General idea: glue two copies of the billiard table along the edge to get a flat sphere; then paths lift to geodesics. Such surfaces are not “very flat”, i.e. they have nontrivial linear holonomy.
+    </p>
+  <h1 id='thursday-week-1' class='pb-2 mb-2 text-5xl font-bold text-center'>Thursday, Week 1</h1>
+    <p class='mb-3'>
+      <strong>Motivation:</strong> Gauss’ Unicursal Problem. How many distinct curves <span class='math inline'>\(\alpha: [0, 1] \to {\mathbb{R}}^2\)</span> are there with no triple crossings?
+    </p>
+  
+    <p class='mb-3'>
+      Note that if we compactify the plane to the Riemann sphere (and possibly take the curve to be piecewise linear) then we obtain a <em>tiling</em> of the sphere. We can also take a <em>dual tiling</em> by taking the barycenters of each polygon and connecting them by an edge iff their corresponding polygons share an edge.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Definition:</strong> A <em>translation surface</em> is the 2-dimensional topological manifold obtained by taking any set of polygons in <span class='math inline'>\({\mathbb{R}}^2\)</span> and gluing their edges by translations.
+    </p>
+  
+    <p class='mb-3'>
+      <em>Example:</em> Any elliptic curve (topologically a torus) is a translation surface.
+    </p>
+  
+    <p class='mb-3'>
+      We take equivalence up to cutting, pasting, and rearranging.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Lemma:</strong> Two elliptic curves (of genus 2) are isomorphic iff the translation surfaces differ by a homothety, i.e. a rotation and scaling.
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Note: we will eventually see that the data of a translation surface is equivalently a holomorphic 1-form.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      <strong>Definition:</strong> A <em>half-translation surface</em> is a translation surface where we now additionally allow gluing by rotations of <span class='math inline'>\(\pi\)</span> radians.
+    </p>
+  
+    <p class='mb-3'>
+      <em>Example:</em>
+    </p>
+  <pre class='pandoc-raw-"tex"'>\begin{center}
+\begin{tikzpicture}
+        \node[fill=black, shape=circle]  (0) at (-3, 3) {};
+        \node[fill=black, shape=circle]  (1) at (3, 3) {};
+        \node[fill=black, shape=circle]  (2) at (-3, -3) {};
+        \node[fill=black, shape=circle]  (3) at (3, -3) {};
+        \node[fill=black, shape=circle]  (4) at (0, 3) {};
+        \node[fill=black, shape=circle]  (5) at (0, -3) {};
+        \draw (1.center) to node [auto] {$a$} (3.center);
+        \draw (0.center) to node [left] {$a$} (2.center);
+        \draw (0.center) to node [above] {$b$} (4.center);
+        \draw (4.center) to node [above] {$b$} (1.center);
+        \draw (2.center) to node [below] {$c$} (5.center);
+        \draw (5.center) to node [below] {$c$} (3.center);
+\end{tikzpicture}
+\end{center}
+</pre>
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Note that the gluing <span class='math inline'>\(b\)</span> now requires a rotation.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      By gluing edges with matching letters, we get a “hot pocket” surface:
+    </p>
+  <pre class='pandoc-raw-"tex"'>\begin{center}
+\begin{tikzpicture}[
+    none/.style={text opacity=0,opacity=0,fill opacity=0},
+    dashed/.style={text opacity=0,opacity=0,fill opacity=0}
+]
+        \node [style=none] (0) at (-3, 3) {};
+        \node [style=none] (1) at (3, 3) {};
+        \node [style=none] (2) at (-3, -4) {};
+        \node [style=none] (3) at (3, -4) {};
+        \node [style=none] (4) at (-3, 2) {};
+        \node [style=none] (5) at (3, 2) {};
+        \node [style=none] (6) at (-3, -0.5) {};
+        \node [style=none] (7) at (3, -0.5) {};
+        \node [style=none] (8) at (-3, -2.75) {};
+        \node [style=none] (9) at (3, -2.75) {};
+        \draw (0.center) to (2.center);
+        \draw (2.center) to (3.center);
+        \draw (3.center) to (1.center);
+        \draw (0.center) to (1.center);
+        \draw [bend right] (4.center) to (5.center);
+        \draw[dotted] [bend left=15] (4.center) to (5.center);
+        \draw [bend right] (6.center) to (7.center);
+        \draw[dotted] [bend left=15] (6.center) to (7.center);
+        \draw [bend right] (8.center) to (9.center);
+        \draw[dotted] [bend left=15] (8.center) to (9.center);
+\end{tikzpicture}
+\end{center}
+</pre>
+    <p class='mb-3'>
+      <strong>Lemma:</strong> Any game of <em>rectangular billiards</em> yields a half-translation surface.
+    </p>
+  
+    <p class='mb-3'>
+      Given any domain for rectangular billiards, we inflate it to a surface:
+    </p>
+  <pre class='pandoc-raw-"tex"'>\begin{center}
+\begin{tikzpicture}[
+    none/.style={text opacity=0,opacity=0,fill opacity=0},
+    dashed/.style={text opacity=0,opacity=0,fill opacity=0}
+]
+        \node [style=none] (0) at (-5, 6) {};
+        \node [style=none] (2) at (0, 0) {};
+        \node [style=none] (3) at (0, 4) {};
+        \node [style=none] (4) at (3, 4) {};
+        \node [style=none] (5) at (3, 2) {};
+        \node [style=none] (6) at (6, 2) {};
+        \node [style=none] (7) at (6, 6) {};
+        \node [style=none] (8) at (-5, 0) {};
+        \node [style=none] (9) at (-2.5, 6) {};
+        \node [style=none] (10) at (-2.5, 0) {};
+        \node [style=none] (11) at (1.5, 6) {};
+        \node [style=none] (12) at (1.5, 4) {};
+        \node [style=none] (13) at (4.5, 6) {};
+        \node [style=none] (14) at (4.5, 2) {};
+        \draw (0.center) to (8.center);
+        \draw (8.center) to (2.center);
+        \draw (2.center) to (3.center);
+        \draw (3.center) to (4.center);
+        \draw (4.center) to (5.center);
+        \draw (5.center) to (6.center);
+        \draw (6.center) to (7.center);
+        \draw (0.center) to (7.center);
+        \draw [bend right] (9.center) to (10.center);
+        \draw[dotted] [bend left=15] (9.center) to (10.center);
+        \draw [bend right=40] (11.center) to (12.center);
+        \draw[dotted] [bend left=40, looseness=0.75] (11.center) to (12.center);
+        \draw [bend right, looseness=0.75] (13.center) to (14.center);
+        \draw[dotted] [bend left=15] (13.center) to (14.center);
+\end{tikzpicture}
+\end{center}
+</pre>
+    <p class='mb-3'>
+      We can then cut along everything but the bottom edge to “unwrap” it into a half-translation surface:
+    </p>
+  <pre class='pandoc-raw-"tex"'>\begin{center}
+\begin{tikzpicture}[
+    none/.style={text opacity=0,opacity=0,fill opacity=0},
+    dashed/.style={text opacity=0,opacity=0,fill opacity=0}
+]
+        \node [style=none] (0) at (-5, 6) {};
+        \node [style=none] (2) at (0, 0) {};
+        \node [style=none] (3) at (0, 4) {};
+        \node [style=none] (4) at (3, 4) {};
+        \node [style=none] (5) at (3, 2) {};
+        \node [style=none] (6) at (6, 2) {};
+        \node [style=none] (7) at (6, 6) {};
+        \node [style=none] (8) at (-5, 0) {};
+        \node [style=none] (9) at (-2.5, 6) {};
+        \node [style=none] (10) at (-2.5, 0) {};
+        \node [style=none] (11) at (1.5, 6) {};
+        \node [style=none] (12) at (1.5, 4) {};
+        \node [style=none] (13) at (4.5, 6) {};
+        \node [style=none] (14) at (4.5, 2) {};
+        \node [style=none] (17) at (-5, -6) {};
+        \node [style=none] (18) at (6, -6) {};
+        \node [style=none] (22) at (0, -4) {};
+        \node [style=none] (23) at (3, -4) {};
+        \node [style=none] (24) at (6, -2) {};
+        \node [style=none] (29) at (3, -2) {};
+        \draw (0.center) to node [auto] {$a$} (8.center);
+        \draw (8.center) to (2.center);
+        \draw (2.center) to node [auto] {$b$}  (3.center);
+        \draw (3.center) to (4.center);
+        \draw (4.center) to (5.center);
+        \draw (5.center) to (6.center);
+        \draw (6.center) to (7.center);
+        \draw (0.center) to (7.center);
+        \draw (8.center) to node [auto] {$a$} (17.center);
+        \draw (17.center) to (18.center);
+        \draw (2.center) to  node [auto] {$b$} (22.center);
+        \draw (22.center) to (23.center);
+        \draw (23.center) to (29.center);
+        \draw (29.center) to (24.center);
+        \draw (24.center) to (18.center);
+\end{tikzpicture}
+\end{center}
+</pre>
+    <p class='mb-3'>
+      Some questions related to rectangular billiards:
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Question 1:</strong> Given a random starting point and direction, what proportion of the total region is traversed? Will the trajectory entire a given region? How long does the billiard spend in any given region?
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Theorem:</strong> The percentage of time spent in a given region is equal to the proportion of its area to the total area.
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      This requires some ergodic theory.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      <strong>Question 2:</strong> If you shine a laser from a given spot, is the entire region illuminated?
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Theorem:</strong> No! There is a counterexample with 18 sides. Moreover, no positive-area region can be avoided, but certain finite sets can.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Definition:</strong> A <em>flat surface</em> is a generalization of translation surfaces that now allows gluing by any isometry of <span class='math inline'>\({\mathbb{R}}^2\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      <em>Example:</em> A cube in <span class='math inline'>\({\mathbb{R}}^3\)</span> is a flat surface, noting that the planar gluing diagram for it now requires rotations of <span class='math inline'>\(\pi/2\)</span> radians:
+    </p>
+  
+    <p class='mb-3'>
+      <img src='figures/2020-01-11-22:16.png' alt='Image' />\
+    </p>
+  
+    <p class='mb-3'>
+      Note that we can form higher genus surfaces using polygon gluing:
+    </p>
+  <pre class='pandoc-raw-"tex"'>\begin{center}
+\begin{tikzpicture}[
+    none/.style={fill=black,shape=circle,scale=0.5},
+    dashed/.style={text opacity=0,opacity=0,fill opacity=0}
+]
+        \node[style=none] (0) at (-0.75, 2.5) {};
+        \node [style=none] (1) at (0.75, 2.5) {};
+        \node [style=none] (2) at (-1.75, 1.25) {};
+        \node [style=none] (3) at (1.75, 1.25) {};
+        \node [style=none] (4) at (-1.75, -0.25) {};
+        \node [style=none] (5) at (1.75, -0.25) {};
+        \node [style=none] (6) at (-0.75, -1.5) {};
+        \node [style=none] (7) at (0.75, -1.5) {};
+        \node [style=none] (8) at (-1.75, 1.25) {};
+        \draw (0.center) to node [auto] {$d$}  (8.center);
+        \draw (8.center) to node [auto] {$a$}  (4.center);
+        \draw (4.center) to node [auto] {$b$}  (6.center);
+        \draw (6.center) to node [auto] {$c$}  (7.center);
+        \draw (7.center) to node [auto] {$d$}  (5.center);
+        \draw (5.center) to node [auto] {$a$}  (3.center);
+        \draw (3.center) to node [auto] {$b$}  (1.center);
+        \draw (1.center) to node [auto] {$c$}  (0.center);
+\end{tikzpicture}
+\end{center}
+</pre>
+    <p class='mb-3'>
+      <strong>Exercise:</strong> Check that there is only one vertex in this polygon.
+    </p>
+  
+    <p class='mb-3'>
+      In general, the vertices may have total angle greater than <span class='math inline'>\(2\pi n\)</span>. We refer to these as <em>cone points</em>, and the total angle as the <em>cone angle</em>.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Exercise:</strong> Check that the cone angle in the above example is <span class='math inline'>\(6\pi\)</span> by taking a loop around the cone point.
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Note on a weird phenomenon: it seems difficult to find <span class='math inline'>\({\mathbb{Z}}^2\)</span> or <span class='math inline'>\({\mathbb{Q}}^2\)</span> points on the sloped edges of a regular polygon, based on computer drawings.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      <em>Remark:</em> This flat surface admits charts to <span class='math inline'>\({\mathbb{C}}\)</span> with the following transition functions. Let <span class='math inline'>\(P\)</span> denote the single cone point.
+    </p>
+  
+    <p class='mb-3'>
+      Then there is a 3-fold cover give by the following space, thought of as a singular helical
+    </p>
+  <pre class='pandoc-raw-"tex"'>\begin{center}
+\begin{tikzpicture}[
+    none/.style={fill=black,shape=circle,scale=0.5},
+    dashed/.style={text opacity=0,opacity=0,fill opacity=0}
+]
+    \draw (0, 0) circle (3cm);
+    \node [style=none, label=P] (0) at (0, 0) {};
+    \node [style=none] (1) at (3, 0) {};
+    \draw (0.center) to node [above] {$C$} node [below] {$A$} (1.center);
+
+    \draw (0, -7) circle (3cm);
+    \node [style=none, label=P] (0) at (0, -7) {};
+    \node [style=none] (1) at (3, -7) {};
+    \draw (0.center) to node [above] {$A$} node [below] {$B$} (1.center);
+
+    \draw (0, -14) circle (3cm);
+    \node [style=none, label=P] (0) at (0, -14) {};
+    \node [style=none] (1) at (3, -14) {};
+    \draw (0.center) to node [above] {$B$} node [below] {$C$} (1.center);
+
+\end{tikzpicture}
+\end{center}
+</pre>
+    <p class='mb-3'>
+      which maps onto the unit disc in <span class='math inline'>\({\mathbb{C}}\)</span>:
+    </p>
+  <pre class='pandoc-raw-"tex"'>\begin{center}
+\begin{tikzpicture}[
+    none/.style={fill=black,shape=circle,scale=0.5},
+    dashed/.style={text opacity=0,opacity=0,fill opacity=0}
+]
+    \draw (0, 0) circle (3cm);
+
+    \node [style=none, label=P] (P) at (0, 0) {};
+    \node [style=none] (u1) at  ({1*360/3}: 3cm){};
+    \node [style=none] (u2) at  ({2*360/3}: 3cm){};
+    \node [style=none] (u3) at  ({3*360/3}: 3cm){};
+
+    \draw (P) to (u1);
+    \draw (P) to (u2);
+    \draw (P) to (u3);
+
+    \node [label=1] (u1) at  ({1*360/6}: 1.5cm){};  
+    \node [label=2] (u1) at  ({3*360/6}: 1.5cm){};
+    \node [label=3] (u1) at  ({5*360/6}: 1.5cm){};
+
+\end{tikzpicture}
+\end{center}
+</pre>
+    <p class='mb-3'>
+      The covering map from the former to the latter is given by <span class='math inline'>\(z\mapsto z^{\frac 1 3}\)</span>, which coincides with the fact that the cone angle at <span class='math inline'>\(P\)</span> is <span class='math inline'>\(3(2\pi) = 6\pi\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      One can also imagine this space in <span class='math inline'>\({\mathbb{R}}^3\)</span> with a projection onto the plane: <pre class='pandoc-raw-"tex"'>\pgfplotsset{compat=1.16,width=10cm,height=14cm}</pre>
+    </p>
+  <pre class='pandoc-raw-"tex"'>\begin{center}
+\begin{tikzpicture}
+\begin{axis}[trig format plots=rad,
+        view={-40}{6*pi},
+        colormap={adopted}{
+            rgb255(0cm)=(219,0,70);
+        rgb255(1cm)=(55,70,170);
+            rgb255(2cm)=(219,0,70)
+        },
+        z buffer=sort,
+        zmin=0]
+\addplot3 [surf,domain=0.001:4,domain y=-pi/2:6*pi-pi/2,samples=25,samples y=40]
+({x*cos(y)},{x*sin(y)},{ln(x)+y});
+\end{axis}
+\end{tikzpicture}
+\end{center}
+</pre>
+    <p class='mb-3'>
+      Here the helicoid goes through three full twists, where the top and bottom pieces are identified.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Proposition:</strong> In a neighborhood of a cone point <span class='math inline'>\(P\)</span> with cone angle <span class='math inline'>\(2\pi n\)</span>, the map <span class='math inline'>\(z\mapsto z^{\frac 1 n}\)</span> will be a local chart for any <span class='math inline'>\(z\)</span> in a neighborhood of <span class='math inline'>\(P\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      This gives the resulting surface the structure of a <em>Riemann surface</em>, i.e. a surface admitting charts to <span class='math inline'>\({\mathbb{C}}\)</span> with holomorphic transition functions.
+    </p>
+  
+    <p class='mb-3'>
+      Let <span class='math inline'>\(X\)</span> be a Riemann surface, we can look at the <em>canonical bundle</em> over <span class='math inline'>\(X\)</span> with sections that are compatible collections of <span class='math inline'>\(f_u(z_u) ~dz_u\)</span> for each chart <span class='math inline'>\(z_u\)</span>, and for each such chart a holomorphic function <span class='math inline'>\(f_u(z_u)\)</span> on <span class='math inline'>\(z_u(U)\)</span> where on overlaps
+    </p>
+  
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+f_u(z_u) ~dz_u &= f_v(z_v) ~dz_v \\
+&= f_v(z_v \circ z_u) z_v'(z_u) ~dz_u
+.\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Updated Definition:</strong> A <em>translation surface</em> is a Riemann surface with a section of its canonical bundle.
+    </p>
+  
+    <p class='mb-3'>
+      <em>Example:</em> <span class='math inline'>\(C/\Lambda\)</span> for <span class='math inline'>\(\Lambda\)</span> any rank-2 lattice:
+    </p>
+  
+    <p class='mb-3'>
+      <img src='figures/2020-01-11-23:35.png' alt='Image' />
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Note that the translation here is given by <span class='math inline'>\(\mathbf{\lambda}\)</span>.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      <strong>Definition:</strong> A holomorphic 1-form is a section of the canonical bundle.
+    </p>
+  
+    <p class='mb-3'>
+      <em>Example:</em> For the above surface, we have <span class='math inline'>\(z_v = z_u + \mathbf{\lambda}\)</span> and thus <span class='math inline'>\(dz_u = dz_v\)</span> is nonvanishing.
+    </p>
+  
+    <p class='mb-3'>
+      Note that <span class='math inline'>\(dz\)</span> is a holomorphic 1-form on the complement of the vertex/vertices of the polygon.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Proposition:</strong> <span class='math inline'>\(dz\)</span> extends holomorphically to charts containing cone points with cone angle <span class='math inline'>\(2\pi n\)</span> and has a zero of order <span class='math inline'>\(n-1\)</span> at such cone points.
+    </p>
+  
+    <p class='mb-3'>
+      <em>Example:</em> For the chart <span class='math inline'>\(z=w^3\)</span> where <span class='math inline'>\(w\)</span> is the local coordinate, we have <span class='math inline'>\(dz = 3w^2\)</span>, yielding a zero of order 2.
+    </p>
+  <h1 id='thursday-january-16th' class='pb-2 mb-2 text-5xl font-bold text-center'>Thursday January 16th</h1><h2 id='correspondence' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Correspondence</h2>
+    <p class='mb-3'>
+      <strong>Recall:</strong> Start with a translation surface with cone points with angles <span class='math inline'>\(2\pi n i\)</span>. This yields a Riemann surface <span class='math inline'>\(\Sigma\)</span> and a holomorphic <span class='math inline'>\(1{\hbox{-}}\)</span>form <span class='math inline'>\(\omega\)</span> with zeros of order <span class='math inline'>\(n_i -1\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      Given a square fundamental domain, there is an order 4 automorphism given by rotating 90 degrees. In charts, this is multiplication by <span class='math inline'>\(i\)</span> and possibly a translation, which is a holomorphic map <span class='math inline'>\(f: \Sigma {\circlearrowleft}\)</span>. We then have <span class='math inline'>\(f^*(dz) = d(f(z)) = idz\)</span>, so <span class='math inline'>\(dz\)</span> is an eigenvector for <span class='math inline'>\(f^*\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      An elliptic curve can be specified by <span class='math inline'>\(y^2 = f_4(x)\)</span> for a degree 4 polynomial, so we can obtain it as a double branched cover of <span class='math inline'>\(S^2\)</span>. (i.e. glue along the slits joining pairs of roots)
+    </p>
+  
+    <p class='mb-3'>
+      <img src='figures/2020-01-22-21:56.png' alt='Image' />\
+    </p>
+  
+    <p class='mb-3'>
+      Take <span class='math inline'>\(E : y^2 = x^4 - 1\)</span>, this is the only elliptic curve with an order 4 automorphism. In coordinates, this is generated by <span class='math inline'>\((x, y) \mapsto (-ix ,y)\)</span>. So <span class='math inline'>\(\omega = c \frac{dx}{y}\)</span>, i.e. <span class='math inline'>\(dx/y\)</span> up to scaling, and <span class='math inline'>\(f^*(dx/y) = i \frac{dx}{y}\)</span>. What is the constant <span class='math inline'>\(c\)</span>?
+    </p>
+  
+    <p class='mb-3'>
+      Take closed cycles on <span class='math inline'>\(E\)</span> given by <span class='math inline'>\(\alpha, \beta\)</span> (see diagram), then by FTC <span class='math inline'>\(\int_\alpha \omega = z \mathrel{\Big|}_0^1 = 1\)</span>. Negation is 4 fixed points on the elliptic curve, the 2-torsion points.
+    </p>
+  
+    <p class='mb-3'>
+      <img src='figures/2020-01-22-21:55.png' alt='Image' />\
+    </p>
+  
+    <p class='mb-3'>
+      <img src='figures/2020-01-22-21:57.png' alt='Image' />\
+    </p>
+  
+    <p class='mb-3'>
+      We can then compute
+    </p>
+  
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+I = \int_\alpha  \frac{dx}{y} = \int_1^2 \frac{dx}{\sqrt{x^4 - 1}} 
+.\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      and since <span class='math inline'>\(2c I = 1\)</span>, this uniquely determines <span class='math inline'>\(c\)</span>.
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Note that this can be numerically evaluated, but this is an elliptic integral with (possibly) no elementary antiderivative.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      Consider the decagon with sides identified. We get a complex structure <span class='math inline'>\((\Sigma, \omega)\)</span> with cone angles <span class='math inline'>\(4\pi\)</span> and <span class='math inline'>\(dz\)</span> has 2 zeros of order 1 (namely the two cone points).
+    </p>
+  
+    <p class='mb-3'>
+      <img src='figures/2020-01-22-21:58.png' alt='Image' />\
+    </p>
+  
+    <p class='mb-3'>
+      What is the genus? The degree of the canonical bundle is <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+g(\Sigma) = \deg K_\Sigma = 2g - 2 = \sum_{p\in \Sigma}{\operatorname{Ord}}_p \omega
+\end{align*}
+<span></span> and thus <span class='math inline'>\(g = 2\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Fact:</strong> Every genus 2 curve is a double branched cover of <span class='math inline'>\({\mathbb{P}}^1\)</span> branched over 6 points.
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Use Riemann-Roch.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      Consider automorphisms that preserve the decagon. Rotation by <span class='math inline'>\(\pi/10\)</span> swaps the two cone points, to take rotation by <span class='math inline'>\(-2\pi/5\)</span> (inserting the negative to account for pullbacks). Then <span class='math inline'>\(f^* \omega = \zeta_5 \omega\)</span>, where again we just write locally <span class='math inline'>\(z \xrightarrow{f} \zeta_5^{-1}+ c \implies f^* dz = \zeta_5 dz\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      Consider points of order <span class='math inline'>\(5\)</span> on <span class='math inline'>\({\mathbb{P}}^1\)</span>, we can take <span class='math inline'>\(\zeta_5^k\)</span> and <span class='math inline'>\(\infty\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      <img src='figures/2020-01-22-21:58.png' alt='Image' />\
+    </p>
+  
+    <p class='mb-3'>
+      This corresponds to the curves <span class='math inline'>\(y^2 = x^5 - 1\)</span>, with an automorphism <span class='math inline'>\((x, y) \mapsto (\zeta_5 x, y)\)</span>. This is the only genus 2 curve with an order 5 automorphism.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Fact:</strong> The space of sections of the canonical <span class='math inline'>\(H^0(K_{\mathcal E}) = {\mathbb{C}}^g\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      We can write a basis for the space of 1-forms: <span class='math inline'>\(\frac{dx}{y}\)</span> and <span class='math inline'>\((1-x) \frac{dx}{y}\)</span>. Alternatively, <span class='math inline'>\(\omega = (a+bx) \frac{dx}{y}\)</span> where <span class='math inline'>\(a, b \in {\mathbb{C}}\)</span>. What are the zeros of <span class='math inline'>\(\omega\)</span>? <span class='math inline'>\(V(\omega) = V(a + bx)\)</span> where if <span class='math inline'>\(b=0\)</span> it’s <span class='math inline'>\(\infty\)</span>. Because this has to preserve the order 5 symmetric and map cone points to themselves, this forces <span class='math inline'>\(\omega = bx \frac{dx}{y}\)</span>, which has exactly two zeros: <span class='math inline'>\((x, y) = (0, \pm i)\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      We can also consider the doubled pentagon, which has only one point. This has an automorphism given by rotating each pentagon by <span class='math inline'>\(1/5\)</span>, it has cone angle <span class='math inline'>\(6\pi\)</span>, and <span class='math inline'>\(\omega\)</span> has a double zero at the cone point. Since there is only <em>one</em> genus 2 curve with order 5 automorphisms, this yields the previous Riemann surface but a distinct translation surface and a distinct form.
+    </p>
+  
+    <p class='mb-3'>
+      We can write <span class='math inline'>\(\alpha = a \frac{dx}{y}\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Proposition:</strong> One Riemann surface has many translation structures, and the space of such structures is the space of 1-forms.
+    </p>
+  
+    <p class='mb-3'>
+      <em>Proof:</em> Pick a chart <span class='math inline'>\(w: U \to {\mathbb{C}}\)</span> avoiding the zeros of <span class='math inline'>\(\omega\)</span>. Then <span class='math inline'>\(\omega = f(z) ~dz\)</span> in this chart, and we want to compose with a biholomorphism <span class='math inline'>\(x\)</span> to obtain a new chart <span class='math inline'>\(z\)</span> such that <span class='math inline'>\(\omega = dz\)</span> in this chart. We can solve <span class='math inline'>\(dz = e = f(w) ~dw\)</span> and <span class='math inline'>\(\frac{dz}{dw} = f(w)\)</span> and by integrating we get <span class='math inline'>\(z(w) = \int_{p_0}^w f(w_0) dw_0\)</span>. In this chart, <span class='math inline'>\(\omega = dz\)</span>, and we can correct near zeros by finding charts such that <span class='math inline'>\(\omega = z^n dz\)</span> where <span class='math inline'>\(n\)</span> is the order of the zero.
+    </p>
+  
+    <p class='mb-3'>
+      <img src='figures/2020-01-22-21:59.png' alt='Image' />\
+    </p>
+  
+    <p class='mb-3'>
+      What does this buy us? We get a translation structure by considering transitions, and <span class='math inline'>\(\omega = dz_1 = dz_2 \implies z_1 = z_2 + c\)</span>, which is exactly a translation structure. Thus every <span class='math inline'>\((\Sigma, \omega)\)</span> has a translation structure for which <span class='math inline'>\(\omega = dz\)</span> in local polygonal charts.
+    </p>
+  
+    <p class='mb-3'>
+      <img src='figures/2020-01-22-22:00.png' alt='Image' />\
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Theorem:</strong> There is a bijection
+    </p>
+  
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+\left\{{\substack{\text{Translation surfaces with cone angles $2\pi n i$ }}}\right\} \iff
+\left\{{\substack{\text{$(\Sigma, \omega)$ a Riemann surface with holomorphic}\\ \text{1-forms with zeros of order $n_i - 1$}}}\right\}
+.\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      What do half-translations correspond to? Note that <span class='math inline'>\(dz \mapsto -dz\)</span>, so we don’t get a well-defined holomorphic 1-form.
+    </p>
+  
+    <p class='mb-3'>
+      <img src='figures/2020-01-22-22:01.png' alt='Image' />\
+    </p>
+  
+    <p class='mb-3'>
+      The fix? <span class='math inline'>\((dz)^2\)</span> is some well-defined object. What is it?
+    </p>
+  
+    <p class='mb-3'>
+      The set <span class='math inline'>\(\left\{{f(z) (dz)^2 = g(w)(dw)^2}\right\}\)</span> corresponds with line bundles with transition functions given by <span class='math inline'>\((dz/dw)^2\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      Thus the correspondence is
+    </p>
+  
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+\left\{{\substack{\text{Half translation surfaces with cone angle $\pi n_i$}}}\right\}
+\iff
+\left\{{\substack{\text{Riemann surfaces with $q$ a section of $K_\Sigma^{\otimes 2}$ }}}\right\}
+.\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      I.e., these correspond with sections of the second tensor power of the canonical bundle of <span class='math inline'>\(\Sigma\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      A defining property of <span class='math inline'>\(q = (dz)^2\)</span> for half-translation charts <span class='math inline'>\(z\)</span>: we can measure the order of the zero by going to charts, finding a chart to <span class='math inline'>\({\mathbb{C}}\)</span> (see image) e.g. <span class='math inline'>\(w = z^{2/3}\)</span>, and then defining <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+\omega = dz = d(w^{3/2}) = 3/2 w^{1/2} dw
+\end{align*}
+<span></span>
+    </p>
+  
+    <p class='mb-3'>
+      Then <span class='math inline'>\(q = w^2 = (dz)^2\)</span> is well-defined and equal to <span class='math inline'>\(\frac{9}{4} w (dw)^2\)</span> in the local chart <span class='math inline'>\(w\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      In this case, we get points that are <em>poles</em> of order 1 for the quadratic differential (sections of <span class='math inline'>\(K^{\otimes 2})\)</span>.
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Note: 1-forms are referred to as “abelian differentials” in the literature.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      We know that <span class='math inline'>\(K_{{\mathbb{P}}^1} = \mathcal O(-2)\)</span> and <span class='math inline'>\(K_{{\mathbb{P}}^1}^{\otimes 2} = \mathcal O(-4)\)</span>.
+    </p>
+  <h2 id='moduli-spaces' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Moduli Spaces</h2>
+    <p class='mb-3'>
+      <strong>Definition:</strong> <span class='math inline'>\(\mathcal{H}(k_1, \cdots, k_n) = \left\{{ \Sigma \text{ with abelian differential} \operatorname{Div}\omega = \sum k p_i}\right\}\)</span> where the <span class='math inline'>\(k_i\)</span> record the orders of zeros of <span class='math inline'>\(\omega\)</span>.
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Second condition on divisor records zeros.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      Similarly, define <span class='math inline'>\(Q(k_1, \cdots, k_n) = \left\{{\cdots {~\mathrel{\Big|}~}\text{quadratic differential}}\right\}\)</span> where now <span class='math inline'>\(k_i \geq -1, \neq 0\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      These moduli spaces are called <em>strata of abelian/quadratic differentials</em>.
+    </p>
+  
+    <p class='mb-3'>
+      Consider <span class='math inline'>\(M_g\)</span>, the moduli space of genus <span class='math inline'>\(g\)</span> surfaces. There is a vector bundle (the Hodge bundle) over <span class='math inline'>\(M_g\)</span> where the fiber over <span class='math inline'>\([c]\)</span> is <span class='math inline'>\(H^0(K_C)\)</span> with strata given by <span class='math inline'>\(Q\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      This is a bundle of rank <span class='math inline'>\(g\)</span>, and by Riemann-Roch, ? <span class='math inline'>\(3g-3\)</span> and is the (co?)tangent bundle of something.
+    </p>
+  
+    <p class='mb-3'>
+      There is an <span class='math inline'>\({\operatorname{SL}}(2, {\mathbb{R}})\)</span> action on any stratum. How to define – use isomorphism with translation structures (see image) by just applying any such form <span class='math inline'>\(\gamma\)</span> to the entire plane and gluing polygons in the same way. This gives a non-holomorphic action on any stratum.
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Next time: to special case of square tiled surfaces.
+    </p>
+  
+    </blockquote>
+  <h1 id='thursday-january-23rd' class='pb-2 mb-2 text-5xl font-bold text-center'>Thursday January 23rd</h1><h2 id='counting-square-tiled-surfaces' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Counting Square Tiled Surfaces</h2>
+    <p class='mb-3'>
+      Square tiled surfaces in <span class='math inline'>\({\mathcal{H}}(k)\)</span> with <span class='math inline'>\(d\)</span> squares correspond to degree <span class='math inline'>\(d\)</span> branched covers of the identification square, branched over the origin, with profile (?).
+    </p>
+  
+    <p class='mb-3'>
+      To count square-tiled surfaces: label squares, look at inverse images of <span class='math inline'>\(\ast\)</span> by <span class='math inline'>\(\left\{{1 ,\cdots, d}\right\}\)</span>. Consider the monodromy representation <span class='math inline'>\(\rho: \pi_1( {\mathbb{T}}\setminus \left\{{0}\right\}, \ast ) \to S_d\)</span> where <span class='math inline'>\(\sigma = \rho(\alpha) = (1)(23)\)</span> and <span class='math inline'>\(\tau = \rho(\beta) = (12)(3)\)</span>. We compute ramification orders by considering the commutators <span class='math inline'>\([\alpha, \beta]\)</span>. Then <span class='math inline'>\(\rho([\alpha, \beta] )\)</span> has cycle type <span class='math inline'>\((1, 1, \cdots 1, 1+k, \cdots, 1+ k_n)\)</span>. Note that <span class='math inline'>\([(23), (12)]\)</span> is a 3 cycle.
+    </p>
+  
+    <p class='mb-3'>
+      <img src='figures/2020-01-23-14:32.png' alt='Image' />\
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Conclusion:</strong> The number of square-tiled surfaces in <span class='math inline'>\({\mathcal{H}}(k)\)</span> with <span class='math inline'>\(d\)</span> squares is exactly <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+\frac{1}{d!} {\left\lvert {\left\{{\sigma, \tau \in S_d {~\mathrel{\Big|}~}[\sigma, \tau] \in C_{1, \cdots, 1, 1+k, \cdots, 1+ k_n}}\right\}} \right\rvert}
+.\end{align*}
+<span></span>
+    </p>
+  
+    <p class='mb-3'>
+      Note that the division is due to the artificial labeling of squares.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Main theorem from “Branched Covers of Torus” Paper:</strong> The generating function <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+f_\kappa(q)\coloneqq\sum_{d\geq 1} \#\left\{{\text{Square tiled, $d$ squares in ${\mathcal{H}}(k)$}}\right\} q^d
+\end{align*}
+<span></span> is a <strong>modular form</strong>.
+    </p>
+  
+    <p class='mb-3'>
+      Follows from taking <span class='math inline'>\(q = e^{2\pi i \tau}\)</span> which is holomorphic on <span class='math inline'>\({\mathbb{H}}\)</span> the upper half-plane, satisfying a transformation rule with respect to <span class='math inline'>\(\tau \mapsto -1/\tau\)</span>, which is a finite-dimensional space.
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Actual: quasimodular mixed form.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      The weights are bounded by <span class='math inline'>\({\left\lvert {\kappa } \right\rvert}+ \ell(\kappa)\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      Concretely, <span class='math inline'>\(f_\kappa \in {\mathbb{Q}}[E_2, E_4, E_8]\)</span> where <span class='math inline'>\(E_k(q) = \text{const} + \sum_{d \geq 1} \sigma_{k-1}(d) q^d\)</span>, where <span class='math inline'>\(\sigma_{k-1}(d) = \sum_{e\mathrel{\Big|}d} e^{k-1}\)</span>. This is the ring of quasimodular forms.
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\(1\)</span> is weight 0,
+        </li>
+      
+        <li>
+          <span class='math inline'>\(E_2\)</span> is weight 2,
+        </li>
+      
+        <li>
+          <span class='math inline'>\(E_2^2, E_4\)</span> are weight 4,
+        </li>
+      
+        <li>
+          <span class='math inline'>\(E_2^3, E_2 E_4, E_6\)</span> are weight 6, etc
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      <em>Example:</em> Take <span class='math inline'>\(\kappa = \left\{{2}\right\} \iff {\mathcal{H}}(2)\)</span>, then <span class='math inline'>\({\left\lvert {\kappa } \right\rvert}+ \ell(\kappa) = 3\)</span> and <span class='math inline'>\(f_{\left\{{z}\right\}}(q) = c_1 + c_2 E_2(q)\)</span>. In this case <span class='math inline'>\([q^1] = [q^2] = 0\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      Note that surfaces in <span class='math inline'>\({\mathcal{H}}(2)\)</span> have 1 vertex of cone angle <span class='math inline'>\(6\pi\)</span> and all others of angle <span class='math inline'>\(2\pi\)</span>, corresponding to an abelian differential with a single zero of order 2.
+    </p>
+  
+    <p class='mb-3'>
+      A special type of square-tiled surfaces: 1 cylinder surfaces, where <span class='math inline'>\(\rho(\alpha)\)</span> is a full length cycle.
+    </p>
+  
+    <p class='mb-3'>
+      This is in <span class='math inline'>\({\mathcal{H}}(3, 1)\)</span>, and corresponding surface <span class='math inline'>\((\Sigma, \omega)\)</span>, which is a holomorphic 1-form with a triple zero and a single zero. By Riemann-Hurwitz, <span class='math inline'>\(2g-2 = \deg \omega = 3+1 \implies g = 3\)</span>.
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Note: the genus here difficult to compute otherwise!
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      <strong>Main Result of 1-Cylinder Surface Paper:</strong> 1-cylinder surfaces have roughly a <span class='math inline'>\(1/d\)</span> proportion in all square tiled surfaces, where <span class='math inline'>\(d = \dim {\mathcal{H}}(\kappa)\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      Recall that we can get a square tiled surface from any unicursal curve:
+    </p>
+  
+    <p class='mb-3'>
+      <img src='figures/2020-01-23-14:41.png' alt='Image' />\
+    </p>
+  
+    <p class='mb-3'>
+      Note that these aren’t always translation surfaces:
+    </p>
+  
+    <p class='mb-3'>
+      <img src='figures/2020-01-23-14:43.png' alt='Image' />\
+    </p>
+  
+    <p class='mb-3'>
+      This has transition maps that looks like <span class='math inline'>\(z \mapsto i^k z + z_0 = w\)</span> and thus <span class='math inline'>\(dz = i^k dw\)</span>, so <span class='math inline'>\(dz^k\)</span> is the well-defined object here.
+    </p>
+  
+    <p class='mb-3'>
+      Recall
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          <span class='math inline'>\((\Sigma, dz) \iff\)</span> translation surfaces
+        </li>
+      
+        <li>
+          <span class='math inline'>\((\Sigma, (dz)^2) \iff \frac 1 2 {\hbox{-}}\)</span>translation surfaces
+        </li>
+      
+        <li>
+          <span class='math inline'>\((\Sigma, (dz)^4) \iff \frac 1 4{\hbox{-}}\)</span>translation surfaces
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          I.e. a Riemann surface with a section of <span class='math inline'>\(K_{\varepsilon}^{\otimes 4}\)</span>.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      Can consider a <em>tricursal</em> curve instead (a curve that requires lifting the pen 3 times). Taking the dual complex yields a cube.
+    </p>
+  
+    <p class='mb-3'>
+      <img src='figures/2020-01-23-14:52.png' alt='Image' />\
+    </p>
+  
+    <p class='mb-3'>
+      This has charts <span class='math inline'>\(w = z^{4/3}\)</span> and thus <span class='math inline'>\((dz)^4 = w^{-1}(dw)^4\)</span>. Let <span class='math inline'>\({\mathcal{H}}(\kappa)\)</span> be the quartic differentials with <span class='math inline'>\(dv \omega = \sigma \kappa_i p_i\)</span>. Then the cube is in <span class='math inline'>\({\mathcal{H}}_4(-1, \cdots -1)\)</span> with <span class='math inline'>\(8\)</span> copies of <span class='math inline'>\(-1\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      This gives cone angles <span class='math inline'>\(n \frac{2\pi}{4}\)</span> and the order of the zero/pole is <span class='math inline'>\(n-4\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      This example is in <span class='math inline'>\({\mathcal{H}}_4(-3, -3, -2)\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Proposition:</strong> The generating functions for square-tiled surfaces <span class='math inline'>\({\mathcal{H}}_4(\kappa)\)</span> is now a quasimodular form for <span class='math inline'>\(\Gamma_1(4)\)</span>.
+    </p>
+  <h2 id='open-questions' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Open Questions</h2>
+    <p class='mb-3'>
+      <strong>Question (can find numerical evidence?):</strong> How can we count these in terms of the symmetric group? Analogous result to proportion result earlier? Can try to lift square example, but admits no map from a torus – instead, quotient square by <span class='math inline'>\({\mathbb{Z}}/4{\mathbb{Z}}\)</span> and take fundamental domain. What kind of branching do these covers have?
+    </p>
+  
+    <p class='mb-3'>
+      Every center of a square is branched of order 4. Every center of an edge is branched of order 2. The ramification order of a vertex is its valence, divided by the number of squares meeting at that vertex. The degree of the covering map is <span class='math inline'>\(4n\)</span> where <span class='math inline'>\(n\)</span> is the number of squares.
+    </p>
+  
+    <p class='mb-3'>
+      Identify the fundamental domain with <span class='math inline'>\({\mathbb{P}}^1\)</span>, We get a monodromy representation:
+    </p>
+  
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+\rho: \pi_1({\mathbb{P}}^1 \setminus(0, 1,\infty), \ast) \to S_{4d} \\
+\gamma_0 \mapsto \rho(\gamma_0)
+.\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      Note that <span class='math inline'>\(\gamma_0 \gamma_1 \gamma_\infty = 1\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      <img src='figures/2020-01-23-15:13.png' alt='Image' />\
+    </p>
+  
+    <p class='mb-3'>
+      It then follows that this has cycle type <span class='math inline'>\((4, \cdots ,4)\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      So the number of square tiled surfaces in <span class='math inline'>\({\mathcal{H}}_4(\kappa)\)</span> is given by
+    </p>
+  
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+\frac{1}{(4d)!} = \# \left\{{ (\sigma_0, \sigma_1, \sigma_\infty) {~\mathrel{\Big|}~}\sigma_0 \in C_{4, \cdots, 4} (d), \sigma_1 \in C_{2, \cdots ,2} (2d), \sigma_{\infty} \in C_{4, \cdots ,4, 4+k, \cdots, 4 + k_n}, \sigma_0 \sigma_1 \sigma_\infty = 1}\right\}
+.\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      Would be nice to figure out what the proportionality constant here is.
+    </p>
+  <h1 id='bens-talk-eskins-ramified-coverings-of-a-torus' class='pb-2 mb-2 text-5xl font-bold text-center'>Ben’s Talk: Eskin’s Ramified Coverings of a Torus</h1>
+    <p class='mb-3'>
+      Today: Section 2. Main theorem: a certain generating function is quasimodular.
+    </p>
+  
+    <p class='mb-3'>
+      Consider a torus <span class='math inline'>\(T\)</span> with marked points <span class='math inline'>\(Z = \left\{{z_1, \cdots z_s}\right\}\)</span> with a map <span class='math inline'>\(\sigma: \Sigma \to T\)</span> which is <em>unramified</em> outside of <span class='math inline'>\(Z\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      <img src='figures/2020-01-30-14:04.png' alt='Image' />
+    </p>
+  
+    <p class='mb-3'>
+      Then <span class='math inline'>\(\sigma\)</span> is determined by the representation <span class='math inline'>\(\pi_1(T\setminus Z, \ast) \to \mathop{\mathrm{Aut}}(\sigma^{-1}(\ast)) \cong S_d\)</span> if <span class='math inline'>\(\sigma\)</span> is a degree <span class='math inline'>\(d\)</span> cover. There is a correspondence
+    </p>
+  
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+\left\{{\substack{\text{d-fold covers ramified over } \left\{{z_i}\right\}}}\right\} 
+\iff
+\hom(\pi_1(T\setminus Z, \ast), S_d)
+.\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      Fix <span class='math inline'>\(C_1, \cdots, C_s\)</span> conjugacy classes in <span class='math inline'>\(S_d\)</span>, and let <span class='math inline'>\(H_d(C_1, \cdots, C_s)\)</span> be the homomorphisms sending small loops around <span class='math inline'>\(z_i\)</span> to <span class='math inline'>\(C_i\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      <img src='figures/2020-01-30-14:09.png' alt='Image' />\
+    </p>
+  
+    <p class='mb-3'>
+      Then cycle types correspond to branching orders over points.
+    </p>
+  
+    <p class='mb-3'>
+      One way to count d-fold covers is to look at the weights of <span class='math inline'>\(\mathop{\mathrm{Aut}}(\sigma)\)</span>. We define
+    </p>
+  
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+\mathrm{Cov}_d (C_1, \cdots, C_s) = \sum_{\sigma \in H_d(C_i) / S(d)} \frac{1}{{\left\lvert {\mathop{\mathrm{Aut}}(\sigma)} \right\rvert}} = \frac{{\left\lvert {H^d(C_1, \cdots, C_2)} \right\rvert}}{d!}
+.\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      This just yields a number, so we can define a generating function:
+    </p>
+  
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+\mathrm{Cov}(C_1, \cdots, C_s) = \sum_{d=0}^\infty q^d \mathrm{Cov}_d(C_1, \cdots, C_s)
+.\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Important note:</strong> To make sense of <span class='math inline'>\(C_i\)</span> in all <span class='math inline'>\(S^d\)</span>, write <span class='math inline'>\(C_i = (m_{i1}, \cdots , m_{ik})\)</span> and set <span class='math inline'>\(\mathrm{Cov}_d(C_i) = 0\)</span> iff <span class='math inline'>\(i_k &lt; d\)</span>, and otherwise pad with 1s to get <span class='math inline'>\(C_i \coloneqq(m_{i1}, \cdots, m_{ik}, 1, 1, \cdots)\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      <em>Remark:</em> The generating function counts all (possibly) disconnected covers. Example: <span class='math inline'>\(\mathrm{Cov}({-})\)</span> counts all unramified covers, and <span class='math inline'>\(\phi(C_1, \cdots C_s)\)</span> counts connected covers. These generating functions will end up being quasimodular.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Definition</strong>: Set <span class='math inline'>\(H_d^1(C_1, \cdots, C_S) \subset H_d(C_1, \cdots, C_S)\)</span> be the degree <span class='math inline'>\(d\)</span> coverings <em>without</em> unramified components.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Definition</strong>: Set <span class='math inline'>\(\mathrm{Cov}'(C_1, \cdots, C_S)= \sum q^d \frac{{\left\lvert {H_d^1(C_1, \cdots, C_s)} \right\rvert}}{d!}\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      This yields the generating function for number of coverings without unramified components.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Lemma</strong>: <span class='math inline'>\(\mathrm{Cov}' (C_1, \cdots, C_S) = \mathrm{Cov}(C_1, \cdots, C_S) / \mathrm{Cov}()\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      <em>Sketch of proof:</em> Look at coefficients in the expansion
+    </p>
+  
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+{\left\lvert {H_d(C_1, \cdots, C_S)} \right\rvert} = \sum_{k=0}^d {d\choose k} {\left\lvert {H_k(C_1, \cdots , C_S)} \right\rvert} \cdot {\left\lvert {H_{d-k}()} \right\rvert}
+.\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      Recall that <span class='math inline'>\(\mathrm{Cov}_d(C_1, \cdots C_S)\)</span> correspond to <span class='math inline'>\(S_d\)</span> representations of <span class='math inline'>\(\pi_1(T\setminus Z)\)</span>, and we can get a presentation <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}\pi_1(T\setminus Z) = \left\langle{\sigma, \gamma, g_i {~\mathrel{\Big|}~}[\omega,\gamma] \prod g_i = e}\right\rangle
+.\end{align*}
+<span></span>
+    </p>
+  
+    <p class='mb-3'>
+      <img src='figures/2020-01-30-14:33.png' alt='Image' />
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      This just comes from doing one full loop around the outside square, which should be equivalent (up to orientation) to going around all 3 punctures.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      <strong>Definition:</strong> Conjugacy classes corresponds to partitions of <span class='math inline'>\(d\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Definition:</strong> For <span class='math inline'>\(C\)</span> a conjugacy class correspond to a partition <span class='math inline'>\(\lambda'\)</span> in <span class='math inline'>\(S_d\)</span>. For any partition <span class='math inline'>\(\lambda\)</span>, let <span class='math inline'>\(f_C(\lambda) = \# C \chi^\lambda(C) / \dim \lambda\)</span>, where <span class='math inline'>\(\chi^\lambda\)</span> is the irreducible representation associated to <span class='math inline'>\(\lambda\)</span> (note that this is a rescaling of a row of the character table, since irreducible reps happen to correspond to conjugacy classes for <span class='math inline'>\(S_d\)</span>). This is a class function, so <span class='math inline'>\(\chi^\lambda(C)\)</span> is its value on any <span class='math inline'>\(c\in C\)</span>, and <span class='math inline'>\(\dim \lambda \coloneqq\chi^\lambda(1)\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Proposition:</strong> <span class='math inline'>\(\mathrm{Cov}_d(C_1, \cdots, C_S) - \sum_{{\left\lvert {\lambda } \right\rvert}= d} \prod_{i=1}^S f_{C_i}(\lambda)\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      <em>Proof:</em> Let <span class='math inline'>\(\prod C_i = \prod \sum_{a_j\in C_i} a_j \in Z({\mathbb{C}}[S_d])\)</span>. Why? Commutating elements reindexes the sum here.
+    </p>
+  
+    <p class='mb-3'>
+      We also have <span class='math inline'>\(\sum_{g, h} [g, h] \prod C_i \in Z({\mathbb{C}}([S_d]))\)</span>, since <span class='math inline'>\([g ,h]^k = [g^k, h^k]\)</span>, which again just reindexes the sum.
+    </p>
+  
+    <p class='mb-3'>
+      We’ll pull out a factor of <span class='math inline'>\(\frac 1 {d!} [\operatorname{id}]\)</span>, and consider what the coefficient of <span class='math inline'>\([\operatorname{id}]\)</span> is in the group algebra.
+    </p>
+  
+    <p class='mb-3'>
+      Thus <span class='math inline'>\(\frac{1}{d!} [\operatorname{id}] = \frac{1}{(d!)^2} {\mathrm{tr}}_{\text{reg}}\qty{ \sum [g, h] \prod C_i }\)</span>, where we consider the regular representation: multiplying by elements of <span class='math inline'>\(g\)</span> is a fixed-point free action, so these are traceless (no terms on the diagonal) whereas the trace of the identity is exactly the dimension of the regular representation, which is <span class='math inline'>\(d!\)</span> (?).
+    </p>
+  
+    <p class='mb-3'>
+      Thus we define <span class='math inline'>\({\mathrm{tr}}_{\text{reg}}({-}) = \sum_{\lambda} (\dim \lambda) {\mathrm{tr}}_\lambda({-})\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      Note that <span class='math inline'>\(\rho: S_d \to \operatorname{GL}(V)\)</span> extends to <span class='math inline'>\(\rho: {\mathbb{C}}[S_d] \to \endo(V)\)</span>, and thus by Schur’s Lemma, the image of the center will commute with every endomorphism.
+    </p>
+  
+    <p class='mb-3'>
+      We get a formula:
+    </p>
+  
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+\frac{[\operatorname{id}]}{d!} 
+&= \frac{1}{(d!)^2} \sum_{{\left\lvert {\lambda } \right\rvert}= d} \dim \lambda {\mathrm{tr}}_{\lambda}(\sum [g, h] \prod_i C_i) \\
+&= \sum_{{\left\lvert {\lambda } \right\rvert}= d} \frac{(\dim \lambda)^2}{({\left\lvert {\lambda } \right\rvert}!)^2} W(\lambda) {\mathrm{tr}}_\lambda(\prod C_i)
+.\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      where <span class='math inline'>\(W(\lambda)\)</span> is a scalar <span class='math inline'>\(\sum [g, h]\)</span> by the above observation.
+    </p>
+  
+    <p class='mb-3'>
+      Recall that <span class='math inline'>\(f_c(\lambda) = \# C \frac{\chi^\lambda(C)}{\dim \lambda}\)</span> and thus
+    </p>
+  
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+\frac{[\operatorname{id}]}{d!} = \sum_{{\left\lvert {\lambda } \right\rvert}= d} \qty{\frac{\dim \lambda}{{\left\lvert {\lambda} \right\rvert}}}^2 W(\lambda) \prod f_{C_i}(\lambda)
+.\end{align*}</pre>
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Fact:</strong> <span class='math inline'>\(W(\lambda) = \qty{\frac{{\left\lvert {\lambda } \right\rvert}!}{\dim \lambda}}^2\)</span>.
+    </p>
+  <h2 id='quasimodularity' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Quasimodularity</h2>
+    <p class='mb-3'>
+      <strong>Fact:</strong> The functions <span class='math inline'>\(f_C(\lambda)\)</span> are polynomial functions in the following way:
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Definition:</strong> Let <span class='math inline'>\(\Lambda^*(n)\)</span> be the algebra of “shifted symmetric functions”, i.e. symmetric functions in the <span class='math inline'>\(\lambda_i - i\)</span>.
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Subtlety: it’s necessary to order to partition in weakly decreasing order of the numbers occurring! Example: <span class='math inline'>\(p(\lambda) = (\lambda_1 - 1)(\lambda_2 - 2)\)</span>, but swapping <span class='math inline'>\(\lambda_1 \iff \lambda_2\)</span> results in <span class='math inline'>\(((\lambda_2 - 2) + 1)((\lambda_1 - 1) - 1)\)</span> is no longer symmetric in <span class='math inline'>\(\lambda_i - i\)</span>.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      Then define <span class='math inline'>\(\Lambda^* = \lim_{\leftarrow} \Lambda^*(n)\)</span>.
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Schur-Weyl duality: bijects representations of <span class='math inline'>\(\operatorname{GL}_n\)</span> and <span class='math inline'>\(S_n\)</span>.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      Then <span class='math inline'>\(f_c \in \Lambda^*\)</span> and the degree of <span class='math inline'>\(f_C\)</span> is exactly the number of non-fixed points of any permutation from <span class='math inline'>\(C\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      From the paper,
+    </p>
+  
+    <p class='mb-3'>
+      <pre class='pandoc-raw-"tex"'>\begin{align*}
+\mathrm{Cov}(C_1, \cdots, C_S) &= \sum_\lambda q^{{\left\lvert {\lambda} \right\rvert}} \prod_i f_{C_i}(\lambda) \\
+\mathrm{Cov}() &= \sum a^{{\left\lvert {\lambda} \right\rvert}} = \qty{ \prod_{n\geq 1} 1-q^n }^{-1}= (q)_\infty^{-1}
+.\end{align*}</pre>
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Note: the partition functions appears!
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      For any <span class='math inline'>\(F\in \Lambda^*\)</span>, we set <span class='math inline'>\(\left\langle{F}\right\rangle_q = (q)_\infty \sum_\lambda q^{{\left\lvert {\lambda} \right\rvert}} F(\lambda)\)</span> and <span xmlhtmlRaw>
+<span class="math display">
+\begin{align*}
+\left\langle{F_1 \mathrel{\Big|}F_2 \mathrel{\Big|}\cdots \mathrel{\Big|}F_S}\right\rangle_q = \sum_{\alpha\in \pi_S} (-1)^{\phi(\alpha) - 1} (\phi(\alpha) - 1)! \prod_{k=1}^{\phi(\alpha)} \left\langle{\prod_{i\in\alpha_j} F_i}\right\rangle_q
+.\end{align*}
+<span></span>
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      This comes from Möbius inversion, and is a form of inclusion-exclusion.
+    </p>
+  
+    </blockquote>
+  
+    <p class='mb-3'>
+      <strong>Proposition:</strong> <span class='math inline'>\(\mathrm{Cov}'(C_1, \cdots, C_S) = \left\langle{f_{C_1} \cdots f_{C_S}}\right\rangle_q\)</span> and <span class='math inline'>\(\phi(C_1, \cdots, C_S) = \left\langle{f_{C_1} \mathrel{\Big|}\cdots \mathrel{\Big|}f_{C_S}}\right\rangle_q\)</span>.
+    </p>
+  
+    <p class='mb-3'>
+      <strong>Theorem:</strong> For all <span class='math inline'>\(F\in \Lambda^*\)</span>, <span class='math inline'>\(\left\langle{F}\right\rangle_q\)</span> is a quasimodular form, i.e in <span class='math inline'>\({\mathbb{C}}[E_2, E_4, E_6]\)</span> where <span class='math inline'>\(E_i(q) = {\operatorname{const.}}+ \sum \sigma+{i-1} (n) q^n\)</span>.
+    </p>
+  
+  <!-- What goes in this file will appear below the note body-->
+</article>
+            <div class='flex flex-col lg:flex-row lg:space-x-2'>
+              
+              
+  <div class='flex-1 p-4 mt-8 bg-gray-100 rounded'>
+    <header class='mb-2 text-xl font-semibold text-gray-500'>Links to this page</header>
+    <ul class='space-y-1'>
+      
+        <li>
+          <a class='text-blue-600 font-bold hover:bg-blue-50' href='Projects/Current%20Projects/0100_Reading%20with%20Phil%20Summer%202021/Tilings/translation%20surface.html'>
+            translation surface
+          </a>
+          
+            <div class='mb-4 overflow-auto text-sm text-gray-500'>
+  
+    <div class='pl-2 mt-2 border-l-2 border-blue-200 hover:border-blue-500'>
+      <div><p>[<a href='Projects/Current%20Projects/0100_Reading%20with%20Phil%20Summer%202021/Tilings/Tilings%20VRG.html' class='text-gray-600 font-bold hover:bg-gray-50'>Tilings VRG</a> [Subjects/Translation Surfaces | Subjects/Translation%20Surfaces.html]]</p></div>
+    </div>
+  
+</div>
+          
+        </li>
+      
+    </ul>
+  </div>
+
+            </div>
+            
+  <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
+    
+  </section>
+
+            <!-- What goes in this file will at the very end of the main div -->
+          </main>
+        </div>
+      </div>
+      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-800'>
+  <div>
+    <a href=''>
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'></path>
+      </svg>
+    </a>
+  </div>
+  <div>
+    Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
+    
+      
+        <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
+          0.3.6.1
+        </span>
+      
+    
+  </div>
+  <div>
+    <a href='-/all.html' title='View Index'>
+      <svg style='width: 1rem;' class='hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
+        </path>
+      </svg>
+    </a>
+
+  </div>
+</footer>
+    </div>
+  
+</body>
+
+</html>

@@ -1,1 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
 ![Derived functors](_attachments/image_2021-03-25-00-09-25.png)

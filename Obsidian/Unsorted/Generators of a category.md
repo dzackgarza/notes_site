@@ -1,3 +1,20 @@
 ---
-aliases: ["generated", "generator", "generating object", "compact generators"]
+aliases:
+- generated
+- generator
+- generating object
+- compact generators
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
