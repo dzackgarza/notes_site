@@ -14,11 +14,9 @@
 
 
 
-Higher Topos Theory
-===================
+# Higher Topos Theory
 
-2021 Oct 2
-----------
+## 2021 Oct 2
 
 -   ![[attachments/2021-10-03_02-44-29.png]]
 

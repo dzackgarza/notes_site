@@ -23,8 +23,7 @@ aliases:
 
 Tags: \#algebraic_geometry \#learning \#todo
 
-References
-==========
+# References
 
 -   <https://en.wikipedia.org/wiki/Glossary_of_algebraic_geometry>
 -   ![[Subjects/_attachments/iag.pdf]]
@@ -36,8 +35,7 @@ References
 -   [McKernan's Class](http://www.math.ucsd.edu/~jmckerna/Teaching/17-18/Autumn/206A/l_1.pdf1)
 -   [MIT OCW course](https://ocw.mit.edu/courses/mathematics/18-725-algebraic-geometry-fall-2015/lecture-notes/)
 
-Topics
-======
+# Topics
 
 -   \[\[Unsorted/variety\]\]
 -   \[\[Twisted cubic\]\]

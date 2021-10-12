@@ -1,15 +1,2 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
--   Unit: $\eta: {\mathbb{S}}\to X$
--   Multiplication: $m: X{ {}^{ \scriptscriptstyle\wedge^{2} }  } \to X$
+- Unit: $\eta: \SS\to X$
+- Multiplication: $m: X\smashpower{2} \to X$

@@ -1,16 +1,4 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 [Expository](Expository)
 
-![[_attachments/Moments.html) ![](_attachments/Moments.xoj]]
+![](_attachments/Moments.html)
+![](_attachments/Moments.xoj)

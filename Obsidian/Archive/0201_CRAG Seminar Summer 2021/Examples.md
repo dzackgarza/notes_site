@@ -25,8 +25,7 @@ https://www.math.u-bordeaux.fr/\~ybilu/algant/documents/theses/Toledo.pdf
 
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.113.1905&rep=rep1&type=pdf
 
-Notes
-=====
+# Notes
 
 Weil cohomology theory: ![[../../attachments/Pasted%20image%2020210704000947.png]]
 

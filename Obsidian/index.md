@@ -5,7 +5,7 @@ page:
 template:
   layout:
     base:
-      bodyClass: 'overflow-y-scroll'
+      bodyClass: overflow-y-scroll
   name: /templates/home
 ---
 
@@ -25,14 +25,12 @@ template:
 
 
 
-Index
-=====
+# Index
 
 ------------------------------------------------------------------------
 
 ::: {.grid .grid-flow-row .grid-cols-1 .gap-0 .p-3 .lg:grid-cols-2 .proofenv}
-Main Pages
-----------
+## Main Pages
 
 ::: {.flex .items-center .justify-center .proofenv}
 -   \[\[Unsorted\]\]
@@ -42,8 +40,7 @@ Main Pages
 -   \[\[Blog\]\]
 :::
 
-Recent Posts
-------------
+## Recent Posts
 
 ::: {.flex .items-center .justify-center .proofenv}
 `query {.timeline} tag:blog/**`
@@ -52,8 +49,7 @@ Recent Posts
 
 ------------------------------------------------------------------------
 
-Auxiliary Pages
----------------
+## Auxiliary Pages
 
 -   \[\[000_Recommendations.md\]\]
 -   \[\[000_Todo.md\]\]

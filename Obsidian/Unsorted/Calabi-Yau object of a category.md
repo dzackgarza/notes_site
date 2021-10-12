@@ -1,14 +1,1 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-![[../attachments/Pastedimage%2020210630222457.png]]
+![](../attachments/Pastedimage%2020210630222457.png)

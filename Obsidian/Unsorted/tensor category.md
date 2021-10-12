@@ -1,18 +1,5 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
--   Many local notions and constructions for ${\mathsf{R}{\hbox{-}}\mathsf{Mod}}$ over some $R\in\mathsf{CRing}$ can be carried out in an arbitrary (linear) cocomplete tensor category.
+- Many local notions and constructions for $\rmod$ over some $R\in\CRing$ can be carried out in an arbitrary (linear) cocomplete tensor category.
 
 Classification of thick tensor ideals and localizing tensor ideals as the key to capturing the global structure of tensor categories; construction of novel support theories.
 
-Important: the \[\[tensor-triangulated category\]\].
+Important: the [[tensor-triangulated category]].

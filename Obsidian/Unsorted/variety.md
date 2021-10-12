@@ -1,24 +1,10 @@
 ---
-aliases:
-- variety
+aliases: ["variety"]
 ---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
--   \[\[toric variety\]\]
--   \[\[variety\]\]
--   \[\[algebraic variety\]\]
--   \[\[projective variety\]\]
--   \[\[smooth variety\]\]
--   \[\[proper variety\]\]
+- [[toric variety]]
+- [[variety]]
+- [[algebraic variety]]
+- [[projective variety]]
+- [[smooth variety]]
+- [[proper variety]]

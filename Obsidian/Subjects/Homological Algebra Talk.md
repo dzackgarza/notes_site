@@ -30,15 +30,13 @@
 
 [[../../00_Talks%20Index.md | ../000_Talks%20Index.html]]
 
-Homological Algebra
-===================
+# Homological Algebra
 
 [[../Classical%20homological%20algebra.md | ../Unsorted/Classical%20homological%20algebra.html]]
 
 Goal: provide some background for <https://www.youtube.com/watch?v=etbcKWEKnvg>!
 
-What is Homological Algebra
-===========================
+# What is Homological Algebra
 
 -   Why was it invented?
 -   What is it used for?
@@ -48,8 +46,7 @@ What is Homological Algebra
 -   Where does it come up
     -   Stoke's theorem: an integral over an $n$-dimensional region $R$ of a manifold can be realized as an $n-1$ dimensional integral over ${{\partial}}R$.
 
-Content
-=======
+# Content
 
 -   Homology and cohomology
     -   Used to detect $n$-dimensional holes, distinguishes manifolds. Given a manifold $M$,
@@ -97,8 +94,7 @@ Content
 -   Spectral Sequences
 -   Snake Lemma
 
-What is homology?
-=================
+# What is homology?
 
 "Homology" as a word just denotes some kind of study of "sameness", which depends on what context you're in.
 
@@ -110,8 +106,7 @@ When you just restrict to continuous maps, though, the discerning feature of spa
 
 We have this intuitive notion, but since we are mathematicians, we need to make that precise! And of course, generalize. There are many different ways of defining what exactly an "$n$-dimensional hole" should mean, and homology started off as one of them that wound up being useful and quite successful.
 
-How was homology first formulated?
-----------------------------------
+## How was homology first formulated?
 
 There are many different ways to formulate the original homology, but they all roughly follow the same motto: "cycles mod boundaries".
 
@@ -137,13 +132,11 @@ $H(S^2) = ({\mathbb{Z}}, 0, {\mathbb{Z}}, 0, \cdots)$ So we have one connected c
 
 $H_k(S^n) = \mathbf{1}[k = 0, n]$ In general, the $n$-sphere has one connected component and one $n$-dimensional hole.
 
-Some Algebraic Background
-=========================
+# Some Algebraic Background
 
 In order to generalize and apply homology to other areas, we need to pull in a little bit of algebra. First, we need to talk about chain complexes. These can generally be formulated in what are called *abelian categories*, but we'll stay a little more concrete than that for now.
 
-Kernels, Cokernels, and Abelian Categories
-------------------------------------------
+## Kernels, Cokernels, and Abelian Categories
 
 Let's get some terminology out of the way first, starting with something you may be familiar with: kernels.
 
@@ -175,8 +168,7 @@ The cokernel measures how far the map is from a surjection. This is because if t
 
 (Advanced note: in full generality, the kernel is defined in terms of a universal property. The cokernel is the categorical dual of the kernel, and satisfies a similar universal property. Duality is important!)
 
-Exactness
----------
+## Exactness
 
 Next let's talk a little bit about exactness. Consider a diagram such as this:
 
@@ -204,8 +196,7 @@ In some instances, this also gives $B \cong A \oplus C$ for some notion of "dire
 
 Informally, when the sequence splits, this says that $B$ is somehow a composite object, inside of which $A$ and $C$ are embedded.
 
-Prototypes
-----------
+## Prototypes
 
 Here are some places exact sequences naturally arise:
 
@@ -227,17 +218,15 @@ Let $T: U \to V$ be a linear operator between vector spaces, let $A = \text{null
 
 Take ${\mathbb{Z}}\xrightarrow{\times n}{\mathbb{Z}}\xrightarrow{\operatorname{mod}n} {\mathbb{Z}}/n{\mathbb{Z}}$, where $n > 1$.
 
-This is exact, since $x \mapsto nx \mapsto 0$, so the composite is the zero map. But there is no map $g$ that can invert the $f(x) = x\operatorname{mod}n$ map, since $x\in {\mathbb{Z}}\mapsto f(x) \in [0, n-1]$ means that ${\left\lvert {(g\circ f)(x)} \right\rvert} \leq n < {\left\lvert {\mathbb{Z}} \right\rvert}$, and the composite can't be surjective. (E.g. this sequence throws away too much information to split!)
+This is exact, since $x \mapsto nx \mapsto 0$, so the composite is the zero map. But there is no map $g$ that can invert the $f(x) = x\operatorname{mod}n$ map, since $x\in {\mathbb{Z}}\mapsto f(x) \in [0, n-1]$ means that ${\left\lvert {(g\circ f)(x)} \right\rvert} \leq n < {\left\lvert {{\mathbb{Z}}} \right\rvert}$, and the composite can't be surjective. (E.g. this sequence throws away too much information to split!)
 
-Commutative Diagrams
---------------------
+## Commutative Diagrams
 
 This one is easy - we say a diagram involving maps between objects if it doesn't matter which path you take between two nodes - the composition of maps yields the same thing in the destination.
 
 ![[http://mathworld.wolfram.com/images/eps-gif/SnakeLemma_1000.gif]]
 
-The Snake Lemma
-===============
+# The Snake Lemma
 
 So now we can describe what is happening in the movie scene! (Note: this is probably the most advanced mathematics ever displayed in a movie.)
 
@@ -259,8 +248,7 @@ What this says is that there is *another* exact sequence that you get for free, 
 
 $\ker a \to\ker b \to\ker c \xrightarrow{d} \operatorname{coker}a \to\operatorname{coker}b \to\operatorname{coker}c$.
 
-Chain Complexes
----------------
+## Chain Complexes
 
 When we have a sequence that is exact everywhere, we say it is a *long exact sequence*
 
@@ -274,8 +262,7 @@ Every exact sequence is a chain complex, so this can be thought of as a generali
 
 Often, you'll see notation abused here, and people will refer to "the" boundary map ${\partial}$. Then the relevant condition is that ${\partial}^2 = 0$.
 
-Homology From Chain Complexes
------------------------------
+## Homology From Chain Complexes
 
 For some "nice enough" topological spaces $X$, we can construct a set of building blocks in each dimension $d$, usually referred to as $d$-simplexes, and build $X$ as some combination of those. In fact, if $X$ in an $n$-dimensional manifold, you only need simplexes of degree $n$ or lower.
 
@@ -283,8 +270,7 @@ So for spaces that can be decomposed (or built, depending on your viewpoint) in 
 
 We can then take the $n$-th homology of $X$ to be the generalization of "cycles mod boundaries", and define $H_n(X) = \ker {\partial}_n / \text{im} ~{\partial}_{n+1}$.4. Given a short exact sequence of chain complexes, we can always "pass to homology" in this way.
 
-Applying the Snake Lemma
-------------------------
+## Applying the Snake Lemma
 
 **Theorem**: Any short exact sequence of chain complexes induces a long exact sequence of homology modules.
 

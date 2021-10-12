@@ -21,15 +21,13 @@ title: First Reading
 
 
 
-References
-==========
+# References
 
 Paper link: <http://www.numdam.org/article/PMIHES_1966__29__95_0.pdf> Resolution of singularities notes: <https://arxiv.org/pdf/math/0508332.pdf>
 
 Daniel's description: \> Compares algebraic de Rham cohomology to the usual notion for manifolds, using resolution of singularities.
 
-To Look Up
-==========
+# To Look Up
 
 -   Hodge cohomology
 -   Algebraic de Rham complex
@@ -79,11 +77,9 @@ To Look Up
 -   Specialization
 -   l-adic cohomology
 
-Notes
-=====
+# Notes
 
-Theorem 1
----------
+## Theorem 1
 
 -   **Theorem 1**: If $X\in {\mathsf{Aff}}{\mathsf{Alg}}{\mathsf{Sch}}_{/{\mathbb{C}}}$ is regular (non-singular), then $H^*_{\mathrm{sing}}(X; {\mathbb{C}})$ is isomorphic to the cohomology of the algebraic de Rham complex: differential forms on $X$ which are rational and everywhere defined. interesting values at integers related to quantities from algebraic K-theory.
 
@@ -130,8 +126,7 @@ Theorem 1
 
 -   If $X$ is complete, theorem 1' follows directly using the spectral sequences and GAGA
 
-Theorem 2
----------
+## Theorem 2
 
 -   Can deduce theorem 1 from a stronger purely local theorem, using that resolution of singularities is valid on complex analytic spaces
 -   **Theorem 2**: If $X$ is a reduced analytic space over ${\mathbb{C}}$, $Y\subseteq X$ closed, $U := X\setminus Y$ nonsingular and dense in $X$, then $Y$ can be locally defined by one equation.

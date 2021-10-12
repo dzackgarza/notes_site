@@ -1,17 +1,3 @@
 ---
-aliases:
-- projective modules
+aliases: ["projective modules"]
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-

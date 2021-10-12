@@ -1,18 +1,5 @@
+Tags: #conjectures 
 
+Conjectured in [[Automorphic form]].
 
-
-
-
-
-
-
-
-
-
-
-
-Tags: \#conjectures
-
-Conjectured in \[\[Automorphic form\]\].
-
-A special case: \[\[Shimura-Taniyama-Weil\]\]
+A special case: [[Shimura-Taniyama-Weil]]

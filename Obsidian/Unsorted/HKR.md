@@ -1,14 +1,1 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
--   The [[HKR.md | HKR.html]], identifies ${\mathbb{H}}$ with derivations.
+- The [HKR.md](HKR.md), identifies $\HH$ with derivations.

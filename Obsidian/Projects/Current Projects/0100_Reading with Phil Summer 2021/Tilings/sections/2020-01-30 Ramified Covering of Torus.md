@@ -14,8 +14,7 @@
 
 
 
-Ben's Talk: Eskin's Ramified Coverings of a Torus
-=================================================
+# Ben's Talk: Eskin's Ramified Coverings of a Torus
 
 Today: Section 2. Main theorem: a certain generating function is quasimodular.
 
@@ -113,8 +112,7 @@ Recall that $f_c(\lambda) = \# C \frac{\chi^\lambda(C)}{\dim \lambda}$ and thus
 
 **Fact:** $W(\lambda) = \qty{\frac{{\left\lvert {\lambda } \right\rvert}!}{\dim \lambda}}^2$.
 
-Quasimodularity
----------------
+## Quasimodularity
 
 **Fact:** The functions $f_C(\lambda)$ are polynomial functions in the following way:
 

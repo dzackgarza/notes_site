@@ -33,8 +33,7 @@ title: Notes on Tilings
 
 Tags: \#algebraic_geometry \#topology \#research
 
-References and Basics
-=====================
+# References and Basics
 
 **References:**
 
@@ -103,13 +102,11 @@ For $\Sigma_g$ a Riemann surface, there is a formula (Gauss-Bonnet in the flat m
 \sum d_j = 2g-2
 .\end{align*}`{=tex}
 
-Notes on Paper
-==============
+# Notes on Paper
 
 > Reference: <https://arxiv.org/abs/math/0609392>
 
-Section 1
----------
+## Section 1
 
 Flat surfaces are characterized as surfaces with a flat metric and (finitely many?) cone-like singularities. These surfaces appear to be isomorphic to moduli spaces of holomorphic 1-forms. It is profitable to study the orbit of the surface under the Teichmüller geodesic flow, as well as a $\operatorname{GL}_n$ action.
 
@@ -192,8 +189,7 @@ Central problem / conjecture: Taking the closure of an orbit under the action of
 
 The there is a projection from these orbits (Teichmüller discs) to the moduli space of complex structures (?), which will be denoted ${\mathcal{M}}_g$. It is well-known that moduli spaces are not homogeneous spaces, but the conjecture here is that they behave as if they were.
 
-Section 2: Motivations
-----------------------
+## Section 2: Motivations
 
 Open problems in rectangular billiards:
 
@@ -206,8 +202,7 @@ Open problems in rectangular billiards:
 
 *Fox-Kershner construction:* Yields a way to go from billiard trajectories to geodesics on a flat surface. General idea: glue two copies of the billiard table along the edge to get a flat sphere; then paths lift to geodesics. Such surfaces are not "very flat", i.e. they have nontrivial linear holonomy.
 
-Thursday, Week 1
-================
+# Thursday, Week 1
 
 **Motivation:** Gauss' Unicursal Problem. How many distinct curves $\alpha: [0, 1] \to {\mathbb{R}}^2$ are there with no triple crossings?
 
@@ -525,11 +520,9 @@ Note that $dz$ is a holomorphic 1-form on the complement of the vertex/vertices 
 
 *Example:* For the chart $z=w^3$ where $w$ is the local coordinate, we have $dz = 3w^2$, yielding a zero of order 2.
 
-Thursday January 16th
-=====================
+# Thursday January 16th
 
-Correspondence
---------------
+## Correspondence
 
 **Recall:** Start with a translation surface with cone points with angles $2\pi n i$. This yields a Riemann surface $\Sigma$ and a holomorphic $1{\hbox{-}}$form $\omega$ with zeros of order $n_i -1$.
 
@@ -638,8 +631,7 @@ In this case, we get points that are *poles* of order 1 for the quadratic differ
 
 We know that $K_{{\mathbb{P}}^1} = \mathcal O(-2)$ and $K_{{\mathbb{P}}^1}^{\otimes 2} = \mathcal O(-4)$.
 
-Moduli Spaces
--------------
+## Moduli Spaces
 
 **Definition:** $\mathcal{H}(k_1, \cdots, k_n) = \left\{{ \Sigma \text{ with abelian differential} \operatorname{Div}\omega = \sum k p_i}\right\}$ where the $k_i$ record the orders of zeros of $\omega$.
 
@@ -657,11 +649,9 @@ There is an ${\operatorname{SL}}(2, {\mathbb{R}})$ action on any stratum. How to
 
 > Next time: to special case of square tiled surfaces.
 
-Thursday January 23rd
-=====================
+# Thursday January 23rd
 
-Counting Square Tiled Surfaces
-------------------------------
+## Counting Square Tiled Surfaces
 
 Square tiled surfaces in ${\mathcal{H}}(k)$ with $d$ squares correspond to degree $d$ branched covers of the identification square, branched over the origin, with profile (?).
 
@@ -739,8 +729,7 @@ This example is in ${\mathcal{H}}_4(-3, -3, -2)$.
 
 **Proposition:** The generating functions for square-tiled surfaces ${\mathcal{H}}_4(\kappa)$ is now a quasimodular form for $\Gamma_1(4)$.
 
-Open Questions
---------------
+## Open Questions
 
 **Question (can find numerical evidence?):** How can we count these in terms of the symmetric group? Analogous result to proportion result earlier? Can try to lift square example, but admits no map from a torus -- instead, quotient square by ${\mathbb{Z}}/4{\mathbb{Z}}$ and take fundamental domain. What kind of branching do these covers have?
 
@@ -767,8 +756,7 @@ So the number of square tiled surfaces in ${\mathcal{H}}_4(\kappa)$ is given by
 
 Would be nice to figure out what the proportionality constant here is.
 
-Ben's Talk: Eskin's Ramified Coverings of a Torus
-=================================================
+# Ben's Talk: Eskin's Ramified Coverings of a Torus
 
 Today: Section 2. Main theorem: a certain generating function is quasimodular.
 
@@ -866,8 +854,7 @@ Recall that $f_c(\lambda) = \# C \frac{\chi^\lambda(C)}{\dim \lambda}$ and thus
 
 **Fact:** $W(\lambda) = \qty{\frac{{\left\lvert {\lambda } \right\rvert}!}{\dim \lambda}}^2$.
 
-Quasimodularity
----------------
+## Quasimodularity
 
 **Fact:** The functions $f_C(\lambda)$ are polynomial functions in the following way:
 

@@ -1,17 +1,3 @@
 ---
-aliases:
-- flat
+aliases: ["flat"]
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-

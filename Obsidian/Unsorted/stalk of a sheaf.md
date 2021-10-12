@@ -1,18 +1,3 @@
 ---
-aliases:
-- stalk
-- stalk of a presheaf
+aliases: ["stalk", "stalk of a presheaf"]
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
--   [Idele class group](Idele%20class%20group)
--   [Hecke character](Hecke%20character)
-    -   Generalizes a [[Dirichlet character | Dirichlet%20character.html]]
+- [Idele class group](Idele%20class%20group)
+- [Hecke character](Hecke%20character)
+	- Generalizes a [Dirichlet character](Dirichlet%20character.md)

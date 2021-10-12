@@ -19,12 +19,10 @@ aliases:
 
 
 
-Misc
-====
+# Misc
 
 \[\[Unsorted/Giant word index\]\]
 
-Journals
-========
+# Journals
 
 \[\[To Review/2021-04-26_Journals\]\] \[\[attachments/Journals.pdf\]\]

@@ -1,17 +1,3 @@
 ---
-aliases:
-- resolution of singularities
+aliases: ["resolution of singularities"]
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-

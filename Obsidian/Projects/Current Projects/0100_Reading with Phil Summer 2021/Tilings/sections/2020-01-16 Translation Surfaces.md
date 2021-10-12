@@ -15,11 +15,9 @@
 
 
 
-Thursday January 16th
-=====================
+# Thursday January 16th
 
-Correspondence
---------------
+## Correspondence
 
 **Recall:** Start with a translation surface with cone points with angles $2\pi n i$. This yields a Riemann surface $\Sigma$ and a holomorphic $1{\hbox{-}}$form $\omega$ with zeros of order $n_i -1$.
 
@@ -128,8 +126,7 @@ In this case, we get points that are *poles* of order 1 for the quadratic differ
 
 We know that $K_{{\mathbb{P}}^1} = \mathcal O(-2)$ and $K_{{\mathbb{P}}^1}^{\otimes 2} = \mathcal O(-4)$.
 
-Moduli Spaces
--------------
+## Moduli Spaces
 
 **Definition:** $\mathcal{H}(k_1, \cdots, k_n) = \left\{{ \Sigma \text{ with abelian differential} \operatorname{Div}\omega = \sum k p_i}\right\}$ where the $k_i$ record the orders of zeros of $\omega$.
 

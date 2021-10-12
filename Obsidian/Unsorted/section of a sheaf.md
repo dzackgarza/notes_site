@@ -1,17 +1,3 @@
 ---
-aliases:
-- section
+aliases: ["section"]
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-

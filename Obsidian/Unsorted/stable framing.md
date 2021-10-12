@@ -1,19 +1,5 @@
 ---
-aliases:
-- stably framed
+aliases: ["stably framed"]
 ---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-\#bundles
+#bundles

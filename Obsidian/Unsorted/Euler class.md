@@ -1,15 +1,2 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
--   The Euler class of the tangent bundle of an oriented manifold can be identified with the Euler characteristic times the fundamental class
--   Fact: $T^O S^2 \isoas_{\operatorname{Diff}} {\mathbb{RP}}^3$ are diffeomorphic, where the lhs is the unit tangent bundle.
+- The Euler class of the tangent bundle of an oriented manifold can be identified with the Euler characteristic times the fundamental class
+- Fact: $T^O S^2 \isoas_{\Diff} \RP^3$ are diffeomorphic, where the lhs is the unit tangent bundle.

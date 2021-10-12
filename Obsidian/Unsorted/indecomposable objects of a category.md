@@ -1,17 +1,3 @@
 ---
-aliases:
-- indecomposables
+aliases: ["indecomposables"]
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-

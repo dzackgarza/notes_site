@@ -17,11 +17,9 @@
 
 
 
-Current Stuff
-=============
+# Current Stuff
 
-Links
------
+## Links
 
 -   [Website for Symplectic Reading Seminar](https://www.notion.so/Symplectic-Reading-Seminar-UGA-Summer-2021-1a2410e895014c82ae5b26c3550ad09f)
 -   Qual Sessions
@@ -31,8 +29,7 @@ Links
     -   [Real Analysis Resources Page](https://www.notion.so/Real-Analysis-dd4bea135ffe40d68087500c77c1cb10)
     -   [Topology Resources Page](https://www.notion.so/Topology-956635f7ae6a4a7bbccbfb44609340fc)
 
-Big Lists
-=========
+# Big Lists
 
 -   \[\[Unsorted/Giant word index\]\]
 -   \[\[To Review/2021-04-26_Unanswered_Questions\]\]
@@ -41,8 +38,7 @@ Big Lists
 -   \[\[000_Recommendations\]\]
 -   \[\[attachments/Journals.pdf\]\]
 
-Indices
-=======
+# Indices
 
 -   \[\[Unsorted/Todo\]\]
 -   \[\[000_Reading Projects Index\]\]
@@ -50,8 +46,7 @@ Indices
 -   \[\[0001_Graduate Research Index\]\]
 -   \[\[0009_subject index\]\]
 
-Goals
-=====
+# Goals
 
 -   Schemes/stacks
 -   Gauge theory

@@ -1,20 +1,5 @@
 ---
-aliases:
-- Thom spectra
-- Thom spectrum
+aliases: ["Thom spectra", "Thom spectrum"]
 ---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-Can view as a twisted \[\[suspension spectrum\]\]?
+Can view as a twisted [[suspension spectrum]]?

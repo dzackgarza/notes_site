@@ -1,17 +1,3 @@
 ---
-aliases:
-- Riemann hypothesis
+aliases: ["Riemann hypothesis"]
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-

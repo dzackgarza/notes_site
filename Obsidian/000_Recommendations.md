@@ -3,7 +3,7 @@ aliases:
 - Reading
 - Reading Recommendations
 - Recommendations
-date: '2019-07-01'
+date: 2019-07-01
 ---
 
 -   [Light / Expository](#light-expository)
@@ -102,14 +102,12 @@ Tags: \#recommendations \#reading \#nograph
 
     -   
 
-Light / Expository
-==================
+# Light / Expository
 
 -   Littlewood's Miscellany
     -   Contains Cambridge gossip!
 
-Physics
-=======
+# Physics
 
 https://twitter.com/dzackgarza/status/1390862843130548224
 

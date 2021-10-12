@@ -1,20 +1,5 @@
 ---
-aliases:
-- completions
-- completion of a ring
+aliases: ["completions", "completion of a ring"]
 ---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
--   $p{\hbox{-}}$completion?
+- $p\dash$completion?

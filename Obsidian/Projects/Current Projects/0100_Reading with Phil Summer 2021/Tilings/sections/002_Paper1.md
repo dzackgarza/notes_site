@@ -16,11 +16,9 @@
 
 
 
-Notes on Paper
-==============
+# Notes on Paper
 
-Background, Definitions, References
------------------------------------
+## Background, Definitions, References
 
 Reference: <https://arxiv.org/abs/math/0609392%5D(https://arxiv.org/abs/math/0609392>
 
@@ -43,8 +41,7 @@ A translation surface is closed orientable surface with a flat metric, a finite 
 A half-translation surface is a surface with a flat metric and holonomy group ${\mathbb{Z}}/(2)$.
 :::
 
-Section 1
----------
+## Section 1
 
 Flat surfaces are characterized as surfaces with a flat metric and (finitely many?) cone-like singularities. These surfaces appear to be isomorphic to moduli spaces of holomorphic 1-forms. It is profitable to study the orbit of the surface under the Teichmüller geodesic flow, as well as a $\operatorname{GL}_n$ action.
 
@@ -126,8 +123,7 @@ Taking the closure of an orbit under the action of $\operatorname{GL}^+(2, {\mat
 The there is a projection from these orbits (Teichmüller discs) to the moduli space of complex structures (?), which will be denoted ${\mathcal{M}}_g$. It is well-known that moduli spaces are not homogeneous spaces, but the conjecture here is that they behave as if they were.
 :::
 
-Section 2: Motivations
-----------------------
+## Section 2: Motivations
 
 ::: {.problem .proofenv title="?"}
 Open problems in rectangular billiards:

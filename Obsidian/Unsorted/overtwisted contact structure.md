@@ -1,17 +1,3 @@
 ---
-aliases:
-- overtwisted
+aliases: ["overtwisted"]
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-

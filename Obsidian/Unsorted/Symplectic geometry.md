@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-``` {.query}
+```query
 tag:#symplectic_geometry
 ```

@@ -1,14 +1,1 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-Maybe \[\[chromatichomotopy%20theory.md\|chromatic homotopy theory\]\]?
+Maybe [[chromatichomotopy%20theory.md|chromatic homotopy theory]]?

@@ -1,14 +1,1 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
--   The $S^1$ spectrum is some kind of "thickening" of ${\mathbb{Z}}$?
+- The $S^1$ spectrum is some kind of "thickening" of $\ZZ$?

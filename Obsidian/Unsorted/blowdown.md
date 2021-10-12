@@ -1,14 +1,1 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-See \[\[blowup.md\|blowup\]\]
+See [[blowup.md|blowup]]

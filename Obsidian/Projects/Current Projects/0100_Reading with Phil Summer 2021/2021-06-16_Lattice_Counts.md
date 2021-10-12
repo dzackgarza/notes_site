@@ -13,8 +13,7 @@
 
 
 
-Lattice Counts
-==============
+# Lattice Counts
 
 -   Baake Theorem 3: Number of sublattices and closed form for Dirichlet series <https://arxiv.org/pdf/math/0605222.pdf>
 

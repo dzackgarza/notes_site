@@ -13,8 +13,7 @@
 
 
 
-References
-==========
+# References
 
 -   Bruner <http://www.rrb.wayne.edu/papers/adams.pdf>
 -   Rognes <https://www.uio.no/studier/emner/matnat/math/MAT9580/v21/dokumenter/spseq.pdf>

@@ -50,19 +50,16 @@
 
 Tags: \#nograph
 
-Review
-======
+# Review
 
 -   [Qual syllabus: algebraic topology, Riemannian geometry, complex analysis](https://etale.site/qual-syllabus.pdf) \#todo
 -   \[\[Unsorted/Qual Review\]\]
 
-Infty Categories
-================
+# Infty Categories
 
 \[\[Unsorted/\_attachments/Pasted image 20210717012401.png\]\]
 
-Algebraic Geometry
-==================
+# Algebraic Geometry
 
 See \[\[Subjects/Algebraic Geometry\]\]
 
@@ -75,34 +72,29 @@ See \[\[Subjects/Algebraic Geometry\]\]
 -   [Seminar: ind-coherent sheaves](http://people.math.harvard.edu/~yifei/indcoh.html)
 -   [Quick Review](http://www.mat.uniroma2.it/~ricerca/geomet/workshops/Zaidenbergnotes.pdf)
 
-Schemes
--------
+## Schemes
 
 See \[\[Unsorted/scheme\]\]
 
 -   <https://etale.site/livetex/256a.pdf>
 -   <https://dongryul-kim.github.io/harvard_notes/Math233a/Notes_Math233a.pdf>
 
-Stacks
-------
+## Stacks
 
 See \[\[Unsorted/stack\]\]
 
 -   [Seminar notes on stacks](https://etale.site/livetex/stax.pdf)
 
-Geometric Topology
-==================
+# Geometric Topology
 
 [MSRI workshop on low-dimensional topology](https://www.msri.org/workshops/375)
 
-Kirby Calculus
---------------
+## Kirby Calculus
 
 -   [Kyle's lecture videos](https://uga.view.usg.edu/d2l/home/2063522)
     -   Take notes on videos \#todo \#typesetting
 
-Floer and Symplectic
---------------------
+## Floer and Symplectic
 
 See \[\[Unsorted/Floer homology\]\] and \[\[Unsorted/Symplectic geometry\]\]
 
@@ -110,11 +102,9 @@ See \[\[Unsorted/Floer homology\]\] and \[\[Unsorted/Symplectic geometry\]\]
 -   [Full Courses](https://www.notion.so/Full-Courses-5c930f2023a3448aa43b6396e192c4b5)
 -   [Just Resources](https://www.notion.so/Just-Resources-8d73c2c7b6374931a1e2fa27665e071f)
 
-Number Theory
-=============
+# Number Theory
 
-Class Field Theory
-------------------
+## Class Field Theory
 
 Advice: - Look at global CFT first, see book of Janusz - Washington's Cyclotomic Fields. - Harari's book (?) - Artin and Tate's notes
 
@@ -129,63 +119,52 @@ Resources
 
 [Seminar on Iwasawa theory](https://math.mit.edu/nt/old/stage_f17.html)
 
-Algebraic Number Theory
------------------------
+## Algebraic Number Theory
 
 See \[\[Unsorted/Learning Algebraic Number Theory\]\]
 
-Modular Forms
--------------
+## Modular Forms
 
 -   [AWS 2021](https://www.math.arizona.edu/~swc/)
 
-Representation Theory
-=====================
+# Representation Theory
 
-Lie Theory
-----------
+## Lie Theory
 
 -   [Problem sets](http://www.math.stonybrook.edu/~jstarr/M552s19/ps.html)
 
-Categorical Rep Theory
-----------------------
+## Categorical Rep Theory
 
 -   [MSRI Summer school on Soergel Bimodules](https://www.msri.org/summer_schools/790)
 -   [CMSA conference on relations to algebraic geometry and mathematical physics](https://www.youtube.com/watch?v=kgu8L6paKNs&list=PL0NRmB0fnLJQiZyGUJyd35rj80k_EgUyt)
 
-Representation Stability
-------------------------
+## Representation Stability
 
 -   [MSRI Summer School on Representation Stability](https://www.msri.org/summer_schools/850)
 
-Arithmetic Geometry
-===================
+# Arithmetic Geometry
 
 -   <https://math.mit.edu/nt/index_stage>
 -   [Seminar talks on the Weil conjectures](https://math.mit.edu/nt/old/stage_f20.html)
 -   [Seminar on unlikely intersections and o-minimality](https://math.mit.edu/nt/old/stage_s19.html)
 
-Abelian Varieties
------------------
+## Abelian Varieties
 
 -   <http://www.math.columbia.edu/~chaoli/docs/AbelianVarieties.html>
 -   \[\[Unsorted/moduli stack of abelian varieties.md\#\^7cc3c7\]\]
 
-Rational Points
----------------
+## Rational Points
 
 -   <https://web.math.princeton.edu/~shouwu/publications/iccm98.pdf>
 
-Algebraic Topology
-==================
+# Algebraic Topology
 
 See the Handbook of Homotopy Theory
 
 -   [Lectures on Homological Algebra](https://www.uwo.ca/math/faculty/jardine/courses/homalg/lectures_on_homological_algebra.html)
 -   [Notes on Goodwillie Calculus](https://etale.site/livetex/goodwillie.pdf)
 
-Spectral Sequences
-------------------
+## Spectral Sequences
 
 Some stuff from Morgan:
 
@@ -201,8 +180,7 @@ Some stuff from Morgan:
 
 > I think the actual $B_\infty$ construction though is maybe a bit technical and/or disastisfying. Like, you need some formalism to get a spectrum out of a "almost symmetric monoidal space", and this one works, but it's a bit mysterious to me....
 
-Stable Homotopy Theory
-----------------------
+## Stable Homotopy Theory
 
 -   [Summer School on Modern Algebraic Topology](https://www.msri.org/workshops/695)
 -   [Homotopy Theory](http://jardine.math.uwo.ca/HomTh/)
@@ -213,8 +191,7 @@ Stable Homotopy Theory
 -   [Seminar on formal groups and p-divisible groups](https://math.mit.edu/nt/old/stage_f19.html)
 -   [Localization of categories](https://www.youtube.com/watch?v=jCSEA1nfffY&list=PLYShsxzWr0U3EZobFoA7sJcpjip8zXzui)
 
-K Theory
---------
+## K Theory
 
 \[\[Unsorted/\_attachments/Pasted image 20210506154540.png\|Recommended reading from Atiyah and Park\]\]
 
@@ -225,31 +202,26 @@ K Theory
 -   [U Chicago Algtop Workshop (including Cobordism)](http://math.uchicago.edu/~chicagotopology2/)
 -   [Quillen K Theory Lecture Notes](https://mandal.ku.edu/M996QuillenKTheory/0TheKBooK.pdf)
 
-Bordism and TQFTs
------------------
+## Bordism and TQFTs
 
 -   [Lectures](https://web.ma.utexas.edu/users/dafr/M392C-2012/)
 
-Mirror Symmetry
-===============
+# Mirror Symmetry
 
 -   [Auroux's introduction](https://arxiv.org/pdf/1301.7056.pdf)
 -   [CMSA 2020 Workshop on mirror symmetry (12 videos)](https://www.youtube.com/watch?v=rZhCfvjhwDI&list=PL0NRmB0fnLJSmnJqrOqgiivJQ_BWnlfXm)
 -   [Conference on homological mirror symmetry](https://www.youtube.com/playlist?list=PL0NRmB0fnLJQRXH3HKos6e4bu8IyfmZCY)
 
-Motivic Stuff
-=============
+# Motivic Stuff
 
 -   \[\[attachments/roadmap.pdf\|Roadmap to learning motivic homotopy theory\]\]
 
-Homotopy of Schemes
--------------------
+## Homotopy of Schemes
 
 -   [Something?](http://people.math.harvard.edu/~gaitsgde/GL/)
 -   Twitter rec: <https://twitter.com/jacobhegna/status/1373792370135867392?s=20>
 
-Derived Geometry
-================
+# Derived Geometry
 
 -   [CMSA series on derived algebraic and differential geometry](https://www.youtube.com/watch?v=qgxq7xnJJvI&list=PL0NRmB0fnLJRk75jsBXXt7J8TCWY9EpI4)
 
@@ -257,27 +229,23 @@ Derived Geometry
 
 -   \[\[Unsorted/\_attachments/moduli.pdf\]\]
 
-Higher Algebra and Infinity Categories
---------------------------------------
+## Higher Algebra and Infinity Categories
 
 -   [Higher Algebra courses](https://www.youtube.com/watch?v=3IjAy0gHRyY)
 -   [MSRI workshops on Infinity Categories](https://www.msri.org/workshops/862/schedules/25956)
 -   [MSRI workshop on higher categories and categorification](https://www.msri.org/workshops/907)
 -   [Higher categories student seminar: notes](https://etale.site/livetex/highercats.pdf)
 
-Hochschild homology
--------------------
+## Hochschild homology
 
 -   See \[\[Unsorted/Hochschild homology\]\]
 
-Topological Cyclic Homology
----------------------------
+## Topological Cyclic Homology
 
 -   See \[\[Unsorted/topological Hochschild homology\]\]
 -   \[\[Unsorted/Topological cyclic homology 1\]\]
 
-Langlands
----------
+## Langlands
 
 -   See \[\[Unsorted/Langlands\]\]
 -   \[\[attachments/Geometric Langlands, Perfectoid Spaces, Fargues-Fontaine Overview.pdf\]\]
@@ -285,25 +253,21 @@ Langlands
 -   [MSRI Summer School on automorphic forms and the Langlands program](https://www.msri.org/summer_schools/792)
     -   [Kevin' Buzzard's lectures on Youtube](https://www.youtube.com/playlist?list=PLhsb6tmzSpiysoRR0bZozub-MM0k3mdFR)
 
-Unsorted
-========
+# Unsorted
 
-Prism-y p-adic-y Hodge-Theory-y Stuff
--------------------------------------
+## Prism-y p-adic-y Hodge-Theory-y Stuff
 
 -   [Seminar on crystalline and prismatic cohomology](https://math.mit.edu/nt/index_stage)
 -   [Seminar on p-adic modular forms](https://math.mit.edu/nt/old/stage_s20.html)
 -   [Seminar on p-adic Hodge theory](https://math.mit.edu/nt/old/stage_f18.html)
 -   [Noncommutative Hodge-to-de Rham degeneration](https://warwick.ac.uk/fac/sci/maths/research/events/2020-2021/noncommutativehodge-to-derhamdegeneration/)
 
-Field Theories
---------------
+## Field Theories
 
 -   [Lecture series (34 videos) on Topology and Field Theories](https://ww-w.youtube.com/playlist?list=PL80A29806A2EA6B1A)
 -   [Fields Summer School](https://video-archive.fields.utoronto.ca/list/event/1538)
 
-Full Courses
-------------
+## Full Courses
 
 -   [Topological Cyclic Homology](https://www.notion.so/Topological-Cyclic-Homology-0db929d8a26943879bb36c916a3877ff)
 -   [Higher Algebra](https://www.notion.so/Higher-Algebra-bfa1645467b2479a979065ab9f48f168)

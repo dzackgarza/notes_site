@@ -4,7 +4,7 @@ aliases:
 - contact topology
 - contact geometry
 - contact structure
-- 'contact 3-manifold'
+- contact 3-manifold
 - contact manifold
 ---
 

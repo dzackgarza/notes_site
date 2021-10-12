@@ -1,14 +1,1 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
--   See also \[\[moduli stack of Higgs bundles.md\]\]
+- See also [[moduli stack of Higgs bundles.md]]

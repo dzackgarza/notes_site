@@ -16,16 +16,13 @@
 
 
 
-Math Reading Projects
-=====================
+# Math Reading Projects
 
-Active
-------
+## Active
 
 -   \[\[Projects/Book Notes/Barnes_and_Roitzheim/Barnes_and_Roitzheim\]\]
 
-Inactive
---------
+## Inactive
 
 -   Atiyah-Macdonald
 -   Lee's Smooth Manifolds
@@ -35,8 +32,7 @@ Inactive
 -   \[\[Projects/Book Notes/Bott_Tu/02-01-18 Bott and Tu Applications of Spectral Sequences\]\]
 -   \[\[Unsorted/Floer Reading Group Fall 2020\]\]
 
-Not Started
------------
+## Not Started
 
 -   \[\[Projects/Book Notes/Audin-Damian Morse Theory and Floer Homology/Audin-Damian Morse Theory and Floer Homology\]\]
 -   \[\[Projects/Book Notes/Folland/Folland\]\]

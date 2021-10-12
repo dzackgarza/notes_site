@@ -17,8 +17,7 @@
 
 ![[attachments/Mirzakhani.pdf]]
 
-Moduli of Curves
-================
+# Moduli of Curves
 
 ![[attachments/Pasted%20image%2020210823224444.png]]
 
@@ -48,8 +47,7 @@ Moduli of Curves
 
 ![[attachments/thumbnail_IMG_0063.jpg]]
 
-Mirzakhani Stuff
-================
+# Mirzakhani Stuff
 
 ![[attachments/Pasted%20image%2020210823222509.png]]
 
@@ -67,8 +65,7 @@ Mirzakhani Stuff
 
 ![[attachments/Pasted%20image%2020210823222606.png]]
 
-Wolport
-=======
+# Wolport
 
 ![[attachments/Pasted%20image%2020210823221710.png]]
 

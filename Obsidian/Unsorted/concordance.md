@@ -1,14 +1,1 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-Smoothly embedded cylinder in $S^3 \times S^1$?
+Smoothly embedded cylinder in $S^3 \cross S^1$?
