@@ -16,9 +16,11 @@
 
 Tags: \#advice \#undergraduate
 
-# Homework 3
+Homework 3
+==========
 
-## Notes
+Notes
+-----
 
 -   Syntax: make sure you're doing well-defined things with mathematical objects. E.g. it doesn't *a priori* make sense to add a set and a number, or a set and a polynomial, or take the union of a polynomial and a set.
 

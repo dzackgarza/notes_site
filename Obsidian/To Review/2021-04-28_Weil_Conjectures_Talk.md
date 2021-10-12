@@ -3,7 +3,7 @@ aspectratio: 169
 author: D. Zack Garza
 colortheme: default
 date: April 2020
-fontfamily: noto-sans
+fontfamily: 'noto-sans'
 fontsize: 9pt
 header-includes:
 - |
@@ -91,11 +91,12 @@ title: CRAG
 
 
 
-[[Subjects/Weil Conjectures | Subjects/Weil%20Conjectures.html]]
+[[Subjects/Weil Conjectures | ../Subjects/Weil%20Conjectures.html]]
 
 Tags: \#talk \#numbertheory \#algebraic_topology
 
-## A Quick Note
+A Quick Note
+------------
 
 -   A big thanks to Daniel Litt for organizing this reading seminar, recommending papers, helping with questions!!
 
@@ -106,14 +107,16 @@ Tags: \#talk \#numbertheory \#algebraic_topology
     -   See elementary but concrete examples,
     -   Count all of the things!
 
-# Generating Functions
+Generating Functions
+====================
 
-## Varieties
+Varieties
+---------
 
 Fix $q$ a prime and ${\mathbb{F}}_q$ the (unique) finite field with $q$ elements, along with its (unique) degree $n$ extensions `
 <span class="math display">
 \begin{align*}
-{\mathbb{F}}_{q^n} = \left\{{x\in \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{F}}\mkern-1.5mu}\mkern 1.5mu_q {~\mathrel{\Big|}~}x^{q^n} - x = 0}\right\} \quad \forall~ n\in {\mathbb{Z}}^{\geq 1}
+{\mathbb{F}}_{q^n} = \left\{{x\in \mkern 1.5mu\overline{\mkern-1.5mu\mathbb{F}\mkern-1.5mu}\mkern 1.5mu_q {~\mathrel{\Big|}~}x^{q^n} - x = 0}\right\} \quad \forall~ n\in {\mathbb{Z}}^{\geq 1}
 \end{align*}
 <span>`{=html}
 
@@ -131,7 +134,8 @@ Definition (Projective Algebraic Varieties)
     {\quad \operatorname{ and } \quad} f(\lambda \cdot \mathbf{x}) = \lambda^d f(\mathbf{x}), \lambda \in {\mathbb{F}}^{\times}
     .\end{align*}`{=tex}
 
-## Point Counts
+Point Counts
+------------
 
 -   For a fixed variety $X$, we can consider its ${\mathbb{F}}_q{\hbox{-}}$points $X({\mathbb{F}}_q)$.
     -   Note that $\# X({\mathbb{F}}_q) < \infty$ is an integer
@@ -152,7 +156,8 @@ Definition (Projective Algebraic Varieties)
     \begin{align*}F(z) = \sum_{n=1}^\infty N_n z^n = N_1z + N_2 z^2 + \cdots .\end{align*}
     <span>`{=html}
 
-## Why Generating Functions?
+Why Generating Functions?
+-------------------------
 
 For an *ordinary* [generating function](generating%20function), the coefficients are related to the real-analytic properties of $F$: `\begin{align*}
 [z^n] \cdot F(z) = [z^n]\cdot T_{F, z=0}(z) = \frac{1}{n!} \qty{{\frac{\partial }{\partial z}\,}}^{n} F(z) \Bigg\rvert_{z = 0} = N_n
@@ -164,7 +169,8 @@ and also to the complex analytic properties: `\begin{align*}
 
 > Using the Residue theorem. The latter form is very amenable to computer calculation.
 
-## Why Generating Functions?
+Why Generating Functions?
+-------------------------
 
 -   An OGF is an infinite series, which we can interpret as an analytic function ${\mathbb{C}}\to {\mathbb{C}}$
 
@@ -186,7 +192,8 @@ and also to the complex analytic properties: `\begin{align*}
 \hspace{5em} \qty{= z + {z^2 \over 2} + {z^3 \over 3} + \cdots} 
 .\end{align*}`{=tex}
 
-## Exponential
+Exponential
+-----------
 
 -   For completeness, also recall that `
     <span class="math display">
@@ -201,9 +208,11 @@ and also to the complex analytic properties: `\begin{align*}
 
 -   Since ${\mathbb{Q}}\hookrightarrow{\mathbb{C}}$, we can consider these as a complex-analytic functions, ask where they converge, etc.
 
-# Zeta Functions
+Zeta Functions
+==============
 
-## Definition: Local Zeta Function
+Definition: Local Zeta Function
+-------------------------------
 
 Problem: count points of a (smooth?) projective variety $X/{\mathbb{F}}$ in all (finite) degree $n$ extensions of ${\mathbb{F}}$.
 
@@ -223,9 +232,11 @@ z \qty{{\frac{\partial }{\partial z}\,}} \log Z_X(z)
 = \sum_{n=1}^\infty N_n z^n 
 ,\end{align*}`{=tex} which is an *ordinary* generating function for the sequence $(N_n)$.
 
-# Examples
+Examples
+========
 
-## Example: A Point
+Example: A Point
+----------------
 
 Take $X = {\operatorname{pt}}= V(\left\{{f(x) = x-c}\right\})/{\mathbb{F}}$ for $c$ a fixed element of ${\mathbb{F}}$. This yields a single point over ${\mathbb{F}}$, then `\begin{align*}
 \#X({\mathbb{F}}_q) &\coloneqq N_1 = 1 \\
@@ -243,7 +254,8 @@ Z_{\operatorname{pt}}(z)
 
 > Notice: $Z$ admits a closed form **and** is a rational function.
 
-## Example: The Affine Line
+Example: The Affine Line
+------------------------
 
 Take $X = {\mathbb{A}}^1/{\mathbb{F}}$ the affine line over ${\mathbb{F}}$, then We can write `
 <span class="math display">
@@ -265,7 +277,8 @@ Z_X(z)
 &= \frac 1 {1 - qz}
 .\end{align*}`{=tex}
 
-## Example: Affine m-space
+Example: Affine m-space
+-----------------------
 
 Take $X = {\mathbb{A}}^m/{\mathbb{F}}$ the affine line over ${\mathbb{F}}$, then We can write `
 <span class="math display">
@@ -298,7 +311,8 @@ Z_X(z)
 &= \frac 1 {1 - q^mz}
 .\end{align*}`{=tex} `\normalsize`{=tex}
 
-## Example: Projective Line
+Example: Projective Line
+------------------------
 
 Take $X = {\mathbb{P}}^1/{\mathbb{F}}$, we can still count by enumerating coordinates: `\small`{=tex} `\begin{align*}
 {\mathbb{P}}^1({\mathbb{F}}_{q^n}) 
@@ -333,9 +347,11 @@ Z_X(z)
 &= {1 \over (1-qz)(1-z)}
 .\end{align*}`{=tex} `\normalsize`{=tex}
 
-# The Weil Conjectures
+The Weil Conjectures
+====================
 
-## Weil 1
+Weil 1
+------
 
 (Weil 1949)
 
@@ -357,7 +373,8 @@ Let $X$ be a smooth projective variety of dimension $N$ over ${\mathbb{F}}_{q}$ 
 
     `\small`{=tex} In particular, this implies the existence of a meromorphic continuation of the associated function $\zeta_X(s)$, which a priori only converges for $\Re(s)\gg 0$. This also implies that for $n$ large enough, $N_n$ satisfies a linear recurrence relation. `\normalsize`{=tex}
 
-## Weil 2
+Weil 2
+------
 
 2.  (Functional Equation and Poincare Duality)
 
@@ -378,7 +395,8 @@ Let $X$ be a smooth projective variety of dimension $N$ over ${\mathbb{F}}_{q}$ 
      \alpha_{j, k} &\iff \alpha_{2N-j, k}
      \end{align*}`{=tex} which sends interchanges the coefficients in $p_j$ and $p_{2N-j}$.
 
-## Weil 3
+Weil 3
+------
 
 3.  (Riemann Hypothesis)
 
@@ -395,7 +413,8 @@ Moral:
 -   The Diophantine properties of a variety's zeta function are governed by its (algebraic) topology.
 -   Conversely, the analytic properties of encode a lot of geometric/topological/algebraic information.
 
-## Why is (3) called the "Riemann Hypothesis"?
+Why is (3) called the "Riemann Hypothesis"?
+-------------------------------------------
 
 Recall the Riemann zeta function is given by `\begin{align*}
 \zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s} = \prod_{p\text{ prime}} {1 \over 1 - p^{-s}}
@@ -407,7 +426,8 @@ After modifying $\zeta$ to make it symmetric about $\Re(s) = \frac 1 2$ and elim
 2.  "Functional equation": $\widehat{\zeta}(1-s) = \widehat{\zeta}(s)$
 3.  "Riemann Hypothesis": The only zeros of $\widehat{\zeta}$ have $\Re(s) = \frac 1 2$.
 
-## Why is (3) called the "Riemann Hypothesis"?
+Why is (3) called the "Riemann Hypothesis"?
+-------------------------------------------
 
 Suppose it holds for some $X$. Use the facts:
 
@@ -418,7 +438,8 @@ and to replace the polynomials $P_j$ with `\begin{align*}
 L_j(s) \coloneqq P_j(q^{-s}) = \prod_{k=1}^{\beta_j} \qty{1 - \alpha_{j, k} q^{-s}}
 .\end{align*}`{=tex}
 
-## Analogy to Riemann Hypothesis
+Analogy to Riemann Hypothesis
+-----------------------------
 
 Now consider the roots of $L_j(s)$: we have `\small`{=tex} `\begin{align*}
 L_j(s_0) = 0 
@@ -432,7 +453,8 @@ L_j(s_0) = 0
 \iff \Re(s_0) = \frac j 2
 .\end{align*}`{=tex} `\normalsize`{=tex}
 
-## Analogy with Riemann Hypothesis
+Analogy with Riemann Hypothesis
+-------------------------------
 
 Roughly speaking, we can apply $\operatorname{Log}$ (a conformal map) to send the $\alpha_{j, k}$ to zeros of the $L_j$, this says that the zeros all must lie on the "critical lines" $\frac{j}{2}$.
 
@@ -444,7 +466,8 @@ Roughly speaking, we can apply $\operatorname{Log}$ (a conformal map) to send th
 ```
 In particular, the zeros of $L_1$ have real part $\frac 1 2$ (analogy: classical [[../Unsorted/RH | ../Unsorted/RH.html]]).
 
-## Precise Relation
+Precise Relation
+----------------
 
 -   Difficult to find in the literature!
 -   Idea: make a similar definition for schemes, then take $X = \operatorname{Spec}{\mathbb{Z}}$.
@@ -464,9 +487,11 @@ which is the Euler product expansion of the classical Riemann Zeta function.
 
 > If anyone knows a reference for this, let me know!
 
-# Weil for Curves
+Weil for Curves
+===============
 
-## Weil for Curves
+Weil for Curves
+---------------
 
 The Weil conjectures take on a particularly nice form for curves. Let $X/{\mathbb{F}}_q$ be a smooth projective curve of genus $g$, then
 
@@ -489,7 +514,8 @@ The Weil conjectures take on a particularly nice form for curves. Let $X/{\mathb
 ```
 > ${\mathcal{P}}$ here is the Poincaré polynomial, the generating function for the Betti numbers. $\Sigma_g$ is the surface (real 2-dimensional smooth manifold) of genus $g$. `\normalsize`{=tex}
 
-## The Projective Line
+The Projective Line
+-------------------
 
 Recall $Z_{{\mathbb{P}}^1/{\mathbb{F}}_q}(z) = {1 \over (1-z)(1-qz)}$.
 
@@ -508,7 +534,8 @@ Recall $Z_{{\mathbb{P}}^1/{\mathbb{F}}_q}(z) = {1 \over (1-z)(1-qz)}$.
 
 > Note that even Betti numbers show up as degrees in the denominator, odd in the numerator. Allows us to immediately guess the zeta function for ${\mathbb{P}}^n/{\mathbb{F}}_q$ by knowing $H^* {\mathbb{CP}}^\infty$!
 
-## Elliptic Curves
+Elliptic Curves
+---------------
 
 ```{=tex}
 \begin{figure}[h]
@@ -534,7 +561,8 @@ Z_E(z) = {p_1(z)  \over p_0(z) p_2(z)} =
 { (1 - a_{1}z)(1 - a_{2}z)  \over (1-z)(1- qz)}
 .\end{align*}`{=tex}
 
-## Elliptic Curves: Weil 1
+Elliptic Curves: Weil 1
+-----------------------
 
 1.  Rationality: using the point count, we can compute `\small`{=tex} `\begin{align*}
     Z_E(z) 
@@ -558,7 +586,8 @@ Z_E(z) = {p_1(z)  \over p_0(z) p_2(z)} =
 ```
 > Note that the "expected" point counts show up in the denominator, along with the even Betti numbers, while the "correction" factor appears in the denominator and odd Betti numbers. `\normalsize`{=tex}
 
-## Elliptic Curves: Weil 2 and 3
+Elliptic Curves: Weil 2 and 3
+-----------------------------
 
 2.  Functional Equation: we use the equivalent formulation of "Poincaré duality": `\begin{align*}
     {(1-\alpha z)(1-\mkern 1.5mu\overline{\mkern-1.5mu\alpha \mkern-1.5mu}\mkern 1.5muz) \over (1-z)(1-qz)} =  
@@ -580,7 +609,8 @@ This amounts to checking that the coefficients of $p_0, p_2$ are interchanged, a
 
 4.  Betti Numbers: ${\mathcal{P}}_{\Sigma_1}(x) = 1 + 2x + x^2$, and indeed $\deg p_0 = \deg p_2 = 1,~ \deg p_1 = 2$.
 
-## History
+History
+-------
 
 -   1801, Gauss: Point count and RH showed for specific elliptic curves
 
@@ -605,9 +635,11 @@ This amounts to checking that the coefficients of $p_0, p_2$ are interchanged, a
     -   2001: Full [[modularity | ../Unsorted/modular%20form.html]] theorem proved, extending Wiles, implies Hasse-Weil for elliptic curves
     -   Inroad to [[Langlands | ../Unsorted/Langlands.html]]: show every $L$ function coming from an algebraic variety also comes from an automorphic representation.
 
-# Weil for Projective m-space
+Weil for Projective m-space
+===========================
 
-## Setup
+Setup
+-----
 
 Take $X = {\mathbb{P}}^m/{\mathbb{F}}$ We can write `
 <span class="math display">
@@ -627,7 +659,8 @@ But how many points are actually in this space?
 ```
 > A nontrivial combinatorial problem!
 
-## q-Analogs and Grassmannians
+q-Analogs and Grassmannians
+---------------------------
 
 To illustrate, this can be done combinatorially: identify ${\mathbb{P}}^m_{\mathbb{F}}= {\operatorname{Gr}}_{{\mathbb{F}}}(1, m+1)$ as the space of lines in ${\mathbb{A}}^{m+1}_{\mathbb{F}}$.
 
@@ -645,7 +678,8 @@ Theorem
 -   Choose a nonzero vector $\mathbf{v}_2$ *not* in the span of $\mathbf{v}_1$ in $q^N - q$ ways.
     -   Now note $\# {\operatorname{span}}\left\{{\mathbf{v}_1, \mathbf{v}_2}\right\} = \# \left\{{\lambda_1 \mathbf{v}_1 + \lambda_2 \mathbf{v}_2 {~\mathrel{\Big|}~}\lambda_i \in {\mathbb{F}}}\right\} = q\cdot q = q^2$.
 
-## Proof continued
+Proof continued
+---------------
 
 -   Choose a nonzero vector $\mathbf{v}_3$ *not* in the span of $\mathbf{v}_1, \mathbf{v}_2$ in $q^N -q^2$ ways.
 
@@ -672,7 +706,8 @@ Thus `\small`{=tex} `\begin{align*}
 
 $\hfill\blacksquare$
 
-## Counting Points
+Counting Points
+---------------
 
 > Note that we've actually computed the number of points in any Grassmannian.
 
@@ -689,7 +724,8 @@ X({\mathbb{F}}_{q^2}) &= \sum_{j=0}^{m} \qty{q^2}^j  \\
 X({\mathbb{F}}_{q^n}) &= \sum_{j=0}^{m} \qty{q^n}^j
 .\end{align*}`{=tex}
 
-## Computing the Zeta Function
+Computing the Zeta Function
+---------------------------
 
 So `\begin{align*}
 Z_X(z) 
@@ -704,7 +740,8 @@ Z_X(z)
 
 > Miraculously, still a rational function! Consequence of sum formula, works in general.
 
-## Checking the Weil Conjectures
+Checking the Weil Conjectures
+-----------------------------
 
 `\begin{align*}
 Z_X(z) = \prod_{j=0}^m \qty{1 \over 1 - q^j z} 
@@ -722,7 +759,8 @@ Z_X\left(\frac{1}{q^{m} z}\right)
 &= \qty{q^{m\over 2}z}^{\chi(X)} \cdot Z_X(z) \\
 .\end{align*}`{=tex}
 
-## Checking
+Checking
+--------
 
 `\begin{align*}
 Z_X(z) = \prod_{j=0}^m \qty{1 \over 1 - q^j z} 
@@ -736,7 +774,8 @@ Z_X(z) = \prod_{j=0}^m \qty{1 \over 1 - q^j z}
 
 -   Only even dimensions, and correspondingly no numerator.
 
-## An Easier Proof: "Paving by Affines"
+An Easier Proof: "Paving by Affines"
+------------------------------------
 
 Quick recap: `\begin{align*}
 Z_{{\operatorname{pt}}} = {1 \over 1 - z} && Z_{{\mathbb{P}}^1}(z) = {1 \over 1 - qz} && Z_{{\mathbb{A}}^1}(z) = {1\over (1-z)(1-qz)}
@@ -755,7 +794,8 @@ Lemma (Excision)
 = \zeta_Y(z) \cdot \zeta_U(z)
 .\end{align*}`{=tex}
 
-## An Easier Proof: "Paving"
+An Easier Proof: "Paving"
+-------------------------
 
 Note that geometry can help us here: we have a decomposition ${\mathbb{P}}^n = {\mathbb{P}}^{n-1} {\textstyle\coprod}{\mathbb{A}}^n$, and thus inductively a stratification `\begin{align*}
 {\mathbb{P}}^m = {\textstyle\coprod}_{j=0}^m {\mathbb{A}}^j = {\mathbb{A}}^0 {\textstyle\coprod}{\mathbb{A}}^1 {\textstyle\coprod}\cdots {\textstyle\coprod}{\mathbb{A}}^m
@@ -772,9 +812,11 @@ and $Z_{{\mathbb{A}}^j}(z) = {1 \over 1 - q^j z}$, we have `\begin{align*}
 Z_{{\mathbb{P}}^m}(z) = \prod_{j=0}^m Z_{{\mathbb{A}}^j}(z) = \prod_{j=0}^m {1 \over 1 - q^j z}
 .\end{align*}`{=tex}
 
-# Grassmannians
+Grassmannians
+=============
 
-## Motivation
+Motivation
+----------
 
 Consider now $X = {\operatorname{Gr}}(k, m) / {\mathbb{F}}$ -- by the previous computation, we know `\begin{align*}
 X({\mathbb{F}}_{q^n}) = 
@@ -792,7 +834,8 @@ Z_X(z) = \prod_{j=0}^{2k(m-k)} \frac{p_{2(j+1)}(z)}{p_{2j}(z)}
 \end{align*}
 <span>`{=html} with $\deg p_j = \beta_j$.
 
-## Grassmannian
+Grassmannian
+------------
 
 It turns out that (proof omitted) one can show `\begin{align*}
 \genfrac{[}{]}{0pt}{}{m}{k}_{q} = \sum_{j=0}^{k(m-k)} \lambda_{m, k}(j) q^j \implies Z_X(z) = \prod_{j=0}^{k(m-k)} \qty{ \frac{1}{ 1 - q^j x} }^{\lambda_{m, k}(j)}
@@ -812,9 +855,11 @@ This lets us conclude that the Poincare polynomial of the complex Grassmannian i
 
 > In particular, the $H^* {\operatorname{Gr}}_{\mathbb{C}}(m, k)$ vanishes in odd degree.
 
-# Weil's Proof
+Weil's Proof
+============
 
-## Diagonal Hypersurfaces
+Diagonal Hypersurfaces
+----------------------
 
 Proof of rationality of $Z_X(T)$ for $X$ a diagonal hypersurface.
 
@@ -831,7 +876,8 @@ Proof of rationality of $Z_X(T)$ for $X$ a diagonal hypersurface.
     -   By Artin's theorem for linear independence of characters, $\psi_q \not \equiv 1$ and every additive character of ${\mathbb{F}}_q$ is of the form $a \mapsto \psi_q(ca)$ for some $c\in {\mathbb{F}}_q$.
 -   Shorthand notation: say $a\sim 0 \iff a \equiv 0 \operatorname{mod}1$.
 
-## A Diagonal Hypersurface
+A Diagonal Hypersurface
+-----------------------
 
 -   Fix an injective multiplicative map `\begin{align*}
     \phi: \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{F}}\mkern-1.5mu}\mkern 1.5mu_q^{\times}\to {\mathbb{C}}^{\times}
@@ -861,7 +907,8 @@ Proof of rationality of $Z_X(T)$ for $X$ a diagonal hypersurface.
     \begin{align*}d \coloneqq\gcd(n, q-1), u \in {\mathbb{F}}_q \implies \#\left\{{x\in {\mathbb{F}}_q {~\mathrel{\Big|}~}x^n = u}\right\} = \sum_{d\alpha \sim 0} \chi_\alpha(u)\end{align*}
     <span>`{=html}
 
-## A Diagonal Hypersurface
+A Diagonal Hypersurface
+-----------------------
 
 -   This implies `\begin{align*}
     N &= \sum_{\substack{\alpha = [\alpha_0, \cdots, \alpha_r] \\ d_i \alpha_i \sim 0}} \quad \sum_{\substack{\mathbf{u} = [u_0, \cdots ,u_r] \\ \Sigma~ a_i u_i = 0}}
@@ -882,7 +929,8 @@ Proof of rationality of $Z_X(T)$ for $X$ a diagonal hypersurface.
     \end{cases}
     .\end{align*}`{=tex}
 
-## A Diagonal Hypersurface
+A Diagonal Hypersurface
+-----------------------
 
 -   Define the *Jacobi sum* for $\alpha$ where $\sum \alpha_i \sim 0$: `\begin{align*}
     J(\alpha) \coloneqq\qty {1 \over q-1} \sum_{\Sigma~ u_i = 0} ~\prod_{j=0}^r \chi_{\alpha_j}(u_j) = \sum_{\Sigma~ v_i = 0} ~\prod_{j=1}^r \chi_{\alpha_j}(v_j) 
@@ -904,7 +952,8 @@ Proof of rationality of $Z_X(T)$ for $X$ a diagonal hypersurface.
         \chi(t) = {G(\chi) \over q} \sum_{x\in {\mathbb{F}}_q} \mkern 1.5mu\overline{\mkern-1.5mu\chi\mkern-1.5mu}\mkern 1.5mu(x) \psi_q(tx) 
         .\end{align*}`{=tex}
 
-## A Diagonal Hypersurface
+A Diagonal Hypersurface
+-----------------------
 
 -   Proposition: if `\begin{align*}
     \sum \alpha_i \sim 0 \implies J(\alpha) = {1 \over q} \prod_{k=1}^r G(\chi_{\alpha_k}) {\quad \operatorname{and} \quad} {\left\lvert {J(\alpha)} \right\rvert} = q^{r - 1\over 2}
@@ -923,7 +972,8 @@ Proof of rationality of $Z_X(T)$ for $X$ a diagonal hypersurface.
     \begin{align*}\qty{q-1}\alpha \sim 0 \implies -G(\chi_{\alpha, \nu}) = \qty{-G(\chi_\alpha)}^\nu.\end{align*}
     <span>`{=html}
 
-## A Diagonal Hypersurface
+A Diagonal Hypersurface
+-----------------------
 
 -   We have a relation $\qty{q^\nu - 1} \mkern 1.5mu\overline{\mkern-1.5muN\mkern-1.5mu}\mkern 1.5mu_\nu = N_\nu$.
 -   This lets us write `\begin{align*}

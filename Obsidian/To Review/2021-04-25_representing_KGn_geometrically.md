@@ -1,5 +1,5 @@
 ---
-date: "2021-04-23T20:09"
+date: '2021-04-23T20:09'
 ---
 
 -   [Representing $K(G, n)$ Geometrically](#representing-kg-n-geometrically)
@@ -19,7 +19,8 @@ date: "2021-04-23T20:09"
 
 \#classifying_spaces \#algebraic_topology
 
-# Representing $K(G, n)$ Geometrically {#representing-kg-n-geometrically}
+Representing $K(G, n)$ Geometrically {#representing-kg-n-geometrically}
+====================================
 
 [(Summary of full material found here)](http://math.ucr.edu/home/baez/week151.html)
 

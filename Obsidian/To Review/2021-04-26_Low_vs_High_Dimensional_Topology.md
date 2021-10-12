@@ -1,5 +1,5 @@
 ---
-date: 2021-04-26
+date: '2021-04-26'
 tags:
 - Unfiled
 ---
@@ -19,7 +19,8 @@ tags:
 
 
 
-# What is the difference between low and high dimensional topology?
+What is the difference between low and high dimensional topology?
+=================================================================
 
 High-dimensional topology refers to manifolds of dimension 5 and above, or in relative terms, embeddings in codimension 3 and above. Low-dimensional topology is concerned with questions in dimensions up to 4, or embeddings in codimension up to 2.
 

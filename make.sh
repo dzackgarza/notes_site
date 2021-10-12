@@ -2,9 +2,10 @@
 
 rm -rf /var/www/notes_site/*;
 rm -rf ./Obsidian/*;
+rm -rf ./figures/*;
 cp -r ~/Notes/Obsidian/* ./Obsidian;
 mkdir /var/www/notes_site;
-#mkdir figures;
+mkdir ./figures;
 
 #shopt -s globstar
 #for i in **/*.txt; do # Whitespace-safe and recursive

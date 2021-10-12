@@ -3,7 +3,7 @@ aspectratio: 169
 author: D. Zack Garza
 colortheme: default
 date: April 2020
-fontfamily: noto-sans
+fontfamily: 'noto-sans'
 fontsize: 10pt
 header-includes:
 - |
@@ -39,11 +39,13 @@ title: Homotopy Groups of Spheres
 
 
 
-[[Subjects/homotopy theory](Subjects/homotopy%20theory.md) [../Unsorted/Homotopy Groups of Spheres](../Unsorted/Homotopy%20Groups%20of%20Spheres.md) [Subjects/Algebraic Topology | Subjects/Algebraic%20Topology.html]]
+[[Subjects/homotopy theory](../Subjects/homotopy%20theory.md) [../Unsorted/Homotopy Groups of Spheres](../Unsorted/Homotopy%20Groups%20of%20Spheres.md) [Subjects/Algebraic Topology | ../Subjects/Algebraic%20Topology.html]]
 
-# Summary
+Summary
+=======
 
-## Big Points
+Big Points
+----------
 
 -   Homotopy as a means of classification somewhere between homeomorphism and cobordism
 -   Comparison to homology
@@ -55,7 +57,8 @@ title: Homotopy Groups of Spheres
 -   "Measuring stick" for current tools, similar to special values of L-functions
 -   Serre's computation
 
-## History
+History
+-------
 
 -   1860s-1890s: (Roughly) defined by Jordan for complex integration, "combinatorial topology"
     -   Original motivation: when does a path integral depend on a specific path? (E.g. a contour integral in ${\mathbb{C}}$)
@@ -80,7 +83,8 @@ title: Homotopy Groups of Spheres
     -   $k \leq 19$ when $n < k+2$ (unstable range)
     -   We *only* have a complete list for $S^0$ and $S^1$, and know *no* patterns beyond this!
 
-## Actual Outline
+Actual Outline
+--------------
 
 -   Definitions of spheres and balls
 -   Definition of homotopy of maps
@@ -89,7 +93,8 @@ title: Homotopy Groups of Spheres
 -   Examples of spaces that are homotopy equivalent and *aren't*.
 -   Example where homotopy distinguishes homologically equivalent spaces
 
-## Images
+Images
+------
 
 [Hopf Fibration Visualizer](http://philogb.github.io/page/hopf/#)
 
@@ -115,7 +120,8 @@ A bundle
 ```
 Visualization: the same way $S^2\setminus{\operatorname{pt}}\to {\mathbb{R}}^2$ via stereographic projection, we take $S^3\setminus{\operatorname{pt}}\to {\mathbb{R}}^3$. Realizes $S^3$ as a family of circles parameterized by a 2-sphere, fiber above each point is a circle.
 
-## Theorems and Definitions
+Theorems and Definitions
+------------------------
 
 A map $f: X \to Y$ is called a *weak homotopy equivalence* if the induced maps $f^*_i: \pi_i(X, x_0) \to \pi_i(Y, f(x_0))$ are isomorphisms for every $i \geq 0$. If a map $X \xrightarrow{f} Y$ satisfies $f(X^{(n)}) \subseteq Y^{(n)}$, then $f$ is said to be a *cellular map*. Any map $X \xrightarrow{f} Y$ between CW complexes is homotopic to a cellular map. For every topological space $X$, there exists a CW complex $Y$ and a weak homotopy equivalence $f: X \to Y$. Moreover, if $X$ is $n{\hbox{-}}$dimensional, $Y$ may be chosen to be $n{\hbox{-}}$connected and is obtained from $X$ by attaching cells of dimension greater than $n$. **Abbreviated statement**: if $X, Y$ are CW complexes, then any map $f: X \to Y$ is a weak homotopy equivalence if and only if it is a homotopy equivalence. (Note: $f$ must induce maps on all homotopy groups simultaneously.) If $X$ is an $n{\hbox{-}}$ connected CW complex, then there are maps $\pi_i X \to \pi_{i+1} \Sigma X$ which is an isomorphism for $i\leq 2n$ and a surjection for $i=2n+1$.
 

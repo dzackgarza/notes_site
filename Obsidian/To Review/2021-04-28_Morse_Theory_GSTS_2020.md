@@ -1,5 +1,5 @@
 ---
-date: "2021-04-28 17:22:38"
+date: '2021-04-28 17:22:38'
 tags:
 - Unfiled
 ---
@@ -29,7 +29,8 @@ tags:
 
 Tags: \#morse_theory \#topology \#talks
 
-# BG Info
+BG Info
+=======
 
 -   [Video of conformal flows](https://youtu.be/mIUi1zIUQJw?t=42)
 
@@ -62,13 +63,15 @@ Tags: \#morse_theory \#topology \#talks
 
 -   Diffeomorphism type depends on isotopy classes of attaching maps.
 
-# Actual Talk
+Actual Talk
+===========
 
 [Extremely good review](https://webusers.imj-prg.fr/~alexandru.oancea/BAMS-review-Stein.pdf)
 
 Goal: reduce the complex geometry of Stein manifolds (hard) to the symplectic geometry of Weinstein manifolds (less hard). Study the space of structures up to homotopy.
 
-## Stein
+Stein
+-----
 
 Moral: rigid, complex-analytic.
 
@@ -112,7 +115,7 @@ Consider $(M^{2n}, J)$ where $M$ is a complex manifold and $J$ the structure of 
 -   Then $\omega_\phi$ is a symplectic form compatible with $J$, i.e. $H_\phi \coloneqq g_\phi - i\omega_\phi$ is a Hermitian metric
 -   Suppose $\phi$ is *exhausting*, i.e. preimages of compact sets are compact and $\phi$ is bounded from below (?)
 
-> Note on exhausting J-convex functions: origins seem to be in analysis of multiple complex variables. In nicest cases, boils down to the "Levi matrix" (analog of Hessian for ${\partial}, \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu$) is positive semidefinite. This is an equivalent condition.
+> Note on exhausting J-convex functions: origins seem to be in analysis of multiple complex variables. In nicest cases, boils down to the "Levi matrix" (analog of Hessian for ${\partial}, \mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5mu$) is positive semidefinite. This is an equivalent condition.
 
 > The subspace of J-convex functions in $C^\infty(M, {\mathbb{R}})$ is open and contractible, so well-approximated by Morse functions (and the bigger class of *generalized Morse functions*: nondegenerate, restricted critical points).
 
@@ -126,7 +129,8 @@ Theorem
 
 > A type of filling? Etnyre seems to work on this kind of thing.
 
-## Weinstein
+Weinstein
+---------
 
 Aside:
 
@@ -162,7 +166,8 @@ Subdefinitions:
 
 [Flow Curves](figures/2020-03-31-18:35.png)\
 
-## Stein to Weinstein
+Stein to Weinstein
+------------------
 
 Big idea: we want to study Stein structures by deforming them.There is a map from the space of Stein structures to the space of Weinstein structures that (theorem) is a weak homotopy equivalence in the compact case, and is conjectured in general.
 
@@ -182,15 +187,18 @@ Goal: fix $M$, take $(J, \phi)$ and produce $(\omega, X, \phi)$.
 
 Now choosing another $\phi$ yields a homotopy-equivalent and thus symplectomorphic manifold, so this association (denoted $\mathfrak{M}_\phi$ in the text) is unique/canonical.
 
-## Weinstein to Stein
+Weinstein to Stein
+------------------
 
 Theorem: there is a "weak homotopy inverse"to $\mathfrak{M}_\phi$, i.e. given a Weinstein structure $(\omega, X, \phi)$ there is a Stein structure $(J, \phi)$ such that $\mathfrak{M}(J, \phi)$ is Weinstein-homotopic (homotopy-equivalent?) to $(\omega, X, \phi)$ rel $\phi$, i.e. $\phi$ is fixed through the homotopy.
 
-## Questions
+Questions
+---------
 
 Do these structures satisfy an **h-principle**? Origins (Gromov, 1970): given a PDE, a "partially specified" solution can be deformed into an actual solution. The former have topological properties (and are amenable to algebraic topology), the latter analytic. Recast, the inclusion of the space of "partially specified" solutions into the space of solutions is a weak homotopy equivalence.
 
-## Morse Theory
+Morse Theory
+------------
 
 Goal: handlebody decomposition, or for the purposes of the above theorems, retractions onto a CW complex. Decomposing a cobordism into a sequence of elementary cobordisms (admit a Morse function with a single critical point).
 
@@ -315,7 +323,8 @@ Proof (Sketch)
 -   Use "Smale's trick": trades in an index $k$ critical point for one of index $k+1$ and one of index $k+2$, such that $k, k+1$ cancel. Trade index $1$ for index $2, 3$ and cancel index $3$ as before.
 -   Eliminate $0, n$ with a lemma (unclear)
 
-# Potentially Useful Figures?
+Potentially Useful Figures?
+===========================
 
 ![Image](figures/2020-03-30-22:49.png)\
 

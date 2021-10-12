@@ -1,5 +1,5 @@
 ---
-title: "Real Analysis Qual Prep Week 1: Preliminaries"
+title: 'Real Analysis Qual Prep Week 1: Preliminaries'
 ---
 
 -   [Week 1: Preliminaries](#week-1-preliminaries)
@@ -25,9 +25,11 @@ title: "Real Analysis Qual Prep Week 1: Preliminaries"
 
 
 
-# Week 1: Preliminaries
+Week 1: Preliminaries
+=====================
 
-## Topics
+Topics
+------
 
 -   Continuity and uniform continuity
     -   Pathological functions and sequences of functions
@@ -46,7 +48,8 @@ title: "Real Analysis Qual Prep Week 1: Preliminaries"
 
 Things that don't explicitly appear in qual problems - Baire category theorem, - Nowhere density, - Basic inequalities (triangle, Cauchy-Schwarz) - Concepts from Calculus - Mean value theorem - Taylor expansion - Taylor's remainder theorem - Intermediate value theorem - Extreme value theorem - Rolle's theorem - Riemann integrability - Weierstrass approximation
 
-## Background / Warmup / Review
+Background / Warmup / Review
+----------------------------
 
 -   Derive the reverse triangle inequality from the triangle inequality.
 -   Let $E\subseteq {\mathbb{R}}$. Define $\sup E$ and $\inf E$.
@@ -106,7 +109,8 @@ Things that don't explicitly appear in qual problems - Baire category theorem, -
 
 -   Find a sequence of continuous functions that does *not* converge uniformly, but still has a pointwise limit that is continuous.
 
-## Exercises
+Exercises
+---------
 
 -   Find a function that is differentiable but not continuously differentiable.
 
@@ -133,7 +137,8 @@ Things that don't explicitly appear in qual problems - Baire category theorem, -
 
 -   ![[_attachments/Pasted%20image%2020210519151915.png]]
 
-## Qual Questions
+Qual Questions
+--------------
 
 -   ![[_attachments/Pasted%20image%2020210519151929.png]]
 -   ![[_attachments/Pasted%20image%2020210519152043.png]]

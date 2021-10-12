@@ -29,7 +29,8 @@ title: Chapter 9
 
 [[Audin-Damian Morse Theory and Floer Homology | ../../../Book%20Notes/Audin-Damian%20Morse%20Theory%20and%20Floer%20Homology/Audin-Damian%20Morse%20Theory%20and%20Floer%20Homology.html]] Tags: \#symplectic
 
-# Background, Notation, Setup
+Background, Notation, Setup
+===========================
 
 **Goals**
 
@@ -152,7 +153,7 @@ $\mathcal{L}(x, y)$ is compact, where the compactification is given by adding in
 -   ${\mathcal{L}}W$ is the *free loop space* on $W$, i.e. space of contractible loops on $W$, i.e. $C^\infty(S^1; W)$ with the $C^\infty$ topology
 
     -   Elements $x\in {\mathcal{L}}W$ can be viewed as maps $S^1\to W$.
-    -   Can extend to maps from a closed disc, $u: \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{D}}\mkern-1.5mu}\mkern 1.5mu^2 \to M$.
+    -   Can extend to maps from a closed disc, $u: \mkern 1.5mu\overline{\mkern-1.5mu\mathbb{D}\mkern-1.5mu}\mkern 1.5mu^2 \to M$.
     -   Loops in ${\mathcal{L}}W$ can be viewed as maps $S^2\to W$, since they're maps $I\times S^1\to W$ with the boundaries pinched:
 
     ![Loops in ${\mathcal{L}}W$](figures/image_2020-09-20-19-43-22.png)
@@ -226,7 +227,8 @@ $\hfill\blacksquare$
 ```{=tex}
 \newpage
 ```
-# Reminder of Goals
+Reminder of Goals
+=================
 
 **Overall Goal**:
 
@@ -264,7 +266,8 @@ $\mathcal{L}(x, y)$ is compact, `
 ```{=tex}
 \newpage
 ```
-# 9.1 and Review
+9.1 and Review
+==============
 
 -   Defined moduli space of (parameterized) **solutions**: `
     <span class="math display">
@@ -373,9 +376,11 @@ $\hfill\blacksquare$
 ```{=tex}
 \newpage
 ```
-# Three Important Theorems
+Three Important Theorems
+========================
 
-## First Theorem: Convergence to Broken Trajectories
+First Theorem: Convergence to Broken Trajectories
+-------------------------------------------------
 
 -   Recall: *broken trajectories* are unions of intermediate trajectories connecting intermediate critical points.
 
@@ -410,7 +415,8 @@ $\mkern 1.5mu\overline{\mkern-1.5mu\mathcal{L}\mkern-1.5mu}\mkern 1.5mu(x, z)$ i
 ```{=tex}
 \newpage
 ```
-## Second Theorem: Compactness of $\mkern 1.5mu\overline{\mkern-1.5mu\mathcal{L}\mkern-1.5mu}\mkern 1.5mu(x, z)$ {#second-theorem-compactness-of-mkern-1.5muoverlinemkern-1.5mumathcallmkern-1.5mumkern-1.5mux-z}
+Second Theorem: Compactness of $\mkern 1.5mu\overline{\mkern-1.5mu\mathcal{L}\mkern-1.5mu}\mkern 1.5mu(x, z)$ {#second-theorem-compactness-of-mkern-1.5muoverlinemkern-1.5mumathcallmkern-1.5mumkern-1.5mux-z}
+-------------------------------------------------------------------------------------------------------------
 
 ::: {.definition .proofenv title="Regular Pair"}
 For an almost complex structure $J$ and a Hamiltonian $H$, the pair $(H, J)$ is **regular** if the Floer map $\mathcal{F}$ is transverse to the zero section in the following vector bundle:\
@@ -460,7 +466,8 @@ y {~\mathrel{\Big|}~}\mu(x) < \mu(y) < \mu(z)
 ```{=tex}
 \newpage
 ```
-## Third Theorem: Gluing
+Third Theorem: Gluing
+---------------------
 
 ::: {.theorem .proofenv title="9.2.3: Gluing"}
 Let $x,y,z$ be three critical points of $\mathcal{A}_H$ with three consecutive indices `
@@ -521,7 +528,8 @@ Then
 
 $\hfill\blacksquare$ `\newpage`{=tex}
 
-# Gluing Theorem
+Gluing Theorem
+==============
 
 Broken into three steps:
 
@@ -549,7 +557,8 @@ Broken into three steps:
 
 $\hfill\blacksquare$ `\newpage`{=tex}
 
-# 9.3: Pre-gluing, Construction of $w_\rho$ {#pre-gluing-construction-of-w_rho}
+9.3: Pre-gluing, Construction of $w_\rho$ {#pre-gluing-construction-of-w_rho}
+=========================================
 
 -   Choose (once and for all) a bump function $\beta$ on $B_{{\varepsilon}}(0)^c \subset {\mathbb{R}}\to [0, 1]$ which is 1 on ${\left\lvert {x} \right\rvert} \geq 1$ and $0$ on ${\left\lvert {x} \right\rvert} < {\varepsilon}$
 -   Split into positive and negative parts $\beta^\pm(s)$:
@@ -628,9 +637,11 @@ $\hfill\blacksquare$ `\newpage`{=tex}
 
 $\hfill\blacksquare$ `\newpage`{=tex}
 
-# 9.4: Construction of $\psi$. {#construction-of-psi.}
+9.4: Construction of $\psi$. {#construction-of-psi.}
+============================
 
-## Summary
+Summary
+-------
 
 -   Newton-Picard method, general idea:
 

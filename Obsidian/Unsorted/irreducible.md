@@ -1,3 +1,17 @@
 ---
-aliases: ["irreducibles"]
+aliases:
+- irreducibles
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+

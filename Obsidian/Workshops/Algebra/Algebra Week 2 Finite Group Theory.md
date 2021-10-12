@@ -1,5 +1,5 @@
 ---
-title: "Algebra Qual Prep Week 2: Finite Group Theory"
+title: 'Algebra Qual Prep Week 2: Finite Group Theory'
 ---
 
 -   [Week 2: Finite Groups](#week-2-finite-groups)
@@ -24,11 +24,13 @@ title: "Algebra Qual Prep Week 2: Finite Group Theory"
 
 
 
-# Week 2: Finite Groups
+Week 2: Finite Groups
+=====================
 
 [See the Presentation Schedule](https://www.notion.so/df531651418e43a9918f8d6c0cc0c706)
 
-## Topics
+Topics
+------
 
 -   Recognition of direct products and semidirect products
 -   Amalgam size lemma: $\#HK = \# H \# K / \#(H\cap K)$
@@ -66,7 +68,8 @@ title: "Algebra Qual Prep Week 2: Finite Group Theory"
 
 > A remark: automorphisms and series of groups aren't often directly tested on the qual, but are useful practice. Simple/solvable groups *do* come up often.
 
-## Exercises
+Exercises
+---------
 
 ### Warmup
 
@@ -156,7 +159,8 @@ title: "Algebra Qual Prep Week 2: Finite Group Theory"
 
 > Hint: consider the derived series.
 
-# Qual Problems
+Qual Problems
+=============
 
 ![[_attachments/Untitled%2014.png]]
 

@@ -1,5 +1,5 @@
 ---
-date: "2021-04-28 18:07:42"
+date: '2021-04-28 18:07:42'
 tags:
 - Unfiled
 ---
@@ -20,13 +20,14 @@ tags:
 
 
 
-[[Subjects/Contact | Subjects/Contact.html]]
+[[Subjects/Contact | ../Subjects/Contact.html]]
 
 Tags: \#topology \#contact_topology
 
 > Convention: All manifolds discussed will be smooth, real, Hausdorff, second-countable, connected, not necessarily closed/compact, possibly with boundary.
 
-# Hyperplane Fields
+Hyperplane Fields
+=================
 
 These are important because of their ties to *foliations*.
 
@@ -48,7 +49,8 @@ These are important because of their ties to *foliations*.
 
 > Remark: Note that this has a more twisted structure, which is what geometrically makes it contact -- no embedded (hyper) surface in ${\mathbb{R}}^3$ can have an open subset $U$ such that $\xi$ is tangent to $p$ for every $p\in U$.
 
-# Foliations
+Foliations
+==========
 
 > *Remark:* Foliations arise when you have a PDE (IVP or BVP) defined on an $n{\hbox{-}}$manifold $M$, with some initial/boundary conditions defined on an embedded surface, and you want to find the time evolution of that system (moving you through leaves of the foliation, think of spacetime being foliated by space-like hyperplanes in General Relativity).
 

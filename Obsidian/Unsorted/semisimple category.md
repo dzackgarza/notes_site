@@ -1,3 +1,17 @@
 ---
-aliases: ["semisimple"]
+aliases:
+- semisimple
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,46 @@
+Error on 1
+
+{ ["2"] = exit,["3"] = 1,} 
+\documentclass{standalone}
+\input{/home/zack/.pandoc/custom/preamble_common}
+\begin{document}
+\nopagecolor
+\begin{tikzcd}
+F \arrow[rr, hook] &  & E \arrow[dd, "\pi", two heads] \\
+ &  &  \\
+ &  & B \arrow[uu, "s", dotted, bend left]
+\end{tikzcd}
+\end{document}
+Error on 1
+
+{ ["2"] = exit,["3"] = 1,} 
+\documentclass{standalone}
+\input{/home/zack/.pandoc/custom/preamble_common}
+\begin{document}
+\nopagecolor
+\begin{tikzcd}
+\pi^{-1}(U) \arrow[dd, "\pi", two heads] \arrow[rr, "\varphi", dashed] &  & U\times F \arrow[lldd, "{(a,b) \mapsto a}"] \\
+ &  &  \\
+U &  &
+\end{tikzcd}
+\end{document}
+Error on 1
+
+{ ["2"] = exit,["3"] = 1,} 
+\documentclass{standalone}
+\input{/home/zack/.pandoc/custom/preamble_common}
+\begin{document}
+\nopagecolor
+\begin{tikzcd}
+    {\mathbb{R}}&& M \\
+    \\
+    && {S^1}
+    \arrow[from=1-3, to=3-3]
+    \arrow[from=1-1, to=1-3]
+\end{tikzcd}
+\end{document}
 ---
-date: "2021-04-25T02:33"
+date: '2021-04-25T02:33'
 ---
 
 -   [Fiber Bundles](#fiber-bundles)
@@ -21,7 +62,8 @@ date: "2021-04-25T02:33"
 
 \#homotopy \#bundles \#fibration \#algebraic_topology
 
-# Fiber Bundles
+Fiber Bundles
+=============
 
 What is a fiber bundle? Generally speaking, it is similar to a fibration - we require the homotopy lifting property to hold, although it is not necessary that path lifting is unique.
 
@@ -75,7 +117,8 @@ and thus $M$ is associated to a nontrivial line bundle over the circle.
 
 **Notation**: Let $I(F, B)$ denote isomorphism classes of fiber bundles of the form $F \to {-}\to B$.
 
-## Proposition:
+Proposition:
+------------
 
 The set of isomorphism classes of smooth line bundles over a space $B$ satisfies the following isomorphism of abelian groups:
 
@@ -176,7 +219,8 @@ and thus $M$ is associated to a nontrivial line bundle over the circle.
 
 **Notation**: Let $I(F, B)$ denote isomorphism classes of fiber bundles of the form $F \to {-}\to B$.
 
-## Proposition:
+Proposition:
+------------
 
 The set of isomorphism classes of smooth line bundles over a space $B$ satisfies the following isomorphism of abelian groups:
 

@@ -3,7 +3,7 @@ aspectratio: 169
 author: D. Zack Garza
 colortheme: default
 date: April 2020
-fontfamily: noto-sans
+fontfamily: 'noto-sans'
 fontsize: 10pt
 header-includes:
 - |
@@ -73,9 +73,11 @@ title: Linearization and Transversality
 
 [[Floer Reading Group Fall 2020 | ../../../../Unsorted/Floer%20Reading%20Group%20Fall%202020.html]]
 
-# Review
+Review
+======
 
-## Recalling Notation
+Recalling Notation
+------------------
 
 -   The Floer equation is given by `\begin{align*}
     \frac{\partial u}{\partial s}+J(u) \frac{\partial u}{\partial t}+\operatorname{grad} H_{t}(u)=0
@@ -91,20 +93,24 @@ title: Linearization and Transversality
 
 -   $W^{1, p}(x, y)$ and ${\mathcal{P}}^{1, p}(x, y)$ were completions of $C^\infty(?)$ with respect to certain norms.
 
-## The "Program" for Chapter 8
+The "Program" for Chapter 8
+---------------------------
 
 -   Show that ${\mathcal{M}}(x, y)$ is a manifold of dimension $\mu(x) - \mu(y)$
 -   Define ${\mathcal{M}}(x, y)$ as the inverse image of a regular value of some map
 -   Perturb $H$ to apply the Sard-Smale theorem
 -   Show the tangent maps are Fredholm operators and compute their index.
 
-# Section 8.3: The Space of Perturbations of H
+Section 8.3: The Space of Perturbations of H
+============================================
 
-## Goal
+Goal
+----
 
 **Goal**: Given a fixed Hamiltonian $H\in C^\infty(W\times S^1; {\mathbb{R}})$, perturb it (without modifying the periodic orbits) so that ${\mathcal{M}}(x, y)$ are manifolds of the expected dimension.
 
-## Goal
+Goal
+----
 
 `\tiny `{=tex}Start by trying to construct a subspace ${\mathcal{C}}_{\varepsilon}^{\infty}(H) \subset {\mathcal{C}}^\infty(W\times S^1; {\mathbb{R}})$, the space of perturbations of $H$ depending on a certain sequence ${\varepsilon}= \left\{{{\varepsilon}_k}\right\}$, and show it is a dense subspace.
 ```{=tex}
@@ -112,7 +118,8 @@ title: Linearization and Transversality
 \includegraphics[width = 0.8\textwidth]{figures/image_2020-04-14-23-36-58.png} 
 \end{center}
 ```
-## Define an Absolute Value
+Define an Absolute Value
+------------------------
 
 Idea: similar to how you build $L^2({\mathbb{R}})$, define a norm ${\left\lVert {{-}} \right\rVert}_{\varepsilon}$ on $C_{\varepsilon}^{\infty}(H)$ and take the subspace of finite-norm elements.
 
@@ -134,12 +141,13 @@ Idea: similar to how you build $L^2({\mathbb{R}})$, define a norm ${\left\lVert 
     > ,\end{align*}
     > <span>`{=html} the partial derivatives wrt the corresponding variables.
 
-## Define a Norm
+Define a Norm
+-------------
 
 -   Define a norm on $C^\infty(W\times S^1; {\mathbb{R}})$:
 
     `\begin{align*}
-    \|h\|_{\mathbf{{\varepsilon}}}
+    \|h\|_{\mathbf{\varepsilon}}
     &= \sum_{k \geq 0} {\varepsilon}_{k} \sup _{(x, t) \in W \times S^{1}}\left|d^{k} h(x, t)\right|
     .\end{align*}`{=tex}
 
@@ -155,10 +163,11 @@ Idea: similar to how you build $L^2({\mathbb{R}})$, define a norm ${\left\lVert 
         .\end{align*}`{=tex}
 
 -   Obtain the computable form `\begin{align*}
-    {\left\lVert {h} \right\rVert}_{\mathbf{{\varepsilon}}} &= \sum_{k \geq 0} {\varepsilon}_{k} \sup _{(x, t) \in W \times S^{1}} \sup_{i, z\in B(0, 1)} {\left\lvert { d^k (h\circ \Psi_i^{-1})(z)} \right\rvert}
+    {\left\lVert {h} \right\rVert}_{\mathbf{\varepsilon}} &= \sum_{k \geq 0} {\varepsilon}_{k} \sup _{(x, t) \in W \times S^{1}} \sup_{i, z\in B(0, 1)} {\left\lvert { d^k (h\circ \Psi_i^{-1})(z)} \right\rvert}
     .\end{align*}`{=tex}
 
-## Define a Banach Space
+Define a Banach Space
+---------------------
 
 -   Define `
     <span class="math display">
@@ -175,7 +184,8 @@ Theorem
 Lemma
 :   $C^\infty(W \times S^1; {\mathbb{R}})$ with the $C^1$ topology is separable as a topological space (contains a countable dense subset).
 
-## Sketch Proof of Theorem
+Sketch Proof of Theorem
+-----------------------
 
 -   By the lemma, produce a sequence $\left\{{f_n}\right\} \subset C^\infty(W\times S^1; {\mathbb{R}})$ dense for the $C^1$ topology.
 
@@ -192,7 +202,8 @@ $\hfill\blacksquare$
 
 > Why does this imply density? I don't know.
 
-## Modified Theorem
+Modified Theorem
+----------------
 
 The next proposition establishes a version of this theorem with compact support:
 
@@ -211,9 +222,11 @@ Then fix a time-dependent Hamiltonian $H_0$ with nondegenerate periodic orbits a
 \end{align*}
 <span>`{=html} and are both nondegenerate.
 
-# Section 8.4: Linearizing the Floer Equation: The Differential of F
+Section 8.4: Linearizing the Floer Equation: The Differential of F
+==================================================================
 
-## Goal
+Goal
+----
 
 Choose $m> n = \dim (W)$ and embed $TW \hookrightarrow{\mathbb{R}}^m$ to identify tangent vectors (such as $Z_i$, tangents to $W$ along $u$ or in a neighborhood $B$ of $u$) with actual vectors in ${\mathbb{R}}^m$.
 
@@ -228,7 +241,8 @@ We can then identify `
 
 > We've just replaced the codomain here.
 
-## Definitions
+Definitions
+-----------
 
 Recall that
 
@@ -241,7 +255,8 @@ Recall that
 &\text{and } {\left\lvert {{\frac{\partial u}{\partial t}\,}(s, t)} \right\rvert}, ~~ {\left\lvert {{\frac{\partial u}{\partial t}\,}(s, t) - X_H(u)} \right\rvert}  \sim \exp({\left\lvert {s} \right\rvert})
 \end{align*}`{=tex}
 
-## Compactify to Sphere
+Compactify to Sphere
+--------------------
 
 Fix a solution `
 <span class="math display">
@@ -259,7 +274,8 @@ We lift each solution to a map `
 
 The loops $x, y$ are contractible, so they bound discs. So we extend by pushing these discs out slightly:
 
-## Lift to 2-Sphere
+Lift to 2-Sphere
+----------------
 
 `
 <span class="math display">
@@ -272,7 +288,8 @@ u \in C^\infty(S^1\times{\mathbb{R}}; W) \quad\mapsto\quad \tilde u \in C^\infty
 \includegraphics[width = 1.02\textwidth]{figures/image_2020-04-15-18-10-40.png} 
 \end{center}
 ```
-## Trivialize the Pullback
+Trivialize the Pullback
+-----------------------
 
 From earlier in the book, we have
 
@@ -298,7 +315,8 @@ S^2 \ar[r, "\tilde u"] \& W
 \end{tikzcd}
 \end{center}
 ```
-## Choose a Frame
+Choose a Frame
+--------------
 
 -   Using the assumption, trivialize the pullback $\tilde u ^* TW$ to obtain an orthonormal unitary frame `
     <span class="math display">
@@ -313,7 +331,8 @@ S^2 \ar[r, "\tilde u"] \& W
 
 Claim: such trivializations exist, "using cylinders near the spherical caps in the figure".
 
-## Define "Banach Manifold Charts"
+Define "Banach Manifold Charts"
+-------------------------------
 
 Recall we had $W^{1, p}(x, y)$ a completion of $C^\infty$ `\begin{align*}
 {\mathcal{M}}(x, y) \subset C_{\searrow}^\infty(x, y) \subset {\mathcal{P}}^{1, p}(x , y) \underset{\text{defn}}\subset \left\{{ (s, t) \xrightarrow{\varphi} \exp_{w(s, t)} Y(s, t)}\right\}
@@ -331,7 +350,8 @@ Use the chosen frame $\left\{{Z_i}\right\}$ to define a chart centered at $u$ of
 
 -   Note that the derivative at zero is $\sum_{i=1}^{2n} y_i Z_i$.
 
-## Define the Floer Map in Charts
+Define the Floer Map in Charts
+------------------------------
 
 Define and compute the differential of the composite map $\tilde{\mathcal{F}}$ defined as follows:
 ```{=tex}
@@ -346,7 +366,8 @@ Define and compute the differential of the composite map $\tilde{\mathcal{F}}$ d
 ```
 -   From now on, let ${\mathcal{F}}$ denote $\tilde {\mathcal{F}}$.
 
-## Add a Tangent
+Add a Tangent
+-------------
 
 -   Take the vector `
     <span class="math display">
@@ -357,7 +378,8 @@ Define and compute the differential of the composite map $\tilde{\mathcal{F}}$ d
 
 -   Plug $u + Y$ into the equation for ${\mathcal{F}}$, directly yielding
 
-## Add a Tangent
+Add a Tangent
+-------------
 
 ```{=tex}
 \begin{center}
@@ -373,7 +395,8 @@ Define and compute the differential of the composite map $\tilde{\mathcal{F}}$ d
 \end{tikzcd}
 \end{center}
 ```
-## Extract Linear Part
+Extract Linear Part
+-------------------
 
 Extract the part that is linear in $Y$ and collect terms: `\begin{align*}
 &(d \mathcal{F})_{u}(Y)  \\
@@ -387,7 +410,8 @@ Extract the part that is linear in $Y$ and collect terms: `\begin{align*}
     -   One of order 1, one of order 0 (Perspective 1)
     -   The Cauchy-Riemann operator, and one of order zero (Perspective 2, not immediate from this form)
 
-## Leibniz Rule
+Leibniz Rule
+------------
 
 -   Now compute in charts. Need a lemma:
 
@@ -402,7 +426,8 @@ Lemma (Leibniz Rule)
     (dJ)(Y) \cdot v = d(Jv)(Y) - J dv(Y)
     .\end{align*}`{=tex}
 
-## Sketch: Proof of Leibniz Rule
+Sketch: Proof of Leibniz Rule
+-----------------------------
 
 Differentiate the map `\begin{align*}
 J\cdot v: X &\to {\mathbb{R}}^m \\
@@ -419,7 +444,8 @@ to obtain `\begin{align*}
 
 $\hfill\blacksquare$
 
-## Decompose by Order
+Decompose by Order
+------------------
 
 Using the chart $\iota$ defined by $\left\{{Z_i}\right\}$ to write $Y = \sum_{i=1}^{2n} y_i Z_i$ and thus `\begin{align*}
 (d{\mathcal{F}})_u(Y) = O_0 + O_1 
@@ -429,17 +455,19 @@ O_0 &= \sum_{i=1}^{2n} y_i \Bigg( {\frac{\partial Z_i}{\partial s}\,} + J(u) {\f
 &\quad\quad\quad\quad - J(u) (dX_t)_u Z_i - (dJ)_u (Z_i) X_t \Bigg)
 .\end{align*}`{=tex}
 
-## Order One
+Order One
+---------
 
 -   Study $O_1$ first, which (claim) reduces to `\begin{align*}
-    O_1 = \sum_{i=1}^{2n} \qty{{\frac{\partial y_i}{\partial s}\,} + J_0 {\frac{\partial y_i}{\partial t}\,}  }Z_i = \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu(y_1, \cdots, y_{2n})
+    O_1 = \sum_{i=1}^{2n} \qty{{\frac{\partial y_i}{\partial s}\,} + J_0 {\frac{\partial y_i}{\partial t}\,}  }Z_i = \mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5mu(y_1, \cdots, y_{2n})
     .\end{align*}`{=tex} where $J_0$ is the standard complex structure on ${\mathbb{R}}^{2n} = {\mathbb{C}}^n$
 
 -   The second equality follows from the assumption that the $Z_i$ are symplectic and orthonormal.
 
 -   Note that this writes $(d{\mathcal{F}})_u(Y) = O_0 + O_{CR}$, a sum of an order zero and a Cauchy-Riemann operator.
 
-## Recap
+Recap
+-----
 
 Note that since we've computed in charts, we have actually computed the differential of ${\mathcal{F}}_u$ in the following diagram
 
@@ -447,23 +475,25 @@ Note that since we've computed in charts, we have actually computed the differen
 
 So we've technically computed $(dF_\mu)_0$.
 
-## Order 0 Term is Linear
+Order 0 Term is Linear
+----------------------
 
 `\begin{align*}
 (d{\mathcal{F}})_u &= 
 \qty{ {\color{red}\frac{\partial Y}{\partial s}} + {\color{red} J(u) \frac{\partial Y}{\partial t}}}  \\
 &\quad +  \qty{ (d J)_{u}(Y) \frac{\partial u}{\partial t} - (d J)_{u}(Y) X_{t}-J(u)\left(d X_{t}\right)_{u}(Y)}  \\ \\
-&\coloneqq{\color{red} \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5muY} + SY
+&\coloneqq{\color{red} \mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5muY} + SY
 \end{align*}`{=tex} where $S\in C^\infty({\mathbb{R}}\times S^1; \endo({\mathbb{R}}^n))$ is a linear operator of order 0.
 
-## Order 0 Symmetry in the Limit
+Order 0 Symmetry in the Limit
+-----------------------------
 
 Theorem (8.4.4, CR + Symmetric in the Limit)
 
 :   If $u$ solves Floer's equation, then `
     <span class="math display">
     \begin{align*}
-    (d{\mathcal{F}})_u = \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu+ S( s, t)
+    (d{\mathcal{F}})_u = \mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5mu+ S( s, t)
     \end{align*}
     <span>`{=html} where
 
@@ -474,7 +504,8 @@ Theorem (8.4.4, CR + Symmetric in the Limit)
         \begin{align*}{\frac{\partial S}{\partial s}\,}(s, t)  \overset{s\to\pm\infty}\to 0 {\quad \operatorname{uniformly in $t$} \quad}\end{align*}
         <span>`{=html}
 
-## Proof
+Proof
+-----
 
 Omitted -- $S$ is exactly $O_0$ from before: `\begin{align*}
 O_0 
@@ -489,7 +520,8 @@ O_0
     -   Uses ${\frac{\partial u}{\partial s}\,} \to 0$ uniformly (as do its derivatives?)
 -   Suffices to show the remaining part is symmetric in the limit
 
-## Proof
+Proof
+-----
 
 -   Write the remaining part as `\begin{align*}
     A(y_1, \cdots, y_{2n}) = \cdots \implies A_{ij} = A_{ji}
@@ -499,7 +531,8 @@ O_0
 
 $\hfill\blacksquare$
 
-## asdas
+asdas
+-----
 
 Write $O_0$ as a map $Y \mapsto S\cdot Y$, so $S\in C^\infty({\mathbb{R}}\times S^1; \endo({\mathbb{R}}^{2n}))$ and define the symmetric operators `
 <span class="math display">
@@ -522,7 +555,8 @@ Theorem
     \end{cases}\quad\text{respectively}
     .\end{align*}`{=tex}
 
-## Image
+Image
+-----
 
 Reminder the $x, y$ were the top/bottom pieces of the original cylinder/sphere:
 
@@ -531,7 +565,8 @@ Reminder the $x, y$ were the top/bottom pieces of the original cylinder/sphere:
 \includegraphics[height= 0.8\textheight]{figures/image_2020-04-15-21-53-36.png} 
 \end{center}
 ```
-## Proof Sketch
+Proof Sketch
+------------
 
 -   Use the fact that ${\frac{\partial Y}{\partial t}\,} = (dX_t)_x Y$
 -   Expand $\sum {\frac{\partial y_i}{\partial t}\,} Z_i$ in the $Z_i$ basis (roughly) to write ${\frac{\partial y_i}{\partial t}\,} = \sum b_{ij} y_j$ for some coefficients $b_{ij}$.
@@ -539,9 +574,10 @@ Reminder the $x, y$ were the top/bottom pieces of the original cylinder/sphere:
     <span class="math display">
     \begin{align*}{\frac{\partial Y}{\partial t}\,} = B^- \cdot Y\end{align*}
     <span>`{=html}
--   Write $(d{\mathcal{F}})_u = \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu+ S$ where $S$ is zero order and symmetric in the limit
+-   Write $(d{\mathcal{F}})_u = \mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5mu+ S$ where $S$ is zero order and symmetric in the limit
 
-## Proof Sketch
+Proof Sketch
+------------
 
 -   Get the corresponding operator $A$ in coordinates
 -   Expand in a basis (roughly) as $A(\sum y_i Z_i) = \sum s_{ij} y_j Z_i$
@@ -551,7 +587,8 @@ Reminder the $x, y$ were the top/bottom pieces of the original cylinder/sphere:
     \begin{align*}S^- = - J_0 B^- \quad S^+ = -J_0 B^+ \implies {\frac{\partial Y}{\partial t}\,} = J_0 S^\pm Y\end{align*}
     <span>`{=html}
 
-## Final Remarks
+Final Remarks
+-------------
 
 -   Given a solution $u$, we have a right ${\mathbb{R}}{\hbox{-}}$action, so for $s\in {\mathbb{R}}$, `\begin{align*}
     u \cdot s \in C^\infty({\mathbb{R}}\times S^1; W) \\ 
@@ -560,7 +597,8 @@ Reminder the $x, y$ were the top/bottom pieces of the original cylinder/sphere:
 
 > In other words: we can flow solutions?
 
-## Final Remarks
+Final Remarks
+-------------
 
 **Punchline**:**${\frac{\partial u}{\partial s}\,}$ is a solution of the linearized equation**, since
 

@@ -1,5 +1,5 @@
 ---
-date: 2021-04-26
+date: '2021-04-26'
 tags:
 - Unfiled
 ---
@@ -21,9 +21,11 @@ tags:
 
 
 
-# Computing some higher homotopy groups of $S^2$ {#computing-some-higher-homotopy-groups-of-s2}
+Computing some higher homotopy groups of $S^2$ {#computing-some-higher-homotopy-groups-of-s2}
+==============================================
 
-## Necessary Theorems
+Necessary Theorems
+------------------
 
 -   UCT: The following sequence is exact `
     <span class="math display">
@@ -54,6 +56,7 @@ H^nX = \operatorname{Ext} (H_{n-1}X, {\mathbb{Z}}) \oplus \hom(H_nX, {\mathbb{Z}
     \begin{align*}X_{(n)} \to X \to K(\pi_n X, n)\end{align*}
     <span>`{=html}
 
-## A Computation: $\pi_3 S^2$ {#a-computation-pi_3-s2}
+A Computation: $\pi_3 S^2$ {#a-computation-pi_3-s2}
+--------------------------
 
 Todo: typeset!

@@ -13,7 +13,7 @@
 
 Tags: \#conjectures
 
-[[Weil%20Conjectures%20References.md | Subjects/Weil%20Conjectures%20References.html]]
+[[Weil%20Conjectures%20References.md | Weil%20Conjectures%20References.html]]
 
 [[../../To%20Review/2021-04-28_Weil_Conjectures_1.md | ../To%20Review/2021-04-28_Weil_Conjectures_1.html]]
 

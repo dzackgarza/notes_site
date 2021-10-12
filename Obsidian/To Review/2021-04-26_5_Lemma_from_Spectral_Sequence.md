@@ -1,5 +1,5 @@
 ---
-date: 2021-04-26
+date: '2021-04-26'
 tags:
 - Unfiled
 ---
@@ -19,7 +19,8 @@ tags:
 
 
 
-# Example: Proving the 5 lemma
+Example: Proving the 5 lemma
+============================
 
 Recall the definition: if $X\xrightarrow{f} Y$ then $\operatorname{coker}f = \frac{Y}{\operatorname{im}f}$
 

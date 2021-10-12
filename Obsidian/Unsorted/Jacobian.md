@@ -1,5 +1,19 @@
 ---
-aliases: ["Jacobians"]
+aliases:
+- Jacobians
 ---
 
-Tags: #algebraicgeometry #numbertheory
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tags: \#algebraicgeometry \#numbertheory

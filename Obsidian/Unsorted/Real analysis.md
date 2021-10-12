@@ -1,1 +1,0 @@
-[bounded%20variation](bounded%20variation)

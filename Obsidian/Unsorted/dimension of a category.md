@@ -1,3 +1,17 @@
 ---
-aliases: ["dimension"]
+aliases:
+- dimension
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+

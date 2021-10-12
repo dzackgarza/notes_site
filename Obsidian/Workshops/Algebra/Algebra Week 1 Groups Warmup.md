@@ -1,5 +1,5 @@
 ---
-title: "Algebra Qual Prep Week 1: Groups Warmup"
+title: 'Algebra Qual Prep Week 1: Groups Warmup'
 ---
 
 -   [Week 1: Finite Groups](#week-1-finite-groups)
@@ -26,11 +26,13 @@ title: "Algebra Qual Prep Week 1: Groups Warmup"
 
 
 
-# Week 1: Finite Groups
+Week 1: Finite Groups
+=====================
 
 [See the Presentation Schedule](https://www.notion.so/df531651418e43a9918f8d6c0cc0c706)
 
-## Week 1 Topics
+Week 1 Topics
+-------------
 
 -   Subgroups
     -   The one-step subgroup test
@@ -58,7 +60,8 @@ title: "Algebra Qual Prep Week 1: Groups Warmup"
 -   Structure:
     -   Cyclic -\> Abelian -\> Nilpotent -\> Solvable -\> All Groups
 
-## Review Exercises
+Review Exercises
+----------------
 
 -   State the definitions of the following:
     -   Group morphism (aka *group homomorphism*)
@@ -74,7 +77,8 @@ title: "Algebra Qual Prep Week 1: Groups Warmup"
 -   Find a counterexample for the converse of Lagrange's theorem.
 -   State the 4 fundamental isomorphism theorems
 
-## Unsorted Questions
+Unsorted Questions
+------------------
 
 For everything that follows, assume $G$ is a finite group.
 
@@ -156,7 +160,8 @@ For everything that follows, assume $G$ is a finite group.
     -   Show that the scalars $\zeta$ that appear in scalar matrices $Z({\operatorname{SL}}_n({\mathbb{F}}_p))$ are roots of unity in ${\mathbb{F}}_p$, i.e. $\zeta^p = 1$.
 -   Determine the orders $\# \operatorname{GL}_n({\mathbb{F}}_p)$ and $\# {\operatorname{SL}}_n({\mathbb{F}}_p)$.
 
-## Warmup Problems
+Warmup Problems
+---------------
 
 -   (**Important**) Prove that if $G/Z(G)$ is cyclic then $G$ is abelian.
 
@@ -188,7 +193,8 @@ For everything that follows, assume $G$ is a finite group.
 
 -   Determine all pairs $n, p\in {\mathbb{Z}}^{\geq 1}$ such that ${\operatorname{SL}}_n({\mathbb{F}}_p)$ is solvable.
 
-## Qual Problems
+Qual Problems
+-------------
 
 ![[_attachments/Untitled%2013.png]]
 

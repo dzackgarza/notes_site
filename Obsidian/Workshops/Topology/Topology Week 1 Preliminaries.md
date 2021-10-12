@@ -1,5 +1,5 @@
 ---
-title: "Topology Qual Prep Week 1: Point-Set"
+title: 'Topology Qual Prep Week 1: Point-Set'
 ---
 
 -   [Topics](#topics)
@@ -20,7 +20,8 @@ title: "Topology Qual Prep Week 1: Point-Set"
 
 
 
-# Topics
+Topics
+======
 
 -   Definitions:
     -   topologies,
@@ -47,7 +48,8 @@ title: "Topology Qual Prep Week 1: Point-Set"
 -   The tube lemma
 -   Common counterexamples (sine curve)
 
-# Warmups
+Warmups
+=======
 
 -   State the axioms of a topology.
 -   What does it mean for a set to be open? Closed?
@@ -61,7 +63,8 @@ title: "Topology Qual Prep Week 1: Point-Set"
 -   What is a **separable** space?
 -   What is a **nowhere dense** subspace?
 
-# Exercises
+Exercises
+=========
 
 -   Prove Cantor's intersection theorem.
 -   Determine if the following subsets of ${\mathbb{R}}$ are opened, closed, both, or neither:
@@ -93,7 +96,8 @@ title: "Topology Qual Prep Week 1: Point-Set"
 -   Prove the following implications of separation axioms, and show that they are strict: ![[_attachments/Pasted%20image%2020210520150233.png]]
 -   Show that every compact metrizable space has a countable basis.
 
-# Qual Questions
+Qual Questions
+==============
 
 Tube lemma: ![[_attachments/Pasted%20image%2020210520142907.png]]
 

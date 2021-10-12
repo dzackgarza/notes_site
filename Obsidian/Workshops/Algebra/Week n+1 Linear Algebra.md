@@ -19,6 +19,7 @@
 
 ![[_attachments/Pasted%20image%2020210530003544.png) ![](_attachments/Pasted%20image%2020210530003556.png) ![](_attachments/Pasted%20image%2020210530003633.png) ![](_attachments/Pasted%20image%2020210530003837.png]]
 
-## Practice
+Practice
+--------
 
 ![[_attachments/Pasted%20image%2020210530003954.png) ![](_attachments/Pasted%20image%2020210530004046.png) ![](_attachments/Pasted%20image%2020210530004625.png]]

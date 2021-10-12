@@ -1,4 +1,18 @@
 ---
-aliases: ["immersion", "immerse"]
+aliases:
+- immersion
+- immerse
 ---
+
+
+
+
+
+
+
+
+
+
+
+
 

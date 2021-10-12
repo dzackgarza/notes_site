@@ -1,3 +1,17 @@
 ---
-aliases: ["loop spaces"]
+aliases:
+- loop spaces
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+

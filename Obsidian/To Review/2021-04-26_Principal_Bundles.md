@@ -1,5 +1,5 @@
 ---
-date: 2021-04-26
+date: '2021-04-26'
 tags:
 - Unfiled
 ---
@@ -22,7 +22,8 @@ tags:
 
 
 
-# Principal Bundles
+Principal Bundles
+=================
 
 A principal bundle is a mathematical object that formalizes some of the essential features of the Cartesian product $X × G$ of a space $X$ with a group $G$. In the same way as with the Cartesian product, a principal bundle $P$ is equipped with
 
@@ -34,7 +35,8 @@ Since the group action preserves the fibers of $π:P → X$ and acts transitivel
 
 **One of the most important questions regarding any fiber bundle is whether or not it is trivial, i.e. isomorphic to a product bundle.** A principal bundle is trivial if and only if it admits a global cross section.
 
-## Examples
+Examples
+--------
 
 The prototypical example of a smooth principal bundle is the frame bundle of a smooth manifold $M$, often denoted $FM$ or $GL(M)$. Here the fiber over a point $x ∈ M$ is the set of all frames (i.e. ordered bases) for the tangent space $T_xM$. The general linear group $GL(n,{\mathbb{R}})$ acts freely and transitively on these frames. These fibers can be glued together in a natural way so as to obtain a principal $GL(n,{\mathbb{R}})$-bundle over $M$.
 
@@ -47,13 +49,15 @@ A normal (regular) covering space $p:C → X$ is a principal bundle where the st
 
 acts on the fibers of p via the monodromy action. In particular, the universal cover of $X$ is a principal bundle over $X$ with structure group $π_1(X)$ (since the universal cover is simply connected and thus $π_1(C)$ is trivial).
 
-## Classification
+Classification
+--------------
 
 Any topological group $G$ admits a classifying space $BG:$ the quotient by the action of $G$ of some weakly contractible space $EG$, i.e. a topological space with vanishing homotopy groups. The classifying space has the property that any $G$ principal bundle over a paracompact manifold $B$ is isomorphic to a pullback of the principal bundle $EG → BG$.
 
 In fact, more is true, as the set of isomorphism classes of principal $G$ bundles over the base $B$ identifies with the set of homotopy classes of maps $B → BG$.
 
-# Classifying Spaces
+Classifying Spaces
+==================
 
 **Definition:** A *principal $G{\hbox{-}}$bundle* is a fiber bundle $F \to E \to B$ in which for each fiber $\pi^{-1}(b)\coloneqq F_b$, satisfying the condition that $G$ acts freely and transitively on $F_b$. In other words, there is a continuous group action $\curvearrowright: E\times G \to E$ such that for every $f \in F_b$ and $g\in G$, we have $g\curvearrowright f \in F_b$ and $g\curvearrowright f \neq f$.
 

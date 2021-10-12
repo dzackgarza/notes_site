@@ -1,5 +1,5 @@
 ---
-date: "2021-04-26T10:41"
+date: '2021-04-26T10:41'
 ---
 
 -   [Vector Bundles](#vector-bundles)
@@ -19,7 +19,8 @@ date: "2021-04-26T10:41"
 
 \#bundles \#algebraic_topology
 
-# Vector Bundles
+Vector Bundles
+==============
 
 **Definition:** A *rank $n$ vector bundle* is a fiber bundle in which the fibers $F$ have the structure of a vector space $k^n$ for some field $k$; the structure group of such a bundle is a subset of $\operatorname{GL}(n, k)$.
 

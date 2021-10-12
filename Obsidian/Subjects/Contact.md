@@ -4,7 +4,7 @@ aliases:
 - contact topology
 - contact geometry
 - contact structure
-- contact 3-manifold
+- 'contact 3-manifold'
 - contact manifold
 ---
 
@@ -23,7 +23,7 @@ aliases:
 
 [[../../To%20Review/2021-04-28_Contact_Topology_Notes.md | ../To%20Review/2021-04-28_Contact_Topology_Notes.html]]
 
-Historically, the study of periodic orbits motivated the definition of [[Contact.md | Subjects/Contact.html]].
+Historically, the study of periodic orbits motivated the definition of [Contact.md]().
 
 **Definition (Hyperplane Field):** A *hyperplane* field $\xi$ is a codimension 1 sub-bundle ${\mathbb{R}}^{n-1} \to \xi \to M$ of the tangent bundle ${\mathbb{R}}^n \to TM \to M$.
 

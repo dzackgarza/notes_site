@@ -1,7 +1,7 @@
 ---
 colortheme: beetle
 theme: Warsaw
-title: "Section 8.6 - 8.8: Setup for Computing the Index"
+title: 'Section 8.6 - 8.8: Setup for Computing the Index'
 ---
 
 -   [Intro](#intro)
@@ -59,9 +59,11 @@ title: "Section 8.6 - 8.8: Setup for Computing the Index"
 
 
 
-# Intro
+Intro
+=====
 
-## Outline
+Outline
+-------
 
 What we're trying to prove:
 
@@ -88,7 +90,8 @@ Used to show:
     \begin{align*}\dim_{\text{mfd}} {\mathcal{M}}(x, y, H_0 + h) = \mu(x) - \mu(y).\end{align*}
     <span>`{=html} `\normalsize`{=tex}
 
-## Map
+Map
+---
 
 ```{=tex}
 \begin{center}
@@ -105,7 +108,8 @@ Used to show:
 8.1.2: & h \in {\mathcal{H}}_{\text{reg}}\text{ and } x, y\sim {\operatorname{pt}}\text{ of } H_0 \implies  \dim_{\text{mfd}} {\mathcal{M}}(x, y, H_0 + h) = \mu(x) - \mu(y)
 .\end{align*}`{=tex} `\normalsize`{=tex}
 
-## Destination
+Destination
+-----------
 
 What we're working toward now:
 
@@ -121,7 +125,8 @@ Outline for today:
     -   8.7: Proving the operator is Fredholm
     -   8.8: Computing its index
 
-## Review From Last Time
+Review From Last Time
+---------------------
 
 -   $u \in C^\infty({\mathbb{R}}\times S^1; W)$ is a solution to the Floer equation
 -   $C(u)$ the critical points and $R(u)$ the regular points of $u$: `\scriptsize`{=tex} `\begin{align*}
@@ -133,7 +138,8 @@ Outline for today:
 
 -   Strategy: "unwrap" $u$ to an easier solution $v$ on ${\mathbb{R}}^2$.
 
-## Strategy
+Strategy
+--------
 
 ```{=tex}
 \scriptsize
@@ -156,9 +162,11 @@ Main Ingredients:
 -   Continuation Principle
 -   Similarity Principle `\normalsize`{=tex}
 
-# 8.6 Review
+8.6 Review
+==========
 
-## Review: 8.6.1, Unwrapping/Reduction
+Review: 8.6.1, Unwrapping/Reduction
+-----------------------------------
 
 ```{=tex}
 \scriptsize
@@ -185,7 +193,8 @@ C(u) = C(v) \quad &\text{and }\quad  R(u) = R(v)
 ```{=tex}
 \normalsize
 ```
-## Toward 8.6.3, Injectivity: $R(v)$ is Open {#toward-8.6.3-injectivity-rv-is-open}
+Toward 8.6.3, Injectivity: $R(v)$ is Open {#toward-8.6.3-injectivity-rv-is-open}
+-----------------------------------------
 
 `\begin{align*}
 C(u) &\coloneqq\left\{{(s_0, t_0) \in {\mathbb{R}}\times S^1 {~\mathrel{\Big|}~}{\frac{\partial u}{\partial s}\,}(s_0, t_0) = 0 }\right\} \\
@@ -197,7 +206,8 @@ R(u) &\coloneqq\left\{{(s_0, t_0) \in C(u)^c {~\mathrel{\Big|}~}v(s, t) \neq x^\
 \includegraphics[width = 0.5\textwidth]{figures/image_2020-05-13-23-51-21.png} 
 \end{center}
 ```
-## Sketch of Proof: $R(v)$ is Open {#sketch-of-proof-rv-is-open}
+Sketch of Proof: $R(v)$ is Open {#sketch-of-proof-rv-is-open}
+-------------------------------
 
 ```{=tex}
 \scriptsize
@@ -216,19 +226,20 @@ R(u) &\coloneqq\left\{{(s_0, t_0) \in C(u)^c {~\mathrel{\Big|}~}v(s, t) \neq x^\
 
 $\hfill\blacksquare$
 
-## Toward 8.6.3, Injectivity: $R(v)$ is Dense {#toward-8.6.3-injectivity-rv-is-dense}
+Toward 8.6.3, Injectivity: $R(v)$ is Dense {#toward-8.6.3-injectivity-rv-is-dense}
+------------------------------------------
 
 Define **multiple points**:
 
--   Set $\mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{R}}\mkern-1.5mu}\mkern 1.5mu= {\mathbb{R}}{\textstyle\coprod}\left\{{\pm \infty}\right\}$, extend $v: {\mathbb{R}}^2 \to W$ to `\begin{align*}
-    v: \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{R}}\mkern-1.5mu}\mkern 1.5mu\times{\mathbb{R}}&\to W \\
+-   Set $\mkern 1.5mu\overline{\mkern-1.5mu\mathbb{R}\mkern-1.5mu}\mkern 1.5mu= {\mathbb{R}}{\textstyle\coprod}\left\{{\pm \infty}\right\}$, extend $v: {\mathbb{R}}^2 \to W$ to `\begin{align*}
+    v: \mkern 1.5mu\overline{\mkern-1.5mu\mathbb{R}\mkern-1.5mu}\mkern 1.5mu\times{\mathbb{R}}&\to W \\
     v(\pm \infty, t) &= x^\pm(t)
     .\end{align*}`{=tex}
 
 -   Define the set of *multiple points over $(s_0, {\color{red}t_0})$*: `\scriptsize`{=tex} `
     <span class="math display">
     \begin{align*}
-    M(s_0, {\color{red}t_0}) \coloneqq\left\{{ (s', {\color{red}t_0}) \in {\mathbb{R}}^2 {~\mathrel{\Big|}~}s\neq s'\in \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{R}}\mkern-1.5mu}\mkern 1.5mu, \quad v(s', {\color{red}t_0}) = v(s_0, {\color{red}t_0}) }\right\}
+    M(s_0, {\color{red}t_0}) \coloneqq\left\{{ (s', {\color{red}t_0}) \in {\mathbb{R}}^2 {~\mathrel{\Big|}~}s\neq s'\in \mkern 1.5mu\overline{\mkern-1.5mu\mathbb{R}\mkern-1.5mu}\mkern 1.5mu, \quad v(s', {\color{red}t_0}) = v(s_0, {\color{red}t_0}) }\right\}
     \end{align*}
     <span>`{=html}
 
@@ -236,9 +247,11 @@ Define **multiple points**:
 
 -   Characterizes $R(v) \subset C(v)^c$ as points which don't admit multiples. `\normalsize`{=tex}
 
-# 8.6.3: $R(v)$ is dense in ${\mathbb{R}}^2$ {#rv-is-dense-in-mathbbr2}
+8.6.3: $R(v)$ is dense in ${\mathbb{R}}^2$ {#rv-is-dense-in-mathbbr2}
+==========================================
 
-## Step 1: Exclude critical points $\cap$ multiple points {#step-1-exclude-critical-points-cap-multiple-points}
+Step 1: Exclude critical points $\cap$ multiple points {#step-1-exclude-critical-points-cap-multiple-points}
+------------------------------------------------------
 
 ```{=tex}
 \scriptsize
@@ -258,7 +271,8 @@ Define **multiple points**:
     .\end{align}`{=tex} is the limit of a sequence of points in $R(v)$.
 -   Proceed by assuming this is not the case, toward a contradiction. `\normalsize`{=tex}
 
-## Step 1: Exclude critical points $\cap$ multiple points {#step-1-exclude-critical-points-cap-multiple-points-1}
+Step 1: Exclude critical points $\cap$ multiple points {#step-1-exclude-critical-points-cap-multiple-points-1}
+------------------------------------------------------
 
 `\begin{align}
 {\frac{\partial v}{\partial s}\,}{(s_0, t_0)} \neq 0 {\quad \operatorname{and} \quad} v(s_0, t_0) \neq x^{\pm}(t_0)
@@ -272,7 +286,8 @@ A Small Ball Avoids Critical Points in the Image
     \begin{align*}\mathbb{M} = [-M, M] \subset {\mathbb{R}},\end{align*}
     <span>`{=html} such that several properties hold:
 
-## Step 1: Exclude critical points $\cap$ multiple points {#step-1-exclude-critical-points-cap-multiple-points-2}
+Step 1: Exclude critical points $\cap$ multiple points {#step-1-exclude-critical-points-cap-multiple-points-2}
+------------------------------------------------------
 
 ```{=tex}
 \scriptsize
@@ -290,7 +305,8 @@ A Small Ball Avoids Critical Points in the Image
 
 2.  For $t \in B_{\varepsilon}(t_0)$, $B_{\varepsilon}(s_0) \hookrightarrow W$ is an injective immersion `\normalsize`{=tex}
 
-## Step 1: Exclude critical points $\cap$ multiple points {#step-1-exclude-critical-points-cap-multiple-points-3}
+Step 1: Exclude critical points $\cap$ multiple points {#step-1-exclude-critical-points-cap-multiple-points-3}
+------------------------------------------------------
 
 ```{=tex}
 \scriptsize
@@ -314,7 +330,8 @@ Combine 1 and 2 to show that
 ```{=tex}
 \normalsize
 ```
-## Step 1: Exclude critical points $\cap$ multiple points {#step-1-exclude-critical-points-cap-multiple-points-4}
+Step 1: Exclude critical points $\cap$ multiple points {#step-1-exclude-critical-points-cap-multiple-points-4}
+------------------------------------------------------
 
 ```{=tex}
 \scriptsize
@@ -334,7 +351,8 @@ Combine 1 and 2 to show that
     \begin{align*}v(B_{\varepsilon}(s_0, t_0)) \cap v(\mathbb{M}_C) = \emptyset.\end{align*}
     <span>`{=html}
 
-## Step 1: Exclude critical points $\cap$ multiple points {#step-1-exclude-critical-points-cap-multiple-points-5}
+Step 1: Exclude critical points $\cap$ multiple points {#step-1-exclude-critical-points-cap-multiple-points-5}
+------------------------------------------------------
 
 `
 <span class="math display">
@@ -348,7 +366,8 @@ Combine 1 and 2 to show that
 ```
 Conclude that we *only* have to consider injectivity, not critical points that are also multiple points.
 
-## Step 2: Failure of Injectivity in Small Boxes
+Step 2: Failure of Injectivity in Small Boxes
+---------------------------------------------
 
 ```{=tex}
 \scriptsize
@@ -373,7 +392,8 @@ Conclude that we *only* have to consider injectivity, not critical points that a
 ```{=tex}
 \normalsize
 ```
-## Step 2: Failure of Injectivity in Small Boxes
+Step 2: Failure of Injectivity in Small Boxes
+---------------------------------------------
 
 ```{=tex}
 \scriptsize
@@ -394,7 +414,8 @@ Conclude that we *only* have to consider injectivity, not critical points that a
 ```{=tex}
 \normalsize
 ```
-## Step 2: Failure of Injectivity in Small Boxes
+Step 2: Failure of Injectivity in Small Boxes
+---------------------------------------------
 
 ```{=tex}
 \scriptsize
@@ -425,7 +446,8 @@ Conclude that we *only* have to consider injectivity, not critical points that a
 \end{center}
 \normalsize
 ```
-## Step 3: Final Contradiction
+Step 3: Final Contradiction
+---------------------------
 
 -   Construct $v_1, v_2$ which
     -   Satisfy the same Cauchy-Riemann equations
@@ -444,7 +466,8 @@ Conclude that we *only* have to consider injectivity, not critical points that a
     -   By construction, they coincide at $(0, 0)$ since $v(s_\star, t_\star) = v(s_\star', t_\star)$.
     -   Derivatives at the origin are nonzero, coming from the fact that ${\frac{\partial v}{\partial s}\,}(s_\star, t_\star) \neq 0$.
 
-## Step 3: Final Contradiction
+Step 3: Final Contradiction
+---------------------------
 
 -   Now work at zero: for every $(s, t) \in B_\rho(0, 0)$ there exists a multiple point $s' \in B_{2{\varepsilon}'}(0)$ over $s$.
 
@@ -460,7 +483,8 @@ Conclude that we *only* have to consider injectivity, not critical points that a
 
 -   Since $v_1, v_2$ satisfy the same CR equation, ${\mathcal{F}}(v_1) = {\mathcal{F}}(v_2)$
 
-## Step 3: Final Contradiction
+Step 3: Final Contradiction
+---------------------------
 
 `\begin{align*}
 \mathcal{F}: \mathrm{C}^{\infty}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) & \longrightarrow \mathrm{C}^{\infty}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) \\
@@ -471,7 +495,8 @@ Linearize ${\mathcal{F}}$ as we did for the Floer operator to obtain `\begin{ali
 \qty{d{\mathcal{F}}}_{\cdots}(Y) = \qty{ {\frac{\partial }{\partial s}\,} + J_0 \cdot {\frac{\partial }{\partial t}\,} + \tilde S } Y
 .\end{align*}`{=tex} where $\tilde S: I \times{\mathbb{R}}^2 \to \endo({\mathbb{R}}^{2n})$
 
-## Step 3: Final Contradiction
+Step 3: Final Contradiction
+---------------------------
 
 -   Set $Y = v_1 - v_2$, then `
     <span class="math display">
@@ -487,7 +512,8 @@ Linearize ${\mathcal{F}}$ as we did for the Floer operator to obtain `\begin{ali
     \end{align*}
     <span>`{=html} which contradicts an open condition. $\hfill\blacksquare$
 
-## The Continuation Principle
+The Continuation Principle
+--------------------------
 
 -   Take the perturbed CR equation `\begin{align*}
     \qty{{\frac{\partial }{\partial s}\,} + J_0 \cdot {\frac{\partial }{\partial t}\,} + S }Y &= 0 {\quad \operatorname{where} \quad}
@@ -500,7 +526,8 @@ Linearize ${\mathcal{F}}$ as we did for the Floer operator to obtain `\begin{ali
     z_0\in Z_\infty \iff f^{(k)}(z_0)= 0 \quad \forall k \in {\mathbb{Z}}^{\geq 0}
     .\end{align*}`{=tex}
 
-## The Continuation Principle
+The Continuation Principle
+--------------------------
 
 -   Statement: If $Y$ solves CR on $U \subset {\mathbb{R}}^2$ then the set `\begin{align*}
     C \coloneqq\left\{{(s, t)\in U {~\mathrel{\Big|}~}~Y \text{ is an infinite-order zero at } (s, t)}\right\}
@@ -513,7 +540,8 @@ Linearize ${\mathcal{F}}$ as we did for the Floer operator to obtain `\begin{ali
 
 -   Proof is a consequence of the **Similarity Principle**
 
-## Similarity Principle
+Similarity Principle
+--------------------
 
 ```{=tex}
 \scriptsize
@@ -541,7 +569,8 @@ J_0 A(s, t) = A(s, t)J_0
 ```{=tex}
 \normalsize
 ```
-## Similarity Principle
+Similarity Principle
+--------------------
 
 Used to prove:
 
@@ -560,9 +589,11 @@ Some ideas from proof:
 
 -   $\mkern 1.5mu\overline{\mkern-1.5muY\mkern-1.5mu}\mkern 1.5mu = 0$ makes $Y$ a holomorphic sphere in ${\mathbb{C}}^n$.
 
-# 8.7
+8.7
+===
 
-## 8.7 Outline
+8.7 Outline
+-----------
 
 What we're trying to prove
 
@@ -579,7 +610,7 @@ What we're trying to prove
 
 -   Statement: if $\operatorname{det}(\operatorname{id}- R^\pm_1) \neq 0$ then the operator `\begin{align*}
     L: W^{1, p}({\mathbb{R}}\times S^1; {\mathbb{R}}^{2n}) &\to L^p({\mathbb{R}}\times S^1; {\mathbb{R}}^{2n})\\
-    L&= \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu+ S(s, t) &
+    L&= \mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5mu+ S(s, t) &
     .\end{align*}`{=tex} is Fredholm for every $p>1$.
 
     > *(i.e. index makes sense, $\dim \ker L, \dim \operatorname{coker}L < \infty$)*
@@ -589,7 +620,8 @@ What we're trying to prove
 ```{=tex}
 \normalsize
 ```
-## 8.7 Outline: Step 1, $\dim \ker L < \infty$ {#outline-step-1-dim-ker-l-infty}
+8.7 Outline: Step 1, $\dim \ker L < \infty$ {#outline-step-1-dim-ker-l-infty}
+-------------------------------------------
 
 -   Main ingredients:
     -   **Elliptic regularity**: For $Y \in L^p({\mathbb{R}}\times S^1)$ a weak solution of the linearized Floer equation `
@@ -603,7 +635,8 @@ What we're trying to prove
     -   Case 1: $S(s, t) = S(t)$ doesn't depend on $s$.
     -   Case 2: $S(s, t)$ *does* depend on $s$ `\scriptsize`{=tex}
 
-## 8.7 Outline: $\dim \ker L < \infty$ {#outline-dim-ker-l-infty}
+8.7 Outline: $\dim \ker L < \infty$ {#outline-dim-ker-l-infty}
+-----------------------------------
 
 CZ inequality: `\begin{align}
 {\left\lVert {Y} \right\rVert}_{W^{1, p}({\mathbb{R}}\times S^1; {\mathbb{R}}^{2n})} \leq C \qty{{\left\lVert {LY} \right\rVert}_{L^p({\mathbb{R}}\times S^1)} + {\left\lVert {Y} \right\rVert}_{L^p({\color{blue}{\mathbb{R}}} \times S^1)}}
@@ -613,12 +646,13 @@ Step 1: $S(s, t) = S(t)$ doesn't depend on $s$, prove improved estimate.
 
 -   Consider the "asymptotic operator" `\begin{align*}
     D: W^{1, p}({\mathbb{R}}\times S^1; {\mathbb{R}}^{2n}) &\to L^p({\mathbb{R}}\times S^1) \\
-    D = \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu+ S(t) &= \lim_{s\to \pm\infty} L \coloneqq\lim_{s\to \pm\infty} \qty{\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu+ S(s, t)}
+    D = \mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5mu+ S(t) &= \lim_{s\to \pm\infty} L \coloneqq\lim_{s\to \pm\infty} \qty{\mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5mu+ S(s, t)}
     .\end{align*}`{=tex}
 -   Show for $p>1, D$ is invertible.
 -   Invertibility improves estimate: replace $\color{blue}{\mathbb{R}}$ with $\color{blue} [-M, M]$.
 
-## 8.7 Outline: $\dim \ker L < \infty$ {#outline-dim-ker-l-infty-1}
+8.7 Outline: $\dim \ker L < \infty$ {#outline-dim-ker-l-infty-1}
+-----------------------------------
 
 -   Step 2: $S(s, t)$ does depend on $s$
 
@@ -628,7 +662,7 @@ Step 1: $S(s, t) = S(t)$ doesn't depend on $s$, prove improved estimate.
 
 -   Then restrict `\begin{align*}
     L: W^{1, p}({\mathbb{R}}\times S^1; {\mathbb{R}}^{2n}) &\to L^p({\mathbb{R}}\times S^1; {\mathbb{R}}^{2n})\\
-    L&\coloneqq\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu+ S(s, t) & \\ \\
+    L&\coloneqq\mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5mu+ S(s, t) & \\ \\
     \leadsto L_M : W^{1, p}({\mathbb{R}}\times S^1) &\to L^p({\color{blue}[-M, M]} \times S^1) 
     .\end{align*}`{=tex}
 
@@ -639,7 +673,8 @@ Step 1: $S(s, t) = S(t)$ doesn't depend on $s$, prove improved estimate.
     .\end{align*}
     <span>`{=html}
 
-## 8.7 Outline: $\dim \ker L < \infty$ {#outline-dim-ker-l-infty-2}
+8.7 Outline: $\dim \ker L < \infty$ {#outline-dim-ker-l-infty-2}
+-----------------------------------
 
 -   Will need some real/functional analysis to invert operators:
     -   "Variation of constants"
@@ -657,9 +692,11 @@ Step 1: $S(s, t) = S(t)$ doesn't depend on $s$, prove improved estimate.
 
 $\hfill\blacksquare$
 
-# 8.8
+8.8
+===
 
-## 8.8: Outline {#outline-2}
+8.8: Outline {#outline-2}
+------------
 
 What we're trying to prove
 
@@ -678,7 +715,8 @@ What we're trying to prove
 
 -   Compute $\mathop{\mathrm{ind}}L_1$: explicitly describe $\ker L_1, \operatorname{coker}L_1$.
 
-## 8.8: Replacing $L$ {#replacing-l}
+8.8: Replacing $L$ {#replacing-l}
+------------------
 
 `\begin{align*}
 L: W^{1, p}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) & \longrightarrow L^{p}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) \\
@@ -691,7 +729,8 @@ Y & \longmapsto \frac{\partial Y}{\partial s}+J_{0} \frac{\partial Y}{\partial t
     -   $L_0 \leadsto L_1$ by a homotopy, where $S_\lambda: S \leadsto S(s)$ a diagonal matrix that is a constant matrix *outside* $B_{\varepsilon}(0)$.
         -   Use invariance of index under homotopy.
 
-## 8.8: Replacing $L$ {#replacing-l-1}
+8.8: Replacing $L$ {#replacing-l-1}
+------------------
 
 ```{=tex}
 \scriptsize
@@ -711,7 +750,8 @@ R^\pm_t \text{a solution to the IVP} \quad \quad &{\frac{\partial }{\partial t}\
     \begin{align*}\mathop{\mathrm{ind}}(L) = \mu(R^-(t)) - \mu(R^+(t)) = \mu(x) - \mu(y).\end{align*}
     <span>`{=html}
 
-## 8.8: $L_0 \leadsto L_1$ {#l_0-leadsto-l_1}
+8.8: $L_0 \leadsto L_1$ {#l_0-leadsto-l_1}
+-----------------------
 
 ```{=tex}
 \scriptsize
@@ -729,7 +769,8 @@ R^\pm_t \text{a solution to the IVP} \quad \quad &{\frac{\partial }{\partial t}\
     Y & \longmapsto \frac{\partial Y}{\partial s}+J_{0} \frac{\partial Y}{\partial t}+S_{\lambda}(s, t) Y
     \end{align*}`{=tex} which are all Fredholm and all have the same index, then take time 1. `\normalsize`{=tex}
 
-## 8.8: Index of $L_1$ {#index-of-l_1}
+8.8: Index of $L_1$ {#index-of-l_1}
+-------------------
 
 `\begin{align*}
 L_{1}: W^{1, p}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) & \longrightarrow L^{p}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) \\

@@ -23,11 +23,13 @@ title: Floer Talk
 
 [[../../../../Unsorted/Floer Reading Group Fall 2020 | ../../../../Unsorted/Floer%20Reading%20Group%20Fall%202020.html]]
 
-# Background and Notation
+Background and Notation
+=======================
 
 !include ./notation.md
 
-# Talk
+Talk
+====
 
 Overview: Analyze the space ${\mathcal{M}}(x, y)$ of solutions to the Floer equation connecting two orbits $x, y$ of $H$. Show ${\mathcal{M}}(x, y)$ is in fact a manifold of dimension $\mu(x) - \mu(y)$.
 
@@ -42,7 +44,8 @@ Goals:
 -   8.3: Overview and big picture
 -   8.4: Formula for linearization of ${\mathcal{F}}$.
 
-## 8.3: The Space of Perturbations of $H$ {#the-space-of-perturbations-of-h}
+8.3: The Space of Perturbations of $H$ {#the-space-of-perturbations-of-h}
+--------------------------------------
 
 Goal: given a fixed Hamiltonian $H\in C^\infty(W\times S^1; {\mathbb{R}})$, perturb it (without modifying the periodic orbits) so that ${\mathcal{M}}(x, y)$ are manifolds of the expected dimension.
 
@@ -73,7 +76,7 @@ Idea: similar to how you build $L^2({\mathbb{R}})$, define a norm ${\left\lVert 
 -   Define a norm on $C^\infty(W\times S^1; {\mathbb{R}})$:
 
     `\begin{align*}
-    \|h\|_{\mathbf{{\varepsilon}}}
+    \|h\|_{\mathbf{\varepsilon}}
     &= \sum_{k \geq 0} {\varepsilon}_{k} \sup _{(x, t) \in W \times S^{1}}\left|d^{k} h(x, t)\right|
     .\end{align*}`{=tex}
 
@@ -89,7 +92,7 @@ Idea: similar to how you build $L^2({\mathbb{R}})$, define a norm ${\left\lVert 
         .\end{align*}`{=tex}
 
 -   Obtain the computable form `\begin{align*}
-    {\left\lVert {h} \right\rVert}_{\mathbf{{\varepsilon}}} &= \sum_{k \geq 0} {\varepsilon}_{k} \sup _{(x, t) \in W \times S^{1}} \sup_{i, z\in B(0, 1)} {\left\lvert { d^k (h\circ \Psi_i^{-1})(z)} \right\rvert}
+    {\left\lVert {h} \right\rVert}_{\mathbf{\varepsilon}} &= \sum_{k \geq 0} {\varepsilon}_{k} \sup _{(x, t) \in W \times S^{1}} \sup_{i, z\in B(0, 1)} {\left\lvert { d^k (h\circ \Psi_i^{-1})(z)} \right\rvert}
     .\end{align*}`{=tex}
 
 -   Define `
@@ -191,7 +194,8 @@ Then fix a time-dependent Hamiltonian $H_0$ with nondegenerate periodic orbits a
 \end{align*}
 <span>`{=html} and are both nondegenerate.
 
-## Review 8.2
+Review 8.2
+----------
 
 What is ${\mathcal{F}}$?
 
@@ -212,7 +216,8 @@ What is the LHS? It is the space of maps `\begin{align*}
 
 where $Y \in W^{1, p}(w^* TW)$ and $w\in C^\infty_{\searrow}(x, y)$.
 
-## 8.4: Linearizing the Floer equation: The Differential of ${\mathcal{F}}$ {#linearizing-the-floer-equation-the-differential-of-mathcalf}
+8.4: Linearizing the Floer equation: The Differential of ${\mathcal{F}}$ {#linearizing-the-floer-equation-the-differential-of-mathcalf}
+------------------------------------------------------------------------
 
 Choose $m> n = \dim (W)$ and embed $TW \hookrightarrow{\mathbb{R}}^m$ to identify tangent vectors (such as $Z_i$, tangents to $W$ along $u$ or in a neighborhood $B$ of $u$) with actual vectors in ${\mathbb{R}}^m$.
 
@@ -390,7 +395,7 @@ Proof
 > Note: the book seems to be incorrect here, or at least ambiguously worded: ![[figures/image_2020-04-15-20-31-48.png]]\
 
 -   Study $O_1$ first, which (claim) reduces to `\begin{align*}
-    O_1 = \sum_{i=1}^{2n} \qty{{\frac{\partial y_i}{\partial s}\,} + J_0 {\frac{\partial y_i}{\partial t}\,}  }Z_i = \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu(y_1, \cdots, y_{2n})
+    O_1 = \sum_{i=1}^{2n} \qty{{\frac{\partial y_i}{\partial s}\,} + J_0 {\frac{\partial y_i}{\partial t}\,}  }Z_i = \mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5mu(y_1, \cdots, y_{2n})
     .\end{align*}`{=tex} where $J_0$ is the standard complex structure on ${\mathbb{R}}^{2n} = {\mathbb{C}}^n$
 
     -   The second equality follows from the assumption that the $Z_i$ are symplectic and orthonormal.
@@ -416,7 +421,7 @@ Proof
     (d{\mathcal{F}})_u &= 
     \qty{ {\color{red}\frac{\partial Y}{\partial s}} + {\color{red} J(u) \frac{\partial Y}{\partial t}}} +  
     \qty{ (d J)_{u}(Y) \frac{\partial u}{\partial t} - (d J)_{u}(Y) X_{t}-J(u)\left(d X_{t}\right)_{u}(Y)}  \\ \\
-    &\coloneqq{\color{red} \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5muY} + SY
+    &\coloneqq{\color{red} \mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5muY} + SY
     \end{align*}`{=tex} where $S\in C^\infty({\mathbb{R}}\times S^1; \endo({\mathbb{R}}^n))$ is a linear operator of order 0.
 
 Proposition (8.4.4, CR + Symmetric in the Limit)
@@ -424,7 +429,7 @@ Proposition (8.4.4, CR + Symmetric in the Limit)
 :   If $u$ solves Floer's equation, then `
     <span class="math display">
     \begin{align*}
-    (d{\mathcal{F}})_u = \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu+ S( s, t)
+    (d{\mathcal{F}})_u = \mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5mu+ S( s, t)
     \end{align*}
     <span>`{=html} where
 
@@ -483,7 +488,7 @@ Proof
         <span class="math display">
         \begin{align*}{\frac{\partial Y}{\partial t}\,} = B^- \cdot Y\end{align*}
         <span>`{=html}
-    -   Write $(d{\mathcal{F}})_u = \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu+ S$ where $S$ is zero order and symmetric in the limit
+    -   Write $(d{\mathcal{F}})_u = \mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5mu+ S$ where $S$ is zero order and symmetric in the limit
     -   Get the corresponding operator $A$ in coordinates
     -   Expand in a basis (roughly) as $A(\sum y_i Z_i) = \sum s_{ij} y_j Z_i$
     -   Check that $s_{ij} = \pm b_{i\pm n, j}$

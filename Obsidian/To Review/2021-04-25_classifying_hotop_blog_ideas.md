@@ -1,5 +1,44 @@
+Error on 1
+
+{ ["2"] = exit,["3"] = 1,} 
+\documentclass{standalone}
+\input{/home/zack/.pandoc/custom/preamble_common}
+\begin{document}
+\nopagecolor
+\begin{tikzcd}
+I \ar[r, hook] & {\mathbb{R}}\ar[d, ->>] \\
+ &  S^1 \\
+\end{tikzcd}
+\end{document}
+Error on 1
+
+{ ["2"] = exit,["3"] = 1,} 
+\documentclass{standalone}
+\input{/home/zack/.pandoc/custom/preamble_common}
+\begin{document}
+\nopagecolor
+\begin{tikzcd}
+\vdots                                           &  & \vdots \arrow[d, "p_{n+2}"', two heads] \arrow[rrdddd, dotted] &  &   \\
+{K(\pi_{n+2}X, n+3)} \arrow[rr, "k_{n+3}", hook] &  & X_{n+1} \arrow[d, "p_{n+1}"', two heads] \arrow[rrddd]         &  &   \\
+{K(\pi_{n+1}X, n+2)} \arrow[rr, "k_{n+2}", hook] &  & X_n \arrow[rrdd]                                               &  &   \\
+\vdots                                           &  & \vdots \arrow[d, "p_1"', two heads]                            &  &   \\
+{K(\pi_2X, 3)} \arrow[rr, "k_3", hook]           &  & X_1 \arrow[rr]                                                 &  & X
+\end{tikzcd}
+\end{document}
+Error on 1
+
+{ ["2"] = exit,["3"] = 1,} 
+\documentclass{standalone}
+\input{/home/zack/.pandoc/custom/preamble_common}
+\begin{document}
+\nopagecolor
+\begin{tikzcd}
+K(\pi_{i+1}(X), i+2) \ar[r] & X_i\ar[d] \\
+ &  X_{i-1}\\
+\end{tikzcd}
+\end{document}
 ---
-date: "2021-04-25T02:31"
+date: '2021-04-25T02:31'
 ---
 
 -   [Classifying the Homotopy Category of Spaces](#classifying-the-homotopy-category-of-spaces)
@@ -28,11 +67,13 @@ date: "2021-04-25T02:31"
 
 \#homotopy \#EM_spaces \#classification \#postnikov_towers
 
-# Classifying the Homotopy Category of Spaces
+Classifying the Homotopy Category of Spaces
+===========================================
 
 The point of this note is to reword and fill in some details in [Akhil Mathew's post](https://amathew.wordpress.com/2010/12/06/eilenberg-maclane-spaces/amp/)
 
-## Types
+Types
+-----
 
 To fix some terminology, if we have fixed category $\mathcal{C}$, given an object $X\in {\operatorname{Ob}}(\mathcal{C})$, we define its **$\mathcal{C}{\hbox{-}}$type** $[X]$ to be the set of all objects $X' \in {\operatorname{Ob}}(\mathcal{C})$ that admit an isomorphism $f\in \hom_{\mathcal{C}}(X, X')$. For example, in the category $\mathcal{C} = {\mathsf{Top}}$ of topological spaces and homeomorphisms, we'll say that $X$ has a unique corresponding *homeomorphism* type, where we identify $X$ with any space it is homeomorphic to. Similarly, in the homotopy category of topological spaces ${\mathsf{hoTop}}$, we identify$X$ with all spaces homotopy-equivalent to $X$, and denote the class of all such spaces $[X]$. We often abuse notation, however, and simply write $X$ in places of $[X]$.
 
@@ -46,7 +87,8 @@ This data, if it exists, will be referred to as a *complete set of invariants* f
 
 One example that doesn't admit an easy answer is $\mathcal{C} = {\mathsf{Top}}$, where I'm not sure if there are any clear results along these lines. In fact, I'd expect that this is the case for most categories of interest! A slightly more tractable example is $\mathcal{C} = {\mathsf{hoTop}}$, where it will turn out there is relatively small set of data that determines the homotopy type of a space completely, i.e. there does indeed exist a known complete set of invariants in this category. One critical ingredient is the computation of $\pi_*(X)$.
 
-## Homotopy Groups
+Homotopy Groups
+---------------
 
 First recall that a homeomorphism induces a homotopy equivalence, and conversely if two spaces are *not* homotopy equivalent then they can not be homeomorphic. So let's reduce to this one piece of the problem: suppose we are given a pointed topological space $(X, x_0)$ (where $x_0$ is some choice of a basepoint) and we wish to compute the graded group structure of the homotopy groups `
 <span class="math display">
@@ -69,7 +111,8 @@ Todo
 
 From this, nice enough spaces $X$ will admit a weak equivalence to some CW complex $X'$, and so $\pi_*(X) \cong \pi_*(X')$. So if we're just interested in computing homotopy groups, this is a harmless step. But there is in fact a strict advantage: we have many nice tools and theorems that specifically work for CW complexes. So we implicitly work in this subcategory from here onward. The very first thing we'll do is replace $X$ with a CW complex $\tilde X$ that is homotopy-equivalent to $X$, and we'll immediately abuse notation by just writing $X$ for $\tilde X$ everywhere.
 
-## Eilenberg-MacLane Spaces: The Atoms of Homotopy Theory
+Eilenberg-MacLane Spaces: The Atoms of Homotopy Theory
+------------------------------------------------------
 
 For any group $G$, suppose for a moment that there existed a space $K(G,n)$ (where $n$ is a natural numbers) satisfying `
 <span class="math display">
@@ -81,7 +124,8 @@ G, & i = n \\
 \end{align*}
 <span>`{=html} where $0$ denotes the trivial group. If such a space existed, this would perhaps be the simplest type of object to work with within homotopy theory -- it has exactly one homotopy group concentrated in one dimension. We will show later that not only does such a space exist, and can be constructed in a relatively straightforward manner, but also that it is unique up to homotopy-equivalence, and are thus referred to as *Eilenberg-MacLane spaces*.
 
-## Assembling the Atoms
+Assembling the Atoms
+--------------------
 
 For the moment, let's focus on one particular degree on homotopy groups, say $G = \pi_i(X)$. Note that for our original space, if we make the assumption that $G$ is finitely generated, we can appeal to the classification of (finitely generated) abelian groups and write $G \cong {\mathbb{Z}}^n \bigoplus_{j=1}^m {\mathbb{Z}}_{k_j}$ for some $n$ and some $m$. That is, it decomposes as a free group of rank $n$, along with a sum of finite cyclic groups with orders given by the invariant factors $k_j$. As an aside, it is perhaps worth mentioning that $\pi_i(X)$ is abelian for $n\geq 2$, so the categorical product and coproduct (here the direct sum) will coincide. This leaves the $i=1$ case; however, the fundamental group can generally be computed using more elementary methods such as covering space theory and Van Kampen's theorem.
 
@@ -108,7 +152,8 @@ What does this buy us? It's not quite the case that $X' \simeq X$, since having 
 
 So the naive hope of writing $X$ as a product of simple spaces won't work. As it turns out, what we *can* get is a way to write $X$ in a way that's often referred to as a "twisted" product, which is formalized in the notion of a (Serre) fibration.
 
-## Twisted Products
+Twisted Products
+----------------
 
 It's perhaps worth spelling out exactly what "twisted product" means here, since it's often glossed over. Suppose we have a fibration $F \hookrightarrow E \xrightarrow{p} B$ which is in fact a fiber bundle -- note that this is a strictly stronger condition, requiring the fibration to have *local trivialization*. This amounts to asking that for every open neighborhood $U \in B$, we have $p^{-1}(B) = F \times B$ up to homeomorphism. This is of course strictly weaker than requiring $E\cong F\times B$ globally, which would be denoted a trivial bundle; there may in fact be monodromy in the total space $E$ that topologically distinguishes it from this product. A primary example of this phenomenon is the Mobius bundle,
 
@@ -118,7 +163,8 @@ which is a line bundle over the circle. Note that locally we do have $M \cong S^
 
 The moral of the story here is that we can generalize a product of spaces $A \times B \times C \times \cdots$ as a "twisted product" $A \rtimes_{\varphi_1} B \rtimes_{\varphi_1} C \rtimes_{\varphi_1} \cdots$ by constructing an interlocking series of fibrations. Luckily for us, our next step towards solving our original problem will involve the construction of [[Postnikov towers | ../Unsorted/Postnikov%20tower.html]], which explicitly encode how this interlocking works.
 
-## Postnikov Towers
+Postnikov Towers
+----------------
 
 First I want to define exactly what a Postnikov tower is and how we can explicitly build them using CW complexes, since this is something that is treated differently among different sources.
 
@@ -172,7 +218,8 @@ G, & i = n \\
 \end{align*}
 <span>`{=html} where $0$ denotes the trivial group. If such a space existed, this would perhaps be the simplest type of object to work with within homotopy theory -- it has exactly one homotopy group concentrated in one dimension. We will show later that not only does such a space exist, and can be constructed in a relatively straightforward manner, but also that it is unique up to homotopy-equivalence, and are thus referred to as *Eilenberg-MacLane spaces*.
 
-# The Atoms of Homotopy Theory
+The Atoms of Homotopy Theory
+============================
 
 For the moment, let's focus on one particular degree on homotopy groups, say $G = \pi_i(X)$. Note that for our original space, if we make the assumption that $G$ is finitely generated, we can appeal to the classification of (finitely generated) abelian groups and write $G \cong {\mathbb{Z}}^n \bigoplus_{j=1}^m {\mathbb{Z}}_{k_j}$ for some $n$ and some $m$. That is, it decomposes as a free group of rank $n$, along with a sum of finite cyclic groups with orders given by the invariant factors $k_j$. As an aside, it is perhaps worth mentioning that $\pi_i(X)$ is abelian for $n\geq 2$, so the categorical product and coproduct (here the direct sum) will coincide. This leaves the $i=1$ case; however, the fundamental group can generally be computed using more elementary methods such as covering space theory and Van Kampen's theorem.
 
@@ -197,7 +244,8 @@ What does this buy us? It's not quite the case that $X' \simeq X$, since having 
 
 So the naive hope of writing $X$ as a product of simple spaces won't work. As it turns out, what we *can* get is a way to write $X$ in a way that's often referred to as a "twisted" product, which is formalized in the notion of a (Serre) fibration.
 
-# Twisted Products
+Twisted Products
+================
 
 It's perhaps worth spelling out exactly what "twisted product" means here, since it's often glossed over. Suppose we have a fibration $F \hookrightarrow E \xrightarrow{p} B$ which is in fact a fiber bundle -- note that this is a strictly stronger condition, requiring the fibration to have *local trivialization*. This amounts to asking that for every open neighborhood $U \in B$, we have $p^{-1}(B) = F \times B$ up to homeomorphism. This is of course strictly weaker than requiring $E\cong F\times B$ globally, which would be denoted a trivial bundle; there may in fact be monodromy in the total space $E$ that topologically distinguishes it from this product. A primary example of this phenomenon is the Mobius bundle, `
 <span class="math display">
@@ -210,7 +258,8 @@ which is a line bundle over the circle. Note that locally we do have $M \cong S^
 
 The moral of the story here is that we can generalize a product of spaces $A \times B \times C \times \cdots$ as a "twisted product" $A \rtimes_{\varphi_1} B \rtimes_{\varphi_1} C \rtimes_{\varphi_1} \cdots$ by constructing an interlocking series of fibrations. Luckily for us, our next step towards solving our original problem will involve the construction of Postnikov towers, which explicitly encode how this interlocking works.
 
-# Postnikov Towers
+Postnikov Towers
+================
 
 First I want to define exactly what a Postnikov tower is and how we can explicitly build them using CW complexes, since this is something that is treated differently among different sources.
 

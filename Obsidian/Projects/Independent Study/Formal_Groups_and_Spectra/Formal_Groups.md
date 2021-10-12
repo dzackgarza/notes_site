@@ -20,7 +20,8 @@
 
 
 
-# Formal Groups and Spectra
+Formal Groups and Spectra
+=========================
 
 Formal group law stuff
 
@@ -30,7 +31,8 @@ Formal group law stuff
 
 ------------------------------------------------------------------------
 
-## Formal Groups
+Formal Groups
+-------------
 
 ### Basics
 
@@ -65,7 +67,8 @@ Formal group law stuff
 -   How does iterated K-theory show up in the theory of formal groups?
     -   ![Untitled%2020.png](attachments/Untitled%2020.png "fig:")
 
-## Other Connections to Elliptic Curves
+Other Connections to Elliptic Curves
+------------------------------------
 
 -   What is the invariant differential of an elliptic curve?
     -   ![Untitled%2021.png](attachments/Untitled%2021.png "fig:")
@@ -78,7 +81,8 @@ Formal group law stuff
 -   What can a formal group tell you about your curve?
     -   ![Untitled%2025.png](attachments/Untitled%2025.png) ![Untitled%2026.png](attachments/Untitled%2026.png)
 
-## Lazard Ring
+Lazard Ring
+-----------
 
 -   What is the Lazard ring?
     -   ![Untitled%2027.png](attachments/Untitled%2027.png "fig:")
@@ -99,7 +103,8 @@ Formal group law stuff
 
 ------------------------------------------------------------------------
 
-## Stable Homotopy
+Stable Homotopy
+---------------
 
 ### tmf
 

@@ -1,5 +1,5 @@
 ---
-date: 2020-01-27
+date: '2020-01-27'
 tags:
 - Unfiled
 ---
@@ -19,7 +19,7 @@ tags:
 
 
 
-[[../../00_Talks Index | 000_Talks%20Index.html]]
+[[../../00_Talks Index | ../000_Talks%20Index.html]]
 
 Tags: \#zeta_functions \#L_functions \#number_theory \#algebraic_geometry
 
@@ -81,7 +81,8 @@ Fix: If $p$ is minimally defined over ${\mathbb{F}}_{q^n}$, consider its Galois 
 
 Then the above argument shows that each orbit now contributes $n$, and each orbit is of size $n$, so the contribution now accurately reflects the number of points.
 
-# Examples
+Examples
+========
 
 1: $f(x) = x$ over ${\mathbb{F}}_q$.
 

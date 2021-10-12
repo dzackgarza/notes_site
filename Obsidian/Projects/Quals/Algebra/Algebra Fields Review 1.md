@@ -13,9 +13,10 @@
 
 
 
-# Review
+Review
+======
 
-[[Unsorted/Qual Review | Unsorted/Qual%20Review.html]]
+[[Unsorted/Qual Review | ../../../Unsorted/Qual%20Review.html]]
 
 Tags: \#algebra \#field_theory \#galois_theory \#quals
 

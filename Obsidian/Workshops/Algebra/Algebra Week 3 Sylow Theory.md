@@ -19,11 +19,13 @@ title: Algebra Qual Prep Week 3
 
 
 
-# Week 3: Sylow Theory
+Week 3: Sylow Theory
+====================
 
 [See the Presentation Schedule](https://www.notion.so/df531651418e43a9918f8d6c0cc0c706)
 
-## Topics
+Topics
+------
 
 -   The 3 Sylow theorems
 -   Showing groups are abelian
@@ -38,7 +40,8 @@ title: Algebra Qual Prep Week 3
         -   $p^2 q$
 -   Sketch a proof for each of the Sylow theorems.
 
-## Unsorted Questions
+Unsorted Questions
+------------------
 
 -   Identify $\mathop{\mathrm{Aut}}_{\mathsf{Grp}}(\bigoplus_{i=1}^n {\mathbb{Z}}/p)$ as a matrix group and determine its size.
 -   State the 3 Sylow theorems

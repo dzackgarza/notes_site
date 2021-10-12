@@ -1,11 +1,31 @@
 ---
-aliases: ["étale"]
+aliases:
+- étale
 ---
 
-# References
-- <https://www.math.ru.nl/personal/bmoonen/Seminars/EtCohConrad.pdf/>
+-   [References](#references)
+-   [Topics](#topics)
 
-# Topics
 
-- [site](site)
-- [topos.md](topos.md)
+
+
+
+
+
+
+
+
+
+
+
+
+References
+==========
+
+-   <https://www.math.ru.nl/personal/bmoonen/Seminars/EtCohConrad.pdf/>
+
+Topics
+======
+
+-   [site](site)
+-   [[topos.md | topos.html]]

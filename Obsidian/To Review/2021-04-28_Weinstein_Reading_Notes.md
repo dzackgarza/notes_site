@@ -1,5 +1,5 @@
 ---
-date: "2021-04-28 17:23:07"
+date: '2021-04-28 17:23:07'
 tags:
 - Unfiled
 ---
@@ -17,7 +17,7 @@ tags:
 
 
 
-[[Stein Manifolds | Subjects/Stein%20Manifolds.html]]
+[[Stein Manifolds | ../Subjects/Stein%20Manifolds.html]]
 
 Goal: set up Stein and Weinstein cobordisms, get a Weinstein analog of the h-cobordism theorem.
 

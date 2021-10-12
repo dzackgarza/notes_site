@@ -1,5 +1,5 @@
 ---
-date: "2021-04-28 18:08:39"
+date: '2021-04-28 18:08:39'
 tags:
 - Unfiled
 ---
@@ -19,11 +19,12 @@ tags:
 
 
 
-[[Subjects/Stein Manifolds | Subjects/Stein%20Manifolds.html]]
+[[Subjects/Stein Manifolds | ../Subjects/Stein%20Manifolds.html]]
 
 Tags: \#symplectic \#contact_topology
 
-# Motivation
+Motivation
+==========
 
 **Example (Hypersurfaces of contact type):** The level sets of a Hamiltonian on ${\mathbb{R}}^{2n} = {\operatorname{span}}_{\mathbb{R}}\left\{{\mathbf{p}, \mathbf{q}}\right\}$ given by $H = K + U$ where $K = \frac 1 2 {\left\lVert {\mathbf{p}} \right\rVert}^2$ and $U = U(\mathbf{q})$ is a function of only $\mathbf{q}$. (Usually kinetic + potential energy.)
 

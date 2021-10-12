@@ -1,5 +1,5 @@
 ---
-date: 2021-04-26
+date: '2021-04-26'
 tags:
 - Unfiled
 ---
@@ -19,7 +19,8 @@ tags:
 
 
 
-# Why study cobordism?
+Why study cobordism?
+====================
 
 Cobordism is a much coarser equivalence relation than diffeomorphism or homeomorphism of manifolds, and is significantly easier to study and compute. It is not possible to classify manifolds up to diffeomorphism or homeomorphism in dimensions ≥ 4 -- because the word problem for groups cannot be solved -- but it is possible to classify manifolds up to cobordism.
 

@@ -1,5 +1,5 @@
 ---
-date: 2021-04-26
+date: '2021-04-26'
 tags:
 - Unfiled
 ---
@@ -19,7 +19,8 @@ tags:
 
 
 
-## Example: Proving the Snake Lemma without chasing elements
+Example: Proving the Snake Lemma without chasing elements
+---------------------------------------------------------
 
 We want to show that this sequence is exact:
 

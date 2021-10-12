@@ -1,5 +1,5 @@
 ---
-date: 2021-04-26
+date: '2021-04-26'
 tags:
 - Unfiled
 ---
@@ -33,7 +33,8 @@ The prime mechanism then appeared to be this: Given a space $X$ carrying a vecto
 
 Characteristic numbers solve the oriented and unoriented bordism questions: two manifolds are (respectively oriented or unoriented) cobordant if and only if their characteristic numbers are equal.
 
-# Topics Todo
+Topics Todo
+===========
 
 -   Characteristic Classes (see Milnor)
     -   Stiefel-Whitney class

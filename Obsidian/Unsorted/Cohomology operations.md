@@ -1,3 +1,17 @@
 ---
-aliases: ["homology operations"]
+aliases:
+- homology operations
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+

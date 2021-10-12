@@ -1,2 +1,15 @@
-- Good reduction: ?
-- Supersingular reduction: ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+-   Good reduction: ?
+-   Supersingular reduction: ?

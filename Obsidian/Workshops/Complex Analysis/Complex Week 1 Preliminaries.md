@@ -1,5 +1,5 @@
 ---
-title: "Complex Analysis Qual Prep Week 1: Preliminaries"
+title: 'Complex Analysis Qual Prep Week 1: Preliminaries'
 ---
 
 -   [Week 1: Preliminaries](#week-1-preliminaries)
@@ -21,9 +21,11 @@ title: "Complex Analysis Qual Prep Week 1: Preliminaries"
 
 
 
-# Week 1: Preliminaries
+Week 1: Preliminaries
+=====================
 
-## Topics
+Topics
+------
 
 -   Complex arithmetic and geometry, conic section equations
 -   Uniform (continuity, differentiability, convergence)
@@ -31,7 +33,8 @@ title: "Complex Analysis Qual Prep Week 1: Preliminaries"
 -   Green's theorem, Stokes theorem
 -   Complex plane, Riemann sphere
 
-## Warmup
+Warmup
+------
 
 -   State the Cauchy-Riemann equations.
 
@@ -78,11 +81,13 @@ title: "Complex Analysis Qual Prep Week 1: Preliminaries"
 
 -   ![[_attachments/Pasted%20image%2020210517023424.png]]
 
-## Exercises
+Exercises
+---------
 
 ![[_attachments/Pasted%20image%2020210517025227.png) ![](_attachments/Pasted%20image%2020210517025152.png) - ![](_attachments/Pasted%20image%2020210517024749.png) - ![](_attachments/Pasted%20image%2020210517024557.png) - ![](_attachments/Pasted%20image%2020210517023333.png) - ![](_attachments/Pasted%20image%2020210517024431.png) - ![](_attachments/Pasted%20image%2020210517024807.png) - ![](_attachments/Pasted%20image%2020210517030008.png) - ![](_attachments/Pasted%20image%2020210517030118.png) - ![](_attachments/Pasted%20image%2020210517030226.png) - ![](_attachments/Pasted%20image%2020210517030343.png) - ![](_attachments/Pasted%20image%2020210517030440.png]]
 
-## Qual Problems
+Qual Problems
+-------------
 
 -   ![[_attachments/Pasted%20image%2020210517025502.png]]
 -   ![[_attachments/Pasted%20image%2020210517025442.png]]

@@ -1,5 +1,5 @@
 ---
-title: "Section 8.6 - 8.8: Setup for Computing the Index"
+title: 'Section 8.6 - 8.8: Setup for Computing the Index'
 ---
 
 -   [8.8](#section)
@@ -34,7 +34,8 @@ Outline - Sketch proof of 8.6.3 - Statement of Somewhere Injectivity - Statement
 
 What we're trying to prove 8.1.5: $(d{\mathcal{F}})_u$ is a Fredholm operator of index $\mu(x) - \mu(y)$.
 
-# 8.8
+8.8
+===
 
 -   Define `\begin{align}
     L: W^{1, p}\left(\mathbf{R} \times S^{1} ; \mathbf{R}^{2 n}\right) & \longrightarrow L^{p}\left(\mathbf{R} \times S^{1} ; \mathbf{R}^{2 n}\right) \\
@@ -80,13 +81,14 @@ What we're trying to prove 8.1.5: $(d{\mathcal{F}})_u$ is a Fredholm operator of
     -   Replace $L$ by $L_0$, which is modified in a neighborhood of zero in the $s$ variable. Use invariance of index under small perturbations.
     -   Homotope $L_0$ to $L_1$, where $S$ is replaced by a diagonal matrix $S(s)$ that is a constant matrix outside the neighborhood of zero in $s$. Use invariance of index under homotopy.
 
-# 8.7
+8.7
+===
 
--   Goal: Toward 8.1.5, show that $L \coloneqq\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu+ S(s, t): W^{1, p} \to L^p$ is a Fredholm operator, i.e. the index makes sense (finite-dimensional kernel and cokernel).
+-   Goal: Toward 8.1.5, show that $L \coloneqq\mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5mu+ S(s, t): W^{1, p} \to L^p$ is a Fredholm operator, i.e. the index makes sense (finite-dimensional kernel and cokernel).
 
 -   Statement: if $\operatorname{det}(\operatorname{id}- R^\pm_1) \neq 0$ then the operator `\begin{align*}
     L: W^{1, p}({\mathbb{R}}\times S^1; {\mathbb{R}}^{2n}) \to L^p({\mathbb{R}}\times S^1; {\mathbb{R}}^{2n})\\
-    .\end{align*}`{=tex} given by $L = \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu+ S(s, t)$ is Fredholm for every $p>1$. \> Most of the work goes into showing that $\dim(\ker L) < \infty$ and $\operatorname{im}(L)$ is closed.
+    .\end{align*}`{=tex} given by $L = \mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5mu+ S(s, t)$ is Fredholm for every $p>1$. \> Most of the work goes into showing that $\dim(\ker L) < \infty$ and $\operatorname{im}(L)$ is closed.
 
 -   $\dim \ker L < \infty$:
 
@@ -109,7 +111,8 @@ What we're trying to prove 8.1.5: $(d{\mathcal{F}})_u$ is a Fredholm operator of
     -   Use the fact that $\operatorname{coker}L = \ker L^\star$
     -   Show $\dim \ker L^\star < \infty$ since it satisfies the conditions of 8.7.4.
 
-# 8.6
+8.6
+===
 
 -   Start with $u \in C^\infty({\mathbb{R}}\times S^1; W)$ a solution to the equation `
     <span class="math display">
@@ -126,7 +129,8 @@ What we're trying to prove 8.1.5: $(d{\mathcal{F}})_u$ is a Fredholm operator of
 
 -   Prove "injectivity result": $R(v) \subseteq {\mathbb{R}}^2$ is dense and open
 
-## 8.6.3, Part 1: R(v) is Open
+8.6.3, Part 1: R(v) is Open
+---------------------------
 
 -   Prove $R(v)$ is open: contradict zero derivative
     -   Proof uses sequential characterization of being a closed set
@@ -136,9 +140,11 @@ What we're trying to prove 8.1.5: $(d{\mathcal{F}})_u$ is a Fredholm operator of
     -   Apply Bolzano-Weierstrass to extract a convergent subsequence
     -   Use quotient definition of derivative, show it is zero, contradiction.
 
-## 8.6.3, Part 2: R(v) is Dense in R2 (p.258)
+8.6.3, Part 2: R(v) is Dense in R2 (p.258)
+------------------------------------------
 
-## Step 1: Exclude critical points that are also multiple points
+Step 1: Exclude critical points that are also multiple points
+-------------------------------------------------------------
 
 -   Definition: *Multiple points* are where injectivity fails in $s$.
     -   Characterize $R(v)$ as those in $C(v)^c$ that are not multiples.
@@ -186,7 +192,8 @@ What we're trying to prove 8.1.5: $(d{\mathcal{F}})_u$ is a Fredholm operator of
 
 -   Conclude that we only have to consider injectivity, not critical points that are also multiple points
 
-## Step 2: Failure of Injectivity in Small Boxes
+Step 2: Failure of Injectivity in Small Boxes
+---------------------------------------------
 
 -   Define `
     <span class="math display">
@@ -224,7 +231,8 @@ What we're trying to prove 8.1.5: $(d{\mathcal{F}})_u$ is a Fredholm operator of
 
 -   Then every point in the $\rho{\hbox{-}}$ball is a multiple point over some point in the box around $(s_1, t_0)$. Pick on such point $(s_\star', t_\star)$ on the $t_\star$ line.
 
-## Step 3: Final Contradiction
+Step 3: Final Contradiction
+---------------------------
 
 -   Construct $v_1, v_2$ which
 
@@ -283,7 +291,8 @@ What we're trying to prove 8.1.5: $(d{\mathcal{F}})_u$ is a Fredholm operator of
 
 BREAK
 
-## The Continuation Principle
+The Continuation Principle
+--------------------------
 
 -   Take the perturbed CR equation `\begin{align*}
     \qty{{\frac{\partial }{\partial s}\,} + J_0 \cdot {\frac{\partial }{\partial t}\,} + S }Y &= 0 {\quad \operatorname{where} \quad}
@@ -307,7 +316,8 @@ BREAK
 
 -   Prove is a consequence of the **Similarity Principle**
 
-## Similarity Principle
+Similarity Principle
+--------------------
 
 -   Statement:
 
@@ -347,16 +357,17 @@ BREAK
 \begin{center}
 \begin{tikzcd}
 \left(A^{0,1} T^{\star} S^{2}\right)^{n}=\Lambda^{0,1} T^{\star} S^{2} \otimes \mathbb{C}^{n} \ar[d]\\
-X \ar[u, "\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5muY"', bend right=50, dotted]
+X \ar[u, "\mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5muY"', bend right=50, dotted]
 \end{tikzcd}
 \end{center}
 ```
 -   $\mkern 1.5mu\overline{\mkern-1.5muY\mkern-1.5mu}\mkern 1.5mu = 0$ makes $Y$ a holomorphic sphere in ${\mathbb{C}}^n$.
 
-## Odds and Ends
+Odds and Ends
+-------------
 
 -   Theorem: the following is a surjective Fredholm operator for every $p> 1$: `\begin{align*}
     \mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5mu: W^{1, p}\left(S^{2}, \mathbb{C}^{n}\right) \longrightarrow L^{p}\left(\Lambda^{0,1} T^{\star} S^{2} \otimes \mathbb{C}^{n}\right)
     .\end{align*}`{=tex}
 
-    -   Computation will show that $\dim \ker \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu= \dim \operatorname{coker}\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu= 2n$, so $\mathop{\mathrm{ind}}\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu= 0$.
+    -   Computation will show that $\dim \ker \mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5mu= \dim \operatorname{coker}\mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5mu= 2n$, so $\mathop{\mathrm{ind}}\mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5mu= 0$.

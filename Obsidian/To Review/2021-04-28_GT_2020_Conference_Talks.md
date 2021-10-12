@@ -1,5 +1,5 @@
 ---
-date: "2021-04-28 18:16:29"
+date: '2021-04-28 18:16:29'
 tags:
 - Unfiled
 ---
@@ -26,9 +26,11 @@ tags:
 
 [Conference and Seminar Talks](Conference%20and%20Seminar%20Talks)
 
-# Joint GT/UGA Topology Seminar: Monday January 13th
+Joint GT/UGA Topology Seminar: Monday January 13th
+==================================================
 
-## Talk 1: Knot Floer Homology and Cosmetic Surgeries
+Talk 1: Knot Floer Homology and Cosmetic Surgeries
+--------------------------------------------------
 
 Dehn surgery: fundamental procedure for building 3-manifolds.
 
@@ -166,7 +168,8 @@ A surgery formula: $\widehat{HF}(S_{p/q}^3(K))$ is floer homology in $T$ of $\Ga
 
 For the $\mathrm{spin}^c$ decomposition, look at $\mkern 1.5mu\overline{\mkern-1.5muT\mkern-1.5mu}\mkern 1.5mu$ with different lifts of $\ell_{p, q}$.
 
-## Talk 2: Branched Covers Bounding ${\mathbb{Q}}H B^4$ {#talk-2-branched-covers-bounding-mathbbqh-b4}
+Talk 2: Branched Covers Bounding ${\mathbb{Q}}H B^4$ {#talk-2-branched-covers-bounding-mathbbqh-b4}
+----------------------------------------------------
 
 > Joint work with Aceto, Meier, A. Miller, M. Miller, Stipsicz.
 

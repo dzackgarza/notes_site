@@ -1,5 +1,5 @@
 ---
-date: "2021-04-28 18:45:07"
+date: '2021-04-28 18:45:07'
 tags:
 - Unfiled
 ---
@@ -29,9 +29,11 @@ tags:
 
 Tags: \#review \#numerical_analysis \#undergraduate
 
-# Numerical Analysis Review
+Numerical Analysis Review
+=========================
 
-## Chapter 1: Error Analysis
+Chapter 1: Error Analysis
+-------------------------
 
 -   Taylor Expansion: `
     <span class="math display">
@@ -53,7 +55,8 @@ Tags: \#review \#numerical_analysis \#undergraduate
     -   Always express polynomials in nested form before evaluating
 -   Convergence: if $\left\{{a_i}\right\} \rightarrow a$ and there is a sequence $\left\{{b_i}\right\} \rightarrow 0$ and a constant $K$ such that ${\left\lvert {a_i- a} \right\rvert} \leq K {\left\lvert {b_i} \right\rvert}$, then the order of convergence is $O(b_i)$. Usually, just take $b_i = 1/i^k$ for some $k$.
 
-## Chapter 2: Equations in 1 Variable
+Chapter 2: Equations in 1 Variable
+----------------------------------
 
 -   Bisection Method: Given $f\in C^0([a,b])$ and $f(a), f(b)$ of differing signs, want to find a root.
     -   Set $a_1 = a, b_1 = b, p_1 \coloneqq~(1/2)(a_1+b_1)$, and evaluate $f(p_1)$
@@ -78,7 +81,8 @@ Tags: \#review \#numerical_analysis \#undergraduate
 -   Fixed-point convergence can be linear if $g'(p) = 0$, $g''$ is bounded, and the initial guess is $\delta-$close to the actual solution.
 -   Zeros of order $m$ occur where $f^{(k)}(x) = 0$ and $f^{(m)}(x) \neq 0$ for $k < m$.
 
-## Chapter 3: Interpolation and Polynomial Approximation
+Chapter 3: Interpolation and Polynomial Approximation
+-----------------------------------------------------
 
 -   Lagrange polynomial:
 
@@ -115,7 +119,8 @@ Tags: \#review \#numerical_analysis \#undergraduate
 
 -   Counting degrees of freedom
 
-## Chapter 4: Numerical differentiation/integration
+Chapter 4: Numerical differentiation/integration
+------------------------------------------------
 
 -   Differentiation
 
@@ -170,7 +175,8 @@ Tags: \#review \#numerical_analysis \#undergraduate
 
         ​
 
-## Chapter 5: ODEs
+Chapter 5: ODEs
+---------------
 
 General setup: we are given $y'(t) = f(t,y)​$ and $y(t_0) = y_0​$.
 
@@ -194,7 +200,8 @@ General setup: we are given $y'(t) = f(t,y)​$ and $y(t_0) = y_0​$.
 -   Linear Systems of ODEs
     -   Just do everything by components, it works out.
 
-## Chapter 6: Linear Systems
+Chapter 6: Linear Systems
+-------------------------
 
 -   The number of flops for Gaussian elimination is $O(n^3)$
 -   $LU$ factorization is $O(n^2)$
@@ -207,7 +214,8 @@ General setup: we are given $y'(t) = f(t,y)​$ and $y(t_0) = y_0​$.
     -   Given $A = LU$, first solve $Ly = b$ for $y$ using forward-substitution.
     -   Then solve $Ux = y$ for $x$ using backward-substitution
 
-## Chapter 7: Matrix Techniques
+Chapter 7: Matrix Techniques
+----------------------------
 
 -   Spectral radius $\rho(A) = \max{\left\{{{\left\lvert {\lambda_i} \right\rvert}}\right\}}$
 -   Jacobi Method: an iterative way to $x$ for $Ax= b$.
@@ -224,6 +232,7 @@ General setup: we are given $y'(t) = f(t,y)​$ and $y(t_0) = y_0​$.
     -   $x_i = (D+L)^{-1}(b-Ux_{i-1})$
     -   Iteration matrix $T = -(D+L^{-1})U$.
 
-## Chapter 8: Discrete Least Squares
+Chapter 8: Discrete Least Squares
+---------------------------------
 
 -   Normal equations

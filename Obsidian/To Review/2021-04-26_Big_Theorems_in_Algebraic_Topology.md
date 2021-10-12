@@ -1,5 +1,5 @@
 ---
-date: 2021-04-26
+date: '2021-04-26'
 tags:
 - Unfiled
 ---
@@ -19,9 +19,10 @@ tags:
 
 
 
-[[Subjects/Algebraic Topology | Subjects/Algebraic%20Topology.html]]
+[[Subjects/Algebraic Topology | ../Subjects/Algebraic%20Topology.html]]
 
-# Big Theorems
+Big Theorems
+============
 
 -   Brouwer Fixed Point
 

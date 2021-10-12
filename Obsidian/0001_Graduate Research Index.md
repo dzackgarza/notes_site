@@ -1,11 +1,30 @@
 ---
-aliases: ["Graduate Research"]
+aliases:
+- Graduate Research
 ---
 
-# Misc
+-   [Misc](#misc)
+-   [Journals](#journals)
 
-[[Unsorted/Giant word index]]
 
-# Journals
-[[To Review/2021-04-26_Journals]]
-[[attachments/Journals.pdf]]
+
+
+
+
+
+
+
+
+
+
+
+
+Misc
+====
+
+\[\[Unsorted/Giant word index\]\]
+
+Journals
+========
+
+\[\[To Review/2021-04-26_Journals\]\] \[\[attachments/Journals.pdf\]\]

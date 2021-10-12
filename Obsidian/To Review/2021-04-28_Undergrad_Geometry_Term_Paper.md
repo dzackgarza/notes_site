@@ -26,18 +26,10 @@
 
 
 
-  ----------------------------------------
-  date: 2021-04-28 18:20:58
-  tags:
-  \- Unfiled
-  title: A History of Algebraic Geometry
-  author: D. Zack Garza
-  date: 2017
-  ----------------------------------------
-
 Tags: \#algebraic_geometry \#undergraduate
 
-# Abstract
+Abstract
+========
 
 The primary purpose of this paper is to discuss Alexandre Grothendieck, who is often cited as one of the most influential mathematical thinkers of the century. In order to fully appreciate the impact of his contributions, it is necessary to provide some historical context in which to place his work, and to this end, this paper will also discuss some the history, and mathematical content of Algebraic Geometry, as well as several key figures in the field.
 
@@ -49,9 +41,11 @@ Instead, such mathematical inclusions are meant to inform the historical narrati
 
 Ultimately, the goal of this paper is to discuss Grothendieck's pioneering use of *schemes*, a construct introduced in his well-known 1957 'Tohoku' paper, which helped lay a new framework for Algebraic Geometry and has driven advances in the field ever since. In order to understand the significance of schemes, however, one must first understand *sheaves*, the construct that schemes are meant to generalize and extend. Sheaves, in turn, are in many ways defined analogously to *manifolds*, which are often thought of as spaces that locally resemble standard Euclidean space, and it is from this construct that a great deal of geometric intuition can be derived and used to guide powerful algebraic generalizations.
 
-# A Historical Perspective {#header-n30}
+A Historical Perspective {#header-n30}
+========================
 
-## The Greeks {#header-n31}
+The Greeks {#header-n31}
+----------
 
 Algebraic Geometry is among the oldest branches of mathematics, which was studied as early as 400 BCE by the Greeks in the form of conic sections. For the Greeks, in fact, the division between Algebra and Geometry was perhaps indistinguishable in either direction. Without the benefits of a numeral system amenable to calculations, nor the convenient symbolic shorthand used in modern mathematics, the very problems they studied were inextricably tied to the geometric situations from which they were born.
 
@@ -77,7 +71,8 @@ A similar example is the problem of "doubling the cube" -- that is, given a cube
 
 However, although in many cases the Greeks made use of coordinates, their study of geometry did not have the same analytic flavor that it takes on today -- the modern notion of a coordinate system would not enter the mathematical zeitgeist until nearly the century, with the work of Rene Descartes. Moreover, the classical study was restricted to algebraic curves in at most 3 dimensions, and usually over fields such as $\mathbb{R}$ or $\mathbb{Q}$, and so it remained until the "Geometric Renaissance" of the and centuries.
 
-## Modern Times {#header-n42}
+Modern Times {#header-n42}
+------------
 
 Due to reverence of the infamous fifth postulate of Euclid, the study of *synthetic geometry* -- that built on a collection axiomatic foundations -- remained the dominant mode of Geometric thought. With the advent of Cartesian coordinates, however, a separate study of *analytic* (or coordinate) geometry began, coinciding with the beginning of the study of alternative geometries based upon negating the fifth postulate. However, the unreasonable effectiveness of coordinates in applications to science and engineering endeavors, along with the invention of Calculus in the mid century, led to the flourishing of the analytic branch in favor of synthetic approaches.
 
@@ -87,9 +82,11 @@ Around this time, a notion of *affine geometry* had also come into the picture, 
 
 A major proponent of this point of view in the century was Felix Klein (of Klein Bottle fame), who sought to classify all geometries with his *Erlangen Program*. He believed that projective geometry would provide a unifying framework under which all other geometries could be united, and introduced the idea that such geometries could be characterized using the theory of groups. It was with the advent of Klein's program that traditionally synthetic approaches found rigorous footing in analytic and algebraic notions.
 
-# The Erlangen Program {#header-n51}
+The Erlangen Program {#header-n51}
+====================
 
-## Euclidean Geometries
+Euclidean Geometries
+--------------------
 
 In particular, the *Erlangen* program laid out a framework in which any given geometry could be categorized as a group of symmetries acting on a vector space, and it is of some interest to see how such constructions can yield familiar geometries.
 
@@ -144,7 +141,8 @@ While defining the notion of a semidirect product is perhaps outside the scope o
 
 Taking a field such as $\mathbb{R}$ and the dimension of $n=2$, we find that the vector space $\mathbb{R}^2$ along with the group $E_2(\mathbb{R})$ provides enough information to recover classical Euclidean geometry in the plane.
 
-## Affine Geometries {#header-n86}
+Affine Geometries {#header-n86}
+-----------------
 
 In the affine case, one is often interested in maps $T: k^n \rightarrow k^n$ of the form $v \mapsto Mv + b$ where $M$ is a linear translation and $b$ is another vector in $k^n$. These maps are often called *affine transformations*, and spaces that result from quotienting by this action are *affine spaces*, which are often described as "vector spaces in which the origin is forgotten." Another way of stating this is that allowing the morphisms to be combinations of both linear maps *and* translations obviates the need for a distinguished zero vector, and allows one to equivalently treat similar figures without reference to an absolute coordinate system.
 
@@ -160,7 +158,8 @@ In order to obtain this type of geometry in the framework of the Erlangen progra
 
 As noted previously, the group $O_n(k)$ is a subgroup of $GL_n(k)$, and so this result suggested to Klein and his contemporaries that Euclidean geometry was, in fact, a restriction, or special case, of affine geometry.
 
-## Projective Geometries {#header-n99}
+Projective Geometries {#header-n99}
+---------------------
 
 In the case of projective geometry, one wants to introduce a notion of "perspective projection" in addition to the isometries obtained in the Euclidean and Affine cases. However, in order to do so, one must forego the preservation of parallel lines. This is a consequence of the early study of the subject, with respect to capturing 3-dimensional images on a 2-dimensional medium. This required the introduction of a point at which all parallel lines in the image would meet, which is now referred to as a *vanishing point* or a *point at infinity*.
 
@@ -178,15 +177,18 @@ The $n+1$ condition is the first noticeable difference, which arises from the fa
 
 It can then be shown that, for fixed $k$ and $n$, both the Euclidean and Affine groups are isomorphic to subgroups of the Projective group, and it is in this way that those geometries can be recovered as special cases of projective geometry.
 
-# Into the Century
+Into the Century
+================
 
-## Post-Erlangen Program {#header-n112}
+Post-Erlangen Program {#header-n112}
+---------------------
 
 Armed with the tools of the Erlangen program, geometry once again become an active mathematical research topic and its impact rippled throughout the and centuries. It was one of the first moderately successful modern attempts to provide a unifying framework under which many disparate parts of mathematics could be connected and derived from one another, revealing new connections and insights.
 
 It is a fact that the program was not all-encompassing - for example, the recently developed Riemannian geometry did not easily fit into this framework. But perhaps its most significant and lasting impact on Mathematics lies in its cultural effects, and in particular, in the way it affected how mathematical knowledge was organized and synthesized. It proved the usefulness of having such unifying frameworks, a theme that would become prominent in the century, and laid the groundwork for the philosophy that would drive the development of category theory in the 1940s.
 
-## The Italian School {#header-n104}
+The Italian School {#header-n104}
+------------------
 
 Meanwhile, the field of Algebraic Geometry progressed somewhat independently, but it became clear that affine and projective spaces were fundamental to the subject, as were functions (and particularly polynomials) on those spaces. Major work was done in this area in the late and early centuries by a group referred to as "The Italian School" in Rome, primarily driven by the work of Severi, Castelnuovo, and Enriques. In order to discuss the significance of their work, however, it is necessary to introduce several more definitions.
 
@@ -238,7 +240,8 @@ The types of irregularities present in $p1$ and $p2$ are in general referred to 
 
 Such questions drove many results in the classification of algebraic curves and it was found that the *genus* associated to the curve, an essentially topological property, was a powerful tool in such classifications. It was the extension of these ideas to the classification algebraic *surfaces* in higher dimensions that the Italian school focused their efforts on. To this end, many results were produced, but their results and methods of proof have remained contentious throughout the century.
 
-## The Weil Conjectures and Grothendieck {#header-n127}
+The Weil Conjectures and Grothendieck {#header-n127}
+-------------------------------------
 
 Various progress in other areas of geometry was made throughout the first half of the century, most notably the advances of Hilbert and his proof of the *Nullstellensatz* (roughly translated as "theorem of zero loci"). Recalling that a variety was defined over system $S$ of polynomials, where $S$ is contained in some polynomial ring $k[x_1, x_2, \cdots, x_n]$, one form of the *Nullstellensatz* shows that if one wants to check whether the variety $V(S)$ is nonempty, one can equivalently check whether $S$ is a (proper) ideal in this ring. This firmly cemented the link between Algebra and Geometry, providing a bridge that allowed many of the tools from either one of these fields to be used in the other.
 
@@ -256,11 +259,13 @@ Although the construction of scheme itself is quite a bit more detailed and nuan
 
 However, such constructions proved to not just be limited to making connections between geometry, topology, and algebra, but as Weil had hoped, laid the groundwork for many of these tools to be applied to number theory. This culminated in the celebrated proof of Fermat's Last Theorem by Andrew Wiles in the 1990s, which built upon on many of the tools developed during this period.
 
-# Conclusion
+Conclusion
+==========
 
 In summary, perhaps the most notable influence of Algebraic Geometry on the face of mathematics has been the bridges it has created between different fields. In its study, many mathematical "Rosetta Stones" have been built, allowing deeper connections to be built between seemingly disparate fields of mathematics, and moreover making possible the transport of powerful techniques across these domains. In the latter half of the century, Grothendieck left the world of Mathematics, and spent most of his remaining days in solitude, living in the Pyrenees until his death in 2014. And although mathematics is not a lone endeavor, it is particularly hard to overstate the singular contributions of Grothendieck, for his ideas continue to shape how modern mathematics is formulated.
 
-# References
+References
+==========
 
 -   Sosinskii, A. B. (2012). Geometries. Providence, RI: American Mathematical Society.
 

@@ -1,1 +1,14 @@
-See [[geometricrepresentation%20theory|geometric representation theory]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+See \[\[geometricrepresentation%20theory\|geometric representation theory\]\]

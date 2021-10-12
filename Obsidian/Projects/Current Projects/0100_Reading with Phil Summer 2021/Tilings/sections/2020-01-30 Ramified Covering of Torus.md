@@ -14,7 +14,8 @@
 
 
 
-# Ben's Talk: Eskin's Ramified Coverings of a Torus
+Ben's Talk: Eskin's Ramified Coverings of a Torus
+=================================================
 
 Today: Section 2. Main theorem: a certain generating function is quasimodular.
 
@@ -78,7 +79,7 @@ Recall that $\mathrm{Cov}_d(C_1, \cdots C_S)$ correspond to $S_d$ representation
 
 **Definition:** Conjugacy classes corresponds to partitions of $d$.
 
-**Definition:** For $C$ a conjugacy class correspond to a partition $\lambda'$ in $S_d$. For any partition $\lambda$, let $f_C(\lambda) = \# C \chi^\lambda(C) / \dim \lambda$, where $\chi^\lambda$ is the irreducible [[representation | Unsorted/Representation%20theory.html]] associated to $\lambda$ (note that this is a rescaling of a row of the character table, since irreducible reps happen to correspond to conjugacy classes for $S_d$). This is a class function, so $\chi^\lambda(C)$ is its value on any $c\in C$, and $\dim \lambda \coloneqq\chi^\lambda(1)$.
+**Definition:** For $C$ a conjugacy class correspond to a partition $\lambda'$ in $S_d$. For any partition $\lambda$, let $f_C(\lambda) = \# C \chi^\lambda(C) / \dim \lambda$, where $\chi^\lambda$ is the irreducible [[representation | ../../../../../Unsorted/Representation%20theory.html]] associated to $\lambda$ (note that this is a rescaling of a row of the character table, since irreducible reps happen to correspond to conjugacy classes for $S_d$). This is a class function, so $\chi^\lambda(C)$ is its value on any $c\in C$, and $\dim \lambda \coloneqq\chi^\lambda(1)$.
 
 **Proposition:** $\mathrm{Cov}_d(C_1, \cdots, C_S) - \sum_{{\left\lvert {\lambda } \right\rvert}= d} \prod_{i=1}^S f_{C_i}(\lambda)$.
 
@@ -112,7 +113,8 @@ Recall that $f_c(\lambda) = \# C \frac{\chi^\lambda(C)}{\dim \lambda}$ and thus
 
 **Fact:** $W(\lambda) = \qty{\frac{{\left\lvert {\lambda } \right\rvert}!}{\dim \lambda}}^2$.
 
-## Quasimodularity
+Quasimodularity
+---------------
 
 **Fact:** The functions $f_C(\lambda)$ are polynomial functions in the following way:
 

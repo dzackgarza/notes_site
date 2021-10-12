@@ -1,10 +1,25 @@
-[Subjects/Algebraic Topology](Subjects/Algebraic%20Topology.md)
-[Subjects/homotopy theory](Subjects/homotopy%20theory.md)
-[../../Unsorted/Homotopy Groups of Spheres](Homotopy%20Groups%20of%20Spheres.md)
+-   [Table](#table)
 
-# Table
 
-```latex{cmd=true, hide=true, run_on_save=true}
+
+
+
+
+
+
+
+
+
+
+
+
+[[Subjects/Algebraic Topology](Subjects/Algebraic%20Topology.md) [Subjects/homotopy theory](Subjects/homotopy%20theory.md) [../../Unsorted/Homotopy Groups of Spheres | Homotopy%20Groups%20of%20Spheres.html]]
+
+Table
+=====
+
+\`\`\`latex{cmd=true, hide=true, run_on_save=true}
+```{=tex}
 \documentclass[]{article}
 \usepackage{graphicx}
 \usepackage{booktabs}
@@ -33,4 +48,5 @@ $S^8$ & 0            & 0            & 0            & 0                & 0       
 \end{table}
 
 \end{document}
+```
 ```

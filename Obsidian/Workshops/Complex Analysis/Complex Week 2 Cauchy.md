@@ -1,5 +1,5 @@
 ---
-title: "Complex Analysis Qual Prep Week 1: Things Named After Cauchy"
+title: 'Complex Analysis Qual Prep Week 1: Things Named After Cauchy'
 ---
 
 -   [Topics](#topics)
@@ -26,7 +26,8 @@ title: "Complex Analysis Qual Prep Week 1: Things Named After Cauchy"
 
 
 
-# Topics
+Topics
+======
 
 -   Blaschke factors
 -   Toy contours
@@ -37,7 +38,8 @@ title: "Complex Analysis Qual Prep Week 1: Things Named After Cauchy"
     -   ML Inequality
     -   Jordan's lemma
 
-## Review
+Review
+------
 
 ![Complex log](_attachments/Pasted%20image%2020210527180305.png)
 
@@ -85,7 +87,8 @@ Jordan's Lemma: ![[_attachments/Pasted%20image%2020210527182026.png]]
 
 ![[_attachments/Pasted%20image%2020210527175424.png) ![](_attachments/Pasted%20image%2020210527175435.png]]
 
-# Warmups
+Warmups
+=======
 
 -   Do any example from [here](http://home.iitk.ac.in/~psraj/mth102/lecture_notes/comp8.pdf)
 
@@ -101,9 +104,10 @@ Jordan's Lemma: ![[_attachments/Pasted%20image%2020210527182026.png]]
 
 -   ![[_attachments/Pasted%20image%2020210527180104.png]]
 
-# Questions
+Questions
+=========
 
--   Can every continuous function on $\mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{D}}\mkern-1.5mu}\mkern 1.5mu$ be uniformly approximated by polynomials in the variable $z$?
+-   Can every continuous function on $\mkern 1.5mu\overline{\mkern-1.5mu\mathbb{D}\mkern-1.5mu}\mkern 1.5mu$ be uniformly approximated by polynomials in the variable $z$?
 
 > Hint: compare to Weierstrass for the real interval.
 
@@ -117,7 +121,8 @@ Jordan's Lemma: ![[_attachments/Pasted%20image%2020210527182026.png]]
 
 ![[_attachments/Pasted%20image%2020210527173030.png]]
 
-# Qual Problems
+Qual Problems
+=============
 
 ![Fall 2020 \#2](_attachments/Pasted%20image%2020210527173251.png)
 

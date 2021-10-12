@@ -1,5 +1,5 @@
 ---
-date: 2021-04-26
+date: '2021-04-26'
 tags:
 - Unfiled
 ---
@@ -19,7 +19,8 @@ tags:
 
 
 
-# Why study characteristic classes?
+Why study characteristic classes?
+=================================
 
 > A characteristic class is a way of associating to each principal bundle X a cohomology class of X. The cohomology class measures the extent the bundle is "twisted" --- and whether it possesses sections.
 

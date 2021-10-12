@@ -1,3 +1,17 @@
 ---
-aliases: ["places"]
+aliases:
+- places
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+

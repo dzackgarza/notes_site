@@ -1,5 +1,5 @@
 ---
-date: 2021-04-26
+date: '2021-04-26'
 tags:
 - Unfiled
 ---
@@ -28,9 +28,11 @@ tags:
 
 
 
-# Spectral Sequences
+Spectral Sequences
+==================
 
-## The Purpose of a Spectral Sequence
+The Purpose of a Spectral Sequence
+----------------------------------
 
 Throughout this section, we will be considering $R{\hbox{-}}$modules over some fixed ring $R$, and we will try to use cohomological indexing wherever possible so that $H^n({\hbox{-}})$ denotes taking the $n{\hbox{-}}$th cohomology.
 
@@ -45,7 +47,8 @@ As is often the case with long exact sequences, we will often be interested in "
 
 This technique becomes especially powerful when combined with the tools of homotopy theory - in particular, the Hurewicz theorem provides a bridge between homotopy and homology, and with some orchestration, one can set up a situation in which any desired homotopy group $\pi_i(X)$ will be isomorphic to $H_i(Y)$ for some potentially complicated space $Y$. Applying a spectral sequence to compute the cohomology of $Y$ thus provides a method (of which there seem to be very few!) of algebraically computing the homotopy groups of $X$, which can be continued inductively to compute $\pi_{i+k}(X)$ for any $k$. In practice, this introduces a nontrivial amount of complexity at each step, and the requisite computations can quickly become quite difficult, but one can often glean valuable information at early stages, and often information that is hard to ascertain by other means. In their full generality, spectral sequences can used to yield relatively easy proofs of theorems such as the commutativity of $\operatorname{Tor}_R^i({-}, {-})$ over $R{\hbox{-}}$modules, or that various cohomology theories yield isomorphic results.
 
-## Algebraic Preliminaries
+Algebraic Preliminaries
+-----------------------
 
 ### Definitions: Homological Algebra
 
@@ -287,7 +290,8 @@ We will thus primarily be interested in bounded spectral sequences, as the limit
 
 Many of the spectral sequences we will encounter can be indexed such that all elements conveniently lie within the quadrant $i \geq 0, j\geq 0$. Such sequences are referred to as **first quadrant spectral sequences**.
 
-## Construction from a Filtration
+Construction from a Filtration
+------------------------------
 
 Although we have asserted that spectral sequences exist, it is perhaps not yet clear how such sequences come about. Spectral sequences are generally constructed in one of two equivalent ways: as either a structure that arises from a filtration on a chain complex, or through the formalism of *exact couples*.
 
@@ -387,7 +391,8 @@ and thus this hope will only hold if and only if each short exact sequence split
 
 Definition: Associated Graded
 
-## Results
+Results
+-------
 
 We are thus in a position to state a theorem that will serve as our main computational tool.
 

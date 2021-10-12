@@ -1,4 +1,20 @@
 ---
-aliases: ["free", "free action", "transitive", "transitive action"]
+aliases:
+- free
+- free action
+- transitive
+- transitive action
 ---
+
+
+
+
+
+
+
+
+
+
+
+
 

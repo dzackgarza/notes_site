@@ -1,5 +1,5 @@
 ---
-date: "2021-04-28 18:08:16"
+date: '2021-04-28 18:08:16'
 tags:
 - Unfiled
 ---
@@ -26,11 +26,13 @@ References:
 
 -   From Stein to Weinstein and Back (Cieliebak and Eliashberg)
 
-# Why Care About Contact/Symplectic Geometry
+Why Care About Contact/Symplectic Geometry
+==========================================
 
 [[../Unsorted/periodic orbit | ../Unsorted/periodic%20orbit.html]]
 
-# Definitions
+Definitions
+===========
 
 ![[../Unsorted/Hamiltonian.md#%5E1c3cf2]]
 

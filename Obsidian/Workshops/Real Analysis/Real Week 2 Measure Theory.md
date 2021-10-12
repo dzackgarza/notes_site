@@ -1,5 +1,5 @@
 ---
-title: "Real Analysis Qual Prep Week 2: Measure Theory, Fubini Tonelli"
+title: 'Real Analysis Qual Prep Week 2: Measure Theory, Fubini Tonelli'
 ---
 
 -   [Study Guide](#study-guide)
@@ -21,14 +21,16 @@ title: "Real Analysis Qual Prep Week 2: Measure Theory, Fubini Tonelli"
 
 
 
-# Study Guide
+Study Guide
+===========
 
 References:
 
 -   Folland's "Real Analysis: Modern Techniques", Ch.1
 -   Stein and Shakarchi Ch.1, Ch.2
 
-## Convergence Tips/Tricks
+Convergence Tips/Tricks
+-----------------------
 
 -   Our favorite tools: **metrics** and **norms**!
     -   ![[_attachments/Pasted%20image%2020210528184220.png]]
@@ -71,7 +73,8 @@ References:
 -   **The $M{\hbox{-}}$test**:
     -   ![[_attachments/Pasted%20image%2020210528183827.png]]
 
-## Measure Theory
+Measure Theory
+--------------
 
 -   $F_\sigma$ sets: unions of closed sets ($F$ for *fermi*, French for closed. Sigma for sums, ie unions)
 -   $G_\delta$ sets: intersections of open sets
@@ -99,7 +102,8 @@ References:
 
 ![[_attachments/Pasted%20image%2020210528185216.png) ![](_attachments/Pasted%20image%2020210528185223.png]]
 
-## Fubini-Tonelli
+Fubini-Tonelli
+--------------
 
 Quick statement:
 
@@ -121,7 +125,8 @@ Some things that qual questions are commonly based on:
 
 ![[_attachments/Pasted%20image%2020210528190107.png) ![](_attachments/Pasted%20image%2020210528190142.png) ![](_attachments/Pasted%20image%2020210528190207.png]]
 
-# Qual Problems
+Qual Problems
+=============
 
 > Suggested by Peter Woolfitt!
 

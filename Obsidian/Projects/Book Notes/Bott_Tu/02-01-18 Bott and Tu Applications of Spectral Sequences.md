@@ -1,5 +1,5 @@
 ---
-date: 02-01-2018
+date: '02-01-2018'
 ---
 
 -   [Applications of Spectral Sequences](#applications-of-spectral-sequences)
@@ -21,9 +21,11 @@ date: 02-01-2018
 
 
 
-# Applications of Spectral Sequences
+Applications of Spectral Sequences
+==================================
 
-## Notation and Remarks
+Notation and Remarks
+--------------------
 
 -   For $M$ a manifold, $T(M)$ is the unit tangent bundle of $M$
 -   For $R$ a ring $R\delta_i$ denotes a copy of $R$ appearing in the $i$th (co)homological degree
@@ -47,7 +49,8 @@ date: 02-01-2018
     -   ${\mathbb{Z}}\otimes A = A$
     -   ${\mathbb{Z}}_n \otimes A = \frac{A}{nA}$
 
-## List of Results
+List of Results
+---------------
 
 -   A simply connected $n$-dimensional manifold $M_n$ is orientable
     -   Use $S^{n-1} \to T(M_n) \to M_n$
@@ -78,7 +81,8 @@ date: 02-01-2018
 -   $H^*(\Omega S^n) = \frac{{\mathbb{Z}}[x]}{(x^2)} \otimes{\mathbb{Z}}\left\{{1,e, \frac{1}{2!}e^2,\cdots}\right\}, \dim x = n-1, \dim e = 2(n-1_)$
     -   Use $\Omega S^3 \to PS^3 \to S^3$
 
-## List of Fibrations
+List of Fibrations
+------------------
 
 -   $S^1 \to S^{2n+1} \to{\mathbb{CP}}^n$, the Hopf fibration?
 
@@ -105,7 +109,8 @@ date: 02-01-2018
 
 -   $Y \to X\times Y \to X$ (not used here)
 
--   # Fibrations
+-   Fibrations
+    ==========
 
 -   $SO_{n-1}(R) \to SO_n(R) \to S^{n-1}$
 
@@ -152,6 +157,7 @@ Obtained from fiber bundles involving [Stiefel Manifold](https://math.stackexcha
 -   $SU^n \to U^n \to S^1$
 -   $\mathbb{V}(k, k) \to \mathbb{V}(k, n) \to \mathbb{G}(k, n)$
 
-## Interesting Spaces to Look At:
+Interesting Spaces to Look At:
+------------------------------
 
 $O, SO, Spin, U, or Sp$

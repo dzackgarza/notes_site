@@ -1,5 +1,19 @@
 ---
-aliases: ["Artinian"]
+aliases:
+- Artinian
 ---
 
-Objects have finite length and $\dim_K \cat{C}(X, Y) < \infty$?
+
+
+
+
+
+
+
+
+
+
+
+
+
+Objects have finite length and $\dim_K \mathsf{C}(X, Y) < \infty$?

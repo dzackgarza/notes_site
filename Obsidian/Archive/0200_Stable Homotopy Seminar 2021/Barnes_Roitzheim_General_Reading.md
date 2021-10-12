@@ -13,7 +13,8 @@
 
 
 
-# General Reading
+General Reading
+===============
 
 -   Slogan, infinite loop spaces are connective spectra: why this falls short
     -   ![SmartSelect_20210606-224655_Moon+\_Reader_Pro.jpg](figures/SmartSelect_20210606-224655_Moon+_Reader_Pro.jpg "fig:")

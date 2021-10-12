@@ -15,11 +15,13 @@
 
 
 
-# Barnes and Roitzheim
+Barnes and Roitzheim
+====================
 
 Useful extr reference: <http://user.math.uzh.ch/mantovani/research/papers/locandcomp_paperversion.pdf>
 
-## Setup and Motivation
+Setup and Motivation
+--------------------
 
 -   To define:
 
@@ -52,7 +54,8 @@ Useful extr reference: <http://user.math.uzh.ch/mantovani/research/papers/locand
 
 -   Product structure on pages: ![SmartSelect_20210606-233413_Moon+\_Reader_Pro.jpg](figures/SmartSelect_20210606-233413_Moon+_Reader_Pro.jpg)
 
-## Construction
+Construction
+------------
 
 -   Definition of Adams tower: ![SmartSelect_20210606-233542_Moon+\_Reader_Pro.jpg](figures/SmartSelect_20210606-233542_Moon+_Reader_Pro.jpg)
     -   Dual is simpler

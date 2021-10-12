@@ -1,5 +1,5 @@
 ---
-date: 2021-04-26
+date: '2021-04-26'
 tags:
 - Unfiled
 ---
@@ -19,7 +19,8 @@ tags:
 
 
 
-# Spectral Sequence of a Filtration
+Spectral Sequence of a Filtration
+=================================
 
 Suppose we are given a chain complex $(C^{-}, d^{-})$ and we want to compute its homology. We assume that $C^{<0} = 0$ (where we use homological indexing and $d^{-}$ is of degree $-1$) along with an ascending, bounded filtration $F^{-}C^{-}$ which can be written as
 

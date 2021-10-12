@@ -1,5 +1,5 @@
 ---
-date: 2021-04-26
+date: '2021-04-26'
 tags:
 - Unfiled
 ---
@@ -22,7 +22,8 @@ tags:
 
 
 
-# A Review
+A Review
+========
 
 Roughly speaking, a spectral sequence is a system for keeping tracking of collections of exact sequences with maps between them.
 
@@ -66,7 +67,8 @@ This yields the following procedure for computing $H_i(A_*)$:
     1.  Take its homology, yielding $G_1H_i$ and $G_2H_i$
 3.  Solve the extension problem for the short exact sequence $0 \xrightarrow{} G_0H_i \xrightarrow{} H_i(A_*) \xrightarrow{}G_1H_i \xrightarrow{} 0$
 
-## Filtrations
+Filtrations
+-----------
 
 A *filtered $R$-module* is an $R$-module $A$ with a sequence of submodules $\left\{{A_i}\right\}_{i\in {\mathbb{Z}}}$ such that $A_i \subset A_{i+1}$ and $\cup_{\mathbb{Z}}A_i = A$. Due to onerous index juggling, we write $A_i = F_i A$.
 
@@ -78,7 +80,8 @@ A *filtered chain complex* is a chain complex $(C_*, {\partial})$ along with a f
 
 Possible example: Compute Serre spectral sequences with ${\mathbb{F}}_p$ coefficients.
 
-# Example
+Example
+=======
 
 The most basic example is a spectral sequence is $E^r_{p,q}$, where $r$ denotes the page of the spectral sequence and the $E_{p,q}$ is a bigraded collection of abelian groups. Furthermore, we can take a "first quadrant" sequence, where only the $p>0, q>0$ terms are nontrivial. The differentials are then defined on any given page as a "shift map" that translates $p+r$ horizontal indices and $q-(r-1)$ vertical indices (direction depends on indexing vs. "coindexing"). Here is an example of an $r=2$ page:
 
@@ -86,7 +89,8 @@ The most basic example is a spectral sequence is $E^r_{p,q}$, where $r$ denotes 
 
 In this case, $\lim_{r\rightarrow \infty} E^r_{p,q}$ stabilizes for any given $(p,q)$ term, so we define it as $E^\infty_{p,q}$.
 
-# Common Types
+Common Types
+============
 
 -   Serre
     -   Cohomology groups of spaces in a fibration

@@ -1,6 +1,6 @@
 ---
 author: D. Zack Garza
-date: "2021-04-28 18:09:50"
+date: '2021-04-28 18:09:50'
 height: 900
 notoc: true
 slideNumber: true
@@ -47,11 +47,12 @@ width: 1200
 
 
 
-[[Subjects/mapping class group | Subjects/mapping%20class%20group.html]]
+[[Subjects/mapping class group | ../Subjects/mapping%20class%20group.html]]
 
 Tags: \#topology
 
-# Setup
+Setup
+=====
 
 -   All manifolds:
 
@@ -79,7 +80,8 @@ Tags: \#topology
 ```{=tex}
 \newpage
 ```
-## The Compact-Open Topology
+The Compact-Open Topology
+-------------------------
 
 -   General idea: *cartesian closed* categories, require *exponential objects* or *internal homs*: i.e. for every hom set, there is some object in the category that represents it
 
@@ -119,7 +121,8 @@ Tags: \#topology
 ```{=tex}
 \newpage
 ```
-## Aside on Analysis
+Aside on Analysis
+-----------------
 
 -   If $Y = (Y, d)$ is a metric space, this is the topology of "uniform convergence on compact sets": for $f_n \to f$ in this topology iff `
     <span class="math display">
@@ -145,7 +148,8 @@ d(f, g) = \sup_{x\in X}(f(x), g(x))
 
 ------------------------------------------------------------------------
 
-# Path Spaces
+Path Spaces
+===========
 
 -   Can immediately consider some interesting spaces via the functor $\mathop{\mathrm{Maps}}({-}, Y)$: `
     <span class="math display">
@@ -172,7 +176,8 @@ d(f, g) = \sup_{x\in X}(f(x), g(x))
 ```{=tex}
 \newpage
 ```
-## Homotopy and Isotopy in Terms of Path Spaces
+Homotopy and Isotopy in Terms of Path Spaces
+--------------------------------------------
 
 -   Can take basepoints to obtain the base path space $PY$, the based loop space $\Omega Y$.
 
@@ -213,9 +218,11 @@ d(f, g) = \sup_{x\in X}(f(x), g(x))
 ```{=tex}
 \newpage
 ```
-# Defining the Mapping Class Group
+Defining the Mapping Class Group
+================================
 
-## Isotopy
+Isotopy
+-------
 
 -   Define a homotopy between $f, g: X\to Y$ as a map $F:X\times I \to Y$ restricting to $f, g$ on the ends.
     -   Equivalently: a *path*, an element of $\mathop{\mathrm{Maps}}(I, C(X, Y))$.
@@ -227,7 +234,8 @@ d(f, g) = \sup_{x\in X}(f(x), g(x))
 ```{=tex}
 \newpage
 ```
-## Self-Homeomorphisms
+Self-Homeomorphisms
+-------------------
 
 -   In any category, the automorphisms form a group.
 
@@ -254,7 +262,8 @@ d(f, g) = \sup_{x\in X}(f(x), g(x))
 ```{=tex}
 \newpage
 ```
-## Definitions in Several Categories
+Definitions in Several Categories
+---------------------------------
 
 -   Now restrict attention to `
     <span class="math display">
@@ -285,7 +294,8 @@ d(f, g) = \sup_{x\in X}(f(x), g(x))
 ```{=tex}
 \newpage
 ```
-## Relation to Moduli Spaces
+Relation to Moduli Spaces
+-------------------------
 
 -   For topological manifolds: Isotopy classes of homeomorphisms
 
@@ -314,9 +324,11 @@ d(f, g) = \sup_{x\in X}(f(x), g(x))
 ```{=tex}
 \newpage
 ```
-# Examples of MCG
+Examples of MCG
+===============
 
-## The Plane: Straight Lines
+The Plane: Straight Lines
+-------------------------
 
 -   ${\operatorname{MCG}}_{\mathsf{Top}}({\mathbb{R}}^2) = 1$: for any $f:{\mathbb{R}}^2\to {\mathbb{R}}^2$, take the straight-line homotopy: `
     <span class="math display">
@@ -331,12 +343,13 @@ d(f, g) = \sup_{x\in X}(f(x), g(x))
 ```{=tex}
 \newpage
 ```
-## The Closed Disc: The Alexander Trick
+The Closed Disc: The Alexander Trick
+------------------------------------
 
--   ${\operatorname{MCG}}_{\mathsf{Top}}(\mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{D}}\mkern-1.5mu}\mkern 1.5mu^2) = 1$: for any $f: \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{D}}\mkern-1.5mu}\mkern 1.5mu^2\to\mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{D}}\mkern-1.5mu}\mkern 1.5mu^2$ such that ${ \left.{{f}} \right|_{{{{\partial}}\mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{D}}\mkern-1.5mu}\mkern 1.5mu^2}} } = \operatorname{id}$, take `
+-   ${\operatorname{MCG}}_{\mathsf{Top}}(\mkern 1.5mu\overline{\mkern-1.5mu\mathbb{D}\mkern-1.5mu}\mkern 1.5mu^2) = 1$: for any $f: \mkern 1.5mu\overline{\mkern-1.5mu\mathbb{D}\mkern-1.5mu}\mkern 1.5mu^2\to\mkern 1.5mu\overline{\mkern-1.5mu\mathbb{D}\mkern-1.5mu}\mkern 1.5mu^2$ such that ${ \left.{{f}} \right|_{{{{\partial}}\mkern 1.5mu\overline{\mkern-1.5mu\mathbb{D}\mkern-1.5mu}\mkern 1.5mu^2}} } = \operatorname{id}$, take `
     <span class="math display">
     \begin{align*}  
-    F: \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{D}}\mkern-1.5mu}\mkern 1.5mu^2 \times I &\to \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{D}}\mkern-1.5mu}\mkern 1.5mu^2 \\
+    F: \mkern 1.5mu\overline{\mkern-1.5mu\mathbb{D}\mkern-1.5mu}\mkern 1.5mu^2 \times I &\to \mkern 1.5mu\overline{\mkern-1.5mu\mathbb{D}\mkern-1.5mu}\mkern 1.5mu^2 \\
     F(x, t) &\coloneqq
     \begin{cases}
     t f \qty{x\over t} & {\left\lVert {x} \right\rVert} \in [0, t) \\
@@ -354,7 +367,8 @@ d(f, g) = \sup_{x\in X}(f(x), g(x))
 ```{=tex}
 \newpage
 ```
-## Overview of Big Results
+Overview of Big Results
+-----------------------
 
 -   The word problem in ${\operatorname{MCG}}(\Sigma_g)$ is solvable
 
@@ -408,7 +422,8 @@ Let $\Sigma_g$ be compact and oriented with $\chi(\Sigma_g) < 0$. Then `
 ```{=tex}
 \newpage
 ```
-# Dehn Twists
+Dehn Twists
+===========
 
 -   ${\operatorname{MCG}}(\Sigma_g)$ is generated by finitely many **Dehn twists**, and always has a finite presentation
 
@@ -427,9 +442,11 @@ z & \mapsto \exp{2\pi i {\left\lvert {z} \right\rvert}}\, z
 ```{=tex}
 \newpage
 ```
-# MCG of the Torus
+MCG of the Torus
+================
 
-## Setup
+Setup
+-----
 
 ::: {.definition .proofenv title="Special Linear Group"}
 `
@@ -505,7 +522,8 @@ The homology representation of the torus induces an isomorphism `
 ```{=tex}
 \newpage
 ```
-## Proof
+Proof
+-----
 
 -   For $f$ any automorphism, the induced map $f_*: {\mathbb{Z}}^2 \to {\mathbb{Z}}^2$ is a group automorphism, so we can consider the group morphism `
     <span class="math display">

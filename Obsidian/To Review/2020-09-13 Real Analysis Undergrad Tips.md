@@ -19,11 +19,13 @@
 
 
 
-# Sunday, September 13
+Sunday, September 13
+====================
 
 Tags: \#advice \#undergraduate
 
-## General Notes
+General Notes
+-------------
 
 -   Say what you're assuming at the start of the proof.
 
@@ -64,7 +66,8 @@ Tags: \#advice \#undergraduate
     -   $x_n = (-1)^n$
     -   Literal lists of numbers: $[0, 1, 0, 2, \cdots]$.
 
-## 1.a
+1.a
+---
 
 ::: {.proof .proofenv title="$A \\implies B$"}
 ```{=tex}
@@ -103,7 +106,8 @@ Tags: \#advice \#undergraduate
     <span>`{=html} so every subsequence is bounded and thus can not converge to $\infty$.
 :::
 
-## 3.a
+3.a
+---
 
 ::: {.proof .proofenv title="Using definition (i)"}
 ```{=tex}
@@ -177,7 +181,8 @@ Tags: \#advice \#undergraduate
     <span>`{=html}
 :::
 
-## 3.b
+3.b
+---
 
 ::: {.proof .proofenv title="Using definition (i)"}
 ```{=tex}
@@ -273,7 +278,8 @@ Tags: \#advice \#undergraduate
     <span>`{=html} but this contradicts $\liminf_{n} x_n > \beta$.
 :::
 
-## 4.a
+4.a
+---
 
 ::: {.proof .proofenv}
 ```{=tex}
@@ -300,7 +306,8 @@ Tags: \#advice \#undergraduate
     <span>`{=html}
 :::
 
-## 4.c
+4.c
+---
 
 ::: {.proof .proofenv}
 ```{=tex}

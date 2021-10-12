@@ -1,5 +1,5 @@
 ---
-date: 2021-04-26
+date: '2021-04-26'
 tags:
 - Unfiled
 ---
@@ -21,7 +21,8 @@ tags:
 
 Basically, all of these computations are based on the fact that $SO^n$ acts transitively on $S^{n-1}$ with stabilizer $SO^{n-1}$, producing fibrations of the form $SO^{n-1} \to SO^n \to S^{n-1}$. The overall question: can this be used to inductively determine $H^*(SO^n)$ for all $n$?
 
-# 1) Cohomology of SO3
+1) Cohomology of SO3
+====================
 
 A priori, we can use the fact that $SO^3$ is diffeomorphic to ${\mathbb{RP}}^3$ to obtain
 

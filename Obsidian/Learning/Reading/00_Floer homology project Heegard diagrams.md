@@ -20,7 +20,8 @@
 
 
 
-# References
+References
+==========
 
 Tags: \#topology
 
@@ -30,7 +31,8 @@ Tags: \#topology
 
 Links: [[../../Unsorted/Floer homology | ../../Unsorted/Floer%20homology.html]]
 
-# Intro/Overview
+Intro/Overview
+==============
 
 -   Goals:
     -   Given $Y$ a closed oriented smooth 3-manifold, compute the Heegaard-Floer homology $\widehat{\operatorname{HF}}(Y; {\mathbb{F}}_2) \in {\mathsf{gr}\,}{\mathsf{Ab}}$.
@@ -41,7 +43,8 @@ Links: [[../../Unsorted/Floer homology | ../../Unsorted/Floer%20homology.html]]
 
 ![image_2021-05-05-12-26-55](../../figures/image_2021-05-05-12-26-55.png)
 
-# Definitions
+Definitions
+===========
 
 ::: {.remark .proofenv}
 Use a cylindrical reformulation of $\widehat{\operatorname{HF}}$ due to Lipshitz.
@@ -102,7 +105,8 @@ Goal: do moves where
 -   $b( \mathcal{H}' ) \leq b( \mathcal{H} ) -1$, so badness decreases.
 :::
 
-## Algorithm Overview
+Algorithm Overview
+------------------
 
 -   Start from an admissible pointed Heegaard diagram, end up with an admissible *nice* pointed Heegaard diagram using isotopies and handleslides on the $\beta$ curves.
 
@@ -118,7 +122,8 @@ Goal: do moves where
     1.  Kill non-disk regions (easier)
     2.  Make all but one region bigons or squares (harder)
 
-## Step 1: Killing Non-disk Regions
+Step 1: Killing Non-disk Regions
+--------------------------------
 
 ::: {.proposition .proofenv title="?"}
 Short procedure: ensure every $\alpha$ curve intersects some $\beta$ curve and vice-versa
@@ -144,7 +149,8 @@ How to fix: ![image_2021-05-07-15-47-29](../../figures/image_2021-05-07-15-47-29
 -   Repeat until equal to 1.
 :::
 
-## Step 2: Converting Regions to Bigons or Squares
+Step 2: Converting Regions to Bigons or Squares
+-----------------------------------------------
 
 Now all regions are discs.
 
@@ -217,7 +223,8 @@ So continue, then do some casework:
 ![image_2021-05-07-15-55-19](../../figures/image_2021-05-07-15-55-19.png)
 :::
 
-## Case 1: Reach a Bigon
+Case 1: Reach a Bigon
+---------------------
 
 ![image_2021-05-07-15-57-00](../../figures/image_2021-05-07-15-57-00.png)
 
@@ -225,7 +232,8 @@ So continue, then do some casework:
 
 ![image_2021-05-07-15-57-30](../../figures/image_2021-05-07-15-57-30.png)
 
-## Case 2: Smaller Distance
+Case 2: Smaller Distance
+------------------------
 
 ![image_2021-05-07-15-57-53](../../figures/image_2021-05-07-15-57-53.png)
 

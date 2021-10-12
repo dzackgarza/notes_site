@@ -1,3 +1,44 @@
+Error on 1
+
+{ ["2"] = exit,["3"] = 1,} 
+\documentclass{standalone}
+\input{/home/zack/.pandoc/custom/preamble_common}
+\begin{document}
+\nopagecolor
+\begin{tikzcd}
+ &  & \operatorname{Diff}^+ \Sigma_g \arrow[dd] \\
+ &  &  \\
+\pi_1 B \arrow[rr] \arrow[rruu, "?" description, dotted] &  & \operatorname{Mod} \Sigma_g
+\end{tikzcd}
+\end{document}
+Error on 1
+
+{ ["2"] = exit,["3"] = 1,} 
+\documentclass{standalone}
+\input{/home/zack/.pandoc/custom/preamble_common}
+\begin{document}
+\nopagecolor
+\begin{tikzcd}
+E' \arrow[rr, "\tilde f"] \arrow[dd, "\pi'"] &  & E \arrow[dd, "\pi"] \\
+ &  &  \\
+B' \arrow[rr, "f" description] &  & B
+\end{tikzcd}
+\end{document}
+Error on 1
+
+{ ["2"] = exit,["3"] = 1,} 
+\documentclass{standalone}
+\input{/home/zack/.pandoc/custom/preamble_common}
+\begin{document}
+\nopagecolor
+\begin{tikzcd}
+ &  & \Sigma_g \arrow[rr] &  & T \arrow[dd] \\
+ &  &  &  &  \\
+\Sigma_g \arrow[rr] \arrow[rruu, dotted] &  & M^4 \arrow[dd] \arrow[rruu, dotted] &  & \operatorname{BDiff}^+ \Sigma_g \\
+ &  &  &  &  \\
+ &  & \Sigma_h \arrow[rruu, "f" description] &  &
+\end{tikzcd}
+\end{document}
 -   [Part 2: Surface bundles, mapping class groups, moduli spaces, and cohomology](#part-2-surface-bundles-mapping-class-groups-moduli-spaces-and-cohomology)
     -   [Why study $\Sigma_g$ bundles?](#why-study-sigma_g-bundles)
     -   [Monodromy as a Complete Invariant](#monodromy-as-a-complete-invariant)
@@ -18,11 +59,12 @@
 
 
 
-[[Subjects/mapping class group | Subjects/mapping%20class%20group.html]]
+[[Subjects/mapping class group | ../Subjects/mapping%20class%20group.html]]
 
 Tags: \#notes \#nograph \#topology
 
-# Part 2: Surface bundles, mapping class groups, moduli spaces, and cohomology
+Part 2: Surface bundles, mapping class groups, moduli spaces, and cohomology
+============================================================================
 
 > Reference: 29th Workshop in Geometric Topology, Oregon State University, June 29, 2012
 
@@ -75,7 +117,8 @@ One organizing problem: classify surface bundles over a fixed closed base manifo
 
 B.F. proved algorithmic computability for bundle isomorphisms, but homeomorphisms and even fiberwise homeomorphisms are generally unsolvable.
 
-## Why study $\Sigma_g$ bundles? {#why-study-sigma_g-bundles}
+Why study $\Sigma_g$ bundles? {#why-study-sigma_g-bundles}
+-----------------------------
 
 \^1f6c50
 
@@ -105,7 +148,7 @@ Representation from earlier can be projected: `
 
 Take a homeomorphism to its homotopy class, Mod is finitely generated.
 
-> In AG, the [[mapping class group](Subjects/mapping%20class%20group.md) is the [orbifold | ../Unsorted/orbifold.html]] [fundamental group](fundamental%20group)\] of $\mathcal{M}$, and this is a $K(\pi_1)$ space in the appropriate category.
+> In AG, the [[mapping class group](../Subjects/mapping%20class%20group.md) is the [orbifold | ../Unsorted/orbifold.html]] [fundamental group](fundamental%20group)\] of $\mathcal{M}$, and this is a $K(\pi_1)$ space in the appropriate category.
 
 So any bundle $\Sigma_g \to E \to B$ yields a corresponding [[../Unsorted/monodromy representation | ../Unsorted/monodromy%20representation.html]] `
 <span class="math display">
@@ -126,7 +169,8 @@ Can produce a map $\operatorname{Mod} \Sigma_g \to \operatorname{Out}\pi_1 \Sigm
 
 Equivalently,\*\* is every bundle flat? \*\* No, but this is an open question when the base is a surface (i.e. for all we know, every representation could lift). Conjectured that for the [Kodaira manifold](Kodaira%20manifold), it is not flat. Big problem, because this is perhaps the simplest nonlinear connection.
 
-## Monodromy as a Complete Invariant
+Monodromy as a Complete Invariant
+---------------------------------
 
 [[classifying space | ../Unsorted/classifying%20space.html]] theory: there exists a (crazy) space $\operatorname{BDiff}^+\Sigma_g$ such that `
 <span class="math display">
@@ -185,7 +229,8 @@ How to solve: the [Thurston norm](Thurston%20norm) is computable. Need to enumer
 
 Check how many ways there are of fibering. Then check, for each fibering, are the monodromies the same? At least one needs to be the same to be homeomorphic.
 
-## Characteristic Classes
+Characteristic Classes
+----------------------
 
 For suitably nice spaces, given by a mapping `
 <span class="math display">
@@ -214,7 +259,8 @@ What do we know?
 -   $H^1(\operatorname{Mod} \Sigma_g; {\mathbb{Q}}) = 0$
 -   Elements of $H^2(\operatorname{Mod} \Sigma_g; {\mathbb{Q}})$: some known cocycles.
 
-## The "Signature Cocycle"
+The "Signature Cocycle"
+-----------------------
 
 Any 2-cycle (for any space) will be homologous to the image of a map $f$ of a surface into that space. Given blah, pullback the bundle over $\operatorname{BDiff}$:
 
@@ -222,7 +268,8 @@ Any 2-cycle (for any space) will be homologous to the image of a map $f$ of a su
 
 Take the signature of $M_4$ (where you use the [[intersection pairing](intersection%20pairing) on $H_2$, take the [signature](../Unsorted/signature.md) of that [quadratic form | ../Unsorted/quadratic%20form.html]]). Using Novikov additivity for signature, this satisfies the cocycle condition and finally yields a number!
 
-## Another Cocycle
+Another Cocycle
+---------------
 
 Look at the vertical bundle over $T$, you get ${\mathbb{R}}^2 \to E \to T$.
 

@@ -14,7 +14,8 @@
 
 
 
-# 2021-08-06
+2021-08-06
+==========
 
 ![[attachments/20210704015029%201.png]]
 
@@ -24,7 +25,8 @@
 
 -   $\omega$ may or may not be closed, i.e. $d\omega = 0$. If so, $\omega$ is Kähler (and incidentally symplectic).
 
-## 12:37
+12:37
+-----
 
 > Some notes on the following paper: <http://www2.math.umd.edu/~wmg/SymplecticNature.pdf>
 

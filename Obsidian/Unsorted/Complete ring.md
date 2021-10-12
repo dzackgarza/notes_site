@@ -1,3 +1,19 @@
 ---
-aliases: ["complete", "completion", "p-completion"]
+aliases:
+- complete
+- completion
+- 'p-completion'
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+

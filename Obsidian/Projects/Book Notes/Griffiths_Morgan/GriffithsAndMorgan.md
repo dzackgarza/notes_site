@@ -18,7 +18,8 @@ date: Unknown
 
 
 
-# Griffiths and Morgan
+Griffiths and Morgan
+====================
 
 Overall purpose: want to relate $C^\infty$ forms on a manifold to AT invariants. One significant result: given a manifold $M$, the singular cohomology $H^*(M, {\mathbb{R}})$ is isomorphic to the cohomology of the differential graded algebra of $C^\infty$ forms, $H^*_{DR}(M)$.
 
@@ -102,7 +103,8 @@ H^n(E^p, E^{p-1}) \cong \prod_{\text{$p$-cells in $B$}} H^n(\pi^{-1}e^p, \pi^{-1
 -   Cohomology of ${\mathbb{CP}}^n$ using $S^1 \to S^{2n+1} \to{\mathbb{CP}}^n$
 -   Cohomology of the infinite Grassmannian $\lim_n G(k, n)$
 
-## Postnikov Towers
+Postnikov Towers
+----------------
 
 A decomposition dual to cell decomposition, the atoms of the space are Eilenberg-Maclane spaces $K(\pi, n)$. (Note the spheres are atomic in homology, while the $K$ are atomic in homotopy.)
 

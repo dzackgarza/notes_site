@@ -1,3 +1,60 @@
+Error on 1
+
+{ ["2"] = exit,["3"] = 1,} 
+\documentclass{standalone}
+\input{/home/zack/.pandoc/custom/preamble_common}
+\begin{document}
+\nopagecolor
+\begin{tikzpicture}[>=latex',line join=bevel,scale=0.56]
+  \pgfsetlinewidth{1bp}
+%%
+\pgfsetcolor{black}
+  % Edge: 8.8.4: \ind(L) = \ind(L_0) -> 8.8.2: \ind(L_1) = \ind(L)
+  \draw [->] (118.29bp,143.7bp) .. controls (118.29bp,135.98bp) and (118.29bp,126.71bp)  .. (118.29bp,108.1bp);
+  % Edge: 8.8.2: \ind(L_1) = \ind(L) -> 8.8.1: \ind(L) = \mu(R^-(t)) - \mu(R^+(s)) = \mu(x) - \mu(y)
+  \draw [->] (153.78bp,72.765bp) .. controls (175.03bp,63.038bp) and (202.29bp,50.567bp)  .. (234.4bp,35.878bp);
+  % Edge: 8.8.5: \dim \ker F, F* -> 8.8.3: mathrm{Ind}(L_1) = k- - k+
+  \draw [->] (425.29bp,143.7bp) .. controls (425.29bp,135.98bp) and (425.29bp,126.71bp)  .. (425.29bp,108.1bp);
+  % Edge: 8.8.3: mathrm{Ind}(L_1) = k- - k+ -> 8.8.1: \ind(L) = \mu(R^-(t)) - \mu(R^+(s)) = \mu(x) - \mu(y)
+  \draw [->] (388.79bp,72.411bp) .. controls (367.45bp,62.71bp) and (340.31bp,50.372bp)  .. (308.32bp,35.834bp);
+  % Node: 8.8.4: \ind(L) = \ind(L_0)
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (118.29bp,162.0bp) ellipse (118.08bp and 18.0bp);
+  \draw (118.29bp,162.0bp) node {8.8.4: $\mathop{\mathrm{ind}}(L_0) = \mathop{\mathrm{ind}}(L)$};
+\end{scope}
+  % Node: 8.8.2: \ind(L_1) = \ind(L)
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (118.29bp,90.0bp) ellipse (118.08bp and 18.0bp);
+  \draw (118.29bp,90.0bp) node {8.8.2: $\mathop{\mathrm{ind}}(L_1) = \mathop{\mathrm{ind}}(L)$};
+\end{scope}
+  % Node: 8.8.1: \ind(L) = \mu(R^-(t)) - \mu(R^+(s)) = \mu(x) - \mu(y)
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (271.29bp,18.0bp) ellipse (271.05bp and 18.0bp);
+  \draw (271.29bp,18.0bp) node {8.8.1: $\mathop{\mathrm{ind}}(L) = k^- - k^+ = \mu(x) - \mu(y)$};
+\end{scope}
+  % Node: 8.8.5: \dim \ker F, F*
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (425.29bp,162.0bp) ellipse (100.18bp and 18.0bp);
+  \draw (425.29bp,162.0bp) node {8.8.5: $\dim \ker F, F^*$};
+\end{scope}
+  % Node: 8.8.3: mathrm{Ind}(L_1) = k- - k+
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (425.29bp,90.0bp) ellipse (170.87bp and 18.0bp);
+  \draw (425.29bp,90.0bp) node {8.8.3: $\mathop{\mathrm{Ind}}(L_1) = k^- - k^+$};
+\end{scope}
+%
+\end{tikzpicture}
+\end{document}
 ---
 colortheme: beetle
 eader-includes: |
@@ -6,7 +63,7 @@ eader-includes: |
   \usepackage{beamerthemesplit}
   ```
 theme: Frankfurt
-title: "Section 8.6 - 8.8: Setup for Computing the Index"
+title: 'Section 8.6 - 8.8: Setup for Computing the Index'
 ---
 
 -   [Summary/Outline](#summaryoutline)
@@ -54,9 +111,11 @@ title: "Section 8.6 - 8.8: Setup for Computing the Index"
 
 [[Floer Reading Group Fall 2020 | ../../../../Unsorted/Floer%20Reading%20Group%20Fall%202020.html]]
 
-# Summary/Outline
+Summary/Outline
+===============
 
-## Outline
+Outline
+-------
 
 What we're trying to prove:
 
@@ -72,7 +131,8 @@ What we have so far:
     S(s, t) &\overset{s\to\pm\infty}\to S^\pm(t)
     .\end{align*}`{=tex}
 
-## Outline
+Outline
+-------
 
 -   Took $R^\pm: I \to {\mathsf{Sp}}(2n; {\mathbb{R}})$: symplectic paths associated to $S^\pm$
 
@@ -86,7 +146,8 @@ What we have so far:
     \mathop{\mathrm{ind}}(L)\stackrel{\text{Thm?}}{=} \mu(R^-(t)) - \mu(R^+(t)) = \mu(x) - \mu(y)
     .\end{align*}`{=tex}
 
-## From Yesterday
+From Yesterday
+--------------
 
 -   Han proved 8.8.2 and 8.8.4.
     -   So we know $\mathop{\mathrm{ind}}(L) = \mathop{\mathrm{ind}}(L_1)$
@@ -95,9 +156,11 @@ What we have so far:
 
 `<p style="text-align:center;"> <img class="tikzpic" src="figures/e6b11b90c4b8e1fd46252a85a72f7b2c767f50f3.svg"></p>`{=html}
 
-# 8.8.5: $\dim \ker F, F^*$ {#dim-ker-f-f}
+8.8.5: $\dim \ker F, F^*$ {#dim-ker-f-f}
+=========================
 
-## Recall
+Recall
+------
 
 `\begin{align*}
 L: W^{1, p}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) & \longrightarrow L^{p}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2 n}\right) \\
@@ -115,7 +178,8 @@ Z & \longmapsto-\frac{\partial Z}{\partial s}+J_{0} \frac{\partial Z}{\partial t
 ```
 Here ${1\over p} + {1\over q} = 1$ are conjugate exponents. `\normalsize`{=tex}
 
-## Reductions
+Reductions
+----------
 
 `\begin{align*}
 L_1^* &= -{\frac{\partial }{\partial s}\,} + J_0 {\frac{\partial }{\partial t}\,} + S(s)^t
@@ -143,7 +207,8 @@ J_0^1           &       &        & \\
 
 -   This allows us to reduce to the $n=1$ case.
 
-## Setup
+Setup
+-----
 
 $L_1$ used a path of diagonal matrices constant near $\infty$: `\begin{align*}
 S(s) \coloneqq\left(\begin{array}{cc}
@@ -160,7 +225,8 @@ a_{i}^{+} & \text {if } s \geq s_{0}
 \includegraphics[width = \textwidth]{figures/image_2020-05-27-20-10-07.png} 
 \end{center}
 ```
-## Statement of Later Lemma (8.8.5)
+Statement of Later Lemma (8.8.5)
+--------------------------------
 
 Let $p>2$ and define `\begin{align*}
 F: W^{1, p}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2}\right) &\longrightarrow L^{p}\left(\mathbb{R} \times S^{1} ; \mathbb{R}^{2}\right) \\
@@ -172,7 +238,8 @@ Y &\mapsto \frac{\partial Y}{\partial s}+J_{0} \frac{\partial Y}{\partial t}+S(s
 > Y & \longmapsto \frac{\partial Y}{\partial s}+J_{0} \frac{\partial Y}{\partial t}+S(s) Y
 > .\end{align*}`{=tex} `\normalsize`{=tex}
 
-## Statement of Lemma
+Statement of Lemma
+------------------
 
 ```{=tex}
 \scriptsize
@@ -205,7 +272,8 @@ Suppose $a_i^\pm \not \in 2\pi {\mathbb{Z}}$.
 &=\#\left\{i \in\{1,2\} {~\mathrel{\Big|}~}~ a_{i}^{+}<0 \text { and } a_{i}^{-}>0\right\}
 .\end{align*}`{=tex}
 
-## Statement of Lemma
+Statement of Lemma
+------------------
 
 In words:
 
@@ -218,7 +286,8 @@ In words:
 \includegraphics[width = \textwidth]{figures/image_2020-05-27-20-10-07.png} 
 \end{center}
 ```
-## Proof of Assertion 1
+Proof of Assertion 1
+--------------------
 
 ```{=tex}
 \scriptsize
@@ -247,10 +316,11 @@ Step 1: Transform to Cauchy-Riemann Equations
     \begin{align*}\mathbf{Y}(s, t) = Y_1(s, t) + i Y_2(s, t).\end{align*}
     <span>`{=html}
 
-## Assertion 1, Step 1: Reduce to CR
+Assertion 1, Step 1: Reduce to CR
+---------------------------------
 
 -   Expand definition of the PDE `\begin{align*}
-    F(\mathbf{Y}) = 0 \leadsto \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu\mathbf{Y} + S \mathbf{Y} = 0
+    F(\mathbf{Y}) = 0 \leadsto \mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5mu\mathbf{Y} + S \mathbf{Y} = 0
     \\ \\ 
     \frac{\partial}{\partial s}
     \mathbf{Y}
@@ -267,15 +337,16 @@ Step 1: Transform to Cauchy-Riemann Equations
     =0
     .\end{align*}`{=tex}
 
--   Change of variables: want to reduce to $\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu\tilde Y = 0$
+-   Change of variables: want to reduce to $\mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5mu\tilde Y = 0$
 
--   Choose $B \in \operatorname{GL}(1, {\mathbb{C}})$ such that $\mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5muB + SB = 0$
+-   Choose $B \in \operatorname{GL}(1, {\mathbb{C}})$ such that $\mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5muB + SB = 0$
 
 -   Set $Y = B\tilde Y$, which (?) reduces the previous equation to `\begin{align*}
-    \mkern 1.5mu\overline{\mkern-1.5mu{\partial}\mkern-1.5mu}\mkern 1.5mu\tilde Y = 0
+    \mkern 1.5mu\overline{\mkern-1.5mu\partial\mkern-1.5mu}\mkern 1.5mu\tilde Y = 0
     .\end{align*}`{=tex}
 
-## Assertion 1, Step 1: Reduce to CR
+Assertion 1, Step 1: Reduce to CR
+---------------------------------
 
 Can choose (and then solve) `\begin{align*}
 B = \begin{bmatrix}
@@ -303,7 +374,8 @@ C_2 + a^+ s, & s \geq \sigma_0 \\
 
 -   The real/imaginary parts of $\tilde Y$ are $C^\infty$ and harmonic.
 
-## Assertion 1, Step 2: Solve CR
+Assertion 1, Step 2: Solve CR
+-----------------------------
 
 -   Identify $s+it \in {\mathbb{R}}\times S^1$ with $u = e^{2\pi z}$
 
@@ -315,7 +387,8 @@ C_2 + a^+ s, & s \geq \sigma_0 \\
     =\sum_{\ell \in \mathbf{Z}} c_{\ell} e^{(s+i t) 2 \pi \ell}
     .\end{align*}`{=tex} where $\left\{{c_\ell}\right\}_{\ell\in{\mathbb{Z}}} \subset {\mathbb{C}}$ converges for all $s, t$.
 
-## Assertion 1, Step 2: Solve CR
+Assertion 1, Step 2: Solve CR
+-----------------------------
 
 Use $e^{s+it} = e^s\qty{\cos(t) + i\sin (t)}$ to write in real coordinates: `\scriptsize`{=tex} `\begin{align*}
 \tilde{Y}(s, t)=\sum_{\ell \in \mathbb{Z}} e^{2 \pi s \ell}
@@ -362,7 +435,8 @@ e^{K'} \qty{ \alpha_\ell \sin(2\pi\ell t) + \beta_\ell \cos(2\pi \ell t)}
 \end{bmatrix}
 .\end{align*}`{=tex} `\normalsize`{=tex}
 
-## Condition on $L^p$ Solutions {#condition-on-lp-solutions}
+Condition on $L^p$ Solutions {#condition-on-lp-solutions}
+----------------------------
 
 For $s\leq s_0$ we had `\begin{align*}
 Y(s, t) = \sum_{\ell\in {\mathbb{Z}}}
@@ -386,7 +460,8 @@ Then `\begin{align*}
 Y\in L^p \iff \text{exponential terms} \overset{\ell\to\infty}\to 0
 .\end{align*}`{=tex}
 
-## Condition on $L^p$ Solutions: Small Tails {#condition-on-lp-solutions-small-tails}
+Condition on $L^p$ Solutions: Small Tails {#condition-on-lp-solutions-small-tails}
+-----------------------------------------
 
 ```{=tex}
 \scriptsize
@@ -422,7 +497,8 @@ e^{C'} \qty{ \alpha_\ell \sin(2\pi\ell t) + \beta_\ell \cos(2\pi \ell t)}
     -   $\alpha_0 = 0$ or $a^+ > 0$ and
     -   $\beta_0 = 0$ or $a^+ > 0$.
 
-## Counting Solutions
+Counting Solutions
+------------------
 
 `\begin{align*}
 \begin{cases}
@@ -445,7 +521,8 @@ Compute dimension of space of solutions: `\scriptsize`{=tex} `\begin{align*}
 
 > Note: not sure what ${\mathbb{Z}}^*$ is: most likely ${\mathbb{Z}}\setminus\left\{{0}\right\}$. `\normalsize`{=tex}
 
-## Counting Solutions
+Counting Solutions
+------------------
 
 Use this to deduce $\dim \ker F^*$:
 
@@ -460,7 +537,8 @@ Use this to deduce $\dim \ker F^*$:
 
 $\hfill\blacksquare_1$
 
-## Assertion 2
+Assertion 2
+-----------
 
 **Assertion 2**: Suppose $\sup_{s\in {\mathbb{R}}} {\left\lVert {S(s)} \right\rVert} < 1$, then `\begin{align*}
   \operatorname{dim} \operatorname{Ker} F &= 
@@ -480,7 +558,8 @@ We use the following:
 ```{=tex}
 \normalsize
 ```
-## Proof of Assertion 2
+Proof of Assertion 2
+--------------------
 
 ```{=tex}
 \scriptsize
@@ -505,7 +584,8 @@ Y &\mapsto \frac{\partial Y}{\partial s}+J_{0} \frac{\partial Y}{\partial t}+S(s
     \mathbf{Y}(s) = \mathbf{c}_0 \exp{-\mathbf{A}(s)}{\quad \operatorname{where} \quad} \mathbf{A}(s) = \int_0^s -\mathbf{a}(\sigma) ~d\sigma
     .\end{align*}`{=tex}
 
-## Proof of Assertion 2
+Proof of Assertion 2
+--------------------
 
 -   Explicitly in components: `\scriptsize`{=tex} `\begin{align*}
     \begin{dcases}
@@ -538,9 +618,11 @@ Y &\mapsto \frac{\partial Y}{\partial s}+J_{0} \frac{\partial Y}{\partial t}+S(s
 
 $\hfill\blacksquare_2$
 
-# 8.8.3: $\mathop{\mathrm{ind}}(L_1) = k^- - k^+$ {#mathopmathrmindl_1-k----k}
+8.8.3: $\mathop{\mathrm{ind}}(L_1) = k^- - k^+$ {#mathopmathrmindl_1-k----k}
+===============================================
 
-## Statement and Outline
+Statement and Outline
+---------------------
 
 Statement: let $k^\pm \coloneqq\mathop{\mathrm{ind}}(R^\pm)$; then $\mathop{\mathrm{ind}}(L_1) = k^- - k^+$. `\scriptsize`{=tex}
 
@@ -557,7 +639,8 @@ Statement: let $k^\pm \coloneqq\mathop{\mathrm{ind}}(R^\pm)$; then $\mathop{\mat
 \includegraphics[width = 0.3\textwidth]{figures/image_2020-05-27-22-54-44.png} 
 \end{center}
 ```
-## Case 1: $k^+ \equiv k^- \equiv n \operatorname{mod}2$ {#case-1-k-equiv-k--equiv-n-operatornamemod2}
+Case 1: $k^+ \equiv k^- \equiv n \operatorname{mod}2$ {#case-1-k-equiv-k--equiv-n-operatornamemod2}
+-----------------------------------------------------
 
 ```{=tex}
 \scriptsize
@@ -583,7 +666,8 @@ S_{k^+}          & = \begin{bmatrix}
 \end{bmatrix}
 .\end{align*}`{=tex}
 
-## Case 1: $k^- \equiv k^+ \equiv n \operatorname{mod}2$ {#case-1-k--equiv-k-equiv-n-operatornamemod2}
+Case 1: $k^- \equiv k^+ \equiv n \operatorname{mod}2$ {#case-1-k--equiv-k-equiv-n-operatornamemod2}
+-----------------------------------------------------
 
 -   Take $a_1(s) = a_2(s)$ so $a_1^\pm = a^\pm$
 -   Apply the proved lemma to obtain
@@ -607,7 +691,8 @@ k^+ - k^- & k^+ > k^- \\
 \implies \mathop{\mathrm{ind}}(L_1) &= \qty{k^- - k^+ \over 2} - \qty{k^+ - k^- \over 2} = k^- - k^+
 .\end{align*}`{=tex}
 
-## Case 2: $k^+ \not\equiv k^- \equiv n \operatorname{mod}2$ {#case-2-k-notequiv-k--equiv-n-operatornamemod2}
+Case 2: $k^+ \not\equiv k^- \equiv n \operatorname{mod}2$ {#case-2-k-notequiv-k--equiv-n-operatornamemod2}
+---------------------------------------------------------
 
 ```{=tex}
 \scriptsize
@@ -633,7 +718,8 @@ S_{k^+}          & = \begin{bmatrix}
 \end{bmatrix}
 .\end{align*}`{=tex} `\normalsize`{=tex}
 
-## Case 2: $k^+ \not\equiv k^- \equiv n \operatorname{mod}2$ {#case-2-k-notequiv-k--equiv-n-operatornamemod2-1}
+Case 2: $k^+ \not\equiv k^- \equiv n \operatorname{mod}2$ {#case-2-k-notequiv-k--equiv-n-operatornamemod2-1}
+---------------------------------------------------------
 
 -   Take $a_1(s) = a_2(s)$ everywhere except the $n-1$st block, where we can assume $\sup_{s\in {\mathbb{R}}} {\left\lVert {S(s)} \right\rVert} < 1$.
 -   Assertion 2 applies and we get

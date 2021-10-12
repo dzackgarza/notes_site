@@ -1,5 +1,5 @@
 ---
-date: 2021-04-26
+date: '2021-04-26'
 tags:
 - Unfiled
 ---
@@ -21,7 +21,8 @@ tags:
 
 \#spectral_sequences
 
-# Using the Path-Loop Fibration
+Using the Path-Loop Fibration
+=============================
 
 In particular the classifying space $BG$ of a topological group $G$ is the solution for a fibration $BG \times_\tau G$ where the fiber space is the given group $G$, the base space is the classifying space $BG$ and the product $BG \times G$ is twisted in such a way the total space $BG \times_\tau G$ is contractible. The same idea where the base space $X$ is given and the fibre space is unknown leads to the loop space $\Omega X$ and the contractible total space $X \times_\tau \Omega X$.
 

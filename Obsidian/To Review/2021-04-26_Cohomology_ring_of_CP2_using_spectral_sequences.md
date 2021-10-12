@@ -1,5 +1,5 @@
 ---
-date: 2021-04-26
+date: '2021-04-26'
 tags:
 - Spectral Sequences
 ---
@@ -21,11 +21,13 @@ tags:
 
 
 
-# Computation of $H^*({\mathbb{CP}}^2)$ {#computation-of-hmathbbcp2}
+Computation of $H^*({\mathbb{CP}}^2)$ {#computation-of-hmathbbcp2}
+=====================================
 
 View rendered version [here](https://rawgit.com/dzackgarza/Notes/master/Research/Computations/Computation%20of%20HCP2.html)
 
-## Theorem
+Theorem
+-------
 
 Suppose \$F `\to `{=tex}E `\to `{=tex}B \$ is a fibration satisfying (conditions).
 
@@ -34,7 +36,8 @@ Then there exists a spectral sequence $E_*$ such that
 1.  $E_2^{p,q} = H^p(B, H^q(F;{\mathbb{Z}})) = H^p(B;{\mathbb{Z}}) \otimes H^q(F;{\mathbb{Z}})$
 2.  $E_\infty^{p,q} \Rightarrow H^{p+q}(E)$
 
-## Computation
+Computation
+-----------
 
 Use the above theorem with the fibration $S^1 \to S^5 \to{\mathbb{CP}}^2$, as well as the following facts:
 

@@ -1,5 +1,5 @@
 ---
-date: 2020-04-18
+date: '2020-04-18'
 tags:
 - Unfiled
 title: Weil Conjectures
@@ -26,7 +26,8 @@ title: Weil Conjectures
 
 
 
-# Notes from Daniel's Office Hours
+Notes from Daniel's Office Hours
+================================
 
 0.  Definition of Zeta functions
 1.  Statement of the conjectures
@@ -43,12 +44,13 @@ References
 -   <http://www.math.canterbury.ac.nz/~j.booher/expos/weil_conjectures.pdf>
 -   [Weil's Paper](https://www.ams.org/journals/bull/1949-55-05/S0002-9904-1949-09219-4/S0002-9904-1949-09219-4.pdf)
 
-## Definition of Zeta Function
+Definition of Zeta Function
+---------------------------
 
 Fix $q$ a prime and ${\mathbb{F}}\coloneqq{\mathbb{F}}_q$ the finite field with $q$ elements, along with its unique degree $n$ extensions `
 <span class="math display">
 \begin{align*}
-{\mathbb{F}}_n \coloneqq{\mathbb{F}}_{q^n} = \left\{{x\in \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{F}}\mkern-1.5mu}\mkern 1.5mu_p {~\mathrel{\Big|}~}x^{q^n} - x = 0}\right\} \quad \forall~ n\in {\mathbb{Z}}^{\geq 2}
+{\mathbb{F}}_n \coloneqq{\mathbb{F}}_{q^n} = \left\{{x\in \mkern 1.5mu\overline{\mkern-1.5mu\mathbb{F}\mkern-1.5mu}\mkern 1.5mu_p {~\mathrel{\Big|}~}x^{q^n} - x = 0}\right\} \quad \forall~ n\in {\mathbb{Z}}^{\geq 2}
 \end{align*}
 <span>`{=html}
 
@@ -96,7 +98,8 @@ Concretely, for $X\subset {\mathbb{P}}^M$ a variety cut out by $\left\{{f_i}\rig
 
 > Compare to the Poincare polynomials: $P_{{\mathbb{RP}}^m}(x) = 1 + x + x^2 + \cdots + x^m$ and $P_{{\mathbb{CP}}^m}(x) = 1 + x^2 + \cdots + x^{2m}$
 
-## Statement of Weil Conjectures
+Statement of Weil Conjectures
+-----------------------------
 
 (Weil 1949)
 
@@ -366,7 +369,8 @@ Example: Take $X = {\operatorname{Gr}}_{{\mathbb{F}}}(k, n)$, then ????? so `\be
 \zeta_X(t) = ? 
 .\end{align*}`{=tex}
 
-## Hard Example: An Elliptic Curve
+Hard Example: An Elliptic Curve
+-------------------------------
 
 The Weyl conjectures take on a particularly nice form for curves. Let $X/{\mathbb{F}}$ be a smooth projective curve of genus $g$, then
 
@@ -427,7 +431,8 @@ Since we know the number of points, we can compute `\begin{align*}
 
 > Originally conjectured for curves by Artin Proved by Weil in 1949, proposed generalization to projective varieties Proof had work contributed by Dwork (rationality using p-adic analysis), Artin, Grothendieck (etale cohomology), with completion by Deligne in 1970s (RH)
 
-## Very Hard Example: A Diagonal Hypersurface
+Very Hard Example: A Diagonal Hypersurface
+------------------------------------------
 
 > [Reference](https://math.mit.edu/~notzeb/weil.pdf)
 

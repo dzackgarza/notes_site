@@ -1,5 +1,20 @@
 ---
-aliases: ["enriched", "enrichment"]
+aliases:
+- enriched
+- enrichment
 ---
 
-![](../attachments/Pastedimage%2020210514204805.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+![[../attachments/Pastedimage%2020210514204805.png]]

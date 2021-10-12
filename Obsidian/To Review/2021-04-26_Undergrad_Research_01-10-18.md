@@ -1,5 +1,5 @@
 ---
-date: 2018-01-10
+date: '2018-01-10'
 tags:
 - Undergrad
 ---
@@ -22,7 +22,8 @@ tags:
 
 
 
-# Summary
+Summary
+=======
 
 I met with Prof. Roberts for about an hour and a half today. At our last meeting, we had a bit of a discussion about what the research topic might be.
 
@@ -89,13 +90,16 @@ S^1 @>>>    S^3\\
 \end{align*}
 <span>`{=html} a family of circles parameterized by spheres.
 
-# The Machinery of a Spectral Sequence
+The Machinery of a Spectral Sequence
+====================================
 
-## Goal
+Goal
+----
 
 We are given a chain complex $(C^*, d: C^n \to C^{n+1})$, usually requiring $* \geq 0$. The goal is to compute $H(C^*, d)$, the total homology of this complex.
 
-## Method
+Method
+------
 
 We'll use a filtration on the complex, usually written
 

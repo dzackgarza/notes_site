@@ -1,5 +1,5 @@
 ---
-date: "2021-04-28 18:11:25"
+date: '2021-04-28 18:11:25'
 tags:
 - Unfiled
 title: Notes on Weil Conjectures
@@ -23,7 +23,8 @@ title: Notes on Weil Conjectures
 
 > Reference: Andre Weil, [Numbers of Solutions of Equations in Finite Fields](https://projecteuclid.org/download/pdf_1/euclid.bams/1183513798)
 
-# External Background
+External Background
+===================
 
 Here we fix a prime $p$ and a system of polynomials $S = \left\{{f_i}\right\}$ of degree $n$, take the variety $V(S)$ and let
 
@@ -64,7 +65,8 @@ F(x)=\frac{\left(x^{m+1}-1\right)\left(x^{m+1}-x\right) \cdots\left(x^{m+1}-x^{r
 
 and so the Poincare polynomial for ${\operatorname{Gr}}(m, r, {\mathbb{P}}_{\mathbb{C}})$ is $F(X^2)$.
 
-# Actual Paper
+Actual Paper
+============
 
 Considers equations of the form $\sum_{i=1}^r a_i x_i^{n_i} = b$.
 

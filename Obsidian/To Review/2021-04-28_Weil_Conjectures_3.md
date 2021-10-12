@@ -1,5 +1,5 @@
 ---
-date: 2020-04-13
+date: '2020-04-13'
 tags:
 - Unfiled
 title: Weil Conjectures Notes
@@ -18,7 +18,7 @@ title: Weil Conjectures Notes
 
 
 
-[[../Unsorted/Zeta function](../Unsorted/Zeta%20function.md) [../Unsorted/Number theory](../Unsorted/Number%20theory.md) [Algebraic Geometry](Subjects/Algebraic%20Geometry.md) [Weil Conjectures | Subjects/Weil%20Conjectures.html]] [GRH](GRH)
+[[../Unsorted/Zeta function](../Unsorted/Zeta%20function.md) [../Unsorted/Number theory](../Unsorted/Number%20theory.md) [Algebraic Geometry](../Subjects/Algebraic%20Geometry.md) [Weil Conjectures | ../Subjects/Weil%20Conjectures.html]] [GRH](GRH)
 
 About [[../Unsorted/variety | ../Unsorted/variety.html]]: defined by polynomial equations, Hypersurfaces are defined by one equation Let $X/K: f(x_0, \cdots, x_{n+1}) = 0, \mathbf{x} \in {\mathbb{P}}_k^{n+2}$, so the variety will have dimension.
 
@@ -44,7 +44,7 @@ The simplest case: $X = {\mathbb{A}}^n$, we have ${\mathbb{A}}^n({\mathbb{F}}_{p
 Theorem (Weil)
 :   If $n=1$, so there is 1 defining equation, with $X$ smooth and connected, then $\# X({\mathbb{F}}_{p^r}) = p^r + O(p^{r/2})$.
 
-We in fact know $\# X({\mathbb{F}}_{p^r})$ is $p^r + 1 - \sum_{i=1}^g \alpha+i^r$ where $g$ is the genus of ths curve and $\alpha_i \in \mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{Q}}\mkern-1.5mu}\mkern 1.5mu$ with ${\left\lvert {\iota(\alpha)} \right\rvert}= \sqrt{2}$ for any embedding $\mkern 1.5mu\overline{\mkern-1.5mu{\mathbb{Q}}\mkern-1.5mu}\mkern 1.5mu\hookrightarrow{\mathbb{C}}$ where the $\alpha_i$ are algebraic.
+We in fact know $\# X({\mathbb{F}}_{p^r})$ is $p^r + 1 - \sum_{i=1}^g \alpha+i^r$ where $g$ is the genus of ths curve and $\alpha_i \in \mkern 1.5mu\overline{\mkern-1.5mu\mathbb{Q}\mkern-1.5mu}\mkern 1.5mu$ with ${\left\lvert {\iota(\alpha)} \right\rvert}= \sqrt{2}$ for any embedding $\mkern 1.5mu\overline{\mkern-1.5mu\mathbb{Q}\mkern-1.5mu}\mkern 1.5mu\hookrightarrow{\mathbb{C}}$ where the $\alpha_i$ are algebraic.
 
 Note that this condition is much stronger than ${\left\lvert {\alpha_i} \right\rvert} = \sqrt{p}$, since e.g. $1 \pm \sqrt 2$ have two different norms.
 
@@ -68,7 +68,7 @@ Z(X, t) = {(1 - \alpha_1 t) \cdots(1 - \alpha_j t \over (1-t) (1-pt) )}
 .\end{align*}
 <span>`{=html}
 
-[[Weil Conjectures | Subjects/Weil%20Conjectures.html]] for $X$ smooth and connected of dimension $n$:
+[[Weil Conjectures | ../Subjects/Weil%20Conjectures.html]] for $X$ smooth and connected of dimension $n$:
 
 -   $Z(X, t) \in {\mathbb{Q}}(t)$
 -   (RH) Explicitly, $Z(X, t) = {P_1(t) \cdots P_{2n-1}(t) \over P_0(t) \cdots P_{2n}(t)}$
@@ -81,4 +81,4 @@ Note that the genus is half of the first [Betti number](Betti%20number). See als
 
 Why are they called the RH for varieties over [finite fields](finite%20fields)? Identify ${\mathbb{Z}}$ as the ring of functions over a curve $\operatorname{Spec}{\mathbb{Z}}$. We think of $x\in \operatorname{Spec}{\mathbb{Z}}$ as a map $\operatorname{ev}_x: {\mathbb{Z}}\to {\mathbb{F}}_p$ of rings, so points correspond to evaluating at the point.
 
-Recall that we can write the [[../Unsorted/Riemann zeta function | ../Unsorted/Riemann%20zeta%20function.html]] as the [Dirichlet series](Dirichlet%20series) $\zeta(s) = \sum_n {1 \over n^s}$ and expand as an [Euler product](Euler%20product) $\prod_{p\text{ prime}} {1 \over 1 - p^{-s}$.
+Recall that we can write the [[../Unsorted/Riemann zeta function](../Unsorted/Riemann%20zeta%20function.md) as the [Dirichlet series | ../Unsorted/Dirichlet%20series.html]] $\zeta(s) = \sum_n {1 \over n^s}$ and expand as an [Euler product](Euler%20product) $\prod_{p\text{ prime}} {1 \over 1 - p^{-s}$.

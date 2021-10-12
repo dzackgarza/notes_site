@@ -1,5 +1,5 @@
 ---
-date: 2021-04-26
+date: '2021-04-26'
 tags:
 - Algebraic Topology
 ---
@@ -29,9 +29,11 @@ tags:
 
 \#spectral_sequences \#algebraic_topology
 
-# A 2 Step Filtration
+A 2 Step Filtration
+===================
 
-## Goal
+Goal
+----
 
 We want to explicitly consider all of the objects, maps, and differentials in a particular spectral sequence arising from a space that admits a filtration that terminates in two steps. There are several concrete examples that should fit into this framework:
 
@@ -40,7 +42,8 @@ We want to explicitly consider all of the objects, maps, and differentials in a 
 -   $0 \hookrightarrow{\mathbb{RP}}^n \hookrightarrow S^n$
     -   Using $S^n$ as a double cover of ${\mathbb{RP}}^n$
 
-## Setup: Space and Filtration
+Setup: Space and Filtration
+---------------------------
 
 Let $X$ be a space and let $A\subset X$ be a subspace, inducing the inclusion $A\xrightarrow{i} X$, so we have the following inclusions of spaces:
 
@@ -81,7 +84,8 @@ F_2C_*(X) @>>\hookrightarrow> F_1C_*(X) @>i_*>\hookrightarrow> F_0C_*(X)
 \end{align*}
 <span>`{=html}
 
-# Setup: Spectral Sequence
+Setup: Spectral Sequence
+========================
 
 A few definitions to recall:
 
@@ -91,9 +95,11 @@ $E_0^{p,q} = G_pC_{p+q}(X)$
 
 $E_1^{p,q} = H(E_0^{p,q}, d_0)$
 
-# Computation of Pages
+Computation of Pages
+====================
 
-## $E_{-1}$ {#e_-1}
+$E_{-1}$ {#e_-1}
+--------
 
 Not standard usage, here I consider the "$E_{-1}$ page" to be simply a presentation of the double complex itself. The formula works out to be something like $E_{-1}^{p,q} = F_pC_q(X)$
 
@@ -158,14 +164,15 @@ Focusing on the area $p,q >= -1$, we use the fact that the chain complexes come 
 \end{align*}
 <span>`{=html}
 
-## $E_0$ {#e_0}
+$E_0$ {#e_0}
+-----
 
 Here we use the following formulas/facts:
 
 -   $G_iC_*(X) \coloneqq\frac{F_iC_*(X)}{F_{i+1}C_*(X)}$
 -   $E_0^{p,q} \coloneqq G_pC_{p+q}(X)$
 -   $C_n(X, A) \coloneqq\frac{C_n(X)}{C_n(A)}$
-    -   This can be done because there is a SES $0 \to C_*(A) \to C_*(X) \to\frac{C_*(X)}{C_*(A)} \to 0$ Then since ${\partial}_n : C_n(X) \to C_{n-1}(X)$ has the property that ${\partial}_n(C_*(A)) = C_*(A)$, it factors through the quotient $\frac{C_*(X)}{C_*(A)}$ to yield a map $\widehat{{\partial}}_n: \frac{C_n(X)}{C_n(A)} \to\frac{C_{n-1}(X)}{C_{n-1}(A)}$. Shorten notation by calling $\frac{C_*(X)}{C_*(A)} \coloneqq C_*(X, A)$ the relative chain complex; this yields relative homology with respect to $\widehat{{\partial}}$, i.e. $H_n(X,A) \coloneqq\frac{\ker {\partial}_n}{\operatorname{im}{\partial}_{n+1}} \subset C_n(X, A)$.
+    -   This can be done because there is a SES $0 \to C_*(A) \to C_*(X) \to\frac{C_*(X)}{C_*(A)} \to 0$ Then since ${\partial}_n : C_n(X) \to C_{n-1}(X)$ has the property that ${\partial}_n(C_*(A)) = C_*(A)$, it factors through the quotient $\frac{C_*(X)}{C_*(A)}$ to yield a map $\widehat{\partial}_n: \frac{C_n(X)}{C_n(A)} \to\frac{C_{n-1}(X)}{C_{n-1}(A)}$. Shorten notation by calling $\frac{C_*(X)}{C_*(A)} \coloneqq C_*(X, A)$ the relative chain complex; this yields relative homology with respect to $\widehat{\partial}$, i.e. $H_n(X,A) \coloneqq\frac{\ker {\partial}_n}{\operatorname{im}{\partial}_{n+1}} \subset C_n(X, A)$.
 
 which explicitly yields `
 <span class="math display">
@@ -279,6 +286,8 @@ $\cdots H_n(A) \xrightarrow{} H_n(X) \xrightarrow{} H_n(X, A) \xrightarrow{\delt
 \end{align*}
 <span>`{=html}
 
-## $E_1$ {#e_1}
+$E_1$ {#e_1}
+-----
 
-## $E_2$ {#e_2}
+$E_2$ {#e_2}
+-----

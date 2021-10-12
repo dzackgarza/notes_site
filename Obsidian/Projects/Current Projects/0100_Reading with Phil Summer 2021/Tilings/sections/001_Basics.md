@@ -1,3 +1,21 @@
+Error on 1
+
+{ ["2"] = exit,["3"] = 1,} 
+\documentclass{standalone}
+\input{/home/zack/.pandoc/custom/preamble_common}
+\begin{document}
+\nopagecolor
+\begin{tikzcd}
+{\mathbb{C}}
+  \ar[r] 
+& 
+\bigwedge\nolimits^p T {}^{ \vee }X
+  \ar[d] 
+\\
+& 
+X 
+\end{tikzcd}
+\end{document}
 -   [References](#references)
 -   [Basics](#basics)
 -   [Elliptic Orbifolds](#elliptic-orbifolds)
@@ -15,7 +33,8 @@
 
 
 
-# References
+References
+==========
 
 -   Survey Paper: Anton Zorich, [Flat Surfaces](https://arxiv.org/abs/math/0609392)
 
@@ -45,7 +64,8 @@
 
 -   J. Smillie
 
-# Basics
+Basics
+======
 
 ::: {.fact .proofenv}
 For $\Sigma_g$ a genus $g$ surface, the Poincaré polynomial and the Euler characteristic are given by `
@@ -202,7 +222,8 @@ For flat tori, ${\mathcal{H}}= \operatorname{GL}_+(2, {\mathbb{R}})/{\operatorna
 
 Fact: - $K_{{\mathbb{P}}^n} = {\mathcal{O}}(-n-1)$
 
-# Elliptic Orbifolds
+Elliptic Orbifolds
+==================
 
 ::: {.remark .proofenv}
 Classification of elliptic orbifolds of dimension 2:
