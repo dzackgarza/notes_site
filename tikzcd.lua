@@ -59,7 +59,7 @@ function RawBlock(el)
       printDebugInfo(rc2)
       return false
     end
-    cmd3 = 'cp "' .. fname .. '" /home/zack/projects/chenghaomou.github.io/figures;'
+    cmd3 = 'cp "' .. fname .. '" /home/zack/notes_site/figures;'
     --print(cmd3)
     local file3 = io.popen(cmd3)
     local output3 = file3:read('*all')
