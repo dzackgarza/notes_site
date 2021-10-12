@@ -1,3 +1,0 @@
-- A category [Enriched%20category.md) over $(\kmod, \tensor_k](Enriched%20category.md)%20over%20$(/kmod,%20/tensor_k)$.
-	- So hom sets are $k\dash$modules and composition is bilinear.
-- More generally, a category is $R\dash$linear if it is enriched over $(\rmod, \tensor_R)$. 

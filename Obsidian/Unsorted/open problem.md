@@ -1,1 +1,0 @@
-https://www.wikiwand.com/en/Special_values_of_L-functions

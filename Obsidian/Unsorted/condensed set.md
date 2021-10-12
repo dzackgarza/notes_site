@@ -1,1 +1,0 @@
-- [profinite%20set.md](profinite%20set.md) sets, with finite families of jointly surjective maps as covers.

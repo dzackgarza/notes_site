@@ -1,3 +1,0 @@
-- A colimit indexed by an ∞-groupoid is called a [homotopy%20sum.md](homotopy%20sum.md)
-	- Similar to [coproduct.md](coproduct.md) in $\Cat$.
-	- Given a morphism of ∞-groupoids $\cat X \to \cat B$, $\cat X$ is the homotopy sum of its fibres.

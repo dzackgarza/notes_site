@@ -1,1 +1,0 @@
-Big goal: determine the [simple](simple) modules.

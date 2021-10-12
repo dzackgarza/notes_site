@@ -1,1 +1,0 @@
-![](https://pbs.twimg.com/media/E1pK0EpWEAQdzFV?format=jpg&name=medium)

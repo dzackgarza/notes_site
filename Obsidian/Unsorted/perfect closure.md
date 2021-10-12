@@ -1,1 +1,0 @@
-$$k^\pref \da \Union_{n\geq 1}k$$

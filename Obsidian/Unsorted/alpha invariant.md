@@ -1,2 +1,0 @@
-- Refined version of the [A%20hat%20genus.md](A%20hat%20genus.md)
-- Vanishes for [Scalar%20curvature.md) (Hitchin](Scalar%20curvature.md)%20(Hitchin)

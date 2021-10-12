@@ -1,4 +1,0 @@
-- [Riemann-Roch.md](Riemann-Roch.md)
-- [Serre%20duality.md](Serre%20duality.md)
-- [Kodaira%20vanishing](Kodaira%20vanishing.md)
-- [Unsorted/splitting principle](splitting%20principle.md)

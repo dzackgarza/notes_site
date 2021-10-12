@@ -1,1 +1,0 @@
-- And how [Topological cyclic homology](Topological%20cyclic%20homology%201%201.md) is related and more computable

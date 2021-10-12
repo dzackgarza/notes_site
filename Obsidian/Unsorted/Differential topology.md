@@ -1,8 +1,0 @@
-- [Sard's Theorem](Sard's%20Theorem)
-- Tubular neighborhoods
-- [Whitney embedding theorem](Whitney%20embedding%20theorem)
-- The Jordan-Brouwer separation theorem
-- [Poincaré-Hopf theorem](Poincaré-Hopf%20theorem)
-- [Hopf degree theorem](Hopf%20degree%20theorem)
-- Generalized Stokes' Theorem
-- The Frobenius Integrability Theorem

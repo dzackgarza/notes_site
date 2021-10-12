@@ -1,5 +1,0 @@
----
-aliases: ["stably framed"]
----
-
-#bundles

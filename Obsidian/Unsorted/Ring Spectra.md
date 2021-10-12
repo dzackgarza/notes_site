@@ -1,2 +1,0 @@
-- Unit: $\eta: \SS\to X$
-- Multiplication: $m: X\smashpower{2} \to X$

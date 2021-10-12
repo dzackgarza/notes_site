@@ -1,3 +1,0 @@
-- [Tilting.md](Tilting.md)
-- [solid%20mathematics.md](solid%20mathematics.md)
-- [condensed%20sets](condensed%20sets)
