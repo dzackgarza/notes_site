@@ -4,7 +4,7 @@ DIR="/home/zack/Notes/Obsidian/"
 
 inotifywait -m -r --format '%w%f' -e CLOSE_WRITE "$DIR" | while read f
 do
-  if [[ $file == *.md ]]; then
+  if [[ $f == *.md ]]; then
     echo "$f"
     destname="$(echo $f | sed 's/\/home\/zack\/Notes\//\.\//g')"
     echo "Moving |$f| to |$destname|"
