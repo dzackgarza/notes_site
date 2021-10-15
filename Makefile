@@ -9,7 +9,7 @@ all: clean pandoc_process generate
 ## Markdown Output
 pandoc:
 	echo "Running custom pandoc conversion..."
-	cp -r ~/Notes/Obsidian/* ./Obsidian;
+	cp -r ~/Notes/Obsidian ./Obsidian;
 	find ./Obsidian -type f \( -iname '*.yaml' -o -iname "*.css" -o -iname "*.sty" -o -iname "*.tex" -o -iname "*.txt" -o -iname "*.sh" -o -iname "*.html" -o -iname "*.log" \) -exec rm {} \;
 	mkdir ./figures;
 	while read THISFILE; do
