@@ -16,7 +16,7 @@ pandoc:
 	mkdir ./figures;
 	echo "Running custom pandoc conversion..."
 	while read THISFILE; do
-		echo "$THISFILE";
+		echo "$$THISFILE";
 		awk 'FNR==1{print ""}1' "$THISFILE" | ./pandoc_stripmacros.sh | sed '/file:\/\//d' > temp.md && mv temp.md "$THISFILE"; 
 	done < <(find ./Obsidian -type f -iname "*.md" ) 
 	
