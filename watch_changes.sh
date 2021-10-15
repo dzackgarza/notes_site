@@ -8,7 +8,6 @@ do
     echo "$f"
     destname="$(echo $f | sed 's/\/home\/zack\/Notes\//\.\//g')"
     echo "Moving |$f| to |$destname|"
-    cp "$f" "$destname"
-    echo "Copied."
+    cp "$f" "$destname" && echo "Copied."
   fi
 done
