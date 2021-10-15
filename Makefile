@@ -32,8 +32,8 @@ clean:
 reset: clean
 	echo "Removing directories.."
 	@rm -rf /var/www/notes_site;
-	@rm -rf ./Obsidian/*;
-	@rm -rf ./figures/*;
+	@rm -rf ./Obsidian;
+	@rm -rf ./figures;
 
 .PHONY: clean
 
