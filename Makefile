@@ -7,8 +7,10 @@ all: pandoc_process generate
 	clr_greenb "____________________________________________________"
 
 ## Markdown Output
-pandoc_process:
+pandoc:
 	echo "Running custom pandoc conversion..."
+	cp -r ~/Notes/Obsidian/* ./Obsidian;
+	mkdir ./figures;
 	while read THISFILE; do
 		echo "$THISFILE";
 		awk 'FNR==1{print ""}1' "$THISFILE" | ./pandoc_stripmacros.sh | sed '/file:\/\//d' > temp.md && mv temp.md "$THISFILE"; 
@@ -18,6 +20,7 @@ watch:
 	HOST=0.0.0.0 PORT=8000 emanote;
 
 generate:
+	mkdir /var/www/notes_site;
 	emanote -L ./ gen /var/www/notes_site;
 
 .SILENT:
@@ -28,7 +31,7 @@ clean:
 
 reset: clean
 	echo "Removing directories.."
-	@rm -rf /var/www/notes_site/*;
+	@rm -rf /var/www/notes_site;
 	@rm -rf ./Obsidian/*;
 	@rm -rf ./figures/*;
 
