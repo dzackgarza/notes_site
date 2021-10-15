@@ -13,7 +13,7 @@ pandoc:
 	echo "Removing auxiliary files.."
 	find ./Obsidian -type f \( -iname '*.yaml' -o -iname "*.css" -o -iname "*.sty" -o -iname "*.tex" -o -iname "*.txt" -o -iname "*.sh" -o -iname "*.html" -o -iname "*.log" \) -exec rm {} \;
 	echo "Making figures directory.."
-	mkdir ./figures;
+	@mkdir ./figures;
 	echo "Running custom pandoc conversion..."
 	while read THISFILE; do
 		echo "$$THISFILE";
