@@ -10,6 +10,7 @@ all: pandoc_process generate
 pandoc:
 	echo "Running custom pandoc conversion..."
 	cp -r ~/Notes/Obsidian/* ./Obsidian;
+	find ./Obsidian -type f \( -iname '*.yaml' -o -iname "*.css" -o -iname "*.sty" -o -iname "*.tex" -o -iname "*.txt" -o -iname "*.sh" -o -iname "*.html" -o -iname "*.log" \) -exec rm {} \;
 	mkdir ./figures;
 	while read THISFILE; do
 		echo "$THISFILE";
@@ -25,11 +26,7 @@ generate:
 
 .SILENT:
 
-clean:
-		echo "Cleaned. Deleting unnecessary file types.."
-	find ./Obsidian -type f \( -iname '*.yaml' -o -iname "*.css" -o -iname "*.sty" -o -iname "*.tex" -o -iname "*.txt" -o -iname "*.sh" -o -iname "*.html" -o -iname "*.log" \) -exec rm {} \;
-
-reset: clean
+clean: 
 	echo "Removing directories.."
 	@rm -rf /var/www/notes_site;
 	@rm -rf ./Obsidian;
