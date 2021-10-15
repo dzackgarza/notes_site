@@ -8,10 +8,13 @@ all: clean pandoc_process generate
 
 ## Markdown Output
 pandoc:
-	echo "Running custom pandoc conversion..."
+	echo "Copying Obsidian directory.."
 	cp -r ~/Notes/Obsidian ./Obsidian;
+	echo "Removing auxiliary files.."
 	find ./Obsidian -type f \( -iname '*.yaml' -o -iname "*.css" -o -iname "*.sty" -o -iname "*.tex" -o -iname "*.txt" -o -iname "*.sh" -o -iname "*.html" -o -iname "*.log" \) -exec rm {} \;
+	echo "Making figures directory.."
 	mkdir ./figures;
+	echo "Running custom pandoc conversion..."
 	while read THISFILE; do
 		echo "$THISFILE";
 		awk 'FNR==1{print ""}1' "$THISFILE" | ./pandoc_stripmacros.sh | sed '/file:\/\//d' > temp.md && mv temp.md "$THISFILE"; 
