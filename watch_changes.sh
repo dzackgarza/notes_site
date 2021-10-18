@@ -8,6 +8,8 @@ do
     echo "$f"
     destname="$(echo $f | sed 's/\/home\/zack\/Notes\//\.\//g')"
     echo "Moving |$f| to |$destname|"
-    cp "$f" "$destname" && echo "Copied."
+    awk 'FNR==1{print ""}1' "$f" | ./pandoc_stripmacros.sh | sed '/file:\/\//d' > temp.md && mv temp.md "$destname" && echo "Copied."
+    #cp "$f" "$destname" && echo "Copied."
   fi
+  cp ~/Notes/Obsidian/index.md ./Obsidian/index.md;
 done
