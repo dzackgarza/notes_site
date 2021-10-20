@@ -10,7 +10,7 @@
               </a>
             </h1>
             <aside class="flex items-end justify-center italic mb-4 text-gray-500 text-sm">
-            <img src="Obsidian/figures/favicon.png" width="500" />
+            <img src="Notes/Obsidian/figures/favicon.png" width="500" />
             </aside>
             <apply template="components/note-body" />
           </main>

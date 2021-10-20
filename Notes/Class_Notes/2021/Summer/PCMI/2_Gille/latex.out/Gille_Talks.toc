@@ -1,0 +1,33 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Table of Contents}{2}{section*.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Phillippe Gille, Talk 1 (Monday, July 12)}{3}{section.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1}Intro}{3}{subsection.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2}Serre-Swan and Vector Group Schemes}{4}{subsection.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3}Vector Bundles over Affine Schemes}{5}{subsection.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4}Linear Groups}{6}{subsection.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.5}Classification of Modules over a Dedekind Ring}{7}{subsection.1.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.6}Replacing the Zariski Topology}{9}{subsection.1.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Phillippe Gille, Talk 2 (Tuesday, July 13)}{14}{section.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Intro}{14}{subsection.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Galois Covers}{15}{subsection.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3}Flat Quotients}{16}{subsection.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4}Galois Cohomology}{17}{subsection.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5}Curves Over an Algebraically Closed Field}{18}{subsection.2.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6}Affine Line}{19}{subsection.2.6}%
+\defcounter {refsection}{0}\relax 
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

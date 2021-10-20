@@ -1,0 +1,73 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Table of Contents}{3}{section*.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}First Examples of Flag/Schubert Varieties (Wednesday, August 18)}{5}{section.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Friday, August 20}{10}{section.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Example 4: The Full Flag Variety}{11}{subsection.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Combining Examples 3 and 4}{12}{subsection.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Lecture 2 (Monday, August 23)}{15}{section.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}A Lightning Introduction to Groups and Representations}{16}{subsection.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}More Broad Overview (Wednesday, August 25)}{18}{section.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Starting Kumar (Friday, August 27)}{21}{section.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}1.1: Definition of Kac-Moody Algebras}{21}{subsection.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Kac-Moody Groups (Monday, August 30)}{24}{section.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1}1.2: Root Space Decompositions}{24}{subsection.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Weyl Groups, 1.3 (Wednesday, September 01)}{27}{section.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1}Root Systems}{27}{subsection.7.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}Wednesday, September 08}{29}{section.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9}Category \({\mathcal {O}}\) (Friday, September 10)}{35}{section.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10}Tits Systems, 5.1 (Monday, September 13)}{39}{section.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11}Generalized Flag Varieties, 7.1 (Wednesday, September 15)}{44}{section.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12}7.1 (Friday, September 17)}{47}{section.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13}Equivariant \({\mathsf {K}}{\hbox {-}}\)theory (Wednesday, September 22)}{50}{section.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {14}Localization in Equivariant \({\mathsf {K}}{\hbox {-}}\)theory (Friday, September 24)}{52}{section.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {14.1}Localization Theorems}{52}{subsection.14.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {14.2}Proper Pushforward}{53}{subsection.14.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {15}Line Bundles on \({\mathcal {X}}^Y\) (Monday, September 27)}{55}{section.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {16}Wednesday, September 29}{58}{section.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {17}Kumar Ch. 8: Demazure Character Formulas (Friday, October 01)}{61}{section.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {18}Cohomology of Certain Line Bundles \(Z_w\) (Monday, October 04)}{66}{section.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {19}Friday, October 08}{69}{section.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {20}Monday, October 11}{72}{section.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {21}Appendix: Preliminary Notions}{74}{section.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline ToDos}{75}{section*.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Definitions}{76}{section*.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Theorems}{77}{section*.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Exercises}{78}{section*.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Figures}{79}{section*.19}%
+\defcounter {refsection}{0}\relax 
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

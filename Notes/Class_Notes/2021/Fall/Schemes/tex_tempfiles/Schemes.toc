@@ -1,0 +1,97 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Table of Contents}{2}{section*.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Wednesday, August 18: Sheaves}{4}{section.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Friday, August 20}{6}{section.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Monday, August 23}{8}{section.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Wednesday, August 25}{10}{section.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Subsheaves}{12}{subsection.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Friday, August 27}{13}{section.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Monday, August 30}{14}{section.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Wednesday, September 01}{15}{section.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}Friday, September 03}{17}{section.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9}Wednesday, September 08}{19}{section.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10}Friday, September 10}{21}{section.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.1}Sections and Stalks of \({\mathcal {O}}_{\operatorname {Spec}A}\) as Localizations}{21}{subsection.10.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11}Monday, September 13}{23}{section.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.1}Affine Schemes}{23}{subsection.11.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.2}Affine Varieties}{24}{subsection.11.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12}Wednesday, September 15}{25}{section.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13}Friday, September 17}{29}{section.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {14}Monday, September 20}{31}{section.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {15}Wednesday, September 22}{34}{section.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {16}Projective Varieties (Tuesday, September 28)}{37}{section.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {16.1}Projective Space}{38}{subsection.16.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {16.2}Graded Rings and Homogeneous Ideals}{38}{subsection.16.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {16.3}Projective Nullstellensatz}{39}{subsection.16.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {16.4}Proj}{40}{subsection.16.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {17}Friday, October 01}{40}{section.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {18}Monday, October 04}{44}{section.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {19}Wednesday, October 06}{48}{section.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {20}Locally Noetherian Schemes vs Noetherian Covers (Friday, October 08)}{50}{section.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.1}Proof of Theorem}{50}{subsection.20.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {20.2}Other Properties}{51}{subsection.20.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {21}Monday, October 11}{52}{section.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {22}Wednesday, October 13}{55}{section.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {22.1}Open/Closed Subschemes}{57}{subsection.22.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {23}Friday, October 15}{58}{section.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {24}Appendix}{60}{section.24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {25}Problem Sets}{62}{section.25}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {25.1}Problem Set 1}{62}{subsection.25.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {25.2}Chapter 2, Section 1}{62}{subsection.25.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {25.3}Problem Set 2}{73}{subsection.25.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {25.4}II.1}{73}{subsection.25.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {25.5}II.2}{78}{subsection.25.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline ToDos}{82}{section*.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Definitions}{83}{section*.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Theorems}{85}{section*.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Exercises}{86}{section*.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Figures}{87}{section*.18}%
+\defcounter {refsection}{0}\relax 
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

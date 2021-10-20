@@ -1,0 +1,93 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Table of Contents}{2}{section*.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Preface}{4}{section.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Thursday, August 19}{4}{section.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Examples of Hasse Principles}{5}{subsection.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Tuesday, August 24}{7}{section.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Brauer Groups}{8}{subsection.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1}The Brauer-Manin Obstruction}{9}{subsubsection.3.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.2}The Hasse Principle for Severi-Brauers}{10}{subsubsection.3.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Brauer Groups and Galois Cohomology}{10}{subsection.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Group Cohomology (Thursday, August 26)}{11}{section.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Computing Examples}{11}{subsection.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2}Functoriality}{12}{subsection.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Tuesday, August 31}{14}{section.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}Some Formal Properties}{16}{subsection.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2}Forms, Torsors, and \(H^1\)}{17}{subsection.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Thursday, September 02}{18}{section.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1}Correspondence of Forms}{18}{subsection.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2}Torsors}{20}{subsection.6.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3}Example: Kummer Theory}{20}{subsection.6.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.4}Geometry of Brauer Groups}{21}{subsection.6.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Tuesday, September 07}{23}{section.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1}Intro: Historical POV on Brauer Groups}{23}{subsection.7.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2}The Boundary Map and Twisted Vector Space}{24}{subsection.7.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}Thursday, September 09}{27}{section.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1}Computing Brauer Groups}{31}{subsection.8.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9}Tuesday, September 14}{32}{section.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.1}Cyclic Algebras}{32}{subsection.9.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10}Thursday, September 16}{36}{section.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.1}Computing Brauer Groups}{36}{subsection.10.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.2}Proof of theorem}{39}{subsection.10.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11}Tuesday, September 21}{42}{section.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.1}Construction of Brauer classes over \(K\)}{42}{subsection.11.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.2}The SES}{44}{subsection.11.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12}Thursday, September 23}{46}{section.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {12.1}Proof of Theorem}{46}{subsection.12.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {12.2}Injectivity}{47}{subsection.12.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13}Tuesday, September 28}{50}{section.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.1}Proof}{53}{subsection.13.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {14}Tuesday, October 05}{54}{section.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {15}Tuesday, October 12}{56}{section.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline ToDos}{60}{section*.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Definitions}{61}{section*.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Theorems}{62}{section*.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Exercises}{64}{section*.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Figures}{65}{section*.20}%
+\defcounter {refsection}{0}\relax 
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -1,0 +1,215 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Table of Contents}{2}{section*.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Preface}{6}{section.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Notation}{6}{section.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Diophantine Equations (Lec. 1, Thursday, January 14)}{6}{section.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Intro/Logistics}{6}{subsection.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Motivation}{7}{subsection.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3}Failure of Unique Factorization}{9}{subsection.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Number Fields (Lec. 2,Tuesday, January 19)}{9}{section.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Embeddings}{9}{subsection.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2}Algebraic Closures}{11}{subsection.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3}Rings of Integers and Fraction Fields}{14}{subsection.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Quadratic Fields (Lec. 3, Thursday, January 21)}{16}{section.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}Quadratic Number Fields}{16}{subsection.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2}Norm and Trace}{17}{subsection.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3}The Field Polynomial}{18}{subsection.5.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4}Classification of \({\mathbb {Z}}_K\)}{19}{subsection.5.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Failure of Unique Factorization (Lec. 4, Wednesday, January 27)}{20}{section.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1}Revisiting a Counterexample to Unique Factorization}{20}{subsection.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2}Factorization Theory}{21}{subsection.6.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Euclidean Quadratic Fields (Lec. 5, Thursday, January 28)}{25}{section.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1}Setup}{25}{subsection.7.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2}Norm-Euclidean Imaginary Quadratic Fields}{26}{subsection.7.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3}Proof of Motzkin's Theorem}{32}{subsection.7.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}Ideal Theory and Quadratic Fields (Lec. 6, Tuesday, February 02)}{33}{section.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1}Prime Factorization in \(\operatorname {Id}({\mathbb {Z}}_K)\)}{33}{subsection.8.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2}Ideal Norms}{35}{subsection.8.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9}Fundamental Theorem of Ideal Theory (Lec. 7, Thursday, February 04)}{37}{section.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.1}Norms: Multiplicativity and Computations}{37}{subsection.9.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.2}Unique Factorization for Ideals}{38}{subsection.9.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.2.1}Proving Unique Factorization}{40}{subsubsection.9.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.3}Preview: Ramification}{42}{subsection.9.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10}Prime Ideals of \({\mathbb {Z}}_K\) (Lec. 8, Tuesday, February 09)}{42}{section.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.1}Dedekind-Kummer Mirroring}{42}{subsection.10.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.2}Units in \({\mathbb {Z}}_K\)}{46}{subsection.10.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11}Units in \({\mathbb {Z}}_K\) (Lec. 9, Monday, February 15)}{48}{section.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.1}Review}{48}{subsection.11.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.2}An Aside: Diophantine approximation}{49}{subsection.11.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.3}Class Groups and the Class Number}{52}{subsection.11.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12}Class Groups (Lec. 10, Thursday, February 18)}{54}{section.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {12.1}Computing Class Groups}{54}{subsection.12.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {12.2}The Class Group as a Measure of Non-unique Factorization}{56}{subsection.12.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {12.3}Elasticity}{59}{subsection.12.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13}Prime Producing Polynomials and Unique Factorization (Lec. 11, Tuesday, February 23)}{60}{section.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.1}Ch. 11: Prime Producing Polynomials and Unique Factorization}{60}{subsection.13.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.2}Proof of Rabinowitz's Theorem}{62}{subsection.13.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.3}Lattice Points}{65}{subsection.13.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {14}Lattice Points (Lec. 12, Monday, March 01)}{67}{section.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {14.1}Minkowski (Version 1)}{67}{subsection.14.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {14.2}Minkowski (Version 2)}{68}{subsection.14.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {14.2.1}Application: The 4 Square Theorem}{73}{subsubsection.14.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {15}Starting Over with General Number Fields (Lec. 13, Thursday, March 04)}{75}{section.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {15.1}Recasting Old Definitions}{75}{subsection.15.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {15.2}Discriminants}{77}{subsection.15.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {15.3}Integral Bases}{78}{subsection.15.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {15.4}Discriminant of Number Fields}{80}{subsection.15.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {16}Discriminants and Norms (Lec. 14, Saturday, March 13)}{80}{section.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {16.1}Norms of Ideals}{81}{subsection.16.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {16.2}Ch. 14: Integral Bases}{84}{subsection.16.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {17}Cyclotomic Fields (Lec. 15, Saturday, March 13)}{86}{section.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {17.1}Ideal Theory in General Number Rings (Ch. 15)}{89}{subsection.17.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {18}Ideal Theory in Number Fields Continued (Lec. 16, Tuesday, March 30)}{91}{section.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {18.1}Setting up the Theory}{91}{subsection.18.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {18.2}Modern Approach}{93}{subsection.18.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {18.3}Norms Revisited}{94}{subsection.18.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {18.4}Applications of Finiteness of Class Group}{96}{subsection.18.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {19}Ch. 16, Continued (Thursday, May 13)}{97}{section.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {19.1}Actuality of Ideals}{97}{subsection.19.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {20}Ch. 17: Prime Decomposition and General Number Rings}{99}{section.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {21}Ch. 17: Dedekind-Kummer (Thursday, May 13)}{102}{section.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {22}Ch. 18: Units of \({\mathbb {Z}}_K\)}{104}{section.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {23}Ch. 18: Dirichlet's Units Theorem Part I (Friday, May 21)}{107}{section.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {23.1}Step 2: Discreteness}{107}{subsection.23.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {23.2}Step 3}{108}{subsection.23.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {23.3}Step 3}{108}{subsection.23.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {24}Ch. 20: Unit Theorem, Part II}{110}{section.24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {25}Ch. 20 Continued (Friday, May 21)}{111}{section.25}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {26}Ch. 21: Applications of Minkowski's Theorem}{114}{section.26}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {27}Ch. 21: Applications of Minkowski's Theorem (Friday, May 21)}{116}{section.27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {27.1}Minkowski's Class Group Bound}{116}{subsection.27.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {27.2}Example: Showing Number Fields are PIDs using Dedekind-Kummer and the Minkowski Bound}{119}{subsection.27.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {28}Ch. 21: Consequences of Minkowski's Bound (Saturday, May 22)}{121}{section.28}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {29}Chapter XYZ: Relative Extensions, Galois Theory, Prime Splitting}{123}{section.29}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {30}Ch. XYZ: April 6}{126}{section.30}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {30.1}Multiplicativity in Towers}{126}{subsection.30.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {30.2}Galois Theory and Prime Decomposition}{128}{subsection.30.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {30.3}Decomposition, Inertia, Frobenius}{131}{subsection.30.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {31}Ch. XYZ: Galois Theory and Prime Decomposition (April 13)}{131}{section.31}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {31.1}Inertia and Decomposition Fields}{134}{subsection.31.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {32}Decomposition and Inertia Fields (April 15)}{136}{section.32}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {32.1}Ramification in Composite Fields}{136}{subsection.32.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {32.2}Frobenius}{139}{subsection.32.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {33}Frobenius (April 20)}{141}{section.33}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {33.1}Cyclotomic Fields}{142}{subsection.33.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {33.2}Galois Theory of \({\mathbb {Q}}(\zeta _m) / {\mathbb {Q}}\) and The Frobenius}{144}{subsection.33.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {34}Chebotarev Density (April 26)}{146}{section.34}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {34.1}Setup}{146}{subsection.34.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {34.2}Chebotarev's Theorem}{147}{subsection.34.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {34.3}Residues \(\operatorname {mod}p\) and Quadratic Reciprocity}{148}{subsection.34.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {35}Quadratic Reciprocity (April 29)}{151}{section.35}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {35.1}Quadratic Reciprocity}{152}{subsection.35.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {35.2}Applying Quadratic Reciprocity: Recovering Classical Results}{153}{subsection.35.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline ToDos}{155}{section*.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Definitions}{156}{section*.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Theorems}{158}{section*.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Exercises}{161}{section*.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Figures}{162}{section*.18}%
+\defcounter {refsection}{0}\relax 
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

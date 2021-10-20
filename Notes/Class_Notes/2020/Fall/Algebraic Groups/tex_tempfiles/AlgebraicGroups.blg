@@ -1,0 +1,15 @@
+[0] Config.pm:312> INFO - This is Biber 2.15
+[0] Config.pm:315> INFO - Logfile is 'tex_tempfiles/AlgebraicGroups.blg'
+[67] biber:330> INFO - === Fri Jul 16, 2021, 00:06:21
+[79] Biber.pm:415> INFO - Reading 'tex_tempfiles/AlgebraicGroups.bcf'
+[139] Biber.pm:952> INFO - Found 2 citekeys in bib section 0
+[151] Biber.pm:4334> INFO - Processing section 0
+[160] Biber.pm:4523> INFO - Looking for bibtex format file 'AlgebraicGroups.bib' for section 0
+[160] bibtex.pm:1682> INFO - LaTeX decoding ...
+[162] bibtex.pm:1494> INFO - Found BibTeX data source 'AlgebraicGroups.bib'
+[199] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[199] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[199] Biber.pm:4162> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[199] Biber.pm:4168> INFO - No sort tailoring available for locale 'en-US'
+[201] bbl.pm:651> INFO - Writing 'tex_tempfiles/AlgebraicGroups.bbl' with encoding 'UTF-8'
+[202] bbl.pm:754> INFO - Output to tex_tempfiles/AlgebraicGroups.bbl

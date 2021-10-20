@@ -1,15 +1,31 @@
 #!/bin/bash
-DIR="/home/zack/Notes/Obsidian/"
+DIR="/home/zack/Notes/"
 #inotifywait -m -r -e move -e create -e close_write "$DIR" | while read f
 
-inotifywait -m -r --format '%w%f' -e CLOSE_WRITE "$DIR" | while read f
+inotifywait --exclude '/\..+' -m -r --format '%w%f' -e CLOSE_WRITE "$DIR" | while read f
 do
-  if [[ $f == *.md ]]; then
-    echo "$f"
-    destname="$(echo $f | sed 's/\/home\/zack\/Notes\//\.\//g')"
-    echo "Moving |$f| to |$destname|"
-    awk 'FNR==1{print ""}1' "$f" | ./pandoc_stripmacros.sh | sed '/file:\/\//d' > temp.md && mv temp.md "$destname" && echo "Copied."
-    #cp "$f" "$destname" && echo "Copied."
+  bf=$(basename "$f")
+  echo "$f" 
+  echo "$bf"
+  destname="$(echo $f | sed 's/\/home\/zack\//\.\//g')"
+  echo "Moving |$f| to |$destname|"
+  if [[ $bf == index.md ]]; then
+    cp "$f" "$destname" && echo "Copied index page."
+    cp ./Notes/index.md ./index.md;
+    continue;
   fi
-  cp ~/Notes/Obsidian/index.md ./Obsidian/index.md;
+  if [[ $f == *.png ]]; then
+    echo "Image changed."
+    outdir=$(dirname "$destname")
+    mkdir --parent "$outdir";
+    cp "$f" "$destname" && echo "Copied image."
+    continue;
+  fi
+  if [[ $f == *.md ]]; then
+    outdir=$(dirname "$destname")
+    mkdir --parent "$outdir";
+    awk 'FNR==1{print ""}1' "$f" | ./pandoc_stripmacros.sh | sed '/file:\/\//d' > /tmp/temp.md && mv /tmp/temp.md "$destname" && echo "Copied pandoc page";
+    sleep 1 && touch "$destname";
+    continue;
+  fi
 done

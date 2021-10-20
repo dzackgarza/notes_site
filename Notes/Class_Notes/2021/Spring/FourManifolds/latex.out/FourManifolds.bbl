@@ -1,0 +1,169 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Calegari}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ac4271f46efa63997ec27898fd1cfbcc}{%
+           family={Calegari},
+           familyi={C\bibinitperiod},
+           given={Danny},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{ac4271f46efa63997ec27898fd1cfbcc}
+      \strng{fullhash}{ac4271f46efa63997ec27898fd1cfbcc}
+      \strng{bibnamehash}{ac4271f46efa63997ec27898fd1cfbcc}
+      \strng{authorbibnamehash}{ac4271f46efa63997ec27898fd1cfbcc}
+      \strng{authornamehash}{ac4271f46efa63997ec27898fd1cfbcc}
+      \strng{authorfullhash}{ac4271f46efa63997ec27898fd1cfbcc}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://math.uchicago.edu/~dannyc/courses/4manifolds_2018/4_manifolds_notes.pdf}}
+      \field{title}{Notes on 4-manifolds}
+    \endentry
+    \entry{Mandelbaum1980}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8b350fdebb16b9191e711fc4bbe2493e}{%
+           family={Mandelbaum},
+           familyi={M\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society}%
+      }
+      \strng{namehash}{8b350fdebb16b9191e711fc4bbe2493e}
+      \strng{fullhash}{8b350fdebb16b9191e711fc4bbe2493e}
+      \strng{bibnamehash}{8b350fdebb16b9191e711fc4bbe2493e}
+      \strng{authorbibnamehash}{8b350fdebb16b9191e711fc4bbe2493e}
+      \strng{authornamehash}{8b350fdebb16b9191e711fc4bbe2493e}
+      \strng{authorfullhash}{8b350fdebb16b9191e711fc4bbe2493e}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bull. Amer. Math. Soc. (N.S.)}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Four-dimensional topology: an introduction}
+      \field{volume}{2}
+      \field{year}{1980}
+      \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 159}
+      \range{pages}{159}
+      \verb{urlraw}
+      \verb https://projecteuclid.org:443/euclid.bams/1183545202
+      \endverb
+      \verb{url}
+      \verb https://projecteuclid.org:443/euclid.bams/1183545202
+      \endverb
+    \endentry
+    \entry{Matthew}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=730cef20d9e3f75946b8b1bb160dfcdd}{%
+           family={Matthew},
+           familyi={M\bibinitperiod},
+           given={Akhil},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{730cef20d9e3f75946b8b1bb160dfcdd}
+      \strng{fullhash}{730cef20d9e3f75946b8b1bb160dfcdd}
+      \strng{bibnamehash}{730cef20d9e3f75946b8b1bb160dfcdd}
+      \strng{authorbibnamehash}{730cef20d9e3f75946b8b1bb160dfcdd}
+      \strng{authornamehash}{730cef20d9e3f75946b8b1bb160dfcdd}
+      \strng{authorfullhash}{730cef20d9e3f75946b8b1bb160dfcdd}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://math.uchicago.edu/~amathew/dirac.pdf}}
+      \field{title}{The Dirac Operator}
+    \endentry
+    \entry{Rudyak}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d707935c3c84e02dbd17f21f258463e1}{%
+           family={Rudyak},
+           familyi={R\bibinitperiod},
+           given={Yuli},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{d707935c3c84e02dbd17f21f258463e1}
+      \strng{fullhash}{d707935c3c84e02dbd17f21f258463e1}
+      \strng{bibnamehash}{d707935c3c84e02dbd17f21f258463e1}
+      \strng{authorbibnamehash}{d707935c3c84e02dbd17f21f258463e1}
+      \strng{authornamehash}{d707935c3c84e02dbd17f21f258463e1}
+      \strng{authorfullhash}{d707935c3c84e02dbd17f21f258463e1}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://hopf.math.purdue.edu/Rudyak/PLstructures.pdf}}
+      \field{title}{Piecewise Linear Structures on Topological Manifolds}
+    \endentry
+    \entry{Dietmar99}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ffa6ea9470e7e504315bbab9117eaee6}{%
+           family={Salamon},
+           familyi={S\bibinitperiod},
+           given={Dietmar},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{ffa6ea9470e7e504315bbab9117eaee6}
+      \strng{fullhash}{ffa6ea9470e7e504315bbab9117eaee6}
+      \strng{bibnamehash}{ffa6ea9470e7e504315bbab9117eaee6}
+      \strng{authorbibnamehash}{ffa6ea9470e7e504315bbab9117eaee6}
+      \strng{authornamehash}{ffa6ea9470e7e504315bbab9117eaee6}
+      \strng{authorfullhash}{ffa6ea9470e7e504315bbab9117eaee6}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://people.math.ethz.ch/~salamon/PREPRINTS/witsei.pdf}}
+      \field{title}{Spin Geometry and Seiberg-Witten Invariants}
+      \field{year}{1999}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Weston}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=28655d8dc52914fb7617ec3f5c4b4424}{%
+           family={Weston},
+           familyi={W\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{28655d8dc52914fb7617ec3f5c4b4424}
+      \strng{fullhash}{28655d8dc52914fb7617ec3f5c4b4424}
+      \strng{bibnamehash}{28655d8dc52914fb7617ec3f5c4b4424}
+      \strng{authorbibnamehash}{28655d8dc52914fb7617ec3f5c4b4424}
+      \strng{authornamehash}{28655d8dc52914fb7617ec3f5c4b4424}
+      \strng{authorfullhash}{28655d8dc52914fb7617ec3f5c4b4424}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://people.math.umass.edu/~weston/oldpapers/cobord.pdf}}
+      \field{title}{An Introduction to Cobordism Theory}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

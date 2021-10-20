@@ -1,0 +1,179 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Table of Contents}{2}{section*.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Preface}{5}{section.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1}Some general resources}{5}{subsection.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2}Definitions}{5}{subsection.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3}Results/Conjectures}{6}{subsection.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4}Generic Notes}{7}{subsection.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.4.1}Major Objects}{8}{subsubsection.1.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Danny Krashen, Talk 1 (Monday, July 12)}{8}{section.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Intro}{8}{subsection.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Galois Cohomology}{9}{subsection.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3}Milnor K-Theory}{10}{subsection.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4}Witt Ring}{10}{subsection.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5}Motivic Cohomology}{11}{subsection.2.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6}Dimension}{12}{subsection.2.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.7}Structural Problems in Galois Cohomology}{13}{subsection.2.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.7.1}Period-Index Problems}{14}{subsubsection.2.7.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.7.2}Symbol Length Problem}{14}{subsubsection.2.7.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Danny Krashen, Talk 2 (Tuesday, July 13)}{15}{section.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Setup}{15}{subsection.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Symbol Length}{16}{subsection.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3}Pfister Forms}{17}{subsection.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4}Canonical Dimension}{19}{subsection.3.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5}Splitting Schemes}{19}{subsection.3.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Phillippe Gille, Talk 1 (Monday, July 12)}{20}{section.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Intro}{20}{subsection.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2}Serre-Swan and Vector Group Schemes}{21}{subsection.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3}Vector Bundles over Affine Schemes}{22}{subsection.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4}Linear Groups}{23}{subsection.4.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5}Classification of Modules over a Dedekind Ring}{25}{subsection.4.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.6}Replacing the Zariski Topology}{26}{subsection.4.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Phillippe Gille, Talk 2 (Tuesday, July 13)}{32}{section.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}Intro}{32}{subsection.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2}Galois Covers}{33}{subsection.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3}Flat Quotients}{33}{subsection.5.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4}Galois Cohomology}{35}{subsection.5.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.5}Curves Over an Algebraically Closed Field}{36}{subsection.5.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.6}Affine Line}{37}{subsection.5.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Frédéric Déglise, Talk 1 (Wednesday, July 14)}{38}{section.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1}Intro}{38}{subsection.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2}Setting up sheaves with transfers}{39}{subsection.6.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.2.1}Finite Correspondences}{39}{subsubsection.6.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.2.2}Presheaves with transfers}{41}{subsubsection.6.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.2.3}Nisnevich Sheaves}{41}{subsubsection.6.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.2.4}Sheaves with transfers}{42}{subsubsection.6.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3}Homotopy and Cohomology}{43}{subsection.6.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.3.1}\({\mathbb {A}}^1{\hbox {-}}\)invariance and Homotopic Morphisms}{43}{subsubsection.6.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.3.2}Cohomology of Perfect Fields}{45}{subsubsection.6.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.3.3}Homotopy Invariance}{45}{subsubsection.6.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.3.4}Relation to Chow}{46}{subsubsection.6.3.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Frédéric Déglise, Talk 2 (Thursday, July 15)}{46}{section.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1}Intro}{46}{subsection.7.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2}The homotopy category}{46}{subsection.7.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3}\({\mathbb {A}}^1{\hbox {-}}\)locality}{48}{subsection.7.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4}Motives}{49}{subsection.7.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.5}Motivic Cohomology}{49}{subsection.7.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.6}Stable Six Functors}{50}{subsection.7.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.7}Stabilization}{50}{subsection.7.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.8}Rational Homotopy}{52}{subsection.7.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}Kirsten Wickelgren, Talk 1 (Wednesday, July 14)}{53}{section.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1}Intro}{53}{subsection.8.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2}Classical Theory}{53}{subsection.8.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.3}Over arbitrary fields: Grothendieck-Witt}{55}{subsection.8.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.4}Homotopy}{57}{subsection.8.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.5}Big Problems}{60}{subsection.8.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.6}Counting Things}{60}{subsection.8.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.7}Euler Numbers}{61}{subsection.8.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9}Kirsten Wickelgren, Talk 2 (Friday, July 16)}{62}{section.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.1}Intro}{62}{subsection.9.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.2}\({\mathbb {A}}^1{\hbox {-}}\)Milnor numbers}{64}{subsection.9.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.3}\({\mathbb {A}}^1{\hbox {-}}\)Euler characteristic \(\chi ^{{\mathbb {A}}^1}\)}{67}{subsection.9.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.4}Cohomology and the Euler Class}{68}{subsection.9.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.5}Oriented Cohomology Theories and Euler Numbers}{70}{subsection.9.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.6}Arithmetic count of lines on a smooth cubic surface (joint with Jesse Kass)}{72}{subsection.9.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10}Matthew Morrow, Talk 1 (Thursday, July 15)}{74}{section.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.1}Intro}{74}{subsection.10.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.2}\({\mathsf {K}}_0\) and \({\mathsf {K}}_1\)}{75}{subsection.10.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.3}Higher Algebraic \({\mathsf {K}}{\hbox {-}}\)theory}{77}{subsection.10.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.4}Arrival of Motivic Cohomology}{79}{subsection.10.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.5}Big Conjecture}{79}{subsection.10.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.6}Milnor \({\mathsf {K}}{\hbox {-}}\)theory and Bloch-Kato}{81}{subsection.10.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11}Matthew Morrow, Talk 2 (Friday, July 16)}{82}{section.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.1}Mod \(p\) motivic cohomology in characteristic \(p\)}{82}{subsection.11.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.2}Variants on a theme}{85}{subsection.11.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.2.1}\({\mathsf {G}}{\hbox {-}}\)theory}{85}{subsubsection.11.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.2.2}\({\mathsf {K}}^{\scriptscriptstyle \mathrm {H}} {\hbox {-}}\)theory}{85}{subsubsection.11.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.2.3}Motivic cohomology with modulus}{86}{subsubsection.11.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.3}Étale \({\mathsf {K}}{\hbox {-}}\)theory}{86}{subsection.11.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.4}Recent Progress}{87}{subsection.11.4}%
+\defcounter {refsection}{0}\relax 
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

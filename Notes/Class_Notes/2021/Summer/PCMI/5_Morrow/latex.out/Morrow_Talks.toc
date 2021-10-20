@@ -1,0 +1,35 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Table of Contents}{2}{section*.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Matthew Morrow, Talk 1 (Thursday, July 15)}{3}{section.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1}Intro}{3}{subsection.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2}\({\mathsf {K}}_0\) and \({\mathsf {K}}_1\)}{3}{subsection.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3}Higher Algebraic \({\mathsf {K}}{\hbox {-}}\)theory}{6}{subsection.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4}Arrival of Motivic Cohomology}{7}{subsection.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.5}Big Conjecture}{8}{subsection.1.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.6}Milnor \({\mathsf {K}}{\hbox {-}}\)theory and Bloch-Kato}{10}{subsection.1.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Matthew Morrow, Talk 2 (Friday, July 16)}{11}{section.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Mod \(p\) motivic cohomology in characteristic \(p\)}{11}{subsection.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Variants on a theme}{14}{subsection.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.1}\({\mathsf {G}}{\hbox {-}}\)theory}{14}{subsubsection.2.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.2}\({\mathsf {K}}^{\scriptscriptstyle \mathrm {H}} {\hbox {-}}\)theory}{14}{subsubsection.2.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.3}Motivic cohomology with modulus}{15}{subsubsection.2.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3}Étale \({\mathsf {K}}{\hbox {-}}\)theory}{15}{subsection.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4}Recent Progress}{16}{subsection.2.4}%
+\defcounter {refsection}{0}\relax 
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
