@@ -521,82 +521,128 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {?}}{59}{thmt@dummyctr.dummy.261}%
 \defcounter {refsection}{0}\relax 
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace 24.0.1\else \numberline {24.0.1}Remark\fi }{60}{remark.24.0.1}%
+\contentsline {question}{\ifthmt@listswap Question\nobreakspace 24.1.1\else \numberline {24.1.1}Question\fi }{61}{question.24.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace 24.0.2\else \numberline {24.0.2}Definition\fi \thmtformatoptarg {Classical AG}}{61}{definition.24.0.2}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace 24.1.2\else \numberline {24.1.2}Definition\fi \thmtformatoptarg {Dimension}}{61}{definition.24.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace 24.0.3\else \numberline {24.0.3}Definition\fi \thmtformatoptarg {Colimit of a diagram}}{61}{definition.24.0.3}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace 24.1.3\else \numberline {24.1.3}Example\fi \thmtformatoptarg {?}}{61}{example.24.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace 25.1.1\else \numberline {25.1.1}Remark\fi }{62}{remark.25.1.1}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace 24.1.4\else \numberline {24.1.4}Example\fi \thmtformatoptarg {?}}{61}{example.24.1.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace 25.2.1\else \numberline {25.2.1}Remark\fi }{62}{remark.25.2.1}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace 24.1.5\else \numberline {24.1.5}Remark\fi }{62}{remark.24.1.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace 25.2.2\else \numberline {25.2.2}Remark\fi }{63}{remark.25.2.2}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace 24.1.6\else \numberline {24.1.6}Definition\fi \thmtformatoptarg {Codimension}}{62}{definition.24.1.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {problem}{\ifthmt@listswap Problem\nobreakspace 25.2.1\else \numberline {25.2.1}Problem\fi \thmtformatoptarg {1.1}}{63}{problem.25.2.1}%
+\contentsline {fact}{\ifthmt@listswap Fact\nobreakspace 24.1.7\else \numberline {24.1.7}Fact\fi }{62}{fact.24.1.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{63}{thmt@dummyctr.dummy.269}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace 24.1.8\else \numberline {24.1.8}Remark\fi }{62}{remark.24.1.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {problem}{\ifthmt@listswap Problem\nobreakspace 25.2.2\else \numberline {25.2.2}Problem\fi \thmtformatoptarg {1.2}}{67}{problem.25.2.2}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace 24.1.9\else \numberline {24.1.9}Example\fi \thmtformatoptarg {?}}{62}{example.24.1.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {of 1, kernels}}{67}{thmt@dummyctr.dummy.271}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace 24.2.1\else \numberline {24.2.1}Remark\fi }{63}{remark.24.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {of 1, images}}{67}{thmt@dummyctr.dummy.272}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace 24.2.2\else \numberline {24.2.2}Definition\fi \thmtformatoptarg {Fiber products}}{63}{definition.24.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {of 2, injectivity}}{68}{thmt@dummyctr.dummy.273}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace 24.2.3\else \numberline {24.2.3}Remark\fi }{64}{remark.24.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {of 2, surjectivity}}{69}{thmt@dummyctr.dummy.274}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace 25.0.1\else \numberline {25.0.1}Remark\fi }{64}{remark.25.0.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {of 3, exactness}}{69}{thmt@dummyctr.dummy.275}%
+\contentsline {question}{\ifthmt@listswap Question\nobreakspace 25.0.2\else \numberline {25.0.2}Question\fi }{64}{question.25.0.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {problem}{\ifthmt@listswap Problem\nobreakspace 25.2.3\else \numberline {25.2.3}Problem\fi \thmtformatoptarg {1.3}}{70}{problem.25.2.3}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace 25.0.3\else \numberline {25.0.3}Theorem\fi \thmtformatoptarg {Existence of fiber products}}{65}{theorem.25.0.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {of 1}}{70}{thmt@dummyctr.dummy.277}%
+\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {Step 1: Prove for $X, Y, S$ are affine.}}{65}{thmt@dummyctr.dummy.277}%
 \defcounter {refsection}{0}\relax 
-\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {of 2}}{70}{thmt@dummyctr.dummy.278}%
+\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {Step 3: Gluing morphisms on covers}}{65}{thmt@dummyctr.dummy.278}%
 \defcounter {refsection}{0}\relax 
-\contentsline {problem}{\ifthmt@listswap Problem\nobreakspace 25.2.4\else \numberline {25.2.4}Problem\fi \thmtformatoptarg {1.4}}{71}{problem.25.2.4}%
+\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {Step 4: Passing to open subsets of a factor}}{65}{thmt@dummyctr.dummy.279}%
 \defcounter {refsection}{0}\relax 
-\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {of a}}{71}{thmt@dummyctr.dummy.280}%
+\contentsline {claim}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Claim}{65}{thmt@dummyctr.dummy.280}%
 \defcounter {refsection}{0}\relax 
-\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {of b}}{72}{thmt@dummyctr.dummy.281}%
+\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {?}}{66}{thmt@dummyctr.dummy.281}%
 \defcounter {refsection}{0}\relax 
-\contentsline {problem}{\ifthmt@listswap Problem\nobreakspace 25.2.5\else \numberline {25.2.5}Problem\fi \thmtformatoptarg {1.5}}{72}{problem.25.2.5}%
+\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {Step 5: Gluing fiber products from an open cover}}{66}{thmt@dummyctr.dummy.282}%
 \defcounter {refsection}{0}\relax 
-\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {?}}{72}{thmt@dummyctr.dummy.283}%
+\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {Step 6: Affine base}}{67}{thmt@dummyctr.dummy.283}%
 \defcounter {refsection}{0}\relax 
-\contentsline {exercise}{\ifthmt@listswap Exercise\nobreakspace 25.4.1\else \numberline {25.4.1}Exercise\fi \thmtformatoptarg {II.1.8}}{73}{exercise.25.4.1}%
+\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {Step 7: Arbitrary}}{67}{thmt@dummyctr.dummy.284}%
 \defcounter {refsection}{0}\relax 
-\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{73}{thmt@dummyctr.dummy.285}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace 26.0.1\else \numberline {26.0.1}Remark\fi }{68}{remark.26.0.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {exercise}{\ifthmt@listswap Exercise\nobreakspace 25.4.2\else \numberline {25.4.2}Exercise\fi \thmtformatoptarg {II.1.14}}{76}{exercise.25.4.2}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace 26.0.2\else \numberline {26.0.2}Definition\fi \thmtformatoptarg {Classical AG}}{68}{definition.26.0.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{76}{thmt@dummyctr.dummy.287}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace 26.0.3\else \numberline {26.0.3}Definition\fi \thmtformatoptarg {Colimit of a diagram}}{69}{definition.26.0.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {exercise}{\ifthmt@listswap Exercise\nobreakspace 25.4.3\else \numberline {25.4.3}Exercise\fi \thmtformatoptarg {II.1.17}}{77}{exercise.25.4.3}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace 27.1.1\else \numberline {27.1.1}Remark\fi }{69}{remark.27.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{78}{thmt@dummyctr.dummy.289}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace 27.2.1\else \numberline {27.2.1}Remark\fi }{70}{remark.27.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {exercise}{\ifthmt@listswap Exercise\nobreakspace 25.5.1\else \numberline {25.5.1}Exercise\fi \thmtformatoptarg {II.2.1}}{78}{exercise.25.5.1}%
+\contentsline {remark}{\ifthmt@listswap Remark\nobreakspace 27.2.2\else \numberline {27.2.2}Remark\fi }{70}{remark.27.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {strategy}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Strategy}{78}{thmt@dummyctr.dummy.291}%
+\contentsline {problem}{\ifthmt@listswap Problem\nobreakspace 27.2.1\else \numberline {27.2.1}Problem\fi \thmtformatoptarg {1.1}}{71}{problem.27.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{78}{thmt@dummyctr.dummy.292}%
+\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{71}{thmt@dummyctr.dummy.292}%
 \defcounter {refsection}{0}\relax 
-\contentsline {exercise}{\ifthmt@listswap Exercise\nobreakspace 25.5.2\else \numberline {25.5.2}Exercise\fi \thmtformatoptarg {II.2.3}}{80}{exercise.25.5.2}%
+\contentsline {problem}{\ifthmt@listswap Problem\nobreakspace 27.2.2\else \numberline {27.2.2}Problem\fi \thmtformatoptarg {1.2}}{75}{problem.27.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {strategy}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Strategy}{80}{thmt@dummyctr.dummy.294}%
+\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {of 1, kernels}}{75}{thmt@dummyctr.dummy.294}%
 \defcounter {refsection}{0}\relax 
-\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution\thmtformatoptarg {1}}{81}{thmt@dummyctr.dummy.295}%
+\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {of 1, images}}{75}{thmt@dummyctr.dummy.295}%
 \defcounter {refsection}{0}\relax 
-\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution\thmtformatoptarg {2}}{81}{thmt@dummyctr.dummy.296}%
+\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {of 2, injectivity}}{76}{thmt@dummyctr.dummy.296}%
 \defcounter {refsection}{0}\relax 
-\contentsline {exercise}{\ifthmt@listswap Exercise\nobreakspace 25.5.3\else \numberline {25.5.3}Exercise\fi \thmtformatoptarg {II.2.5}}{81}{exercise.25.5.3}%
+\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {of 2, surjectivity}}{77}{thmt@dummyctr.dummy.297}%
 \defcounter {refsection}{0}\relax 
-\contentsline {strategy}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Strategy}{81}{thmt@dummyctr.dummy.298}%
+\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {of 3, exactness}}{77}{thmt@dummyctr.dummy.298}%
 \defcounter {refsection}{0}\relax 
-\contentsline {exercise}{\ifthmt@listswap Exercise\nobreakspace 25.5.4\else \numberline {25.5.4}Exercise\fi \thmtformatoptarg {II.2.7}}{81}{exercise.25.5.4}%
+\contentsline {problem}{\ifthmt@listswap Problem\nobreakspace 27.2.3\else \numberline {27.2.3}Problem\fi \thmtformatoptarg {1.3}}{78}{problem.27.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {strategy}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Strategy}{81}{thmt@dummyctr.dummy.300}%
+\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {of 1}}{78}{thmt@dummyctr.dummy.300}%
 \defcounter {refsection}{0}\relax 
-\contentsline {warnings}{\ifthmt@listswap Warning\nobreakspace 25.5.5\else \numberline {25.5.5}Warning\fi }{81}{warnings.25.5.5}%
+\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {of 2}}{78}{thmt@dummyctr.dummy.301}%
+\defcounter {refsection}{0}\relax 
+\contentsline {problem}{\ifthmt@listswap Problem\nobreakspace 27.2.4\else \numberline {27.2.4}Problem\fi \thmtformatoptarg {1.4}}{79}{problem.27.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {of a}}{79}{thmt@dummyctr.dummy.303}%
+\defcounter {refsection}{0}\relax 
+\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {of b}}{80}{thmt@dummyctr.dummy.304}%
+\defcounter {refsection}{0}\relax 
+\contentsline {problem}{\ifthmt@listswap Problem\nobreakspace 27.2.5\else \numberline {27.2.5}Problem\fi \thmtformatoptarg {1.5}}{80}{problem.27.2.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {pf}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Proof\thmtformatoptarg {?}}{80}{thmt@dummyctr.dummy.306}%
+\defcounter {refsection}{0}\relax 
+\contentsline {exercise}{\ifthmt@listswap Exercise\nobreakspace 27.4.1\else \numberline {27.4.1}Exercise\fi \thmtformatoptarg {II.1.8}}{81}{exercise.27.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{81}{thmt@dummyctr.dummy.308}%
+\defcounter {refsection}{0}\relax 
+\contentsline {exercise}{\ifthmt@listswap Exercise\nobreakspace 27.4.2\else \numberline {27.4.2}Exercise\fi \thmtformatoptarg {II.1.14}}{84}{exercise.27.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{84}{thmt@dummyctr.dummy.310}%
+\defcounter {refsection}{0}\relax 
+\contentsline {exercise}{\ifthmt@listswap Exercise\nobreakspace 27.4.3\else \numberline {27.4.3}Exercise\fi \thmtformatoptarg {II.1.17}}{85}{exercise.27.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{86}{thmt@dummyctr.dummy.312}%
+\defcounter {refsection}{0}\relax 
+\contentsline {exercise}{\ifthmt@listswap Exercise\nobreakspace 27.5.1\else \numberline {27.5.1}Exercise\fi \thmtformatoptarg {II.2.1}}{86}{exercise.27.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {strategy}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Strategy}{86}{thmt@dummyctr.dummy.314}%
+\defcounter {refsection}{0}\relax 
+\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{86}{thmt@dummyctr.dummy.315}%
+\defcounter {refsection}{0}\relax 
+\contentsline {exercise}{\ifthmt@listswap Exercise\nobreakspace 27.5.2\else \numberline {27.5.2}Exercise\fi \thmtformatoptarg {II.2.3}}{88}{exercise.27.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {strategy}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Strategy}{88}{thmt@dummyctr.dummy.317}%
+\defcounter {refsection}{0}\relax 
+\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution\thmtformatoptarg {1}}{89}{thmt@dummyctr.dummy.318}%
+\defcounter {refsection}{0}\relax 
+\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution\thmtformatoptarg {2}}{89}{thmt@dummyctr.dummy.319}%
+\defcounter {refsection}{0}\relax 
+\contentsline {exercise}{\ifthmt@listswap Exercise\nobreakspace 27.5.3\else \numberline {27.5.3}Exercise\fi \thmtformatoptarg {II.2.5}}{89}{exercise.27.5.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {strategy}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Strategy}{89}{thmt@dummyctr.dummy.321}%
+\defcounter {refsection}{0}\relax 
+\contentsline {exercise}{\ifthmt@listswap Exercise\nobreakspace 27.5.4\else \numberline {27.5.4}Exercise\fi \thmtformatoptarg {II.2.7}}{89}{exercise.27.5.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {strategy}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Strategy}{89}{thmt@dummyctr.dummy.323}%
+\defcounter {refsection}{0}\relax 
+\contentsline {warnings}{\ifthmt@listswap Warning\nobreakspace 27.5.5\else \numberline {27.5.5}Warning\fi }{89}{warnings.27.5.5}%

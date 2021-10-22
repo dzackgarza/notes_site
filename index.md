@@ -17,6 +17,7 @@ template:
 - [Browse by tag](-/tags)
 - [Browse all](-/all)
 - [[Obsidian/Changelog]]
+- A clearly broken link: [[so super broken]]
 
 :::{class="grid grid-flow-row grid-cols-1 gap-0 p-3 lg:grid-cols-2"}
 

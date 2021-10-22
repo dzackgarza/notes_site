@@ -2213,6 +2213,288 @@ So pass to an open affine cover. We'll have \( (A_i) \left[ { \scriptstyle { {f}
 .\]
 :::
 
+# Monday, October 18
+
+## Dimension
+
+::: {.question}
+If \( X = \operatorname{Spec}A \) is affine and \( U \subset { {\left\lvert {X} \right\rvert} } \) is open, is the inclusion \( U \hookrightarrow X \), represented say by \( \operatorname{Spec}A' \hookrightarrow\operatorname{Spec}A \), represented by a ring map \( A\to A' \)?
+:::
+
+::: {.definition title="Dimension"}
+For \( X\in {\mathsf{Sch}} \), write \( \dim X \coloneqq\dim_{\mathsf{Top}}{ {\left\lvert {X} \right\rvert} } \) as the topological dimension of the underlying space, which is the length of the longest chain of irreducible closed subsets
+\[
+\emptyset \subsetneq Z_0 \subseteq Z_1 \subsetneq \cdots \subsetneq Z_n \subseteq { {\left\lvert {X} \right\rvert} }
+,\]
+where equality at the end is possible if \( { {\left\lvert {X} \right\rvert} } \) is irreducible.
+:::
+
+::: {.example title="?"}
+```{=tex}
+\envlist
+```
+-   \( \dim \operatorname{Spec}k = 0 \)
+-   \( \dim \operatorname{Spec}{ {\mathbb{Z}}_p } \): consider \( \emptyset \subsetneq {\operatorname{pt}}\subseteq \operatorname{Spec}{ {\mathbb{Z}}_p } \), where \( {\operatorname{pt}} \) is a generic point, so \( \dim \operatorname{Spec}{ {\mathbb{Z}}_p }= 1 \).
+-   \( \dim {\mathbb{P}}^n_{/ {k}}  = \dim {\mathbb{A}}^n_{/ {k}}  = n \).
+:::
+
+::: {.example title="?"}
+If \( X = \operatorname{Spec}A \) is affine for \( A \) then \( \dim X = \operatorname{krulldim}A \) is the Krull dimension of the ring \( A \). This follows because irreducible closed subsets of \( \operatorname{Spec}A \) biject with prime ideals of \( A \). Why is this true?
+
+\( \impliedby \):
+
+Suppose \( p\subseteq A \) is prime, then note that \( V(p) = \left\{{q \in \operatorname{Spec}A {~\mathrel{\Big|}~}q \supseteq p}\right\} \). If \( V(p) = V(I) \cup V(J) = V(IJ) \), then \( p \supseteq IJ \) so \( p \) contains one of \( I, J \). But then \( V(p) = V(I) \) wlog, so \( V(p) \) is an irreducible closed subset.
+
+\( \implies \): We can reverse almost all of these implications:
+
+-   \( V(p) = V(IJ) \)
+-   \( \iff p\supseteq IJ \)
+-   \( \iff p \subseteq I \) or \( p \subseteq J \)
+-   \( \iff V(p) = V(I) \) or \( V(J) \).
+
+Note that bijections preserve strict containments, so we have correspondences on chains:
+\[
+\emptyset \subsetneq Z_0 \subsetneq \cdots \subsetneq Z_n \subset X = \operatorname{Spec}A \\
+\iff \\
+\left\langle{1}\right\rangle \supsetneq p_0 \supsetneq \cdots \supsetneq p_n
+.\]
+:::
+
+::: {.remark}
+So we can use that \( \operatorname{krulldim}k[x_1, \cdots, x_{n}]= n \) to show \( \dim {\mathbb{A}}^n_{/ {k}}  = n \). For \( {\mathbb{P}}^n_{/ {k}}  \), use that any maximal chain contains a point \( \left\{{z_0}\right\} \), so choosing such a point and intersecting \( z_i \) with the embedded copy of \( {\mathbb{A}}^n_{/ {k}} \hookrightarrow{\mathbb{P}}^n_{/ {k}}  \). Then use that there is a chain \( \left\langle{0}\right\rangle \subsetneq \left\langle{x_1}\right\rangle \subsetneq \left\langle{x_1, x_2}\right\rangle \cdots \subsetneq \left\langle{x_1,\cdots, x_n}\right\rangle \), so \( \dim X \geq n \). For the reverse inequality: this is hard! See Atiyah-MacDonald's discussion of regular systems of parameters.
+:::
+
+::: {.definition title="Codimension"}
+The **codimension** \( \operatorname{codim}(Z, X) \) for \( Z \subseteq X \) a closed irreducible subset is the length of the longest chain starting at \( Z \):
+\[
+Z = Z_0 \subsetneq Z_1 \subsetneq \cdots \subsetneq Z_n \subset X
+.\]
+:::
+
+::: {.fact}
+For \( X = \operatorname{Spec}A \) and \( A\in {\mathsf{Alg}_{/k} }^{\mathrm{fg}} \), there is a formula
+\[
+\dim(Z) + \operatorname{codim}(X, Z) = \dim (X)
+.\]
+:::
+
+::: {.remark}
+This is not true in general, even for Noetherian rings -- see **catenary rings**, where any chain of prime ideals can be extended to a chain of fixed maximal length \( n \). Without this, one can extend chains to maximal chains of differing lengths.
+:::
+
+::: {.example title="?"}
+\( \dim \operatorname{Spec}{\mathbb{Z}}= 1 \), instead of having dimension zero! This is because there's always a chain \( 0 \to \left\langle{p}\right\rangle \to {\mathbb{Z}} \) for any prime. An analogy here is a curve \( \operatorname{Spec}k[x, y] / \left\langle{f(x, y)}\right\rangle \):
+
+```{=tex}
+\begin{tikzpicture}
+\fontsize{45pt}{1em} 
+\node (node_one) at (0,0) { \import{/home/zack/SparkleShare/github.com/Notes/Class_Notes/2021/Fall/Schemes/sections/figures}{2021-10-18_12-16.pdf_tex} };
+\end{tikzpicture}
+```
+One can similarly do this for \( {\mathcal{O}}_K \) the ring of integers in a number field \( K \) and get \( \dim \operatorname{Spec}{\mathcal{O}}_K = 1 \). This leads to a good theory of divisors (free modules on codimension 1 subvarieties) and the Picard group, so a useful geometrization of number theory.
+:::
+
+## Fiber Products
+
+::: {.remark}
+Perhaps the most important construction in schemes! Picks up intersection multiplicities.
+:::
+
+::: {.definition title="Fiber products"}
+Let \( X, Y \in {\mathsf{Sch}}_{/ {S}}  \) then \( X{ \underset{\scriptscriptstyle {S} }{\times} } Y \in {\mathsf{Sch}}_{/ {S}}  \) is an \( S{\hbox{-}} \)scheme equipped with morphisms of \( S{\hbox{-}} \)schemes onto \( X, Y \) satisfying a universal property. For any \( Z \) with maps to \( X \) and \( Y \), there is a unique \( \theta \) making the following diagram commute:
+
+```{=tex}
+\begin{tikzcd}
+    & Z \\
+    & {} \\
+    & {X{ \underset{\scriptscriptstyle {S} }{\times} } Y} \\
+    Y && X \\
+    & S
+    \arrow[from=4-1, to=5-2]
+    \arrow[from=4-3, to=5-2]
+    \arrow[from=1-2, to=4-1]
+    \arrow[from=1-2, to=4-3]
+    \arrow["{\exists !\theta}"{description}, dashed, from=1-2, to=3-2]
+    \arrow[from=3-2, to=4-1]
+    \arrow[from=3-2, to=4-3]
+\end{tikzcd}
+```
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNixbMSwwLCJaIl0sWzAsMywiWSJdLFsyLDMsIlgiXSxbMSw0LCJTIl0sWzEsMV0sWzEsMiwiWFxcZnB7U30gWSJdLFsxLDNdLFsyLDNdLFswLDFdLFswLDJdLFswLDUsIlxcZXhpc3RzICFcXHRoZXRhIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzUsMV0sWzUsMl1d)
+:::
+
+::: {.remark}
+Note that on the ring side, this yields a tensor product over \( S \).
+:::
+
+# Wednesday, October 20
+
+::: {.remark}
+Today: only the most important property of schemes, the existence of fiber products! Let \( X, Y\in {\mathsf{Sch}}_{/ {S}}  \), then the fiber product \( X{ \underset{\scriptscriptstyle {S} }{\times} } Y \in {\mathsf{Sch}}_{/ {S}}  \) is an object satisfying a universal property:
+
+```{=tex}
+\begin{tikzcd}
+    {\forall Z} \\
+    \\
+    && {X{ \underset{\scriptscriptstyle {S} }{\times} } Y} && X \\
+    &&& {} \\
+    && Y && Z
+    \arrow[from=5-3, to=5-5]
+    \arrow[from=3-5, to=5-5]
+    \arrow["{\exists! \theta}"{description}, dashed, from=1-1, to=3-3]
+    \arrow["\beta"{description}, from=1-1, to=3-5]
+    \arrow["\alpha"{description}, from=1-1, to=5-3]
+    \arrow["p"{description}, from=3-3, to=5-3]
+    \arrow["q"{description}, from=3-3, to=3-5]
+\end{tikzcd}
+```
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNixbMiwyLCJYXFxmcHtTfSBZIl0sWzMsM10sWzQsMiwiWCJdLFsyLDQsIlkiXSxbNCw0LCJaIl0sWzAsMCwiXFxmb3JhbGwgWiJdLFszLDRdLFsyLDRdLFs1LDAsIlxcZXhpc3RzISBcXHRoZXRhIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzUsMiwiXFxiZXRhIiwxXSxbNSwzLCJcXGFscGhhIiwxXSxbMCwzLCJwIiwxXSxbMCwyLCJxIiwxXV0=)
+
+Note that needing the square involving \( Z \) and \( X{ \underset{\scriptscriptstyle {S} }{\times} } Y \) to commute is automatic, since we're working in \( {\mathsf{Sch}}_{/ {S}}  \) instead of just \( {\mathsf{Sch}} \). Note that \( X\times Y = X{ \underset{\scriptscriptstyle {\operatorname{Spec}{\mathbb{Z}}} }{\times} } Y \) recovers the product.
+:::
+
+::: {.question}
+Do fiber products exist? They're unique up to isomorphism if they do, so we just need to construct it.
+:::
+
+::: {.theorem title="Existence of fiber products"}
+Fiber products exist and are unique up to isomorphism.
+:::
+
+## The 7-Step Proof
+
+::: {.proof title="Step 1: Prove for $X, Y, S$ are affine."}
+Write \( X = \operatorname{Spec}A, Y= \operatorname{Spec}B, S = \operatorname{Spec}R \). We start in \( \mathsf{Ring} \), and noting contravariance of \( \operatorname{Spec}({-}) \), the claim is that \( \operatorname{Spec}(A\otimes_R B) \cong X{ \underset{\scriptscriptstyle {S} }{\times} } Y \). Use that \( \operatorname{Spec}: \mathsf{Ring}\to {\mathsf{Sch}} \) is fully faithful, which almost allows just reversing arrows if some care is taken. A map \( Z\to \operatorname{Spec}A \) is the same data as a map \( A\to {\mathcal{O}}_Z(Z) \). Let \( {\mathcal{U}}\rightrightarrows Z \) with \( U_i = \operatorname{Spec}C_i \), then a morphism \( Z\to \operatorname{Spec}A \in {\mathsf{Sch}}_{/ {S}}  \) is equivalently a collection of compatible morphisms \( A\to C_i \in \mathsf{Ring} \) by the sheaf condition, so the restrictions to \( {\mathcal{O}}_{Z_i \cap Z_j} \) are compatible. So we can interchange any two diagrams of the following form:
+
+```{=tex}
+\begin{tikzcd}
+    Z & Y && {{\mathcal{O}}_Z(Z)} & B \\
+    X & S && A & R
+    \arrow[from=1-1, to=1-2]
+    \arrow[""{name=0, anchor=center, inner sep=0}, from=1-2, to=2-2]
+    \arrow[from=1-1, to=2-1]
+    \arrow[from=2-1, to=2-2]
+    \arrow[from=2-5, to=1-5]
+    \arrow[from=1-5, to=1-4]
+    \arrow[from=2-5, to=2-4]
+    \arrow[""{name=1, anchor=center, inner sep=0}, from=2-4, to=1-4]
+    \arrow[shorten <=14pt, shorten >=14pt, Rightarrow, from=0, to=1]
+\end{tikzcd}
+```
+> [Link to Diagram](https://q.uiver.app/?q=WzAsOCxbMCwwLCJaIl0sWzAsMSwiWCJdLFsxLDEsIlMiXSxbMSwwLCJZIl0sWzMsMCwiXFxPT19aKFopIl0sWzQsMCwiQiJdLFszLDEsIkEiXSxbNCwxLCJSIl0sWzAsM10sWzMsMl0sWzAsMV0sWzEsMl0sWzcsNV0sWzUsNF0sWzcsNl0sWzYsNF0sWzksMTUsIiIsMCx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH19XV0=)
+
+Now the universal property of \( A\otimes_R B \in \mathsf{Ring} \) yields a unique map \( A\otimes_R B \xrightarrow{\theta*} {\mathcal{O}}_Z(Z) \), so equivalently \( Z \xrightarrow{\theta} \operatorname{Spec}(A\otimes_R B) \).
+:::
+
+For step 2, the universal property will imply uniqueness if it exists, which we'll need for gluing.
+
+::: {.proof title="Step 3: Gluing morphisms on covers"}
+A morphism \( X \to Y\in {\mathsf{Sch}} \) is equivalently the data of \( {\mathcal{U}}\rightrightarrows X \) and morphism \( U_i \xrightarrow{f_i} Y \in {\mathsf{Sch}} \) with \( { \left.{{f_i}} \right|_{{U_i \cap U_j}} } = { \left.{{f_j}} \right|_{{U_i \cap U_j}} } \). This is true more generally for any \( X\in {\mathsf{Top}} \) and \( F\in {\mathsf{Sh}}_{/ {X}} (\mathsf{C}) \) with values in any category.
+:::
+
+::: {.proof title="Step 4: Passing to open subsets of a factor"}
+Let \( X, Y\in {\mathsf{Sch}}_{/ {S}}  \) be arbitrary and \( U \subseteq X \) open. If \( X{ \underset{\scriptscriptstyle {S} }{\times} } Y \) exists, it is equipped with morphisms \( q \) to \( X \) and \( p \) to \( Y \). Note that every open subset has a canonical open subscheme structure.
+
+::: {.claim}
+\( U { \underset{\scriptscriptstyle {S} }{\times} } Y \cong p^{-1}(U) \), noting that we don't yet know that fibers are schemes.
+:::
+
+::: {.proof title="?"}
+Let \( Z\in {\mathsf{Sch}}_{/ {S}}  \) such that we have the following:
+
+```{=tex}
+\begin{tikzcd}
+    Z && U && X \\
+    \\
+    Y
+    \arrow["\iota", hook, from=1-3, to=1-5]
+    \arrow["\alpha", from=1-1, to=1-3]
+    \arrow["\beta"', from=1-1, to=3-1]
+    \arrow["{\alpha'}", curve={height=-30pt}, from=1-1, to=1-5]
+\end{tikzcd}
+```
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMCwwLCJaIl0sWzIsMCwiVSJdLFs0LDAsIlgiXSxbMCwyLCJZIl0sWzEsMiwiXFxpb3RhIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMCwxLCJcXGFscGhhIl0sWzAsMywiXFxiZXRhIiwyXSxbMCwyLCJcXGFscGhhJyIsMCx7ImN1cnZlIjotNX1dXQ==)
+
+If \( X{ \underset{\scriptscriptstyle {S} }{\times} } Y \) exists, then \( \exists ! \theta: Z\to X{ \underset{\scriptscriptstyle {S} }{\times} } Y \). Then \( \Theta(Z) \subseteq p^{-1}(U) \) since \( p \circ \Theta = \alpha' \coloneqq\iota \circ \alpha \), so \( \operatorname{im}(p \circ \Theta) \subseteq U \). So \( \theta:Z\to p^{-1}(U) \) is unique, making \( p^{-1}(U) \cong U{ \underset{\scriptscriptstyle {S} }{\times} } Y \).
+:::
+
+So if \( X{ \underset{\scriptscriptstyle {S} }{\times} }Y \) exists then \( U{ \underset{\scriptscriptstyle {S} }{\times} } Y \) exists.
+:::
+
+::: {.proof title="Step 5: Gluing fiber products from an open cover"}
+Let \( X, Y\in {\mathsf{Sch}}_{/ {S}}  \) and suppose \( {\mathcal{X}}\rightrightarrows X \) where \( X_i { \underset{\scriptscriptstyle {S} }{\times} } Y \) exists, then the claim is that \( X{ \underset{\scriptscriptstyle {S} }{\times} } Y \) exists. Define \( X_{ij} \coloneqq X_i \cap X_j \), then by step 4 \( p_i^{-1}(X_{ij}) \) is a fiber product \( X_{ij}{ \underset{\scriptscriptstyle {S} }{\times} } Y \), and similarly \( p_j^{-1}(X_{ij}) = X_{ij} { \underset{\scriptscriptstyle {S} }{\times} } Y \). By uniqueness in step 2, there is a unique isomorphism \( \phi_{ij}: p_i^{-1}(X_{ij})\to p_j^{-1}(X_{ij}) \) of fiber products. Furthermore, the cocycle condition is satisfied since \( \phi_{ik} \) is unique, so \( \phi_{ij} \circ \phi_{jk} = \phi_{ik} \). These are schemes (or more generally any ringed space), so we can glue to get *some* scheme which we'll suggestively write \( X{ \underset{\scriptscriptstyle {S} }{\times} } Y \). The claim is that this satisfies the correct universal property. First: there are morphisms \( X{ \underset{\scriptscriptstyle {S} }{\times} } Y \xrightarrow{p} X \) and \( X{ \underset{\scriptscriptstyle {S} }{\times} } Y \xrightarrow{q} Y \). Note that the \( X{ \underset{\scriptscriptstyle {S} }{\times} } Y \) cover \( X_i { \underset{\scriptscriptstyle {S} }{\times} } Y \) and \( X = {\textstyle\coprod}X_i/\sim \) Define the following maps:
+
+```{=tex}
+\begin{tikzcd}
+    && {Z_i \coloneqq\alpha^{-1}(X_i)} && {X_i} \\
+    \\
+    Y && Z && X
+    \arrow["\alpha", from=3-3, to=3-5]
+    \arrow["\beta"', from=3-3, to=3-1]
+    \arrow[hook, from=1-3, to=3-3]
+    \arrow[hook, from=1-5, to=3-5]
+    \arrow["{{ \left.{{\alpha}} \right|_{{Z_i}} }}", from=1-3, to=1-5]
+    \arrow["{{ \left.{{\beta}} \right|_{{Z_i}} }}"', curve={height=30pt}, from=1-3, to=3-1]
+\end{tikzcd}
+```
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNSxbMiwyLCJaIl0sWzQsMiwiWCJdLFswLDIsIlkiXSxbMiwwLCJaX2kgXFxkYSBcXGFscGhhXFxpbnYoWF9pKSJdLFs0LDAsIlhfaSJdLFswLDEsIlxcYWxwaGEiXSxbMCwyLCJcXGJldGEiLDJdLFszLDAsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzQsMSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMyw0LCJcXHJve1xcYWxwaGF9e1pfaX0iXSxbMywyLCJcXHJve1xcYmV0YX17Wl9pfSIsMix7ImN1cnZlIjo1fV1d)
+
+Then \( \exists ! \Theta_i: Z_i\to X_i { \underset{\scriptscriptstyle {S} }{\times} } Y \) where the \( \Theta_i \) agree on overlaps \( Z_{ij} \) as morphisms \( Z_{ij} \to X_{ij}{ \underset{\scriptscriptstyle {S} }{\times} } Y \). By step 3, these glue to a unique \( \Theta: Z\to X{ \underset{\scriptscriptstyle {S} }{\times} } Y \), since the gluing is defined as \( X{ \underset{\scriptscriptstyle {S} }{\times} } Y = \displaystyle\coprod_i (X_i{ \underset{\scriptscriptstyle {S} }{\times} } Y)/\phi_{ij}(p) \sim p \). Why does it make the above diagram commute?
+
+```{=tex}
+\begin{tikzcd}
+    Z \\
+    \\
+    && {X{ \underset{\scriptscriptstyle {S} }{\times} } Y} && X \\
+    \\
+    && Y && S
+    \arrow[from=3-5, to=5-5]
+    \arrow[from=5-3, to=5-5]
+    \arrow[from=3-3, to=5-3]
+    \arrow[from=3-3, to=3-5]
+    \arrow["\Theta"{description}, from=1-1, to=3-3]
+    \arrow["\alpha", from=1-1, to=3-5]
+    \arrow["\beta", from=1-1, to=5-3]
+\end{tikzcd}
+```
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNSxbMiwyLCJYXFxmcHtTfSBZIl0sWzIsNCwiWSJdLFs0LDQsIlMiXSxbNCwyLCJYIl0sWzAsMCwiWiJdLFszLDJdLFsxLDJdLFswLDFdLFswLDNdLFs0LDAsIlxcVGhldGEiLDFdLFs0LDMsIlxcYWxwaGEiXSxbNCwxLCJcXGJldGEiXV0=)
+
+This commutes because such a map is determined on an open cover, and we have commutativity in the following:
+
+```{=tex}
+\begin{tikzcd}
+    {Z_i} \\
+    \\
+    && {X_i{ \underset{\scriptscriptstyle {S} }{\times} } Y} && X
+    \arrow["{\Theta_i}", from=1-1, to=3-3]
+    \arrow["{p_i}", from=3-3, to=3-5]
+    \arrow["{\alpha_i}", from=1-1, to=3-5]
+\end{tikzcd}
+```
+> [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJaX2kiXSxbMiwyLCJYX2lcXGZwe1N9IFkiXSxbNCwyLCJYIl0sWzAsMSwiXFxUaGV0YV9pIl0sWzEsMiwicF9pIl0sWzAsMiwiXFxhbHBoYV9pIl1d)
+
+So \( X{ \underset{\scriptscriptstyle {S} }{\times} } Y \) exists if \( X_i { \underset{\scriptscriptstyle {S} }{\times} } Y \) exists for \( {\mathcal{X}}\rightrightarrows X \).
+:::
+
+::: {.proof title="Step 6: Affine base"}
+Let \( S\in {\mathsf{Aff}}{\mathsf{Sch}} \), then by step 1 \( X_i { \underset{\scriptscriptstyle {S} }{\times} } Y_j \) exists, to \( X_i{ \underset{\scriptscriptstyle {S} }{\times} } Y \) exists by step 5, which implies \( X{ \underset{\scriptscriptstyle {S} }{\times} } Y \) exists
+:::
+
+::: {.proof title="Step 7: Arbitrary"}
+Let \( X,Y,S\in {\mathsf{Sch}}_{/ {S}}  \) be arbitrary. Take \( {\mathcal{S}}\rightrightarrows S \), and set \( X_i = p^{-1}(S_i) \) and \( Y_i = q^{-1}(S_i) \). Then \( X_i { \underset{\scriptscriptstyle {S_i} }{\times} } Y_i \) exists, and the claim is that there is an isomorphism
+\[
+X_i{ \underset{\scriptscriptstyle {S_i} }{\times} } Y_i \cong X{ \underset{\scriptscriptstyle {S} }{\times} } Y_i \in {\mathsf{Sch}}_{/ {S}} 
+.\]
+
+Then there exist \( Z\to Y_i \), and \( \operatorname{im}(Z\to S) \) must lie in \( S \).
+
+```{=tex}
+\begin{tikzpicture}
+\fontsize{45pt}{1em} 
+\node (node_one) at (0,0) { \import{/home/zack/SparkleShare/github.com/Notes/Class_Notes/2021/Fall/Schemes/sections/figures}{2021-10-20_12-32.pdf_tex} };
+\end{tikzpicture}
+```
+:::
+
 # Appendix
 
 ::: {.remark}

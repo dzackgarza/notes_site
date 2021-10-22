@@ -159,6 +159,9 @@ page:
       max-height: 200px;
       overflow-y: auto;
     }
+    .missing_link a {
+      color: #a92727 !important;
+    }
     </style>
 
     <link rel="stylesheet" href="https://dzackgarza.com/rawnotes/notes.css">

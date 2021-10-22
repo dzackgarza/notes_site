@@ -839,6 +839,7 @@
 \newcommand{\suchthat}[0]{{~\mathrel{\Big|}~}}
 \newcommand{\delbar}[0]{{ \bar{\del}}}
 
+\newcommand{\containedin}[0]{\subseteq}
 \newcommand{\contains}[0]{\supseteq}
 \newcommand{\containing}[0]{\supseteq}
 \newcommand{\iscontainedin}[0]{\supseteq}
@@ -3647,6 +3648,339 @@ We'll have $(A_i)\localize{f} = (A_j)\localize{g}$ for some $f, g$, and this wil
 .\]
 
 :::
+
+
+
+
+# Monday, October 18
+
+## Dimension
+
+:::{.question}
+If $X = \spec A$ is affine and $U \subset \realize{X}$ is open, is the inclusion $U \injects X$, represented say by $\spec A' \injects \spec A$, represented by a ring map $A\to A'$?
+:::
+
+:::{.definition title="Dimension"}
+For $X\in \Sch$, write $\dim X \da \dim_\Top \realize{X}$ as the topological dimension of the underlying space, which is the length of the longest chain of irreducible closed subsets
+\[
+\emptyset \subsetneq Z_0 \subseteq Z_1 \subsetneq \cdots \subsetneq Z_n \subseteq \realize{X}
+,\]
+where equality at the end is possible if $\realize{X}$ is irreducible.
+:::
+
+:::{.example title="?"}
+\envlist
+
+- $\dim \spec k = 0$
+- $\dim \spec \ZZpadic$: consider $\emptyset \subsetneq \pt \subseteq \spec \ZZpadic$, where $\pt$ is a generic point, so $\dim \spec \ZZpadic = 1$.
+- $\dim \PP^n\slice k = \dim \AA^n\slice k = n$.
+
+:::
+
+:::{.example title="?"}
+If $X = \spec A$ is affine for $A$ then $\dim X = \krulldim A$ is the Krull dimension of the ring $A$.
+This follows because irreducible closed subsets of $\spec A$ biject with prime ideals of $A$.
+Why is this true?
+
+$\impliedby$:
+
+Suppose $p\containedin A$ is prime, then note that $V(p) = \ts{q \in \spec A \st q \contains p}$.
+If $V(p) = V(I) \union V(J) = V(IJ)$, then $p \contains IJ$ so $p$ contains one of $I, J$.
+But then $V(p) = V(I)$ wlog, so $V(p)$ is an irreducible closed subset.
+
+$\implies$:
+We can reverse almost all of these implications:
+
+- $V(p) = V(IJ)$
+- $\iff p\contains IJ$
+- $\iff p \subseteq I$ or $p \subseteq J$
+- $\iff V(p) = V(I)$ or $V(J)$.
+
+Note that bijections preserve strict containments, so we have correspondences on chains:
+\[
+\emptyset \subsetneq Z_0 \subsetneq \cdots \subsetneq Z_n \subset X = \spec A \\
+\iff \\
+\gens{1} \supsetneq p_0 \supsetneq \cdots \supsetneq p_n
+.\]
+
+:::
+
+:::{.remark}
+So we can use that $\krulldim \kxn = n$ to show $\dim \AA^n\slice k = n$.
+For $\PP^n\slice k$, use that any maximal chain contains a point $\ts{z_0}$, so choosing such a point and intersecting $z_i$ with the embedded copy of $\AA^n\slice k\injects \PP^n\slice k$.
+Then use that there is a chain $\gens{0} \subsetneq \gens{x_1} \subsetneq \gens{x_1, x_2} \cdots \subsetneq \gens{x_1,\cdots, x_n}$, so $\dim X \geq n$.
+For the reverse inequality: this is hard! 
+See Atiyah-MacDonald's discussion of regular systems of parameters.
+:::
+
+:::{.definition title="Codimension"}
+The **codimension** $\codim(Z, X)$ for $Z \subseteq X$ a closed irreducible subset is the length of the longest chain starting at $Z$:
+\[
+Z = Z_0 \subsetneq Z_1 \subsetneq \cdots \subsetneq Z_n \subset X
+.\]
+:::
+
+:::{.fact}
+For $X = \spec A$ and $A\in \kalg^\fg$, there is a formula
+\[
+\dim(Z) + \codim(X, Z) = \dim (X)
+.\]
+:::
+
+:::{.remark}
+This is not true in general, even for Noetherian rings -- see **catenary rings**, where any chain of prime ideals can be extended to a chain of fixed maximal length $n$.
+Without this, one can extend chains to maximal chains of differing lengths.
+:::
+
+:::{.example title="?"}
+$\dim \spec \ZZ = 1$, instead of having dimension zero!
+This is because there's always a chain $0 \to \gens{p} \to \ZZ$ for any prime.
+An analogy here is a curve $\spec k[x, y] / \gens{f(x, y)}$:
+
+
+\begin{tikzpicture}
+\fontsize{45pt}{1em} 
+\node (node_one) at (0,0) { \import{/home/zack/SparkleShare/github.com/Notes/Class_Notes/2021/Fall/Schemes/sections/figures}{2021-10-18_12-16.pdf_tex} };
+\end{tikzpicture}
+
+One can similarly do this for $\OO_K$ the ring of integers in a number field $K$ and get $\dim \spec \OO_K = 1$.
+This leads to a good theory of divisors (free modules on codimension 1 subvarieties) and the Picard group, so a useful geometrization of number theory.
+:::
+
+## Fiber Products
+
+:::{.remark}
+Perhaps the most important construction in schemes!
+Picks up intersection multiplicities.
+:::
+
+:::{.definition title="Fiber products"}
+Let $X, Y \in \Sch\slice{S}$ then $X\fiberprod{S} Y \in \Sch\slice{S}$ is an $S\dash$scheme equipped with morphisms of $S\dash$schemes onto $X, Y$ satisfying a universal property.
+For any $Z$ with maps to $X$ and $Y$, there is a unique $\theta$ making the following diagram commute:
+
+\begin{tikzcd}
+	& Z \\
+	& {} \\
+	& {X\fiberprod{S} Y} \\
+	Y && X \\
+	& S
+	\arrow[from=4-1, to=5-2]
+	\arrow[from=4-3, to=5-2]
+	\arrow[from=1-2, to=4-1]
+	\arrow[from=1-2, to=4-3]
+	\arrow["{\exists !\theta}"{description}, dashed, from=1-2, to=3-2]
+	\arrow[from=3-2, to=4-1]
+	\arrow[from=3-2, to=4-3]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNixbMSwwLCJaIl0sWzAsMywiWSJdLFsyLDMsIlgiXSxbMSw0LCJTIl0sWzEsMV0sWzEsMiwiWFxcZnB7U30gWSJdLFsxLDNdLFsyLDNdLFswLDFdLFswLDJdLFswLDUsIlxcZXhpc3RzICFcXHRoZXRhIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzUsMV0sWzUsMl1d)
+
+:::
+
+:::{.remark}
+Note that on the ring side, this yields a tensor product over $S$.
+:::
+
+
+
+
+
+# Wednesday, October 20
+
+:::{.remark}
+Today: only the most important property of schemes, the existence of fiber products!
+Let $X, Y\in \Sch\slice S$, then the fiber product $X\fiberprod{S} Y \in \Sch\slice{S}$ is an object satisfying a universal property:
+
+\begin{tikzcd}
+	{\forall Z} \\
+	\\
+	&& {X\fiberprod{S} Y} && X \\
+	&&& {} \\
+	&& Y && Z
+	\arrow[from=5-3, to=5-5]
+	\arrow[from=3-5, to=5-5]
+	\arrow["{\exists! \theta}"{description}, dashed, from=1-1, to=3-3]
+	\arrow["\beta"{description}, from=1-1, to=3-5]
+	\arrow["\alpha"{description}, from=1-1, to=5-3]
+	\arrow["p"{description}, from=3-3, to=5-3]
+	\arrow["q"{description}, from=3-3, to=3-5]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNixbMiwyLCJYXFxmcHtTfSBZIl0sWzMsM10sWzQsMiwiWCJdLFsyLDQsIlkiXSxbNCw0LCJaIl0sWzAsMCwiXFxmb3JhbGwgWiJdLFszLDRdLFsyLDRdLFs1LDAsIlxcZXhpc3RzISBcXHRoZXRhIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzUsMiwiXFxiZXRhIiwxXSxbNSwzLCJcXGFscGhhIiwxXSxbMCwzLCJwIiwxXSxbMCwyLCJxIiwxXV0=)
+
+Note that needing the square involving $Z$ and $X\fiberprod{S} Y$ to commute is automatic, since we're working in $\Sch\slice S$ instead of just $\Sch$.
+Note that $X\times Y = X\fiberprod{\spec \ZZ} Y$ recovers the product.
+:::
+
+
+:::{.question}
+Do fiber products exist?
+They're unique up to isomorphism if they do, so we just need to construct it.
+:::
+
+
+:::{.theorem title="Existence of fiber products"}
+Fiber products exist and are unique up to isomorphism.
+:::
+
+## The 7-Step Proof
+
+:::{.proof title="Step 1: Prove for $X, Y, S$ are affine."}
+Write $X = \spec A, Y= \spec B, S = \spec R$.
+We start in $\Ring$, and noting contravariance of $\spec(\wait)$, the claim is that $\spec (A\tensor_R B) \cong X\fiberprod{S} Y$.
+Use that $\spec: \Ring \to \Sch$ is fully faithful, which almost allows just reversing arrows if some care is taken.
+A map $Z\to \spec A$ is the same data as a map $A\to \OO_Z(Z)$.
+Let $\mcu \covers Z$ with $U_i = \spec C_i$, then a morphism $Z\to \spec A \in \Sch\slice S$ is equivalently a collection of compatible morphisms $A\to C_i \in \Ring$ by the sheaf condition, so the restrictions to $\OO_{Z_i \intersect Z_j}$ are compatible.
+So we can interchange any two diagrams of the following form:
+
+\begin{tikzcd}
+	Z & Y && {\OO_Z(Z)} & B \\
+	X & S && A & R
+	\arrow[from=1-1, to=1-2]
+	\arrow[""{name=0, anchor=center, inner sep=0}, from=1-2, to=2-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-5, to=1-5]
+	\arrow[from=1-5, to=1-4]
+	\arrow[from=2-5, to=2-4]
+	\arrow[""{name=1, anchor=center, inner sep=0}, from=2-4, to=1-4]
+	\arrow[shorten <=14pt, shorten >=14pt, Rightarrow, from=0, to=1]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsOCxbMCwwLCJaIl0sWzAsMSwiWCJdLFsxLDEsIlMiXSxbMSwwLCJZIl0sWzMsMCwiXFxPT19aKFopIl0sWzQsMCwiQiJdLFszLDEsIkEiXSxbNCwxLCJSIl0sWzAsM10sWzMsMl0sWzAsMV0sWzEsMl0sWzcsNV0sWzUsNF0sWzcsNl0sWzYsNF0sWzksMTUsIiIsMCx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH19XV0=)
+
+Now the universal property of $A\tensor_R B \in \Ring$ yields a unique map $A\tensor_R B \mapsvia{\theta*} \OO_Z(Z)$, so equivalently $Z \mapsvia{\theta} \spec(A\tensor_R B)$.
+:::
+
+For step 2, the universal property will imply uniqueness if it exists, which we'll need for gluing.
+
+:::{.proof title="Step 3: Gluing morphisms on covers"}
+A morphism $X \to Y\in \Sch$ is equivalently the data of $\mcu \covers X$ and morphism $U_i \mapsvia{f_i} Y \in \Sch$ with $\ro{f_i}{U_i \intersect U_j} = \ro{f_j}{U_i \intersect U_j}$.
+This is true more generally for any $X\in \Top$ and $F\in \Sh\slice X(\cat{C})$ with values in any category.
+:::
+
+
+:::{.proof title="Step 4: Passing to open subsets of a factor"}
+Let $X, Y\in \Sch\slice S$ be arbitrary and $U \subseteq X$ open.
+If $X\fiberprod{S} Y$ exists, it is equipped with morphisms $q$ to $X$ and $p$ to $Y$.
+Note that every open subset has a canonical open subscheme structure.
+
+:::{.claim}
+$U \fiberprod{S} Y \cong p\inv(U)$, noting that we don't yet know that fibers are schemes.
+:::
+
+
+:::{.proof title="?"}
+Let $Z\in \Sch\slice S$ such that we have the following:
+
+\begin{tikzcd}
+	Z && U && X \\
+	\\
+	Y
+	\arrow["\iota", hook, from=1-3, to=1-5]
+	\arrow["\alpha", from=1-1, to=1-3]
+	\arrow["\beta"', from=1-1, to=3-1]
+	\arrow["{\alpha'}", curve={height=-30pt}, from=1-1, to=1-5]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNCxbMCwwLCJaIl0sWzIsMCwiVSJdLFs0LDAsIlgiXSxbMCwyLCJZIl0sWzEsMiwiXFxpb3RhIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMCwxLCJcXGFscGhhIl0sWzAsMywiXFxiZXRhIiwyXSxbMCwyLCJcXGFscGhhJyIsMCx7ImN1cnZlIjotNX1dXQ==)
+
+If $X\fiberprod{S} Y$ exists, then $\exists ! \theta: Z\to X\fiberprod{S} Y$.
+Then $\Theta(Z) \subseteq p\inv(U)$ since $p \circ \Theta = \alpha' \da \iota \circ \alpha$, so $\im(p \circ \Theta) \subseteq U$.
+So $\theta:Z\to p\inv(U)$ is unique, making $p\inv(U) \cong U\fiberprod{S} Y$.
+:::
+
+So if $X\fiberprod{S}Y$ exists then $U\fiberprod{S} Y$ exists.
+:::
+
+
+:::{.proof title="Step 5: Gluing fiber products from an open cover"}
+Let $X, Y\in \Sch\slice S$ and suppose $\mcx \covers X$ where $X_i \fiberprod{S} Y$ exists, then the claim is that $X\fiberprod{S} Y$ exists.
+Define $X_{ij} \da X_i \intersect X_j$, then by step 4 $p_i\inv(X_{ij})$ is a fiber product $X_{ij}\fiberprod{S} Y$, and similarly $p_j\inv(X_{ij}) = X_{ij} \fiberprod{S} Y$.
+By uniqueness in step 2, there is a unique isomorphism $\phi_{ij}: p_i\inv(X_{ij})\to p_j\inv(X_{ij})$ of fiber products.
+Furthermore, the cocycle condition is satisfied since $\phi_{ik}$ is unique, so $\phi_{ij} \circ \phi_{jk} = \phi_{ik}$.
+These are schemes (or more generally any ringed space), so we can glue to get *some* scheme which we'll suggestively write $X\fiberprod{S} Y$.
+The claim is that this satisfies the correct universal property.
+First: there are morphisms $X\fiberprod{S} Y \mapsvia{p} X$ and $X\fiberprod{S} Y \mapsvia{q} Y$.
+Note that the $X\fiberprod{S} Y$ cover $X_i \fiberprod{S} Y$ and $X = \disjoint X_i/\sim$
+Define the following maps:
+
+\begin{tikzcd}
+	&& {Z_i \da \alpha\inv(X_i)} && {X_i} \\
+	\\
+	Y && Z && X
+	\arrow["\alpha", from=3-3, to=3-5]
+	\arrow["\beta"', from=3-3, to=3-1]
+	\arrow[hook, from=1-3, to=3-3]
+	\arrow[hook, from=1-5, to=3-5]
+	\arrow["{\ro{\alpha}{Z_i}}", from=1-3, to=1-5]
+	\arrow["{\ro{\beta}{Z_i}}"', curve={height=30pt}, from=1-3, to=3-1]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNSxbMiwyLCJaIl0sWzQsMiwiWCJdLFswLDIsIlkiXSxbMiwwLCJaX2kgXFxkYSBcXGFscGhhXFxpbnYoWF9pKSJdLFs0LDAsIlhfaSJdLFswLDEsIlxcYWxwaGEiXSxbMCwyLCJcXGJldGEiLDJdLFszLDAsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzQsMSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMyw0LCJcXHJve1xcYWxwaGF9e1pfaX0iXSxbMywyLCJcXHJve1xcYmV0YX17Wl9pfSIsMix7ImN1cnZlIjo1fV1d)
+
+Then $\exists ! \Theta_i: Z_i\to X_i \fiberprod{S} Y$ where the $\Theta_i$ agree on overlaps $Z_{ij}$ as morphisms $Z_{ij} \to X_{ij}\fiberprod{S} Y$.
+By step 3, these glue to a unique $\Theta: Z\to X\fiberprod{S} Y$, since the gluing is defined as $X\fiberprod{S} Y = \Disjoint_i (X_i\fiberprod{S} Y)/\phi_{ij}(p) \sim p$.
+Why does it make the above diagram commute?
+
+\begin{tikzcd}
+	Z \\
+	\\
+	&& {X\fiberprod{S} Y} && X \\
+	\\
+	&& Y && S
+	\arrow[from=3-5, to=5-5]
+	\arrow[from=5-3, to=5-5]
+	\arrow[from=3-3, to=5-3]
+	\arrow[from=3-3, to=3-5]
+	\arrow["\Theta"{description}, from=1-1, to=3-3]
+	\arrow["\alpha", from=1-1, to=3-5]
+	\arrow["\beta", from=1-1, to=5-3]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsNSxbMiwyLCJYXFxmcHtTfSBZIl0sWzIsNCwiWSJdLFs0LDQsIlMiXSxbNCwyLCJYIl0sWzAsMCwiWiJdLFszLDJdLFsxLDJdLFswLDFdLFswLDNdLFs0LDAsIlxcVGhldGEiLDFdLFs0LDMsIlxcYWxwaGEiXSxbNCwxLCJcXGJldGEiXV0=)
+
+This commutes because such a map is determined on an open cover, and we have commutativity in the following:
+
+\begin{tikzcd}
+	{Z_i} \\
+	\\
+	&& {X_i\fiberprod{S} Y} && X
+	\arrow["{\Theta_i}", from=1-1, to=3-3]
+	\arrow["{p_i}", from=3-3, to=3-5]
+	\arrow["{\alpha_i}", from=1-1, to=3-5]
+\end{tikzcd}
+
+> [Link to Diagram](https://q.uiver.app/?q=WzAsMyxbMCwwLCJaX2kiXSxbMiwyLCJYX2lcXGZwe1N9IFkiXSxbNCwyLCJYIl0sWzAsMSwiXFxUaGV0YV9pIl0sWzEsMiwicF9pIl0sWzAsMiwiXFxhbHBoYV9pIl1d)
+
+So $X\fiberprod{S} Y$ exists if $X_i \fiberprod{S} Y$ exists for $\mcx \covers X$.
+:::
+
+
+:::{.proof title="Step 6: Affine base"}
+Let $S\in \Aff\Sch$, then by step 1 $X_i \fiberprod{S} Y_j$ exists, to $X_i\fiberprod{S} Y$ exists by step 5, which implies $X\fiberprod{S} Y$ exists
+:::
+
+:::{.proof title="Step 7: Arbitrary"}
+Let $X,Y,S\in \Sch\slice{S}$ be arbitrary.
+Take $\mcs \covers S$, and set $X_i = p\inv(S_i)$ and $Y_i = q\inv(S_i)$.
+Then $X_i \fiberprod{S_i} Y_i$ exists, and the claim is that there is an isomorphism
+\[
+X_i\fiberprod{S_i} Y_i \cong X\fiberprod{S} Y_i \in \Sch\slice S
+.\]
+
+Then there exist $Z\to Y_i$, and $\im(Z\to S)$ must lie in $S$.
+
+\begin{tikzpicture}
+\fontsize{45pt}{1em} 
+\node (node_one) at (0,0) { \import{/home/zack/SparkleShare/github.com/Notes/Class_Notes/2021/Fall/Schemes/sections/figures}{2021-10-20_12-32.pdf_tex} };
+\end{tikzpicture}
+
+
+:::
+
+
+
 
 
 

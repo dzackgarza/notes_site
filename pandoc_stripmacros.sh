@@ -16,7 +16,6 @@ cat $TMP_DIR/combined.temp | pandoc \
   --lua-filter=./convert_thm_env.lua \
   --lua-filter=./convert_math_delimiters.lua \
   --wrap=none \
-  --toc \
   --standalone \
   -o "$TMP_DIR/out.temp"; 
 

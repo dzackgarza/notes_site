@@ -8,5 +8,11 @@ feed:
 ## Recent blog posts
 
 ```query {.timeline}
-tag:blog/**
+tag:blog
+```
+
+## Recent daily notes
+
+```query {.timeline}
+tag:quick_notes
 ```

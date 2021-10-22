@@ -70,28 +70,38 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {23}Friday, October 15}{58}{section.23}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {24}Appendix}{60}{section.24}%
+\contentsline {section}{\numberline {24}Monday, October 18}{61}{section.24}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {25}Problem Sets}{62}{section.25}%
+\contentsline {subsection}{\numberline {24.1}Dimension}{61}{subsection.24.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {25.1}Problem Set 1}{62}{subsection.25.1}%
+\contentsline {subsection}{\numberline {24.2}Fiber Products}{63}{subsection.24.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {25.2}Chapter 2, Section 1}{62}{subsection.25.2}%
+\contentsline {section}{\numberline {25}Wednesday, October 20}{64}{section.25}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {25.3}Problem Set 2}{73}{subsection.25.3}%
+\contentsline {subsection}{\numberline {25.1}The 7-Step Proof}{65}{subsection.25.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {25.4}II.1}{73}{subsection.25.4}%
+\contentsline {section}{\numberline {26}Appendix}{68}{section.26}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {25.5}II.2}{78}{subsection.25.5}%
+\contentsline {section}{\numberline {27}Problem Sets}{69}{section.27}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\nonumberline ToDos}{82}{section*.6}%
+\contentsline {subsection}{\numberline {27.1}Problem Set 1}{69}{subsection.27.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\nonumberline Definitions}{83}{section*.9}%
+\contentsline {subsection}{\numberline {27.2}Chapter 2, Section 1}{70}{subsection.27.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\nonumberline Theorems}{85}{section*.12}%
+\contentsline {subsection}{\numberline {27.3}Problem Set 2}{81}{subsection.27.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\nonumberline Exercises}{86}{section*.15}%
+\contentsline {subsection}{\numberline {27.4}II.1}{81}{subsection.27.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\nonumberline Figures}{87}{section*.18}%
+\contentsline {subsection}{\numberline {27.5}II.2}{86}{subsection.27.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline ToDos}{90}{section*.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Definitions}{91}{section*.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Theorems}{93}{section*.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Exercises}{94}{section*.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Figures}{95}{section*.18}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
