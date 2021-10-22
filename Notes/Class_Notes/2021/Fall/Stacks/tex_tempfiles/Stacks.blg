@@ -1,9 +1,0 @@
-[0] Config.pm:312> INFO - This is Biber 2.15
-[0] Config.pm:315> INFO - Logfile is 'tex_tempfiles/Stacks.blg'
-[63] biber:330> INFO - === Fri Jul 30, 2021, 22:41:33
-[81] Biber.pm:415> INFO - Reading 'tex_tempfiles/Stacks.bcf'
-[145] Biber.pm:952> INFO - Found 0 citekeys in bib section 0
-[150] Utils.pm:395> WARN - The file 'tex_tempfiles/Stacks.bcf' does not contain any citations!
-[157] bbl.pm:651> INFO - Writing 'tex_tempfiles/Stacks.bbl' with encoding 'UTF-8'
-[158] bbl.pm:754> INFO - Output to tex_tempfiles/Stacks.bbl
-[158] Biber.pm:128> INFO - WARNINGS: 1

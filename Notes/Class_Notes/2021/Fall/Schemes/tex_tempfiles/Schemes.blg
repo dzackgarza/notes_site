@@ -1,9 +1,0 @@
-[0] Config.pm:312> INFO - This is Biber 2.15
-[0] Config.pm:315> INFO - Logfile is 'tex_tempfiles/Schemes.blg'
-[86] biber:330> INFO - === Sat Oct 16, 2021, 01:28:29
-[102] Biber.pm:415> INFO - Reading 'tex_tempfiles/Schemes.bcf'
-[186] Biber.pm:952> INFO - Found 0 citekeys in bib section 0
-[193] Utils.pm:395> WARN - The file 'tex_tempfiles/Schemes.bcf' does not contain any citations!
-[203] bbl.pm:651> INFO - Writing 'tex_tempfiles/Schemes.bbl' with encoding 'UTF-8'
-[203] bbl.pm:754> INFO - Output to tex_tempfiles/Schemes.bbl
-[203] Biber.pm:128> INFO - WARNINGS: 1
