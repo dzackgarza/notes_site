@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="165.8042mm"
+   height="153.01266mm"
+   viewBox="0 0 165.8042 153.01266"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="2021-10-01_11-43.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="1"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="131.42857"
+     inkscape:cy="405"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="true"
+     showborder="true"
+     borderlayer="true"
+     inkscape:showpageshadow="false"
+     objecttolerance="10000"
+     guidetolerance="10000"
+     inkscape:snap-perpendicular="true"
+     inkscape:snap-tangential="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
+     inkscape:window-x="-1"
+     inkscape:window-y="14"
+     inkscape:window-maximized="0"
+     inkscape:pagecheckerboard="1">
+    <sodipodi:guide
+       position="-35.996688,142.12412"
+       orientation="0,793.70079"
+       id="guide10" />
+    <sodipodi:guide
+       position="174.0033,142.12412"
+       orientation="559.37008,0"
+       id="guide12" />
+    <sodipodi:guide
+       position="174.0033,-5.875873"
+       orientation="0,-793.70079"
+       id="guide14" />
+    <sodipodi:guide
+       position="-35.996688,-5.875873"
+       orientation="-559.37008,0"
+       id="guide16" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid20"
+       dotted="true"
+       units="px"
+       originx="69.003309"
+       originy="84.888528" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+        <cc:license
+           rdf:resource="" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-35.996689,10.888538)">
+    <circle
+       style="opacity:0.372407;fill:#ff6600;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stop-color:#000000"
+       id="path860"
+       cx="105.03835"
+       cy="73.082466"
+       r="68.791664" />
+    <path
+       style="fill:#00cc00;stroke:#6699ff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 52.083332,31.666669 C 157.91666,116.33333 157.91666,116.33333 157.91666,116.33333"
+       id="path1010" />
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="158.89409"
+       y="127.33454"
+       id="text9109"><tspan
+         sodipodi:role="line"
+         id="tspan9107"
+         style="stroke-width:0.264583"
+         x="158.89409"
+         y="127.33454">$a_i=0$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="87.342476"
+       y="-2.8477111"
+       id="text10037"><tspan
+         sodipodi:role="line"
+         id="tspan10035"
+         style="stroke-width:0.264583"
+         x="87.342476"
+         y="-2.8477111">$\PP^n$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="90.641563"
+       y="42.492336"
+       id="text11243"><tspan
+         sodipodi:role="line"
+         id="tspan11241"
+         style="stroke-width:0.264583"
+         x="90.641563"
+         y="42.492336">$D(x_i)$</tspan></text>
+  </g>
+</svg>
