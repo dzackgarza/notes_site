@@ -31,6 +31,7 @@ clean:
 	echo "Removing directories.."
 	@rm -rf /var/www/notes_site;
 	@rm -rf ./Notes;
+	@rm -rf ./figures;
 
 .PHONY: clean
 
