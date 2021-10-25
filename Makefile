@@ -9,7 +9,7 @@ all: clean pandoc_process generate
 ## Markdown Output
 pandoc:
 	echo "Copying Notes directory.."
-	rsync -a --exclude='.*' --exclude="*.yaml" --exclude="*.css" --exclude="*.sty" --exclude="*.tex" --exclude="*.txt" --exclude="*.sh" --exclude="*.html" --exclude="*.log" --exclude="*.add.spl" --exclude="*.add" --exclude="*.bib" --exclude="Visualizations" --exclude="Latex" --exclude="Teaching" --exclude="Flashcards" --exclude="annotations" ~/Notes/ ./Notes;
+	rsync -a --exclude='.*' --exclude="*.yaml" --exclude="*.css" --exclude="*.sty" --exclude="*.tex" --exclude="*.txt" --exclude="*.sh" --exclude="*.html" --exclude="*.log" --exclude="*.add.spl" --exclude="*.add" --exclude="*.bib" --exclude="Visualizations" --exclude="Latex" --exclude="Teaching" --exclude="Flashcards" --exclude="annotations" --exclude="Class_Notes" ~/Notes/ ./Notes;
 	echo "Running custom pandoc conversion..."
 	while read THISFILE; do
 		echo "$$THISFILE";
