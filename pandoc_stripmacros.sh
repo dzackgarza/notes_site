@@ -6,7 +6,10 @@
 
 TMP_DIR=$(mktemp -d -t pandoc-XXXXXXXXXX);
 
-cat $PANDOC_DIR/custom/latexmacs*.tex "$input" | sed '/file:\/\//d' > $TMP_DIR/combined.temp ;
+cat $PANDOC_DIR/custom/latexmacs*.tex "$input" | \
+  sed 's/\!\[\[/\\!\[\[/g' | \
+  sed '/file:\/\//d' > \
+  $TMP_DIR/combined.temp ;
 
 cat $TMP_DIR/combined.temp | pandoc \
   --quiet \

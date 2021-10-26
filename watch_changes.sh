@@ -24,7 +24,8 @@ do
   if [[ $f == *.md ]]; then
     outdir=$(dirname "$destname")
     mkdir --parent "$outdir";
-    awk 'FNR==1{print ""}1' "$f" | ./pandoc_stripmacros.sh | sed '/file:\/\//d' > /tmp/temp.md && mv /tmp/temp.md "$destname" && echo "Copied pandoc page";
+    awk 'FNR==1{print ""}1' "$f" | ./pandoc_stripmacros.sh > /tmp/temp.md && mv /tmp/temp.md "$destname" && echo "Copied pandoc page";
+    #awk 'FNR==1{print ""}1' "$f" | sed '/file:\/\//d' > /tmp/temp.md && mv /tmp/temp.md "$destname" && echo "Copied pandoc page";
     sleep 1 && touch "$destname";
     continue;
   fi
