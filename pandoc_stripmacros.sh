@@ -15,9 +15,11 @@ cat $TMP_DIR/combined.temp | pandoc \
   --quiet \
   -r markdown+latex_macros+tex_math_dollars+tex_math_single_backslash \
   --to=markdown \
-  --lua-filter=./tikzcd.lua \
-  --lua-filter=./convert_thm_env.lua \
-  --lua-filter=./convert_math_delimiters.lua \
+  --lua-filter=$PANDOC_DIR/filters/tikzcd.lua \
+  --lua-filter=$PANDOC_DIR/filters/replace_symbols_html.lua \
+  --lua-filter=$PANDOC_DIR/filters/convert_math_delimiters.lua \
+  --lua-filter=$PANDOC_DIR/filters/convert_amsthm_envs.lua \
+  --lua-filter=$PANDOC_DIR/filters/hide_solutions_html.lua \
   --wrap=none \
   --standalone \
   -o "$TMP_DIR/out.temp"; 
