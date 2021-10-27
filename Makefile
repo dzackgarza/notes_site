@@ -32,6 +32,9 @@ pandoc_test:
 watch:
 	HOST=0.0.0.0 PORT=8000 emanote;
 
+sync:
+	rsync -vaz --rsh="ssh -l zack" /var/www/notes_site/ dzackgarza.com:/var/www/notes_site/;
+
 generate:
 	mkdir /var/www/notes_site;
 	emanote -L ./ gen /var/www/notes_site;
