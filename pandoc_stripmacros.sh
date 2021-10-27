@@ -13,7 +13,8 @@ cat $PANDOC_DIR/custom/latexmacs*.tex "$input" | \
 
 cat $TMP_DIR/combined.temp | pandoc \
   --quiet \
-  -r markdown+latex_macros+tex_math_dollars+tex_math_single_backslash \
+  --toc \
+  -r markdown+simple_tables+table_captions+yaml_metadata_block+tex_math_single_backslash \
   --to=markdown \
   --lua-filter=./tikzcd.lua \
   --lua-filter=./convert_thm_env.lua \

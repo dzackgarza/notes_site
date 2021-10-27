@@ -162,6 +162,9 @@ page:
     .missing_link a {
       color: #a92727 !important;
     }
+    .container.m-auto.max-w-screen-sm.rounded-lg {
+      max-width: 500px !important;
+    }
     </style>
 
     <link rel="stylesheet" href="https://dzackgarza.com/rawnotes/notes.css">
