@@ -13,12 +13,13 @@ template:
 
 - [[000_Personal_Home|Personal Home]]
 -  [[000_Recommendations|Recommendations]]
--  [[Obsidian/Unsorted/Course Note Index]]
+-  [[Course Note Index]]
 - [Browse by tag](-/tags)
 - [Browse all](-/all)
 - [[Obsidian/Changelog]]
 
-:::{class="grid grid-flow-row grid-cols-1 gap-0 p-3 lg:grid-cols-2"}
+
+:::{.grid}
 
 # [[Quick_Notes|Journal]] 
 
@@ -33,7 +34,6 @@ tag:quick_notes
 :::
 
 ---
-
 
 
 <!--## Timers-->

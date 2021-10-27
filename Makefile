@@ -20,7 +20,7 @@ pandoc:
 	
 pandoc_test:
 	echo "Copying Notes directory.."
-	rsync -a --exclude='.*' --exclude="*.yaml" --exclude="*.css" --exclude="*.sty" --exclude="*.tex" --exclude="*.txt" --exclude="*.sh" --exclude="*.html" --exclude="*.log" --exclude="*.add.spl" --exclude="*.add" --exclude="*.bib" --exclude="Visualizations" --exclude="Latex" --exclude="Teaching" --exclude="Flashcards" --exclude="annotations" --exclude="Unsorted" --exclude="Quick_Notes" --exclude="Archive" --exclude="Projects" --exclude="To Review" --exclude="Class_Notes" ~/Notes/ ./Notes;
+	rsync -a --exclude='.*' --exclude="*.yaml" --exclude="*.css" --exclude="*.sty" --exclude="*.tex" --exclude="*.txt" --exclude="*.sh" --exclude="*.html" --exclude="*.log" --exclude="*.add.spl" --exclude="*.add" --exclude="*.bib" --exclude="Visualizations" --exclude="Latex" --exclude="Teaching" --exclude="Flashcards" --exclude="annotations" --exclude="Unsorted" --exclude="Archive" --exclude="Projects" --exclude="To Review" --exclude="Class_Notes" ~/Notes/ ./Notes;
 	echo "Running custom pandoc conversion..."
 	while read THISFILE; do
 		echo "$$THISFILE";
