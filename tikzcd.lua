@@ -33,7 +33,8 @@ function RawBlock(el)
   end
 
   -- Just drop SVG files directly in tmp directory.   
-  local fname = "/tmp/" .. pandoc.sha1(el.text) .. ".svg"
+  local fbasename = pandoc.sha1(el.text) .. ".svg"
+  local fname = "/tmp/" .. fbasename
 
   system.with_working_directory("/tmp", function()
     local f = io.open('/tmp/tikz.tex', 'w')
@@ -59,7 +60,7 @@ function RawBlock(el)
       printDebugInfo(rc2)
       return false
     end
-    cmd3 = 'cp "' .. fname .. '" /home/zack/notes_site/figures;'
+    cmd3 = 'cp "' .. fname .. '" /home/zack/notes_site/tikzcd/' .. fbasename
     --print(cmd3)
     local file3 = io.popen(cmd3)
     local output3 = file3:read('*all')
@@ -67,9 +68,9 @@ function RawBlock(el)
     -- Success!
   end)
   if starts_with('\\begin{tikzcd}', el.text) then
-    ril = pandoc.RawInline('html', '<p style="text-align:center;"> <img class="tikzcd" src="figures/' .. pandoc.sha1(el.text) .. '.svg"></p>')
+    ril = pandoc.RawInline('html', '<p style="text-align:center;"> <img class="tikzcd" src="tikzcd/' .. fbasename .. '"></p>')
   else
-    ril = pandoc.RawInline('html', '<p style="text-align:center;"> <img class="tikzpic" src="figures/' .. pandoc.sha1(el.text) .. '.svg"></p>')
+    ril = pandoc.RawInline('html', '<p style="text-align:center;"> <img class="tikzpic" src="tikzcd/' .. fbasename .. '"></p>')
   end
   return pandoc.Para(ril)
 end

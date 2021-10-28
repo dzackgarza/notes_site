@@ -11,9 +11,10 @@ cat $PANDOC_DIR/custom/latexmacs*.tex "$input" | \
   sed '/file:\/\//d' > \
   $TMP_DIR/combined.temp ;
 
+# toc doesn't work with emanote yet.
+
 cat $TMP_DIR/combined.temp | pandoc \
   --quiet \
-  --toc \
   -r markdown+simple_tables+table_captions+yaml_metadata_block+tex_math_single_backslash \
   --to=markdown \
   --lua-filter=./tikzcd.lua \

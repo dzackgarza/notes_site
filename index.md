@@ -11,12 +11,11 @@ template:
 
 # Index
 
-- [[000_Personal_Home|Personal Home]]
--  [[000_Recommendations|Recommendations]]
--  [[Course Note Index]]
+- [[001_Personal_Home|Personal Home]]
+- [[Course Note Index]]
 - [Browse by tag](-/tags)
 - [Browse all](-/all)
-- [[Obsidian/Changelog]]
+- [[900_Changelog]]
 
 
 :::{.grid}
