@@ -2,7 +2,7 @@
 function Math(m)
   -- For markdown->markdown cleaning
   if m.mathtype == "InlineMath" then
-    return pandoc.RawInline('markdown', '$' .. m.text .. '$')
+    return pandoc.RawInline('markdown', '$' .. m.text:gsub("^%s+", "") .. '$')
   else
     return pandoc.RawInline('html', '\n<span class="math display">\n\\begin{align*}'.. m.text .. '\\end{align*}\n<span>')
   end
