@@ -1,6 +1,6 @@
 SHELL:=/bin/zsh
 
-all: clean pandoc_process generate 
+all: clean pandoc generate sync
 	type clr_green 2>&1 >/dev/null || { source "$$DOTFILES_ROOT/.bash_colors";}
 	clr_greenb "____________________________________________________"
 	clr_greenb "___________  All files compiled.  __________________"
