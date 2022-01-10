@@ -1,4 +1,5 @@
 SHELL:=/bin/zsh
+NOTES_DIR="/home/zack/Notes/Obsidian/"
 
 all: clean pandoc generate sync
 	type clr_green 2>&1 >/dev/null || { source "$$DOTFILES_ROOT/.bash_colors";}
@@ -13,7 +14,7 @@ pandoc:
 	rm -rf ./tikzcd;
 	mkdir ./tikzcd;
 	echo "Copying Notes directory.."
-	rsync -a --exclude='.*' --exclude="*.yaml" --exclude="*.css" --exclude="*.sty" --exclude="*.tex" --exclude="*.txt" --exclude="*.sh" --exclude="*.html" --exclude="*.log" --exclude="*.add.spl" --exclude="*.add" --exclude="*.bib" --exclude="Visualizations" --exclude="Latex" --exclude="Teaching" --exclude="Flashcards" --exclude="annotations" --exclude="Class_Notes" ~/Notes/ ./Notes;
+	rsync -a --exclude='.*' --exclude="*.yaml" --exclude="*.css" --exclude="*.sty" --exclude="*.tex" --exclude="*.txt" --exclude="*.sh" --exclude="*.html" --exclude="*.log" --exclude="*.add.spl" --exclude="*.add" --exclude="*.bib" --exclude="Archive" --exclude="To Review" $(NOTES_DIR) ./Notes;
 	echo "Running custom pandoc conversion..."
 	while read THISFILE; do
 		echo "$$THISFILE";
@@ -22,7 +23,7 @@ pandoc:
 		
 pandoc_test:
 	echo "Copying Notes directory.."
-	rsync -a --exclude='.*' --exclude="*.yaml" --exclude="*.css" --exclude="*.sty" --exclude="*.tex" --exclude="*.txt" --exclude="*.sh" --exclude="*.html" --exclude="*.log" --exclude="*.add.spl" --exclude="*.add" --exclude="*.bib" --exclude="Visualizations" --exclude="Latex" --exclude="Teaching" --exclude="Flashcards" --exclude="annotations" --exclude="Unsorted" --exclude="Archive" --exclude="Projects" --exclude="Seminars and Talks" --exclude="To Review" --exclude="Class_Notes" --exclude="Quick_Notes" ~/Notes/ ./Notes;
+	rsync -a --exclude='.*' --exclude="*.yaml" --exclude="*.css" --exclude="*.sty" --exclude="*.tex" --exclude="*.txt" --exclude="*.sh" --exclude="*.html" --exclude="*.log" --exclude="*.add.spl" --exclude="*.add" --exclude="*.bib" --exclude="Archive" --exclude="To Review" --exclude="Unsorted" --exclude="advanced_quals" $(NOTES_DIR) ./Notes;
 	echo "Running custom pandoc conversion..."
 	while read THISFILE; do
 		echo "$$THISFILE";
