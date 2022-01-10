@@ -60,7 +60,7 @@ function RawBlock(el)
       printDebugInfo(rc2)
       return false
     end
-    cmd3 = 'cp "' .. fname .. '" /home/zack/notes_site/tikzcd/' .. fbasename
+    cmd3 = 'cp "' .. fname .. '" /home/zack/notes_site/Notes/tikzcd/' .. fbasename
     --print(cmd3)
     local file3 = io.popen(cmd3)
     local output3 = file3:read('*all')
