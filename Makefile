@@ -43,6 +43,7 @@ sync:
 
 generate:
 	mkdir /var/www/notes_site;
+	cp ./templates ./Notes/templates -r;
 	emanote -L ./Notes gen /var/www/notes_site;
 
 .SILENT:
