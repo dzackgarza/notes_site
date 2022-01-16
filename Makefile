@@ -11,7 +11,7 @@ all: clean pandoc generate sync
 pandoc:
 	rm -rf ./Notes;
 	echo "Copying Notes directory.."
-	rsync -a --exclude='.*' --exclude="*.yaml" --exclude="*.css" --exclude="*.sty" --exclude="*.tex" --exclude="*.txt" --exclude="*.sh" --exclude="*.html" --exclude="*.log" --exclude="*.add.spl" --exclude="*.add" --exclude="*.bib" --exclude="Archive" --exclude="Unsorted" $(NOTES_DIR) ./Notes;
+	rsync -a --exclude='.*' --exclude="*.yaml" --exclude="*.css" --exclude="*.sty" --exclude="*.tex" --exclude="*.txt" --exclude="*.sh" --exclude="*.html" --exclude="*.log" --exclude="*.add.spl" --exclude="*.add" --exclude="*.bib" --exclude="Archive" $(NOTES_DIR) ./Notes;
 	echo "Running custom pandoc conversion..."
 	mkdir ./Notes/figures;
 	mkdir ./Notes/tikzcd;
@@ -26,7 +26,7 @@ pandoc:
 pandoc_test:
 	rm -rf ./Notes;
 	echo "Copying Notes directory.."
-	rsync -a --exclude='.*' --exclude="*.yaml" --exclude="*.css" --exclude="*.sty" --exclude="*.tex" --exclude="*.txt" --exclude="*.sh" --exclude="*.html" --exclude="*.log" --exclude="*.add.spl" --exclude="*.add" --exclude="*.bib" --exclude="Archive" --exclude="To Review" --exclude="Unsorted" --exclude="advanced_quals" $(NOTES_DIR) ./Notes;
+	rsync -a --exclude='.*' --exclude="*.yaml" --exclude="*.css" --exclude="*.sty" --exclude="*.tex" --exclude="*.txt" --exclude="*.sh" --exclude="*.html" --exclude="*.log" --exclude="*.add.spl" --exclude="*.add" --exclude="*.bib" --exclude="Archive" --exclude="To Review" --exclude="advanced_quals" $(NOTES_DIR) ./Notes;
 	echo "Running custom pandoc conversion..."
 	mkdir ./Notes/figures;
 	mkdir ./Notes/tikzcd;
