@@ -13,6 +13,7 @@ template:
 
 - [[001_Personal_Home|Personal Home]]
 - [[Course Note Index]]
+- [[Blog]]
 - [Browse by tag](-/tags)
 - [Browse all](-/all)
 - [[900_Changelog]]
@@ -25,25 +26,15 @@ template:
 :::{.flex .items-center .justify-center .custom_aggregate}
 
 ```query {.timeline}
-tag:quick_notes
+tag:web/quick-notes
 ```
 
+```query {.timeline}
+tag:web/blog
+```
+
+
 :::
 
 :::
-
----
-
-
-<!--## Timers-->
-
-<!--:::{class="grid grid-flow-row grid-cols-1 gap-0 p-3 lg:grid-cols-2"}-->
-<!--<iframe src="https://indify.co/widgets/live/countdown/yT8LD2nPSIrjlVwnprlW"></iframe>-->
-<!--<iframe src="https://indify.co/widgets/live/countdown/h8ZzqlmJF6IZxx2bhZqD"></iframe>-->
-<!--<iframe src="-->
-<!--https://indify.co/widgets/live/countdown/LaagAnItmSGmJnvtsZfZ"></iframe>-->
-
-<!--<iframe src="https://indify.co/widgets/live/countdown/MUneFNuacOw1xMbTKidz"></iframe>-->
-<!--<iframe src="https://indify.co/widgets/live/countdown/2laxmHoH1erwI6jfHCEj"></iframe>-->
-<!--:::-->
 
