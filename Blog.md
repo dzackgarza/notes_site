@@ -2,17 +2,17 @@
 slug: blog
 order: -12
 feed:
-  count: 5
+  count: 10
 ---
 
-## Recent blog posts
+## Recent blog notes
 
 ```query {.timeline}
-tag:blog
+tag:web/blog
 ```
 
 ## Recent daily notes
 
 ```query {.timeline}
-tag:quick_notes
+tag:web/quick-notes
 ```

@@ -21,18 +21,13 @@ template:
 
 :::{.grid}
 
-# [[Quick_Notes|Journal]] 
+# [[Quick_Notes|Math Journal]] 
 
 :::{.flex .items-center .justify-center .custom_aggregate}
 
 ```query {.timeline}
 tag:web/quick-notes
 ```
-
-```query {.timeline}
-tag:web/blog
-```
-
 
 :::
 
