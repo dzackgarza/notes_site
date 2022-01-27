@@ -16,14 +16,14 @@ template:
 - [[Blog]]
 - [Browse by tag](-/tags)
 - [Browse all](-/all)
-- [[900_Changelog]]
+- [[900_Changelog|Recently Changed Pages]]
 
 
 :::{.grid}
 
 # [[Quick_Notes|Math Journal]] 
 
-:::{.flex .items-center .justify-center .custom_aggregate}
+:::{.flex .justify-center .custom_aggregate}
 
 ```query {.timeline}
 tag:web/quick-notes
