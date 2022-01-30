@@ -32,7 +32,7 @@ fi
 # Send output file, but strip away any tex comments (lines starting with %)
 # Change image links
 # Remove escapes for Obsidian-style wikilinks and tags
-cat "$TMP_DIR/out.temp" | sed -E -e '/^\\\%/d' \
-  -e 's/\[(.*)\]\((.*).md\)/\[\[\1 \| \2.html\]\]/g' \
+cat "$TMP_DIR/out.temp" | sed -E \
+  -e '/^\\\%/d' \
   -e 's/\!\[\]\((.*)\)/\!\[\[\1\]\]/g' \
   -e 's/\\\[\\\[/\[\[/g' -e 's/\\\]\\\]/\]\]/g' -e 's/\\\#/\#/g' -e 's/\\\|/|/g';
