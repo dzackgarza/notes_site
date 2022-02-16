@@ -7,7 +7,7 @@
 TMP_DIR=$(mktemp -d -t pandoc-XXXXXXXXXX);
 
 cat $PANDOC_DIR/custom/latexmacs*.tex "$input" | \
-  sed 's/\!\[\[/\\!\[\[/g' | \
+  #sed 's/\!\[\[/\\!\[\[/g' | \
   sed '/file:\/\//d' > \
   $TMP_DIR/combined.temp ;
 
@@ -34,5 +34,4 @@ fi
 # Remove escapes for Obsidian-style wikilinks and tags
 cat "$TMP_DIR/out.temp" | sed -E \
   -e '/^\\\%/d' \
-  -e 's/\!\[\]\((.*)\)/\!\[\[\1\]\]/g' \
   -e 's/\\\[\\\[/\[\[/g' -e 's/\\\]\\\]/\]\]/g' -e 's/\\\#/\#/g' -e 's/\\\|/|/g';
