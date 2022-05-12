@@ -11,17 +11,17 @@ template:
 
 # Index
 
-- [[001_Personal_Home|Personal Home]]
-- [[Course Note Index]]
-- [[Blog]]
+- [Personal Home](001_Personal_Home.md)
+- [Course Note Index](Course%20Note%20Index)
+- [Blog](Blog.md)
 - [Browse by tag](-/tags)
 - [Browse all](-/all)
-- [[900_Changelog|Recently Changed Pages]]
+- [Recently Changed Pages](900_Changelog.md)
 
 
 :::{.grid}
 
-# [[Quick_Notes|Math Journal]] 
+# [Math Journal](Quick_Notes) 
 
 :::{.flex .justify-center .custom_aggregate}
 
